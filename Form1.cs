@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Sassa_Queue_And_Service_Management_System
 {
-    public partial class Form1 : Form
+    public partial class frmSassaQueueAndServiceManagementSystem : Form
     {
-        public Form1()
+        public frmSassaQueueAndServiceManagementSystem()
         {
             InitializeComponent();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
