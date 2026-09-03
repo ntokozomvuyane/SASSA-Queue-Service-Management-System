@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -69,6 +70,17 @@ namespace Sassa_Queue_And_Service_Management_System
                     "Login Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+            }
+
+            if (!staffID.StartsWith("STAFF") || staffID.Length != 8)
+            {
+                MessageBox.Show("Please enter a valid staff ID.",
+                    "Invalid Staff ID",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                txtStaffID.Focus();
+                return;
             }
         }
 
