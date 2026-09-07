@@ -101,9 +101,8 @@
             this.lblStaffRole.ForeColor = System.Drawing.Color.White;
             this.lblStaffRole.Location = new System.Drawing.Point(970, 36);
             this.lblStaffRole.Name = "lblStaffRole";
-            this.lblStaffRole.Size = new System.Drawing.Size(75, 16);
+            this.lblStaffRole.Size = new System.Drawing.Size(0, 16);
             this.lblStaffRole.TabIndex = 1;
-            this.lblStaffRole.Text = "Occupation";
             // 
             // lblStaffName
             // 
@@ -111,9 +110,8 @@
             this.lblStaffName.ForeColor = System.Drawing.Color.White;
             this.lblStaffName.Location = new System.Drawing.Point(970, 13);
             this.lblStaffName.Name = "lblStaffName";
-            this.lblStaffName.Size = new System.Drawing.Size(73, 16);
+            this.lblStaffName.Size = new System.Drawing.Size(0, 16);
             this.lblStaffName.TabIndex = 1;
-            this.lblStaffName.Text = "Staff Name";
             // 
             // lblSystemSubtitle
             // 
@@ -492,9 +490,8 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(7, 39);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(243, 16);
+            this.lblDate.Size = new System.Drawing.Size(0, 16);
             this.lblDate.TabIndex = 4;
-            this.lblDate.Text = "Johannesburg CBD - Today\'s Overview";
             // 
             // lblDashboardTitle
             // 
