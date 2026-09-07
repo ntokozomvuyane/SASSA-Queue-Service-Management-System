@@ -16,7 +16,6 @@ namespace Sassa_Queue_And_Service_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QueueStatusForm());
             //Application.Run(new frmSassaQueueAndServiceManagementSystem());
             Application.Run(new frmBeneficiary_welcomePage());
            //Application.Run(new LoginForm());
