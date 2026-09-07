@@ -19,9 +19,10 @@ namespace Sassa_Queue_And_Service_Management_System
 
         private void btnBackToDashboard_Click(object sender, EventArgs e)
         {
-            frmMyBookings myBookings = new frmMyBookings();
-            myBookings.Show();
+            BeneficiaryDashboard dashboard = new BeneficiaryDashboard();
+            dashboard.Show();
             this.Hide();
+            
         }
     }
 }
