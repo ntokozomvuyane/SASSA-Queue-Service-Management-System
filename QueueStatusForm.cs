@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace Sassa_Queue_And_Service_Management_System
 {
-    public partial class frmSassaQueueAndServiceManagementSystem : Form
+    public partial class QueueStatusForm : Form
     {
-        public frmSassaQueueAndServiceManagementSystem()
+        public QueueStatusForm()
         {
             InitializeComponent();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+        private void btnBackToDashboard_Click(object sender, EventArgs e)
         {
-
+            BeneficiaryDashboard dashboard = new BeneficiaryDashboard();
+            dashboard.Show();
+            this.Hide();
+            
         }
     }
 }
