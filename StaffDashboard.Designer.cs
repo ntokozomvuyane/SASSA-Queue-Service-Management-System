@@ -224,54 +224,54 @@
             this.lblQueueDescription3.AutoSize = true;
             this.lblQueueDescription3.Location = new System.Drawing.Point(452, 149);
             this.lblQueueDescription3.Name = "lblQueueDescription3";
-            this.lblQueueDescription3.Size = new System.Drawing.Size(44, 16);
+            this.lblQueueDescription3.Size = new System.Drawing.Size(74, 16);
             this.lblQueueDescription3.TabIndex = 9;
-            this.lblQueueDescription3.Text = "label1";
+            this.lblQueueDescription3.Text = "Checked In";
             // 
             // lblQueueDescription2
             // 
             this.lblQueueDescription2.AutoSize = true;
             this.lblQueueDescription2.Location = new System.Drawing.Point(452, 102);
             this.lblQueueDescription2.Name = "lblQueueDescription2";
-            this.lblQueueDescription2.Size = new System.Drawing.Size(44, 16);
+            this.lblQueueDescription2.Size = new System.Drawing.Size(89, 16);
             this.lblQueueDescription2.TabIndex = 8;
-            this.lblQueueDescription2.Text = "label1";
+            this.lblQueueDescription2.Text = "Being Served";
             // 
             // lblQueueDescription1
             // 
             this.lblQueueDescription1.AutoSize = true;
             this.lblQueueDescription1.Location = new System.Drawing.Point(452, 54);
             this.lblQueueDescription1.Name = "lblQueueDescription1";
-            this.lblQueueDescription1.Size = new System.Drawing.Size(44, 16);
+            this.lblQueueDescription1.Size = new System.Drawing.Size(52, 16);
             this.lblQueueDescription1.TabIndex = 7;
-            this.lblQueueDescription1.Text = "label1";
+            this.lblQueueDescription1.Text = "Waiting";
             // 
             // lblQueueName3
             // 
             this.lblQueueName3.AutoSize = true;
             this.lblQueueName3.Location = new System.Drawing.Point(69, 149);
             this.lblQueueName3.Name = "lblQueueName3";
-            this.lblQueueName3.Size = new System.Drawing.Size(44, 16);
+            this.lblQueueName3.Size = new System.Drawing.Size(85, 16);
             this.lblQueueName3.TabIndex = 6;
-            this.lblQueueName3.Text = "label3";
+            this.lblQueueName3.Text = "Mpho Sithole";
             // 
             // lblQueueName2
             // 
             this.lblQueueName2.AutoSize = true;
             this.lblQueueName2.Location = new System.Drawing.Point(69, 102);
             this.lblQueueName2.Name = "lblQueueName2";
-            this.lblQueueName2.Size = new System.Drawing.Size(44, 16);
+            this.lblQueueName2.Size = new System.Drawing.Size(80, 16);
             this.lblQueueName2.TabIndex = 5;
-            this.lblQueueName2.Text = "label2";
+            this.lblQueueName2.Text = "Sipho Nkosi";
             // 
             // lblQueueName1
             // 
             this.lblQueueName1.AutoSize = true;
             this.lblQueueName1.Location = new System.Drawing.Point(69, 53);
             this.lblQueueName1.Name = "lblQueueName1";
-            this.lblQueueName1.Size = new System.Drawing.Size(44, 16);
+            this.lblQueueName1.Size = new System.Drawing.Size(99, 16);
             this.lblQueueName1.TabIndex = 4;
-            this.lblQueueName1.Text = "label1";
+            this.lblQueueName1.Text = "Nomsa Dlamini";
             // 
             // lblCount3
             // 
@@ -280,7 +280,7 @@
             this.lblCount3.Name = "lblCount3";
             this.lblCount3.Size = new System.Drawing.Size(14, 16);
             this.lblCount3.TabIndex = 3;
-            this.lblCount3.Text = "0";
+            this.lblCount3.Text = "4";
             // 
             // lblCount2
             // 
@@ -289,7 +289,7 @@
             this.lblCount2.Name = "lblCount2";
             this.lblCount2.Size = new System.Drawing.Size(14, 16);
             this.lblCount2.TabIndex = 2;
-            this.lblCount2.Text = "0";
+            this.lblCount2.Text = "1";
             // 
             // lblCount1
             // 
@@ -298,7 +298,7 @@
             this.lblCount1.Name = "lblCount1";
             this.lblCount1.Size = new System.Drawing.Size(14, 16);
             this.lblCount1.TabIndex = 1;
-            this.lblCount1.Text = "0";
+            this.lblCount1.Text = "3";
             // 
             // lblQueueHeading
             // 
@@ -399,7 +399,7 @@
             this.lblWaitingCount.Name = "lblWaitingCount";
             this.lblWaitingCount.Size = new System.Drawing.Size(14, 16);
             this.lblWaitingCount.TabIndex = 10;
-            this.lblWaitingCount.Text = "0";
+            this.lblWaitingCount.Text = "1";
             // 
             // pnlServing
             // 
@@ -427,7 +427,7 @@
             this.lblServingCount.Name = "lblServingCount";
             this.lblServingCount.Size = new System.Drawing.Size(14, 16);
             this.lblServingCount.TabIndex = 10;
-            this.lblServingCount.Text = "0";
+            this.lblServingCount.Text = "1";
             // 
             // pnlCompleted
             // 
@@ -455,7 +455,7 @@
             this.lblCompleteCount.Name = "lblCompleteCount";
             this.lblCompleteCount.Size = new System.Drawing.Size(14, 16);
             this.lblCompleteCount.TabIndex = 10;
-            this.lblCompleteCount.Text = "0";
+            this.lblCompleteCount.Text = "1";
             // 
             // pnlBooked
             // 
@@ -474,7 +474,7 @@
             this.lblBookedCount.Name = "lblBookedCount";
             this.lblBookedCount.Size = new System.Drawing.Size(14, 16);
             this.lblBookedCount.TabIndex = 9;
-            this.lblBookedCount.Text = "0";
+            this.lblBookedCount.Text = "6";
             // 
             // lblBooked
             // 
