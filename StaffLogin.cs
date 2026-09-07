@@ -60,7 +60,7 @@ namespace Sassa_Queue_And_Service_Management_System
             {
                 MessageBox.Show("Login successful!");
 
-                StaffDashboard dashboard = new StaffDashboard();
+                StaffDashboard dashboard = new StaffDashboard("Officer Bhengu", "Service Officer");
                 dashboard.Show();
                 this.Hide();
             }
