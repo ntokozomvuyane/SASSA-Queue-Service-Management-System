@@ -59,5 +59,15 @@ namespace SASSAQueueManagementSystem.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_09_15_at_2_44_52_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-09-15 at 2.44.52 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
