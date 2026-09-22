@@ -66,7 +66,7 @@
             lblBeneficiaryPortal.ForeColor = SystemColors.ControlLightLight;
             lblBeneficiaryPortal.Location = new Point(907, 29);
             lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
-            lblBeneficiaryPortal.Size = new Size(134, 20);
+            lblBeneficiaryPortal.Size = new Size(106, 15);
             lblBeneficiaryPortal.TabIndex = 2;
             lblBeneficiaryPortal.Text = "Beneficiary Portal";
             // 
@@ -76,7 +76,7 @@
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(99, 20);
             label2.Name = "label2";
-            label2.Size = new Size(324, 40);
+            label2.Size = new Size(256, 30);
             label2.TabIndex = 1;
             label2.Text = "Beneficiary Registration                   \r\n           Secure access to your SASSA bookings.\r\n";
             // 
@@ -87,7 +87,7 @@
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(8, 20);
             label1.Name = "label1";
-            label1.Size = new Size(85, 31);
+            label1.Size = new Size(71, 25);
             label1.TabIndex = 0;
             label1.Text = "SASSA";
             // 
@@ -97,9 +97,9 @@
             lblCreateAccount.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCreateAccount.Location = new Point(376, 103);
             lblCreateAccount.Name = "lblCreateAccount";
-            lblCreateAccount.Size = new Size(250, 38);
+            lblCreateAccount.Size = new Size(166, 30);
             lblCreateAccount.TabIndex = 3;
-            lblCreateAccount.Text = "Create an Account";
+            lblCreateAccount.Text = "Create Account";
             // 
             // btnCreateAccount
             // 
@@ -109,8 +109,9 @@
             btnCreateAccount.Name = "btnCreateAccount";
             btnCreateAccount.Size = new Size(496, 53);
             btnCreateAccount.TabIndex = 12;
-            btnCreateAccount.Text = "Create an account";
+            btnCreateAccount.Text = "Create an Account";
             btnCreateAccount.UseVisualStyleBackColor = false;
+            btnCreateAccount.Click += btnCreateAccount_Click;
             // 
             // btnBack
             // 
@@ -127,7 +128,7 @@
             // 
             txtEmail.Location = new Point(344, 409);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(379, 27);
+            txtEmail.Size = new Size(379, 23);
             txtEmail.TabIndex = 15;
             // 
             // lblConfirmPassword
@@ -135,7 +136,7 @@
             lblConfirmPassword.AutoSize = true;
             lblConfirmPassword.Location = new Point(336, 573);
             lblConfirmPassword.Name = "lblConfirmPassword";
-            lblConfirmPassword.Size = new Size(137, 20);
+            lblConfirmPassword.Size = new Size(107, 15);
             lblConfirmPassword.TabIndex = 14;
             lblConfirmPassword.Text = "Confirm Password";
             // 
@@ -143,7 +144,7 @@
             // 
             txtConfirmPassword.Location = new Point(344, 614);
             txtConfirmPassword.Name = "txtConfirmPassword";
-            txtConfirmPassword.Size = new Size(379, 27);
+            txtConfirmPassword.Size = new Size(379, 23);
             txtConfirmPassword.TabIndex = 17;
             txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -152,7 +153,7 @@
             lblEmail.AutoSize = true;
             lblEmail.Location = new Point(336, 370);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(47, 20);
+            lblEmail.Size = new Size(36, 15);
             lblEmail.TabIndex = 16;
             lblEmail.Text = "Email\r\n";
             // 
@@ -160,7 +161,7 @@
             // 
             txtPassword.Location = new Point(344, 508);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(379, 27);
+            txtPassword.Size = new Size(379, 23);
             txtPassword.TabIndex = 19;
             txtPassword.UseSystemPasswordChar = true;
             // 
@@ -169,7 +170,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Location = new Point(336, 464);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(76, 20);
+            lblPassword.Size = new Size(59, 15);
             lblPassword.TabIndex = 18;
             lblPassword.Text = "Password";
             // 
@@ -177,16 +178,15 @@
             // 
             txtFullName.Location = new Point(344, 213);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(379, 27);
+            txtFullName.Size = new Size(379, 23);
             txtFullName.TabIndex = 21;
-            txtFullName.TextChanged += textBox3_TextChanged;
             // 
             // lblBeneficiaryID
             // 
             lblBeneficiaryID.AutoSize = true;
             lblBeneficiaryID.Location = new Point(328, 269);
             lblBeneficiaryID.Name = "lblBeneficiaryID";
-            lblBeneficiaryID.Size = new Size(108, 20);
+            lblBeneficiaryID.Size = new Size(86, 15);
             lblBeneficiaryID.TabIndex = 20;
             lblBeneficiaryID.Text = "Beneficiary ID";
             // 
@@ -194,19 +194,17 @@
             // 
             txtBeneficiaryID.Location = new Point(344, 302);
             txtBeneficiaryID.Name = "txtBeneficiaryID";
-            txtBeneficiaryID.Size = new Size(379, 27);
+            txtBeneficiaryID.Size = new Size(379, 23);
             txtBeneficiaryID.TabIndex = 23;
-            txtBeneficiaryID.TextChanged += this.textBox4_TextChanged;
             // 
             // lblFullName
             // 
             lblFullName.AutoSize = true;
             lblFullName.Location = new Point(336, 181);
             lblFullName.Name = "lblFullName";
-            lblFullName.Size = new Size(80, 20);
+            lblFullName.Size = new Size(62, 15);
             lblFullName.TabIndex = 22;
             lblFullName.Text = "Full Name";
-            lblFullName.Click += this.label6_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -218,9 +216,9 @@
             // 
             // BeneficiaryRegistration
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1072, 829);
+            ClientSize = new Size(1072, 749);
             Controls.Add(txtBeneficiaryID);
             Controls.Add(lblFullName);
             Controls.Add(txtFullName);

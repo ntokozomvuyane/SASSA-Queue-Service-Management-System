@@ -28,323 +28,337 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnNewBooking = new System.Windows.Forms.Button();
-            this.btnMyBooking = new System.Windows.Forms.Button();
-            this.btnQueueStatus = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnbookingnewappointment = new System.Windows.Forms.Button();
-            this.btnpersonalBooking = new System.Windows.Forms.Button();
-            this.btnQueuePosition = new System.Windows.Forms.Button();
-            this.btnViewBookingDetails = new System.Windows.Forms.Button();
-            this.btnViewAppointmentDetails = new System.Windows.Forms.Button();
-            this.btnViewQueue = new System.Windows.Forms.Button();
-            this.btnViewAll = new System.Windows.Forms.Button();
-            this.btnpersonalDetails = new System.Windows.Forms.Button();
-            this.lblMenue = new System.Windows.Forms.Label();
-            this.lblUpcomingAppointment = new System.Windows.Forms.Label();
-            this.lbltotalBookings = new System.Windows.Forms.Label();
-            this.lblQueuePosition = new System.Windows.Forms.Label();
-            this.lblUnreadNotifications = new System.Windows.Forms.Label();
-            this.menuePanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblBeneficiaryDashboard = new System.Windows.Forms.Label();
-            this.lblPortal = new System.Windows.Forms.Label();
-            this.lblmanage = new System.Windows.Forms.Label();
-            this.lblSassa = new System.Windows.Forms.Label();
-            this.menuePanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            btnDashboard = new Button();
+            btnNewBooking = new Button();
+            btnMyBooking = new Button();
+            btnQueueStatus = new Button();
+            btnProfile = new Button();
+            btnLogout = new Button();
+            btnbookingnewappointment = new Button();
+            btnpersonalBooking = new Button();
+            btnQueuePosition = new Button();
+            btnViewBookingDetails = new Button();
+            btnViewAppointmentDetails = new Button();
+            btnViewQueue = new Button();
+            btnViewAll = new Button();
+            btnpersonalDetails = new Button();
+            lblMenue = new Label();
+            lblUpcomingAppointment = new Label();
+            lbltotalBookings = new Label();
+            lblQueuePosition = new Label();
+            lblUnreadNotifications = new Label();
+            menuePanel = new Panel();
+            panel1 = new Panel();
+            lblBeneficiaryDashboard = new Label();
+            lblPortal = new Label();
+            lblmanage = new Label();
+            lblSassa = new Label();
+            menuePanel.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.btnDashboard.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDashboard.Location = new System.Drawing.Point(16, 47);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(144, 40);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.BackColor = Color.FromArgb(26, 74, 122);
+            btnDashboard.ForeColor = SystemColors.Control;
+            btnDashboard.Location = new Point(14, 44);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(126, 38);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // btnNewBooking
             // 
-            this.btnNewBooking.Location = new System.Drawing.Point(16, 103);
-            this.btnNewBooking.Name = "btnNewBooking";
-            this.btnNewBooking.Size = new System.Drawing.Size(144, 40);
-            this.btnNewBooking.TabIndex = 1;
-            this.btnNewBooking.Text = "New Booking";
-            this.btnNewBooking.UseVisualStyleBackColor = true;
+            btnNewBooking.Location = new Point(14, 97);
+            btnNewBooking.Name = "btnNewBooking";
+            btnNewBooking.Size = new Size(126, 38);
+            btnNewBooking.TabIndex = 1;
+            btnNewBooking.Text = "New Booking";
+            btnNewBooking.UseVisualStyleBackColor = true;
+            btnNewBooking.Click += btnNewBooking_Click;
             // 
             // btnMyBooking
             // 
-            this.btnMyBooking.Location = new System.Drawing.Point(16, 155);
-            this.btnMyBooking.Name = "btnMyBooking";
-            this.btnMyBooking.Size = new System.Drawing.Size(144, 40);
-            this.btnMyBooking.TabIndex = 2;
-            this.btnMyBooking.Text = "My Booking";
-            this.btnMyBooking.UseVisualStyleBackColor = true;
+            btnMyBooking.Location = new Point(14, 145);
+            btnMyBooking.Name = "btnMyBooking";
+            btnMyBooking.Size = new Size(126, 38);
+            btnMyBooking.TabIndex = 2;
+            btnMyBooking.Text = "My Booking";
+            btnMyBooking.UseVisualStyleBackColor = true;
+            btnMyBooking.Click += btnMyBooking_Click;
             // 
             // btnQueueStatus
             // 
-            this.btnQueueStatus.Location = new System.Drawing.Point(16, 210);
-            this.btnQueueStatus.Name = "btnQueueStatus";
-            this.btnQueueStatus.Size = new System.Drawing.Size(144, 40);
-            this.btnQueueStatus.TabIndex = 3;
-            this.btnQueueStatus.Text = "Queue Status";
-            this.btnQueueStatus.UseVisualStyleBackColor = true;
+            btnQueueStatus.Location = new Point(14, 197);
+            btnQueueStatus.Name = "btnQueueStatus";
+            btnQueueStatus.Size = new Size(126, 38);
+            btnQueueStatus.TabIndex = 3;
+            btnQueueStatus.Text = "Queue Status";
+            btnQueueStatus.UseVisualStyleBackColor = true;
+            btnQueueStatus.Click += btnQueueStatus_Click;
             // 
             // btnProfile
             // 
-            this.btnProfile.Location = new System.Drawing.Point(16, 269);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(144, 40);
-            this.btnProfile.TabIndex = 4;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Location = new Point(14, 252);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Size = new Size(126, 38);
+            btnProfile.TabIndex = 4;
+            btnProfile.Text = "Profile";
+            btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Click += btnProfile_Click;
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(16, 325);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(144, 40);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(14, 305);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(126, 38);
+            btnLogout.TabIndex = 7;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnbookingnewappointment
             // 
-            this.btnbookingnewappointment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.btnbookingnewappointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbookingnewappointment.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnbookingnewappointment.Location = new System.Drawing.Point(239, 252);
-            this.btnbookingnewappointment.Name = "btnbookingnewappointment";
-            this.btnbookingnewappointment.Size = new System.Drawing.Size(405, 127);
-            this.btnbookingnewappointment.TabIndex = 8;
-            this.btnbookingnewappointment.Text = "New Booking";
-            this.btnbookingnewappointment.UseVisualStyleBackColor = false;
-
+            btnbookingnewappointment.BackColor = Color.FromArgb(26, 74, 122);
+            btnbookingnewappointment.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnbookingnewappointment.ForeColor = SystemColors.Control;
+            btnbookingnewappointment.Location = new Point(209, 236);
+            btnbookingnewappointment.Name = "btnbookingnewappointment";
+            btnbookingnewappointment.Size = new Size(354, 119);
+            btnbookingnewappointment.TabIndex = 8;
+            btnbookingnewappointment.Text = "New Booking";
+            btnbookingnewappointment.UseVisualStyleBackColor = false;
+            btnbookingnewappointment.Click += btnbookingnewappointment_Click;
             // 
             // btnpersonalBooking
             // 
-            this.btnpersonalBooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.btnpersonalBooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpersonalBooking.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnpersonalBooking.Location = new System.Drawing.Point(699, 437);
-            this.btnpersonalBooking.Name = "btnpersonalBooking";
-            this.btnpersonalBooking.Size = new System.Drawing.Size(405, 127);
-            this.btnpersonalBooking.TabIndex = 9;
-            this.btnpersonalBooking.Text = "My Bookings";
-            this.btnpersonalBooking.UseVisualStyleBackColor = false;
+            btnpersonalBooking.BackColor = Color.FromArgb(26, 74, 122);
+            btnpersonalBooking.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnpersonalBooking.ForeColor = SystemColors.Control;
+            btnpersonalBooking.Location = new Point(612, 410);
+            btnpersonalBooking.Name = "btnpersonalBooking";
+            btnpersonalBooking.Size = new Size(354, 119);
+            btnpersonalBooking.TabIndex = 9;
+            btnpersonalBooking.Text = "My Bookings";
+            btnpersonalBooking.UseVisualStyleBackColor = false;
+            btnpersonalBooking.Click += btnpersonalBooking_Click;
             // 
             // btnQueuePosition
             // 
-            this.btnQueuePosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.btnQueuePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQueuePosition.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnQueuePosition.Location = new System.Drawing.Point(239, 437);
-            this.btnQueuePosition.Name = "btnQueuePosition";
-            this.btnQueuePosition.Size = new System.Drawing.Size(405, 127);
-            this.btnQueuePosition.TabIndex = 10;
-            this.btnQueuePosition.Text = "Queue Status";
-            this.btnQueuePosition.UseVisualStyleBackColor = false;
+            btnQueuePosition.BackColor = Color.FromArgb(26, 74, 122);
+            btnQueuePosition.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnQueuePosition.ForeColor = SystemColors.Control;
+            btnQueuePosition.Location = new Point(209, 410);
+            btnQueuePosition.Name = "btnQueuePosition";
+            btnQueuePosition.Size = new Size(354, 119);
+            btnQueuePosition.TabIndex = 10;
+            btnQueuePosition.Text = "Queue Status";
+            btnQueuePosition.UseVisualStyleBackColor = false;
+            btnQueuePosition.Click += btnQueuePosition_Click;
             // 
             // btnViewBookingDetails
             // 
-            this.btnViewBookingDetails.Location = new System.Drawing.Point(452, 120);
-            this.btnViewBookingDetails.Name = "btnViewBookingDetails";
-            this.btnViewBookingDetails.Size = new System.Drawing.Size(144, 40);
-            this.btnViewBookingDetails.TabIndex = 11;
-            this.btnViewBookingDetails.Text = "View Details          >";
-            this.btnViewBookingDetails.UseVisualStyleBackColor = true;
+            btnViewBookingDetails.Location = new Point(396, 112);
+            btnViewBookingDetails.Name = "btnViewBookingDetails";
+            btnViewBookingDetails.Size = new Size(126, 38);
+            btnViewBookingDetails.TabIndex = 11;
+            btnViewBookingDetails.Text = "View Details          >";
+            btnViewBookingDetails.UseVisualStyleBackColor = true;
+            btnViewBookingDetails.Click += btnViewBookingDetails_Click;
             // 
             // btnViewAppointmentDetails
             // 
-            this.btnViewAppointmentDetails.Location = new System.Drawing.Point(239, 120);
-            this.btnViewAppointmentDetails.Name = "btnViewAppointmentDetails";
-            this.btnViewAppointmentDetails.Size = new System.Drawing.Size(144, 40);
-            this.btnViewAppointmentDetails.TabIndex = 12;
-            this.btnViewAppointmentDetails.Text = "View Details          >";
-            this.btnViewAppointmentDetails.UseVisualStyleBackColor = true;
+            btnViewAppointmentDetails.Location = new Point(209, 112);
+            btnViewAppointmentDetails.Name = "btnViewAppointmentDetails";
+            btnViewAppointmentDetails.Size = new Size(126, 38);
+            btnViewAppointmentDetails.TabIndex = 12;
+            btnViewAppointmentDetails.Text = "View Details          >";
+            btnViewAppointmentDetails.UseVisualStyleBackColor = true;
+            btnViewAppointmentDetails.Click += btnViewAppointmentDetails_Click;
             // 
             // btnViewQueue
             // 
-            this.btnViewQueue.Location = new System.Drawing.Point(666, 120);
-            this.btnViewQueue.Name = "btnViewQueue";
-            this.btnViewQueue.Size = new System.Drawing.Size(144, 40);
-            this.btnViewQueue.TabIndex = 13;
-            this.btnViewQueue.Text = "View Queue           >";
-            this.btnViewQueue.UseVisualStyleBackColor = true;
+            btnViewQueue.Location = new Point(583, 112);
+            btnViewQueue.Name = "btnViewQueue";
+            btnViewQueue.Size = new Size(126, 38);
+            btnViewQueue.TabIndex = 13;
+            btnViewQueue.Text = "View Queue           >";
+            btnViewQueue.UseVisualStyleBackColor = true;
+            btnViewQueue.Click += btnViewQueue_Click;
             // 
             // btnViewAll
             // 
-            this.btnViewAll.Location = new System.Drawing.Point(901, 120);
-            this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(144, 40);
-            this.btnViewAll.TabIndex = 14;
-            this.btnViewAll.Text = "View All           >";
-            this.btnViewAll.UseVisualStyleBackColor = true;
+            btnViewAll.Location = new Point(788, 112);
+            btnViewAll.Name = "btnViewAll";
+            btnViewAll.Size = new Size(126, 38);
+            btnViewAll.TabIndex = 14;
+            btnViewAll.Text = "View All           >";
+            btnViewAll.UseVisualStyleBackColor = true;
+            btnViewAll.Click += btnViewAll_Click;
             // 
             // btnpersonalDetails
             // 
-            this.btnpersonalDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.btnpersonalDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnpersonalDetails.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnpersonalDetails.Location = new System.Drawing.Point(699, 252);
-            this.btnpersonalDetails.Name = "btnpersonalDetails";
-            this.btnpersonalDetails.Size = new System.Drawing.Size(405, 127);
-            this.btnpersonalDetails.TabIndex = 15;
-            this.btnpersonalDetails.Text = "Profile";
-            this.btnpersonalDetails.UseVisualStyleBackColor = false;
+            btnpersonalDetails.BackColor = Color.FromArgb(26, 74, 122);
+            btnpersonalDetails.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnpersonalDetails.ForeColor = SystemColors.Control;
+            btnpersonalDetails.Location = new Point(612, 236);
+            btnpersonalDetails.Name = "btnpersonalDetails";
+            btnpersonalDetails.Size = new Size(354, 119);
+            btnpersonalDetails.TabIndex = 15;
+            btnpersonalDetails.Text = "Profile";
+            btnpersonalDetails.UseVisualStyleBackColor = false;
+            btnpersonalDetails.Click += btnpersonalDetails_Click;
             // 
             // lblMenue
             // 
-            this.lblMenue.AutoSize = true;
-            this.lblMenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenue.Location = new System.Drawing.Point(542, 205);
-            this.lblMenue.Name = "lblMenue";
-            this.lblMenue.Size = new System.Drawing.Size(251, 22);
-            this.lblMenue.TabIndex = 16;
-            this.lblMenue.Text = "What would you like to do?";
+            lblMenue.AutoSize = true;
+            lblMenue.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMenue.Location = new Point(474, 192);
+            lblMenue.Name = "lblMenue";
+            lblMenue.Size = new Size(212, 18);
+            lblMenue.TabIndex = 16;
+            lblMenue.Text = "What would you like to do?";
             // 
             // lblUpcomingAppointment
             // 
-            this.lblUpcomingAppointment.AutoSize = true;
-            this.lblUpcomingAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpcomingAppointment.Location = new System.Drawing.Point(236, 85);
-            this.lblUpcomingAppointment.Name = "lblUpcomingAppointment";
-            this.lblUpcomingAppointment.Size = new System.Drawing.Size(182, 20);
-            this.lblUpcomingAppointment.TabIndex = 21;
-            this.lblUpcomingAppointment.Text = "Upcoming Appointment";
+            lblUpcomingAppointment.AutoSize = true;
+            lblUpcomingAppointment.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUpcomingAppointment.Location = new Point(206, 80);
+            lblUpcomingAppointment.Name = "lblUpcomingAppointment";
+            lblUpcomingAppointment.Size = new Size(154, 17);
+            lblUpcomingAppointment.TabIndex = 21;
+            lblUpcomingAppointment.Text = "Upcoming Appointment";
             // 
             // lbltotalBookings
             // 
-            this.lbltotalBookings.AutoSize = true;
-            this.lbltotalBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotalBookings.Location = new System.Drawing.Point(453, 85);
-            this.lbltotalBookings.Name = "lbltotalBookings";
-            this.lbltotalBookings.Size = new System.Drawing.Size(111, 20);
-            this.lbltotalBookings.TabIndex = 22;
-            this.lbltotalBookings.Text = "Total Booking";
+            lbltotalBookings.AutoSize = true;
+            lbltotalBookings.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbltotalBookings.Location = new Point(396, 80);
+            lbltotalBookings.Name = "lbltotalBookings";
+            lbltotalBookings.Size = new Size(95, 17);
+            lbltotalBookings.TabIndex = 22;
+            lbltotalBookings.Text = "Total Booking";
             // 
             // lblQueuePosition
             // 
-            this.lblQueuePosition.AutoSize = true;
-            this.lblQueuePosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQueuePosition.Location = new System.Drawing.Point(663, 85);
-            this.lblQueuePosition.Name = "lblQueuePosition";
-            this.lblQueuePosition.Size = new System.Drawing.Size(157, 20);
-            this.lblQueuePosition.TabIndex = 23;
-            this.lblQueuePosition.Text = "Est. Queue Position";
+            lblQueuePosition.AutoSize = true;
+            lblQueuePosition.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblQueuePosition.Location = new Point(580, 80);
+            lblQueuePosition.Name = "lblQueuePosition";
+            lblQueuePosition.Size = new Size(133, 17);
+            lblQueuePosition.TabIndex = 23;
+            lblQueuePosition.Text = "Est. Queue Position";
             // 
             // lblUnreadNotifications
             // 
-            this.lblUnreadNotifications.AutoSize = true;
-            this.lblUnreadNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnreadNotifications.Location = new System.Drawing.Point(898, 85);
-            this.lblUnreadNotifications.Name = "lblUnreadNotifications";
-            this.lblUnreadNotifications.Size = new System.Drawing.Size(161, 20);
-            this.lblUnreadNotifications.TabIndex = 24;
-            this.lblUnreadNotifications.Text = "Unread Notifications";
+            lblUnreadNotifications.AutoSize = true;
+            lblUnreadNotifications.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUnreadNotifications.Location = new Point(786, 80);
+            lblUnreadNotifications.Name = "lblUnreadNotifications";
+            lblUnreadNotifications.Size = new Size(136, 17);
+            lblUnreadNotifications.TabIndex = 24;
+            lblUnreadNotifications.Text = "Unread Notifications";
             // 
             // menuePanel
             // 
-            this.menuePanel.BackColor = System.Drawing.Color.White;
-            this.menuePanel.Controls.Add(this.btnLogout);
-            this.menuePanel.Controls.Add(this.btnProfile);
-            this.menuePanel.Controls.Add(this.btnQueueStatus);
-            this.menuePanel.Controls.Add(this.btnMyBooking);
-            this.menuePanel.Controls.Add(this.btnNewBooking);
-            this.menuePanel.Controls.Add(this.btnDashboard);
-            this.menuePanel.Location = new System.Drawing.Point(5, 73);
-            this.menuePanel.Name = "menuePanel";
-            this.menuePanel.Size = new System.Drawing.Size(183, 541);
-            this.menuePanel.TabIndex = 25;
+            menuePanel.BackColor = Color.White;
+            menuePanel.Controls.Add(btnLogout);
+            menuePanel.Controls.Add(btnProfile);
+            menuePanel.Controls.Add(btnQueueStatus);
+            menuePanel.Controls.Add(btnMyBooking);
+            menuePanel.Controls.Add(btnNewBooking);
+            menuePanel.Controls.Add(btnDashboard);
+            menuePanel.Location = new Point(4, 68);
+            menuePanel.Name = "menuePanel";
+            menuePanel.Size = new Size(160, 507);
+            menuePanel.TabIndex = 25;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.panel1.Controls.Add(this.lblBeneficiaryDashboard);
-            this.panel1.Controls.Add(this.lblPortal);
-            this.panel1.Controls.Add(this.lblmanage);
-            this.panel1.Controls.Add(this.lblSassa);
-            this.panel1.Location = new System.Drawing.Point(5, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1117, 60);
-            this.panel1.TabIndex = 26;
+            panel1.BackColor = Color.FromArgb(26, 74, 122);
+            panel1.Controls.Add(lblBeneficiaryDashboard);
+            panel1.Controls.Add(lblPortal);
+            panel1.Controls.Add(lblmanage);
+            panel1.Controls.Add(lblSassa);
+            panel1.Location = new Point(4, 5);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(977, 56);
+            panel1.TabIndex = 26;
             // 
             // lblBeneficiaryDashboard
             // 
-            this.lblBeneficiaryDashboard.AutoSize = true;
-            this.lblBeneficiaryDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficiaryDashboard.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBeneficiaryDashboard.Location = new System.Drawing.Point(104, 4);
-            this.lblBeneficiaryDashboard.Name = "lblBeneficiaryDashboard";
-            this.lblBeneficiaryDashboard.Size = new System.Drawing.Size(213, 22);
-            this.lblBeneficiaryDashboard.TabIndex = 20;
-            this.lblBeneficiaryDashboard.Text = "Beneficiary Dashboard";
+            lblBeneficiaryDashboard.AutoSize = true;
+            lblBeneficiaryDashboard.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBeneficiaryDashboard.ForeColor = SystemColors.Control;
+            lblBeneficiaryDashboard.Location = new Point(91, 4);
+            lblBeneficiaryDashboard.Name = "lblBeneficiaryDashboard";
+            lblBeneficiaryDashboard.Size = new Size(178, 18);
+            lblBeneficiaryDashboard.TabIndex = 20;
+            lblBeneficiaryDashboard.Text = "Beneficiary Dashboard";
             // 
             // lblPortal
             // 
-            this.lblPortal.AutoSize = true;
-            this.lblPortal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPortal.Location = new System.Drawing.Point(964, 19);
-            this.lblPortal.Name = "lblPortal";
-            this.lblPortal.Size = new System.Drawing.Size(142, 20);
-            this.lblPortal.TabIndex = 19;
-            this.lblPortal.Text = "Beneficiary Portal";
+            lblPortal.AutoSize = true;
+            lblPortal.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPortal.ForeColor = SystemColors.Control;
+            lblPortal.Location = new Point(844, 18);
+            lblPortal.Name = "lblPortal";
+            lblPortal.Size = new Size(119, 17);
+            lblPortal.TabIndex = 19;
+            lblPortal.Text = "Beneficiary Portal";
             // 
             // lblmanage
             // 
-            this.lblmanage.AutoSize = true;
-            this.lblmanage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmanage.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblmanage.Location = new System.Drawing.Point(105, 30);
-            this.lblmanage.Name = "lblmanage";
-            this.lblmanage.Size = new System.Drawing.Size(315, 18);
-            this.lblmanage.TabIndex = 18;
-            this.lblmanage.Text = "Manage your booking, profile and queue status";
+            lblmanage.AutoSize = true;
+            lblmanage.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblmanage.ForeColor = SystemColors.Control;
+            lblmanage.Location = new Point(92, 28);
+            lblmanage.Name = "lblmanage";
+            lblmanage.Size = new Size(263, 15);
+            lblmanage.TabIndex = 18;
+            lblmanage.Text = "Manage your booking, profile and queue status";
             // 
             // lblSassa
             // 
-            this.lblSassa.AutoSize = true;
-            this.lblSassa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSassa.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSassa.Location = new System.Drawing.Point(11, 19);
-            this.lblSassa.Name = "lblSassa";
-            this.lblSassa.Size = new System.Drawing.Size(96, 29);
-            this.lblSassa.TabIndex = 17;
-            this.lblSassa.Text = "SASSA";
+            lblSassa.AutoSize = true;
+            lblSassa.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSassa.ForeColor = SystemColors.Control;
+            lblSassa.Location = new Point(10, 18);
+            lblSassa.Name = "lblSassa";
+            lblSassa.Size = new Size(77, 24);
+            lblSassa.TabIndex = 17;
+            lblSassa.Text = "SASSA";
             // 
             // BeneficiaryDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1129, 612);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblUpcomingAppointment);
-            this.Controls.Add(this.menuePanel);
-            this.Controls.Add(this.btnViewAppointmentDetails);
-            this.Controls.Add(this.lblMenue);
-            this.Controls.Add(this.lblUnreadNotifications);
-            this.Controls.Add(this.lblQueuePosition);
-            this.Controls.Add(this.lbltotalBookings);
-            this.Controls.Add(this.btnpersonalDetails);
-            this.Controls.Add(this.btnViewAll);
-            this.Controls.Add(this.btnViewQueue);
-            this.Controls.Add(this.btnViewBookingDetails);
-            this.Controls.Add(this.btnQueuePosition);
-            this.Controls.Add(this.btnpersonalBooking);
-            this.Controls.Add(this.btnbookingnewappointment);
-            this.Name = "BeneficiaryDashboard";
-            this.Text = "BeneficiaryDashboard";
-            this.menuePanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(988, 574);
+            Controls.Add(panel1);
+            Controls.Add(lblUpcomingAppointment);
+            Controls.Add(menuePanel);
+            Controls.Add(btnViewAppointmentDetails);
+            Controls.Add(lblMenue);
+            Controls.Add(lblUnreadNotifications);
+            Controls.Add(lblQueuePosition);
+            Controls.Add(lbltotalBookings);
+            Controls.Add(btnpersonalDetails);
+            Controls.Add(btnViewAll);
+            Controls.Add(btnViewQueue);
+            Controls.Add(btnViewBookingDetails);
+            Controls.Add(btnQueuePosition);
+            Controls.Add(btnpersonalBooking);
+            Controls.Add(btnbookingnewappointment);
+            Name = "BeneficiaryDashboard";
+            Text = "BeneficiaryDashboard";
+            Load += BeneficiaryDashboard_Load;
+            menuePanel.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

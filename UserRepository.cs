@@ -6,7 +6,7 @@ namespace SASSAQueueManagementSystem
 {
     public class UserRepository
     {
-        public static List<User> User { get; } = new List<User>
+        public static List<User> Users { get; } = new List<User>
         {
             new Beneficiary
             {

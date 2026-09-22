@@ -28,339 +28,382 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblBeneficiaryPortal = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblSassa = new System.Windows.Forms.Label();
-            this.lblMyBookings = new System.Windows.Forms.Label();
-            this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.lblSignOut = new System.Windows.Forms.Label();
-            this.lblProfile = new System.Windows.Forms.Label();
-            this.lblQueueStatus = new System.Windows.Forms.Label();
-            this.lblMyBookings2 = new System.Windows.Forms.Label();
-            this.lblNewBooking = new System.Windows.Forms.Label();
-            this.lblDashboard = new System.Windows.Forms.Label();
-            this.lblUpcoming = new System.Windows.Forms.Label();
-            this.pnlUpcomingBooking = new System.Windows.Forms.Panel();
-            this.btnViewDetails = new System.Windows.Forms.Button();
-            this.lblUpcomingDateTime = new System.Windows.Forms.Label();
-            this.lblJohannesburgCentre = new System.Windows.Forms.Label();
-            this.lblNewGrantApplication = new System.Windows.Forms.Label();
-            this.lblUpcomingBookingNumber = new System.Windows.Forms.Label();
-            this.lblBookingHistory = new System.Windows.Forms.Label();
-            this.pnlBookingHistory = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblBookingHistory1 = new System.Windows.Forms.Label();
-            this.pnlBookingHistory2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblBookingHistory2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.pnlSideBar.SuspendLayout();
-            this.pnlUpcomingBooking.SuspendLayout();
-            this.pnlBookingHistory.SuspendLayout();
-            this.pnlBookingHistory2.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            lblBeneficiaryPortal = new Label();
+            label1 = new Label();
+            lblSassa = new Label();
+            lblMyBookings = new Label();
+            pnlSideBar = new Panel();
+            btnLogout = new Button();
+            btnMyProfile = new Button();
+            btnQueueStatus = new Button();
+            btnMyBooking = new Button();
+            btnNewBooking = new Button();
+            btnDashboard = new Button();
+            pnlReschedule = new Panel();
+            lblChooseAvailableSlot = new Label();
+            lblRescheduleDate = new Label();
+            btnRefresh = new Button();
+            btnBack = new Button();
+            btnConfirmReschedule = new Button();
+            lblRescheduleAvailability = new Label();
+            btnCloseReschedule = new Button();
+            cboRescheduleTimeSlot = new ComboBox();
+            dtpRescheduleDate = new DateTimePicker();
+            tabControlMyBookings = new TabControl();
+            tabUpcoming = new TabPage();
+            btnRescheduleBooking = new Button();
+            btnCancelBooking = new Button();
+            dgvUpcoming = new DataGridView();
+            tabPrevious = new TabPage();
+            dgvPrevious = new DataGridView();
+            panel1.SuspendLayout();
+            pnlSideBar.SuspendLayout();
+            pnlReschedule.SuspendLayout();
+            tabControlMyBookings.SuspendLayout();
+            tabUpcoming.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUpcoming).BeginInit();
+            tabPrevious.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvPrevious).BeginInit();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.lblBeneficiaryPortal);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblSassa);
-            this.panel1.Controls.Add(this.lblMyBookings);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 70);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = Color.Navy;
+            panel1.Controls.Add(lblBeneficiaryPortal);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblSassa);
+            panel1.Controls.Add(lblMyBookings);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(933, 81);
+            panel1.TabIndex = 0;
             // 
             // lblBeneficiaryPortal
             // 
-            this.lblBeneficiaryPortal.AutoSize = true;
-            this.lblBeneficiaryPortal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficiaryPortal.ForeColor = System.Drawing.Color.White;
-            this.lblBeneficiaryPortal.Location = new System.Drawing.Point(693, 20);
-            this.lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
-            this.lblBeneficiaryPortal.Size = new System.Drawing.Size(107, 13);
-            this.lblBeneficiaryPortal.TabIndex = 2;
-            this.lblBeneficiaryPortal.Text = "Beneficiary Portal";
+            lblBeneficiaryPortal.AutoSize = true;
+            lblBeneficiaryPortal.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBeneficiaryPortal.ForeColor = Color.White;
+            lblBeneficiaryPortal.Location = new Point(808, 23);
+            lblBeneficiaryPortal.Margin = new Padding(4, 0, 4, 0);
+            lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
+            lblBeneficiaryPortal.Size = new Size(107, 13);
+            lblBeneficiaryPortal.TabIndex = 2;
+            lblBeneficiaryPortal.Text = "Beneficiary Portal";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(117, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "View and manage your SASSA appointments";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(136, 50);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(191, 12);
+            label1.TabIndex = 1;
+            label1.Text = "View and manage your SASSA appointments";
             // 
             // lblSassa
             // 
-            this.lblSassa.AutoSize = true;
-            this.lblSassa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSassa.ForeColor = System.Drawing.Color.White;
-            this.lblSassa.Location = new System.Drawing.Point(12, 11);
-            this.lblSassa.Name = "lblSassa";
-            this.lblSassa.Size = new System.Drawing.Size(87, 25);
-            this.lblSassa.TabIndex = 1;
-            this.lblSassa.Text = "SASSA";
+            lblSassa.AutoSize = true;
+            lblSassa.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSassa.ForeColor = Color.White;
+            lblSassa.Location = new Point(14, 13);
+            lblSassa.Margin = new Padding(4, 0, 4, 0);
+            lblSassa.Name = "lblSassa";
+            lblSassa.Size = new Size(87, 25);
+            lblSassa.TabIndex = 1;
+            lblSassa.Text = "SASSA";
             // 
             // lblMyBookings
             // 
-            this.lblMyBookings.AutoSize = true;
-            this.lblMyBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMyBookings.ForeColor = System.Drawing.Color.White;
-            this.lblMyBookings.Location = new System.Drawing.Point(116, 16);
-            this.lblMyBookings.Name = "lblMyBookings";
-            this.lblMyBookings.Size = new System.Drawing.Size(106, 18);
-            this.lblMyBookings.TabIndex = 0;
-            this.lblMyBookings.Text = "My Bookings";
+            lblMyBookings.AutoSize = true;
+            lblMyBookings.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMyBookings.ForeColor = Color.White;
+            lblMyBookings.Location = new Point(135, 18);
+            lblMyBookings.Margin = new Padding(4, 0, 4, 0);
+            lblMyBookings.Name = "lblMyBookings";
+            lblMyBookings.Size = new Size(106, 18);
+            lblMyBookings.TabIndex = 0;
+            lblMyBookings.Text = "My Bookings";
             // 
             // pnlSideBar
             // 
-            this.pnlSideBar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlSideBar.Controls.Add(this.lblSignOut);
-            this.pnlSideBar.Controls.Add(this.lblProfile);
-            this.pnlSideBar.Controls.Add(this.lblQueueStatus);
-            this.pnlSideBar.Controls.Add(this.lblMyBookings2);
-            this.pnlSideBar.Controls.Add(this.lblNewBooking);
-            this.pnlSideBar.Controls.Add(this.lblDashboard);
-            this.pnlSideBar.Location = new System.Drawing.Point(0, 76);
-            this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(130, 430);
-            this.pnlSideBar.TabIndex = 1;
+            pnlSideBar.BackColor = Color.WhiteSmoke;
+            pnlSideBar.Controls.Add(btnLogout);
+            pnlSideBar.Controls.Add(btnMyProfile);
+            pnlSideBar.Controls.Add(btnQueueStatus);
+            pnlSideBar.Controls.Add(btnMyBooking);
+            pnlSideBar.Controls.Add(btnNewBooking);
+            pnlSideBar.Controls.Add(btnDashboard);
+            pnlSideBar.Location = new Point(0, 88);
+            pnlSideBar.Margin = new Padding(4, 3, 4, 3);
+            pnlSideBar.Name = "pnlSideBar";
+            pnlSideBar.Size = new Size(152, 496);
+            pnlSideBar.TabIndex = 1;
             // 
-            // lblSignOut
+            // btnLogout
             // 
-            this.lblSignOut.AutoSize = true;
-            this.lblSignOut.Location = new System.Drawing.Point(21, 197);
-            this.lblSignOut.Name = "lblSignOut";
-            this.lblSignOut.Size = new System.Drawing.Size(48, 13);
-            this.lblSignOut.TabIndex = 5;
-            this.lblSignOut.Text = "Sign Out";
+            btnLogout.Location = new Point(7, 235);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(142, 39);
+            btnLogout.TabIndex = 12;
+            btnLogout.Text = "Sign Out";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnSignOut_Click;
             // 
-            // lblProfile
+            // btnMyProfile
             // 
-            this.lblProfile.AutoSize = true;
-            this.lblProfile.Location = new System.Drawing.Point(20, 157);
-            this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(36, 13);
-            this.lblProfile.TabIndex = 4;
-            this.lblProfile.Text = "Profile";
+            btnMyProfile.Location = new Point(7, 190);
+            btnMyProfile.Name = "btnMyProfile";
+            btnMyProfile.Size = new Size(142, 39);
+            btnMyProfile.TabIndex = 11;
+            btnMyProfile.Text = "Profile";
+            btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnProfile_Click;
             // 
-            // lblQueueStatus
+            // btnQueueStatus
             // 
-            this.lblQueueStatus.AutoSize = true;
-            this.lblQueueStatus.Location = new System.Drawing.Point(17, 119);
-            this.lblQueueStatus.Name = "lblQueueStatus";
-            this.lblQueueStatus.Size = new System.Drawing.Size(72, 13);
-            this.lblQueueStatus.TabIndex = 3;
-            this.lblQueueStatus.Text = "Queue Status";
+            btnQueueStatus.Location = new Point(7, 145);
+            btnQueueStatus.Name = "btnQueueStatus";
+            btnQueueStatus.Size = new Size(142, 39);
+            btnQueueStatus.TabIndex = 10;
+            btnQueueStatus.Text = "Queue Status";
+            btnQueueStatus.UseVisualStyleBackColor = true;
+            btnQueueStatus.Click += btnQueueStatus_Click;
             // 
-            // lblMyBookings2
+            // btnMyBooking
             // 
-            this.lblMyBookings2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(215)))), ((int)(((byte)(230)))));
-            this.lblMyBookings2.Location = new System.Drawing.Point(17, 84);
-            this.lblMyBookings2.Name = "lblMyBookings2";
-            this.lblMyBookings2.Size = new System.Drawing.Size(120, 25);
-            this.lblMyBookings2.TabIndex = 2;
-            this.lblMyBookings2.Text = "My Bookings";
-            this.lblMyBookings2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnMyBooking.Location = new Point(7, 100);
+            btnMyBooking.Name = "btnMyBooking";
+            btnMyBooking.Size = new Size(142, 39);
+            btnMyBooking.TabIndex = 9;
+            btnMyBooking.Text = "My Booking";
+            btnMyBooking.UseVisualStyleBackColor = true;
+            btnMyBooking.Click += btnMyBooking_Click;
             // 
-            // lblNewBooking
+            // btnNewBooking
             // 
-            this.lblNewBooking.AutoSize = true;
-            this.lblNewBooking.BackColor = System.Drawing.Color.Transparent;
-            this.lblNewBooking.Location = new System.Drawing.Point(17, 55);
-            this.lblNewBooking.Name = "lblNewBooking";
-            this.lblNewBooking.Size = new System.Drawing.Size(71, 13);
-            this.lblNewBooking.TabIndex = 1;
-            this.lblNewBooking.Text = "New Booking";
+            btnNewBooking.Location = new Point(10, 55);
+            btnNewBooking.Name = "btnNewBooking";
+            btnNewBooking.Size = new Size(142, 39);
+            btnNewBooking.TabIndex = 7;
+            btnNewBooking.Text = "New Booking";
+            btnNewBooking.UseVisualStyleBackColor = true;
+            btnNewBooking.Click += btnNewBooking_Click;
             // 
-            // lblDashboard
+            // btnDashboard
             // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.lblDashboard.Location = new System.Drawing.Point(17, 18);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(59, 13);
-            this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "Dashboard";
+            btnDashboard.Location = new Point(3, 12);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(149, 37);
+            btnDashboard.TabIndex = 8;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
-            // lblUpcoming
+            // pnlReschedule
             // 
-            this.lblUpcoming.AutoSize = true;
-            this.lblUpcoming.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUpcoming.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpcoming.Location = new System.Drawing.Point(151, 109);
-            this.lblUpcoming.Name = "lblUpcoming";
-            this.lblUpcoming.Size = new System.Drawing.Size(105, 24);
-            this.lblUpcoming.TabIndex = 2;
-            this.lblUpcoming.Text = "Upcoming";
+            pnlReschedule.BackColor = Color.FromArgb(248, 248, 248);
+            pnlReschedule.Controls.Add(lblChooseAvailableSlot);
+            pnlReschedule.Controls.Add(lblRescheduleDate);
+            pnlReschedule.Controls.Add(btnRefresh);
+            pnlReschedule.Controls.Add(btnBack);
+            pnlReschedule.Controls.Add(btnConfirmReschedule);
+            pnlReschedule.Controls.Add(lblRescheduleAvailability);
+            pnlReschedule.Controls.Add(btnCloseReschedule);
+            pnlReschedule.Controls.Add(cboRescheduleTimeSlot);
+            pnlReschedule.Controls.Add(dtpRescheduleDate);
+            pnlReschedule.Location = new Point(181, 333);
+            pnlReschedule.Margin = new Padding(4, 3, 4, 3);
+            pnlReschedule.Name = "pnlReschedule";
+            pnlReschedule.Size = new Size(653, 251);
+            pnlReschedule.TabIndex = 5;
             // 
-            // pnlUpcomingBooking
+            // lblChooseAvailableSlot
             // 
-            this.pnlUpcomingBooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.pnlUpcomingBooking.Controls.Add(this.btnViewDetails);
-            this.pnlUpcomingBooking.Controls.Add(this.lblUpcomingDateTime);
-            this.pnlUpcomingBooking.Controls.Add(this.lblJohannesburgCentre);
-            this.pnlUpcomingBooking.Controls.Add(this.lblNewGrantApplication);
-            this.pnlUpcomingBooking.Controls.Add(this.lblUpcomingBookingNumber);
-            this.pnlUpcomingBooking.Location = new System.Drawing.Point(155, 146);
-            this.pnlUpcomingBooking.Name = "pnlUpcomingBooking";
-            this.pnlUpcomingBooking.Size = new System.Drawing.Size(560, 100);
-            this.pnlUpcomingBooking.TabIndex = 3;
+            lblChooseAvailableSlot.AutoSize = true;
+            lblChooseAvailableSlot.Location = new Point(20, 35);
+            lblChooseAvailableSlot.Margin = new Padding(4, 0, 4, 0);
+            lblChooseAvailableSlot.Name = "lblChooseAvailableSlot";
+            lblChooseAvailableSlot.Size = new Size(163, 15);
+            lblChooseAvailableSlot.TabIndex = 6;
+            lblChooseAvailableSlot.Text = "Choose Reschedule Time Slot";
             // 
-            // btnViewDetails
+            // lblRescheduleDate
             // 
-            this.btnViewDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnViewDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewDetails.ForeColor = System.Drawing.Color.White;
-            this.btnViewDetails.Location = new System.Drawing.Point(439, 50);
-            this.btnViewDetails.Name = "btnViewDetails";
-            this.btnViewDetails.Size = new System.Drawing.Size(90, 30);
-            this.btnViewDetails.TabIndex = 4;
-            this.btnViewDetails.Text = "View Details";
-            this.btnViewDetails.UseVisualStyleBackColor = false;
+            lblRescheduleDate.AutoSize = true;
+            lblRescheduleDate.Location = new Point(20, 9);
+            lblRescheduleDate.Margin = new Padding(4, 0, 4, 0);
+            lblRescheduleDate.Name = "lblRescheduleDate";
+            lblRescheduleDate.Size = new Size(94, 15);
+            lblRescheduleDate.TabIndex = 5;
+            lblRescheduleDate.Text = "Reschedule Date";
             // 
-            // lblUpcomingDateTime
+            // btnRefresh
             // 
-            this.lblUpcomingDateTime.AutoSize = true;
-            this.lblUpcomingDateTime.Location = new System.Drawing.Point(9, 67);
-            this.lblUpcomingDateTime.Name = "lblUpcomingDateTime";
-            this.lblUpcomingDateTime.Size = new System.Drawing.Size(169, 13);
-            this.lblUpcomingDateTime.TabIndex = 3;
-            this.lblUpcomingDateTime.Text = "10 September 2026 • 09:30-10:00";
+            btnRefresh.Location = new Point(152, 159);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(149, 57);
+            btnRefresh.TabIndex = 4;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // lblJohannesburgCentre
+            // btnBack
             // 
-            this.lblJohannesburgCentre.AutoSize = true;
-            this.lblJohannesburgCentre.Location = new System.Drawing.Point(9, 50);
-            this.lblJohannesburgCentre.Name = "lblJohannesburgCentre";
-            this.lblJohannesburgCentre.Size = new System.Drawing.Size(182, 13);
-            this.lblJohannesburgCentre.TabIndex = 2;
-            this.lblJohannesburgCentre.Text = "Johannesburg Central SASSA Centre";
+            btnBack.Location = new Point(3, 159);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(142, 57);
+            btnBack.TabIndex = 3;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
-            // lblNewGrantApplication
+            // btnConfirmReschedule
             // 
-            this.lblNewGrantApplication.AutoSize = true;
-            this.lblNewGrantApplication.Location = new System.Drawing.Point(6, 34);
-            this.lblNewGrantApplication.Name = "lblNewGrantApplication";
-            this.lblNewGrantApplication.Size = new System.Drawing.Size(113, 13);
-            this.lblNewGrantApplication.TabIndex = 1;
-            this.lblNewGrantApplication.Text = "New Grant Application";
+            btnConfirmReschedule.Location = new Point(467, 159);
+            btnConfirmReschedule.Name = "btnConfirmReschedule";
+            btnConfirmReschedule.Size = new Size(173, 61);
+            btnConfirmReschedule.TabIndex = 2;
+            btnConfirmReschedule.Text = "Confirm Reschedule";
+            btnConfirmReschedule.UseVisualStyleBackColor = true;
+            btnConfirmReschedule.Click += btnConfirmReschedule_Click;
             // 
-            // lblUpcomingBookingNumber
+            // lblRescheduleAvailability
             // 
-            this.lblUpcomingBookingNumber.AutoSize = true;
-            this.lblUpcomingBookingNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpcomingBookingNumber.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblUpcomingBookingNumber.Location = new System.Drawing.Point(5, 15);
-            this.lblUpcomingBookingNumber.Name = "lblUpcomingBookingNumber";
-            this.lblUpcomingBookingNumber.Size = new System.Drawing.Size(212, 15);
-            this.lblUpcomingBookingNumber.TabIndex = 0;
-            this.lblUpcomingBookingNumber.Text = "SASSA-2026-00482 • Confirmed";
+            lblRescheduleAvailability.AutoSize = true;
+            lblRescheduleAvailability.Location = new Point(20, 81);
+            lblRescheduleAvailability.Margin = new Padding(4, 0, 4, 0);
+            lblRescheduleAvailability.Name = "lblRescheduleAvailability";
+            lblRescheduleAvailability.Size = new Size(88, 15);
+            lblRescheduleAvailability.TabIndex = 2;
+            lblRescheduleAvailability.Text = "Slot Availability";
             // 
-            // lblBookingHistory
+            // btnCloseReschedule
             // 
-            this.lblBookingHistory.AutoSize = true;
-            this.lblBookingHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingHistory.Location = new System.Drawing.Point(151, 266);
-            this.lblBookingHistory.Name = "lblBookingHistory";
-            this.lblBookingHistory.Size = new System.Drawing.Size(135, 20);
-            this.lblBookingHistory.TabIndex = 4;
-            this.lblBookingHistory.Text = "Booking History";
+            btnCloseReschedule.Location = new Point(307, 159);
+            btnCloseReschedule.Name = "btnCloseReschedule";
+            btnCloseReschedule.Size = new Size(154, 59);
+            btnCloseReschedule.TabIndex = 1;
+            btnCloseReschedule.Text = "Close Reschedule";
+            btnCloseReschedule.UseVisualStyleBackColor = true;
+            btnCloseReschedule.Click += btnCloseReschedule_Click;
             // 
-            // pnlBookingHistory
+            // cboRescheduleTimeSlot
             // 
-            this.pnlBookingHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.pnlBookingHistory.Controls.Add(this.label2);
-            this.pnlBookingHistory.Controls.Add(this.lblBookingHistory1);
-            this.pnlBookingHistory.Location = new System.Drawing.Point(155, 289);
-            this.pnlBookingHistory.Name = "pnlBookingHistory";
-            this.pnlBookingHistory.Size = new System.Drawing.Size(560, 100);
-            this.pnlBookingHistory.TabIndex = 5;
+            cboRescheduleTimeSlot.FormattingEnabled = true;
+            cboRescheduleTimeSlot.Location = new Point(208, 32);
+            cboRescheduleTimeSlot.Name = "cboRescheduleTimeSlot";
+            cboRescheduleTimeSlot.Size = new Size(206, 23);
+            cboRescheduleTimeSlot.TabIndex = 1;
             // 
-            // label2
+            // dtpRescheduleDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Payment Enquiry • 28 August 2026 • Completed";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            dtpRescheduleDate.Location = new Point(207, 3);
+            dtpRescheduleDate.Name = "dtpRescheduleDate";
+            dtpRescheduleDate.Size = new Size(207, 23);
+            dtpRescheduleDate.TabIndex = 0;
+            dtpRescheduleDate.ValueChanged += dtpRescheduleDate_ValueChanged;
             // 
-            // lblBookingHistory1
+            // tabControlMyBookings
             // 
-            this.lblBookingHistory1.AutoSize = true;
-            this.lblBookingHistory1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingHistory1.Location = new System.Drawing.Point(12, 18);
-            this.lblBookingHistory1.Name = "lblBookingHistory1";
-            this.lblBookingHistory1.Size = new System.Drawing.Size(192, 13);
-            this.lblBookingHistory1.TabIndex = 0;
-            this.lblBookingHistory1.Text = "SASSA-2026-00391 • Completed";
+            tabControlMyBookings.Controls.Add(tabUpcoming);
+            tabControlMyBookings.Controls.Add(tabPrevious);
+            tabControlMyBookings.Location = new Point(181, 87);
+            tabControlMyBookings.Name = "tabControlMyBookings";
+            tabControlMyBookings.SelectedIndex = 0;
+            tabControlMyBookings.Size = new Size(653, 217);
+            tabControlMyBookings.TabIndex = 7;
             // 
-            // pnlBookingHistory2
+            // tabUpcoming
             // 
-            this.pnlBookingHistory2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.pnlBookingHistory2.Controls.Add(this.label3);
-            this.pnlBookingHistory2.Controls.Add(this.lblBookingHistory2);
-            this.pnlBookingHistory2.Location = new System.Drawing.Point(155, 410);
-            this.pnlBookingHistory2.Name = "pnlBookingHistory2";
-            this.pnlBookingHistory2.Size = new System.Drawing.Size(560, 96);
-            this.pnlBookingHistory2.TabIndex = 6;
+            tabUpcoming.Controls.Add(btnRescheduleBooking);
+            tabUpcoming.Controls.Add(btnCancelBooking);
+            tabUpcoming.Controls.Add(dgvUpcoming);
+            tabUpcoming.Location = new Point(4, 24);
+            tabUpcoming.Name = "tabUpcoming";
+            tabUpcoming.Padding = new Padding(3);
+            tabUpcoming.Size = new Size(645, 189);
+            tabUpcoming.TabIndex = 0;
+            tabUpcoming.Text = "Upcoming";
+            tabUpcoming.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnRescheduleBooking
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(261, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Document Submission • 12 August 2026 • Completed";
+            btnRescheduleBooking.Location = new Point(476, 87);
+            btnRescheduleBooking.Name = "btnRescheduleBooking";
+            btnRescheduleBooking.Size = new Size(150, 68);
+            btnRescheduleBooking.TabIndex = 2;
+            btnRescheduleBooking.Text = "Reschedule Booking";
+            btnRescheduleBooking.UseVisualStyleBackColor = true;
+            btnRescheduleBooking.Click += btnRescheduleBooking_Click;
             // 
-            // lblBookingHistory2
+            // btnCancelBooking
             // 
-            this.lblBookingHistory2.AutoSize = true;
-            this.lblBookingHistory2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingHistory2.Location = new System.Drawing.Point(18, 20);
-            this.lblBookingHistory2.Name = "lblBookingHistory2";
-            this.lblBookingHistory2.Size = new System.Drawing.Size(192, 13);
-            this.lblBookingHistory2.TabIndex = 0;
-            this.lblBookingHistory2.Text = "SASSA-2026-00310 • Completed";
+            btnCancelBooking.Location = new Point(476, 13);
+            btnCancelBooking.Name = "btnCancelBooking";
+            btnCancelBooking.Size = new Size(150, 68);
+            btnCancelBooking.TabIndex = 1;
+            btnCancelBooking.Text = "Cancel Booking";
+            btnCancelBooking.UseVisualStyleBackColor = true;
+            btnCancelBooking.Click += btnCancelBooking_Click;
+            // 
+            // dgvUpcoming
+            // 
+            dgvUpcoming.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUpcoming.Location = new Point(18, 11);
+            dgvUpcoming.Name = "dgvUpcoming";
+            dgvUpcoming.Size = new Size(392, 149);
+            dgvUpcoming.TabIndex = 0;
+            // 
+            // tabPrevious
+            // 
+            tabPrevious.Controls.Add(dgvPrevious);
+            tabPrevious.Location = new Point(4, 24);
+            tabPrevious.Name = "tabPrevious";
+            tabPrevious.Padding = new Padding(3);
+            tabPrevious.Size = new Size(645, 189);
+            tabPrevious.TabIndex = 1;
+            tabPrevious.Text = "Previous";
+            tabPrevious.UseVisualStyleBackColor = true;
+            // 
+            // dgvPrevious
+            // 
+            dgvPrevious.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPrevious.Location = new Point(0, 6);
+            dgvPrevious.Name = "dgvPrevious";
+            dgvPrevious.Size = new Size(636, 177);
+            dgvPrevious.TabIndex = 0;
             // 
             // frmMyBookings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 518);
-            this.Controls.Add(this.pnlBookingHistory2);
-            this.Controls.Add(this.pnlBookingHistory);
-            this.Controls.Add(this.lblBookingHistory);
-            this.Controls.Add(this.pnlUpcomingBooking);
-            this.Controls.Add(this.lblUpcoming);
-            this.Controls.Add(this.pnlSideBar);
-            this.Controls.Add(this.panel1);
-            this.Name = "frmMyBookings";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "My Bookings";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pnlSideBar.ResumeLayout(false);
-            this.pnlSideBar.PerformLayout();
-            this.pnlUpcomingBooking.ResumeLayout(false);
-            this.pnlUpcomingBooking.PerformLayout();
-            this.pnlBookingHistory.ResumeLayout(false);
-            this.pnlBookingHistory.PerformLayout();
-            this.pnlBookingHistory2.ResumeLayout(false);
-            this.pnlBookingHistory2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(933, 598);
+            Controls.Add(tabControlMyBookings);
+            Controls.Add(pnlReschedule);
+            Controls.Add(pnlSideBar);
+            Controls.Add(panel1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "frmMyBookings";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "My Bookings";
+            WindowState = FormWindowState.Maximized;
+            Load += MyBookingsForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            pnlSideBar.ResumeLayout(false);
+            pnlReschedule.ResumeLayout(false);
+            pnlReschedule.PerformLayout();
+            tabControlMyBookings.ResumeLayout(false);
+            tabUpcoming.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvUpcoming).EndInit();
+            tabPrevious.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvPrevious).EndInit();
+            ResumeLayout(false);
 
         }
 
@@ -372,26 +415,29 @@
         private System.Windows.Forms.Label lblMyBookings;
         private System.Windows.Forms.Label lblBeneficiaryPortal;
         private System.Windows.Forms.Panel pnlSideBar;
-        private System.Windows.Forms.Label lblSignOut;
-        private System.Windows.Forms.Label lblProfile;
-        private System.Windows.Forms.Label lblQueueStatus;
-        private System.Windows.Forms.Label lblMyBookings2;
-        private System.Windows.Forms.Label lblNewBooking;
-        private System.Windows.Forms.Label lblDashboard;
-        private System.Windows.Forms.Label lblUpcoming;
-        private System.Windows.Forms.Panel pnlUpcomingBooking;
-        private System.Windows.Forms.Button btnViewDetails;
-        private System.Windows.Forms.Label lblUpcomingDateTime;
-        private System.Windows.Forms.Label lblJohannesburgCentre;
-        private System.Windows.Forms.Label lblNewGrantApplication;
-        private System.Windows.Forms.Label lblUpcomingBookingNumber;
-        private System.Windows.Forms.Label lblBookingHistory;
-        private System.Windows.Forms.Panel pnlBookingHistory;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblBookingHistory1;
-        private System.Windows.Forms.Panel pnlBookingHistory2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblBookingHistory2;
+        private System.Windows.Forms.Panel pnlReschedule;
+        private TabControl tabControlMyBookings;
+        private TabPage tabUpcoming;
+        private TabPage tabPrevious;
+        private DataGridView dgvUpcoming;
+        private Button btnRescheduleBooking;
+        private Button btnCancelBooking;
+        private Button btnConfirmReschedule;
+        private Button btnCloseReschedule;
+        private DataGridView dgvPrevious;
+        private Label lblRescheduleAvailability;
+        private ComboBox cboRescheduleTimeSlot;
+        private DateTimePicker dtpRescheduleDate;
+        private Button btnRefresh;
+        private Button btnBack;
+        private Label lblChooseAvailableSlot;
+        private Label lblRescheduleDate;
+        private Button btnNewBooking;
+        private Button btnDashboard;
+        private Button btnLogout;
+        private Button btnMyProfile;
+        private Button btnQueueStatus;
+        private Button btnMyBooking;
     }
 }
 

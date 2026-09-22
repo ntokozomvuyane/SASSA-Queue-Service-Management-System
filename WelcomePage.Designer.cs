@@ -75,6 +75,7 @@
             btnBeneficiaryLogin.TabIndex = 2;
             btnBeneficiaryLogin.Text = "Beneficiary Login";
             btnBeneficiaryLogin.UseVisualStyleBackColor = false;
+            btnBeneficiaryLogin.Click += btnBeneficiaryLogin_Click;
             // 
             // btnAdmin
             // 
@@ -86,6 +87,7 @@
             btnAdmin.TabIndex = 3;
             btnAdmin.Text = "Admin Login";
             btnAdmin.UseVisualStyleBackColor = false;
+            btnAdmin.Click += btnAdminLogin_Click;
             // 
             // label1
             // 
@@ -93,7 +95,7 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(714, 35);
             label1.Name = "label1";
-            label1.Size = new Size(324, 41);
+            label1.Size = new Size(257, 32);
             label1.TabIndex = 4;
             label1.Text = "WELCOME TO SASSA!";
             // 
@@ -104,7 +106,7 @@
             label2.ForeColor = SystemColors.ControlDarkDark;
             label2.Location = new Point(765, 147);
             label2.Name = "label2";
-            label2.Size = new Size(380, 72);
+            label2.Size = new Size(296, 56);
             label2.TabIndex = 5;
             label2.Text = "Easier access.\r\n        Shorter queues.\r\n                     Better service for a brighter tomorrow.\r\n\r\n";
             // 
@@ -115,7 +117,7 @@
             label3.ForeColor = SystemColors.ControlDarkDark;
             label3.Location = new Point(727, 89);
             label3.Name = "label3";
-            label3.Size = new Size(333, 46);
+            label3.Size = new Size(279, 38);
             label3.TabIndex = 6;
             label3.Text = "Queue and Service Management System\r\n\r\n";
             // 
@@ -126,7 +128,7 @@
             label4.ForeColor = SystemColors.ControlDarkDark;
             label4.Location = new Point(765, 598);
             label4.Name = "label4";
-            label4.Size = new Size(318, 92);
+            label4.Size = new Size(263, 76);
             label4.TabIndex = 7;
             label4.Text = "Together we can build a better future!\r\n\r\n\r\n\r\n";
             // 
@@ -166,7 +168,7 @@
             // 
             // WelcomePage
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1167, 736);
             Controls.Add(pictureBox3);

@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
-            panel1 = new Panel();
             btnDashboard = new Button();
             btnNewBooking = new Button();
             btnMyBooking = new Button();
             btnQueueStatus = new Button();
             btnProfile = new Button();
             btnSignOut = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            panel1 = new Panel();
             lblBeneficiaryPortal = new Label();
+            lblLoginHeading = new Label();
+            label1 = new Label();
             lblWelcome = new Label();
             lblUsername = new Label();
             label3 = new Label();
-            txtUsename = new TextBox();
+            txtUsername = new TextBox();
             txtPassword = new TextBox();
             lblPassword = new Label();
             btnLogin = new Button();
             lblCreateAccount = new Label();
             lblForgotPassword = new Label();
             btnBack = new Button();
+            btnCreateAccount = new Button();
+            chkShowPassword = new CheckBox();
             flowLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -66,17 +68,6 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(322, 632);
             flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(26, 74, 122);
-            panel1.Controls.Add(lblBeneficiaryPortal);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1071, 78);
-            panel1.TabIndex = 1;
             // 
             // btnDashboard
             // 
@@ -146,26 +137,16 @@
             btnSignOut.Text = "Sign Out";
             btnSignOut.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // panel1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(8, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 31);
-            label1.TabIndex = 0;
-            label1.Text = "SASSA";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(99, 20);
-            label2.Name = "label2";
-            label2.Size = new Size(364, 40);
-            label2.TabIndex = 1;
-            label2.Text = "Beneficiary Login\r\n                     Secure access to your SASSA bookings.\r\n";
+            panel1.BackColor = Color.FromArgb(26, 74, 122);
+            panel1.Controls.Add(lblBeneficiaryPortal);
+            panel1.Controls.Add(lblLoginHeading);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1071, 78);
+            panel1.TabIndex = 1;
             // 
             // lblBeneficiaryPortal
             // 
@@ -173,9 +154,30 @@
             lblBeneficiaryPortal.ForeColor = SystemColors.ControlLightLight;
             lblBeneficiaryPortal.Location = new Point(907, 29);
             lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
-            lblBeneficiaryPortal.Size = new Size(134, 20);
+            lblBeneficiaryPortal.Size = new Size(106, 15);
             lblBeneficiaryPortal.TabIndex = 2;
             lblBeneficiaryPortal.Text = "Beneficiary Portal";
+            // 
+            // lblLoginHeading
+            // 
+            lblLoginHeading.AutoSize = true;
+            lblLoginHeading.ForeColor = SystemColors.ControlLightLight;
+            lblLoginHeading.Location = new Point(99, 20);
+            lblLoginHeading.Name = "lblLoginHeading";
+            lblLoginHeading.Size = new Size(286, 30);
+            lblLoginHeading.TabIndex = 1;
+            lblLoginHeading.Text = "Beneficiary Login\r\n                     Secure access to your SASSA bookings.\r\n";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(8, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 25);
+            label1.TabIndex = 0;
+            label1.Text = "SASSA";
             // 
             // lblWelcome
             // 
@@ -183,7 +185,7 @@
             lblWelcome.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblWelcome.Location = new Point(465, 132);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(243, 38);
+            lblWelcome.Size = new Size(191, 30);
             lblWelcome.TabIndex = 2;
             lblWelcome.Text = "WELCOME BACK!";
             // 
@@ -192,7 +194,7 @@
             lblUsername.AutoSize = true;
             lblUsername.Location = new Point(455, 272);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(190, 20);
+            lblUsername.Size = new Size(151, 15);
             lblUsername.TabIndex = 3;
             lblUsername.Text = "Beneficiary ID/ Username";
             // 
@@ -202,22 +204,22 @@
             label3.ForeColor = SystemColors.ControlDark;
             label3.Location = new Point(455, 182);
             label3.Name = "label3";
-            label3.Size = new Size(432, 20);
+            label3.Size = new Size(338, 15);
             label3.TabIndex = 4;
             label3.Text = "Login as a SASSA beneficiary to manage your appointments.";
             // 
-            // txtUsename
+            // txtUsername
             // 
-            txtUsename.Location = new Point(455, 311);
-            txtUsename.Name = "txtUsename";
-            txtUsename.Size = new Size(432, 27);
-            txtUsename.TabIndex = 5;
+            txtUsername.Location = new Point(455, 311);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(432, 23);
+            txtUsername.TabIndex = 5;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(455, 413);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(432, 27);
+            txtPassword.Size = new Size(432, 23);
             txtPassword.TabIndex = 7;
             txtPassword.UseSystemPasswordChar = true;
             // 
@@ -226,7 +228,7 @@
             lblPassword.AutoSize = true;
             lblPassword.Location = new Point(455, 376);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(76, 20);
+            lblPassword.Size = new Size(59, 15);
             lblPassword.TabIndex = 6;
             lblPassword.Text = "Password";
             // 
@@ -234,12 +236,13 @@
             // 
             btnLogin.BackColor = Color.FromArgb(26, 74, 122);
             btnLogin.ForeColor = SystemColors.ControlLightLight;
-            btnLogin.Location = new Point(428, 480);
+            btnLogin.Location = new Point(428, 466);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(469, 63);
             btnLogin.TabIndex = 8;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // lblCreateAccount
             // 
@@ -248,7 +251,7 @@
             lblCreateAccount.ForeColor = Color.FromArgb(26, 74, 122);
             lblCreateAccount.Location = new Point(455, 632);
             lblCreateAccount.Name = "lblCreateAccount";
-            lblCreateAccount.Size = new Size(263, 20);
+            lblCreateAccount.Size = new Size(209, 15);
             lblCreateAccount.TabIndex = 9;
             lblCreateAccount.Text = "New beneficiary? Create an account.";
             // 
@@ -258,7 +261,7 @@
             lblForgotPassword.ForeColor = Color.FromArgb(26, 74, 122);
             lblForgotPassword.Location = new Point(352, 601);
             lblForgotPassword.Name = "lblForgotPassword";
-            lblForgotPassword.Size = new Size(134, 20);
+            lblForgotPassword.Size = new Size(104, 15);
             lblForgotPassword.TabIndex = 10;
             lblForgotPassword.Text = "Forgot Password?";
             // 
@@ -272,19 +275,45 @@
             btnBack.TabIndex = 11;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
+            // 
+            // btnCreateAccount
+            // 
+            btnCreateAccount.BackColor = Color.FromArgb(26, 74, 122);
+            btnCreateAccount.ForeColor = SystemColors.ControlLightLight;
+            btnCreateAccount.Location = new Point(428, 535);
+            btnCreateAccount.Name = "btnCreateAccount";
+            btnCreateAccount.Size = new Size(469, 63);
+            btnCreateAccount.TabIndex = 12;
+            btnCreateAccount.Text = "Create Account";
+            btnCreateAccount.UseVisualStyleBackColor = false;
+            btnCreateAccount.Click += btnRegister_Click;
+            // 
+            // chkShowPassword
+            // 
+            chkShowPassword.AutoSize = true;
+            chkShowPassword.Location = new Point(337, 417);
+            chkShowPassword.Name = "chkShowPassword";
+            chkShowPassword.Size = new Size(112, 19);
+            chkShowPassword.TabIndex = 13;
+            chkShowPassword.Text = "Show Password";
+            chkShowPassword.UseVisualStyleBackColor = true;
+            chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1083, 731);
+            Controls.Add(chkShowPassword);
+            Controls.Add(btnCreateAccount);
             Controls.Add(btnBack);
             Controls.Add(lblForgotPassword);
             Controls.Add(lblCreateAccount);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
-            Controls.Add(txtUsename);
+            Controls.Add(txtUsername);
             Controls.Add(label3);
             Controls.Add(lblUsername);
             Controls.Add(lblWelcome);
@@ -293,6 +322,7 @@
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             flowLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -311,17 +341,19 @@
         private Button btnProfile;
         private Button btnSignOut;
         private Label lblBeneficiaryPortal;
-        private Label label2;
+        private Label lblLoginHeading;
         private Label label1;
         private Label lblWelcome;
         private Label lblUsername;
         private Label label3;
-        private TextBox txtUsename;
+        private TextBox txtUsername;
         private TextBox txtPassword;
         private Label lblPassword;
         private Button btnLogin;
         private Label lblCreateAccount;
         private Label lblForgotPassword;
         private Button btnBack;
+        private Button btnCreateAccount;
+        private CheckBox chkShowPassword;
     }
 }

@@ -29,320 +29,347 @@ namespace Sassa_Queue_And_Service_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSassa = new System.Windows.Forms.Label();
-            this.lblMyProfile = new System.Windows.Forms.Label();
-            this.lblBeneficiaryDetails = new System.Windows.Forms.Label();
-            this.lblBeneficiaryPortal = new System.Windows.Forms.Label();
-            this.pnlSideBar = new System.Windows.Forms.Panel();
-            this.lblDashboard = new System.Windows.Forms.Label();
-            this.lblNewBooking = new System.Windows.Forms.Label();
-            this.lblMyBookings = new System.Windows.Forms.Label();
-            this.lblQueueStatus = new System.Windows.Forms.Label();
-            this.lblProfile = new System.Windows.Forms.Label();
-            this.lblSignOut = new System.Windows.Forms.Label();
-            this.lblPersonalInformation = new System.Windows.Forms.Label();
-            this.lblFullName = new System.Windows.Forms.Label();
-            this.txtFullName = new System.Windows.Forms.TextBox();
-            this.lblBeneficiaryId = new System.Windows.Forms.Label();
-            this.txtBeneficiaryId = new System.Windows.Forms.TextBox();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblEmailAddress = new System.Windows.Forms.Label();
-            this.txtEmailAddress = new System.Windows.Forms.TextBox();
-            this.lblPreferredCentre = new System.Windows.Forms.Label();
-            this.txtPreferredCentre = new System.Windows.Forms.TextBox();
-            this.btnSaveChanges = new System.Windows.Forms.Button();
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.pnlSideBar.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            lblBeneficiaryPortal = new Label();
+            lblBeneficiaryDetails = new Label();
+            lblMyProfile = new Label();
+            lblSassa = new Label();
+            pnlSideBar = new Panel();
+            btnLogout = new Button();
+            btnMyProfile = new Button();
+            btnQueueStatus = new Button();
+            btnMyBooking = new Button();
+            btnNewBooking = new Button();
+            btnDashboard = new Button();
+            lblPersonalInformation = new Label();
+            lblFullName = new Label();
+            txtFullName = new TextBox();
+            lblBeneficiaryId = new Label();
+            txtUserID = new TextBox();
+            lblPhoneNumber = new Label();
+            txtContactNumber = new TextBox();
+            lblEmailAddress = new Label();
+            txtUsername = new TextBox();
+            lblPreferredCentre = new Label();
+            btnSave = new Button();
+            btnBack = new Button();
+            cboPreferredCentre = new ComboBox();
+            panel1.SuspendLayout();
+            pnlSideBar.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.panel1.Controls.Add(this.lblBeneficiaryPortal);
-            this.panel1.Controls.Add(this.lblBeneficiaryDetails);
-            this.panel1.Controls.Add(this.lblMyProfile);
-            this.panel1.Controls.Add(this.lblSassa);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 65);
-            this.panel1.TabIndex = 0;
-            // 
-            // lblSassa
-            // 
-            this.lblSassa.AutoSize = true;
-            this.lblSassa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSassa.ForeColor = System.Drawing.Color.White;
-            this.lblSassa.Location = new System.Drawing.Point(30, 13);
-            this.lblSassa.Name = "lblSassa";
-            this.lblSassa.Size = new System.Drawing.Size(87, 25);
-            this.lblSassa.TabIndex = 0;
-            this.lblSassa.Text = "SASSA";
-            // 
-            // lblMyProfile
-            // 
-            this.lblMyProfile.AutoSize = true;
-            this.lblMyProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMyProfile.ForeColor = System.Drawing.Color.White;
-            this.lblMyProfile.Location = new System.Drawing.Point(123, 9);
-            this.lblMyProfile.Name = "lblMyProfile";
-            this.lblMyProfile.Size = new System.Drawing.Size(87, 20);
-            this.lblMyProfile.TabIndex = 1;
-            this.lblMyProfile.Text = "My Profile";
-            // 
-            // lblBeneficiaryDetails
-            // 
-            this.lblBeneficiaryDetails.AutoSize = true;
-            this.lblBeneficiaryDetails.ForeColor = System.Drawing.Color.White;
-            this.lblBeneficiaryDetails.Location = new System.Drawing.Point(127, 33);
-            this.lblBeneficiaryDetails.Name = "lblBeneficiaryDetails";
-            this.lblBeneficiaryDetails.Size = new System.Drawing.Size(197, 13);
-            this.lblBeneficiaryDetails.TabIndex = 2;
-            this.lblBeneficiaryDetails.Text = "View and update your beneficiary details";
+            panel1.BackColor = Color.FromArgb(0, 51, 102);
+            panel1.Controls.Add(lblBeneficiaryPortal);
+            panel1.Controls.Add(lblBeneficiaryDetails);
+            panel1.Controls.Add(lblMyProfile);
+            panel1.Controls.Add(lblSassa);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 3, 4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1029, 75);
+            panel1.TabIndex = 0;
             // 
             // lblBeneficiaryPortal
             // 
-            this.lblBeneficiaryPortal.AutoSize = true;
-            this.lblBeneficiaryPortal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeneficiaryPortal.ForeColor = System.Drawing.Color.White;
-            this.lblBeneficiaryPortal.Location = new System.Drawing.Point(759, 23);
-            this.lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
-            this.lblBeneficiaryPortal.Size = new System.Drawing.Size(120, 15);
-            this.lblBeneficiaryPortal.TabIndex = 3;
-            this.lblBeneficiaryPortal.Text = "Beneficiary Portal";
+            lblBeneficiaryPortal.AutoSize = true;
+            lblBeneficiaryPortal.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBeneficiaryPortal.ForeColor = Color.White;
+            lblBeneficiaryPortal.Location = new Point(886, 27);
+            lblBeneficiaryPortal.Margin = new Padding(4, 0, 4, 0);
+            lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
+            lblBeneficiaryPortal.Size = new Size(120, 15);
+            lblBeneficiaryPortal.TabIndex = 3;
+            lblBeneficiaryPortal.Text = "Beneficiary Portal";
+            // 
+            // lblBeneficiaryDetails
+            // 
+            lblBeneficiaryDetails.AutoSize = true;
+            lblBeneficiaryDetails.ForeColor = Color.White;
+            lblBeneficiaryDetails.Location = new Point(148, 38);
+            lblBeneficiaryDetails.Margin = new Padding(4, 0, 4, 0);
+            lblBeneficiaryDetails.Name = "lblBeneficiaryDetails";
+            lblBeneficiaryDetails.Size = new Size(220, 15);
+            lblBeneficiaryDetails.TabIndex = 2;
+            lblBeneficiaryDetails.Text = "View and update your beneficiary details";
+            // 
+            // lblMyProfile
+            // 
+            lblMyProfile.AutoSize = true;
+            lblMyProfile.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMyProfile.ForeColor = Color.White;
+            lblMyProfile.Location = new Point(144, 10);
+            lblMyProfile.Margin = new Padding(4, 0, 4, 0);
+            lblMyProfile.Name = "lblMyProfile";
+            lblMyProfile.Size = new Size(87, 20);
+            lblMyProfile.TabIndex = 1;
+            lblMyProfile.Text = "My Profile";
+            // 
+            // lblSassa
+            // 
+            lblSassa.AutoSize = true;
+            lblSassa.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSassa.ForeColor = Color.White;
+            lblSassa.Location = new Point(35, 15);
+            lblSassa.Margin = new Padding(4, 0, 4, 0);
+            lblSassa.Name = "lblSassa";
+            lblSassa.Size = new Size(87, 25);
+            lblSassa.TabIndex = 0;
+            lblSassa.Text = "SASSA";
             // 
             // pnlSideBar
             // 
-            this.pnlSideBar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlSideBar.Controls.Add(this.lblSignOut);
-            this.pnlSideBar.Controls.Add(this.lblProfile);
-            this.pnlSideBar.Controls.Add(this.lblQueueStatus);
-            this.pnlSideBar.Controls.Add(this.lblMyBookings);
-            this.pnlSideBar.Controls.Add(this.lblNewBooking);
-            this.pnlSideBar.Controls.Add(this.lblDashboard);
-            this.pnlSideBar.Location = new System.Drawing.Point(0, 61);
-            this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(154, 473);
-            this.pnlSideBar.TabIndex = 1;
+            pnlSideBar.BackColor = Color.WhiteSmoke;
+            pnlSideBar.Controls.Add(btnLogout);
+            pnlSideBar.Controls.Add(btnMyProfile);
+            pnlSideBar.Controls.Add(btnQueueStatus);
+            pnlSideBar.Controls.Add(btnMyBooking);
+            pnlSideBar.Controls.Add(btnNewBooking);
+            pnlSideBar.Controls.Add(btnDashboard);
+            pnlSideBar.Location = new Point(0, 70);
+            pnlSideBar.Margin = new Padding(4, 3, 4, 3);
+            pnlSideBar.Name = "pnlSideBar";
+            pnlSideBar.Size = new Size(180, 546);
+            pnlSideBar.TabIndex = 1;
             // 
-            // lblDashboard
+            // btnLogout
             // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Location = new System.Drawing.Point(12, 21);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(59, 13);
-            this.lblDashboard.TabIndex = 0;
-            this.lblDashboard.Text = "Dashboard";
+            btnLogout.Location = new Point(14, 244);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(131, 35);
+            btnLogout.TabIndex = 11;
+            btnLogout.Text = "Sign Out";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnSignOut_Click;
             // 
-            // lblNewBooking
+            // btnMyProfile
             // 
-            this.lblNewBooking.AutoSize = true;
-            this.lblNewBooking.Location = new System.Drawing.Point(12, 67);
-            this.lblNewBooking.Name = "lblNewBooking";
-            this.lblNewBooking.Size = new System.Drawing.Size(71, 13);
-            this.lblNewBooking.TabIndex = 1;
-            this.lblNewBooking.Text = "New Booking";
+            btnMyProfile.Location = new Point(14, 200);
+            btnMyProfile.Name = "btnMyProfile";
+            btnMyProfile.Size = new Size(131, 35);
+            btnMyProfile.TabIndex = 10;
+            btnMyProfile.Text = "Profile";
+            btnMyProfile.UseVisualStyleBackColor = true;
+            btnMyProfile.Click += btnMyProfile_Click;
             // 
-            // lblMyBookings
+            // btnQueueStatus
             // 
-            this.lblMyBookings.AutoSize = true;
-            this.lblMyBookings.Location = new System.Drawing.Point(12, 111);
-            this.lblMyBookings.Name = "lblMyBookings";
-            this.lblMyBookings.Size = new System.Drawing.Size(68, 13);
-            this.lblMyBookings.TabIndex = 2;
-            this.lblMyBookings.Text = "My Bookings";
+            btnQueueStatus.Location = new Point(14, 150);
+            btnQueueStatus.Name = "btnQueueStatus";
+            btnQueueStatus.Size = new Size(131, 35);
+            btnQueueStatus.TabIndex = 9;
+            btnQueueStatus.Text = "Queue Status";
+            btnQueueStatus.UseVisualStyleBackColor = true;
+            btnQueueStatus.Click += btnQueueStatus_Click;
             // 
-            // lblQueueStatus
+            // btnMyBooking
             // 
-            this.lblQueueStatus.AutoSize = true;
-            this.lblQueueStatus.Location = new System.Drawing.Point(12, 162);
-            this.lblQueueStatus.Name = "lblQueueStatus";
-            this.lblQueueStatus.Size = new System.Drawing.Size(72, 13);
-            this.lblQueueStatus.TabIndex = 3;
-            this.lblQueueStatus.Text = "Queue Status";
+            btnMyBooking.Location = new Point(12, 109);
+            btnMyBooking.Name = "btnMyBooking";
+            btnMyBooking.Size = new Size(131, 35);
+            btnMyBooking.TabIndex = 8;
+            btnMyBooking.Text = "My Booking";
+            btnMyBooking.UseVisualStyleBackColor = true;
+            btnMyBooking.Click += btnMyBookings_Click;
             // 
-            // lblProfile
+            // btnNewBooking
             // 
-            this.lblProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(216)))), ((int)(((byte)(255)))));
-            this.lblProfile.Location = new System.Drawing.Point(12, 211);
-            this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(139, 27);
-            this.lblProfile.TabIndex = 4;
-            this.lblProfile.Text = "Profile";
-            this.lblProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnNewBooking.Location = new Point(13, 68);
+            btnNewBooking.Name = "btnNewBooking";
+            btnNewBooking.Size = new Size(131, 35);
+            btnNewBooking.TabIndex = 7;
+            btnNewBooking.Text = "New Booking";
+            btnNewBooking.UseVisualStyleBackColor = true;
+            btnNewBooking.Click += btnNewBooking_Click;
             // 
-            // lblSignOut
+            // btnDashboard
             // 
-            this.lblSignOut.AutoSize = true;
-            this.lblSignOut.Location = new System.Drawing.Point(12, 272);
-            this.lblSignOut.Name = "lblSignOut";
-            this.lblSignOut.Size = new System.Drawing.Size(48, 13);
-            this.lblSignOut.TabIndex = 5;
-            this.lblSignOut.Text = "Sign Out";
+            btnDashboard.Location = new Point(13, 24);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(131, 35);
+            btnDashboard.TabIndex = 6;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // lblPersonalInformation
             // 
-            this.lblPersonalInformation.AutoSize = true;
-            this.lblPersonalInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonalInformation.Location = new System.Drawing.Point(175, 91);
-            this.lblPersonalInformation.Name = "lblPersonalInformation";
-            this.lblPersonalInformation.Size = new System.Drawing.Size(150, 16);
-            this.lblPersonalInformation.TabIndex = 2;
-            this.lblPersonalInformation.Text = "Personal Information";
+            lblPersonalInformation.AutoSize = true;
+            lblPersonalInformation.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPersonalInformation.Location = new Point(204, 105);
+            lblPersonalInformation.Margin = new Padding(4, 0, 4, 0);
+            lblPersonalInformation.Name = "lblPersonalInformation";
+            lblPersonalInformation.Size = new Size(149, 16);
+            lblPersonalInformation.TabIndex = 2;
+            lblPersonalInformation.Text = "Personal Information";
             // 
             // lblFullName
             // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblFullName.Location = new System.Drawing.Point(178, 128);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(54, 13);
-            this.lblFullName.TabIndex = 3;
-            this.lblFullName.Text = "Full Name";
+            lblFullName.AutoSize = true;
+            lblFullName.ForeColor = SystemColors.ControlDarkDark;
+            lblFullName.Location = new Point(208, 148);
+            lblFullName.Margin = new Padding(4, 0, 4, 0);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(61, 15);
+            lblFullName.TabIndex = 3;
+            lblFullName.Text = "Full Name";
             // 
             // txtFullName
             // 
-            this.txtFullName.BackColor = System.Drawing.Color.White;
-            this.txtFullName.Location = new System.Drawing.Point(178, 144);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(449, 20);
-            this.txtFullName.TabIndex = 4;
-            this.txtFullName.Text = "Test Beneficiary";
+            txtFullName.BackColor = Color.White;
+            txtFullName.Location = new Point(208, 166);
+            txtFullName.Margin = new Padding(4, 3, 4, 3);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(523, 23);
+            txtFullName.TabIndex = 4;
+            txtFullName.Text = "Test Beneficiary";
             // 
             // lblBeneficiaryId
             // 
-            this.lblBeneficiaryId.AutoSize = true;
-            this.lblBeneficiaryId.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblBeneficiaryId.Location = new System.Drawing.Point(178, 172);
-            this.lblBeneficiaryId.Name = "lblBeneficiaryId";
-            this.lblBeneficiaryId.Size = new System.Drawing.Size(73, 13);
-            this.lblBeneficiaryId.TabIndex = 5;
-            this.lblBeneficiaryId.Text = "Beneficiary ID";
+            lblBeneficiaryId.AutoSize = true;
+            lblBeneficiaryId.ForeColor = SystemColors.ControlDarkDark;
+            lblBeneficiaryId.Location = new Point(208, 198);
+            lblBeneficiaryId.Margin = new Padding(4, 0, 4, 0);
+            lblBeneficiaryId.Name = "lblBeneficiaryId";
+            lblBeneficiaryId.Size = new Size(79, 15);
+            lblBeneficiaryId.TabIndex = 5;
+            lblBeneficiaryId.Text = "Beneficiary ID";
             // 
-            // txtBeneficiaryId
+            // txtUserID
             // 
-            this.txtBeneficiaryId.BackColor = System.Drawing.Color.White;
-            this.txtBeneficiaryId.Location = new System.Drawing.Point(181, 189);
-            this.txtBeneficiaryId.Name = "txtBeneficiaryId";
-            this.txtBeneficiaryId.Size = new System.Drawing.Size(446, 20);
-            this.txtBeneficiaryId.TabIndex = 6;
-            this.txtBeneficiaryId.Text = "SASSA-123456789";
+            txtUserID.BackColor = Color.White;
+            txtUserID.Location = new Point(211, 218);
+            txtUserID.Margin = new Padding(4, 3, 4, 3);
+            txtUserID.Name = "txtUserID";
+            txtUserID.ReadOnly = true;
+            txtUserID.Size = new Size(520, 23);
+            txtUserID.TabIndex = 6;
+            txtUserID.Text = "SASSA-123456789";
             // 
             // lblPhoneNumber
             // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(178, 223);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(78, 13);
-            this.lblPhoneNumber.TabIndex = 7;
-            this.lblPhoneNumber.Text = "Phone Number";
+            lblPhoneNumber.AutoSize = true;
+            lblPhoneNumber.BackColor = SystemColors.ButtonFace;
+            lblPhoneNumber.ForeColor = SystemColors.ControlDarkDark;
+            lblPhoneNumber.Location = new Point(208, 257);
+            lblPhoneNumber.Margin = new Padding(4, 0, 4, 0);
+            lblPhoneNumber.Name = "lblPhoneNumber";
+            lblPhoneNumber.Size = new Size(88, 15);
+            lblPhoneNumber.TabIndex = 7;
+            lblPhoneNumber.Text = "Phone Number";
             // 
-            // textBox1
+            // txtContactNumber
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(178, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(449, 20);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "071 234 5678";
+            txtContactNumber.BackColor = Color.White;
+            txtContactNumber.Location = new Point(208, 277);
+            txtContactNumber.Margin = new Padding(4, 3, 4, 3);
+            txtContactNumber.Name = "txtContactNumber";
+            txtContactNumber.Size = new Size(523, 23);
+            txtContactNumber.TabIndex = 8;
+            txtContactNumber.Text = "071 234 5678";
             // 
             // lblEmailAddress
             // 
-            this.lblEmailAddress.AutoSize = true;
-            this.lblEmailAddress.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblEmailAddress.Location = new System.Drawing.Point(178, 272);
-            this.lblEmailAddress.Name = "lblEmailAddress";
-            this.lblEmailAddress.Size = new System.Drawing.Size(73, 13);
-            this.lblEmailAddress.TabIndex = 9;
-            this.lblEmailAddress.Text = "Email Address";
+            lblEmailAddress.AutoSize = true;
+            lblEmailAddress.ForeColor = SystemColors.ControlDarkDark;
+            lblEmailAddress.Location = new Point(208, 314);
+            lblEmailAddress.Margin = new Padding(4, 0, 4, 0);
+            lblEmailAddress.Name = "lblEmailAddress";
+            lblEmailAddress.Size = new Size(81, 15);
+            lblEmailAddress.TabIndex = 9;
+            lblEmailAddress.Text = "Email Address";
             // 
-            // txtEmailAddress
+            // txtUsername
             // 
-            this.txtEmailAddress.Location = new System.Drawing.Point(181, 289);
-            this.txtEmailAddress.Name = "txtEmailAddress";
-            this.txtEmailAddress.Size = new System.Drawing.Size(446, 20);
-            this.txtEmailAddress.TabIndex = 10;
-            this.txtEmailAddress.Text = "beneficiary@example.com";
+            txtUsername.Location = new Point(211, 333);
+            txtUsername.Margin = new Padding(4, 3, 4, 3);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(520, 23);
+            txtUsername.TabIndex = 10;
+            txtUsername.Text = "beneficiary@example.com";
             // 
             // lblPreferredCentre
             // 
-            this.lblPreferredCentre.AutoSize = true;
-            this.lblPreferredCentre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblPreferredCentre.Location = new System.Drawing.Point(181, 316);
-            this.lblPreferredCentre.Name = "lblPreferredCentre";
-            this.lblPreferredCentre.Size = new System.Drawing.Size(84, 13);
-            this.lblPreferredCentre.TabIndex = 11;
-            this.lblPreferredCentre.Text = "Preferred Centre";
+            lblPreferredCentre.AutoSize = true;
+            lblPreferredCentre.ForeColor = SystemColors.ControlDarkDark;
+            lblPreferredCentre.Location = new Point(211, 365);
+            lblPreferredCentre.Margin = new Padding(4, 0, 4, 0);
+            lblPreferredCentre.Name = "lblPreferredCentre";
+            lblPreferredCentre.Size = new Size(93, 15);
+            lblPreferredCentre.TabIndex = 11;
+            lblPreferredCentre.Text = "Preferred Centre";
             // 
-            // txtPreferredCentre
+            // btnSave
             // 
-            this.txtPreferredCentre.Location = new System.Drawing.Point(184, 333);
-            this.txtPreferredCentre.Name = "txtPreferredCentre";
-            this.txtPreferredCentre.Size = new System.Drawing.Size(443, 20);
-            this.txtPreferredCentre.TabIndex = 12;
-            this.txtPreferredCentre.Text = "Johannesburg Centre SASSA Centre";
+            btnSave.BackColor = Color.FromArgb(0, 51, 102);
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(786, 452);
+            btnSave.Margin = new Padding(4, 3, 4, 3);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(147, 42);
+            btnSave.TabIndex = 13;
+            btnSave.Text = "Save Changes";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
-            // btnSaveChanges
+            // btnBack
             // 
-            this.btnSaveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveChanges.ForeColor = System.Drawing.Color.White;
-            this.btnSaveChanges.Location = new System.Drawing.Point(674, 392);
-            this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(126, 36);
-            this.btnSaveChanges.TabIndex = 13;
-            this.btnSaveChanges.Text = "Save Changes";
-            this.btnSaveChanges.UseVisualStyleBackColor = false;
+            btnBack.BackColor = Color.FromArgb(0, 51, 102);
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(786, 516);
+            btnBack.Margin = new Padding(4, 3, 4, 3);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(147, 43);
+            btnBack.TabIndex = 14;
+            btnBack.Text = "Sign Out";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
-            // btnSignOut
+            // cboPreferredCentre
             // 
-            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignOut.ForeColor = System.Drawing.Color.White;
-            this.btnSignOut.Location = new System.Drawing.Point(674, 447);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(126, 37);
-            this.btnSignOut.TabIndex = 14;
-            this.btnSignOut.Text = "Sign Out";
-            this.btnSignOut.UseVisualStyleBackColor = false;
+            cboPreferredCentre.FormattingEnabled = true;
+            cboPreferredCentre.Location = new Point(214, 389);
+            cboPreferredCentre.Name = "cboPreferredCentre";
+            cboPreferredCentre.Size = new Size(448, 23);
+            cboPreferredCentre.TabIndex = 15;
             // 
             // MyProfileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 532);
-            this.Controls.Add(this.btnSignOut);
-            this.Controls.Add(this.btnSaveChanges);
-            this.Controls.Add(this.txtPreferredCentre);
-            this.Controls.Add(this.lblPreferredCentre);
-            this.Controls.Add(this.txtEmailAddress);
-            this.Controls.Add(this.lblEmailAddress);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblPhoneNumber);
-            this.Controls.Add(this.txtBeneficiaryId);
-            this.Controls.Add(this.lblBeneficiaryId);
-            this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.lblFullName);
-            this.Controls.Add(this.lblPersonalInformation);
-            this.Controls.Add(this.pnlSideBar);
-            this.Controls.Add(this.panel1);
-            this.Name = "MyProfileForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyProfileForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pnlSideBar.ResumeLayout(false);
-            this.pnlSideBar.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1029, 614);
+            Controls.Add(cboPreferredCentre);
+            Controls.Add(btnBack);
+            Controls.Add(btnSave);
+            Controls.Add(lblPreferredCentre);
+            Controls.Add(txtUsername);
+            Controls.Add(lblEmailAddress);
+            Controls.Add(txtContactNumber);
+            Controls.Add(lblPhoneNumber);
+            Controls.Add(txtUserID);
+            Controls.Add(lblBeneficiaryId);
+            Controls.Add(txtFullName);
+            Controls.Add(lblFullName);
+            Controls.Add(lblPersonalInformation);
+            Controls.Add(pnlSideBar);
+            Controls.Add(panel1);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "MyProfileForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MyProfileForm";
+            WindowState = FormWindowState.Maximized;
+            Load += BeneficiaryProfileForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            pnlSideBar.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -354,24 +381,24 @@ namespace Sassa_Queue_And_Service_Management_System
         private System.Windows.Forms.Label lblMyProfile;
         private System.Windows.Forms.Label lblSassa;
         private System.Windows.Forms.Panel pnlSideBar;
-        private System.Windows.Forms.Label lblProfile;
-        private System.Windows.Forms.Label lblQueueStatus;
-        private System.Windows.Forms.Label lblMyBookings;
-        private System.Windows.Forms.Label lblNewBooking;
-        private System.Windows.Forms.Label lblDashboard;
-        private System.Windows.Forms.Label lblSignOut;
         private System.Windows.Forms.Label lblPersonalInformation;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label lblBeneficiaryId;
-        private System.Windows.Forms.TextBox txtBeneficiaryId;
+        private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Label lblPhoneNumber;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Label lblEmailAddress;
-        private System.Windows.Forms.TextBox txtEmailAddress;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPreferredCentre;
-        private System.Windows.Forms.TextBox txtPreferredCentre;
-        private System.Windows.Forms.Button btnSaveChanges;
-        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnBack;
+        private Button btnNewBooking;
+        private Button btnDashboard;
+        private Button btnMyProfile;
+        private Button btnQueueStatus;
+        private Button btnMyBooking;
+        private Button btnLogout;
+        private ComboBox cboPreferredCentre;
     }
 }
