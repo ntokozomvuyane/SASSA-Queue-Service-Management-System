@@ -53,7 +53,8 @@
             // 
             // pnlHeader
             // 
-            pnlHeader.BackColor = Color.DarkBlue;
+            pnlHeader.BackColor = Color.FromArgb(0, 51, 102);
+            pnlHeader.BorderStyle = BorderStyle.Fixed3D;
             pnlHeader.Controls.Add(btnSignOut);
             pnlHeader.Controls.Add(lblServiceOfficer);
             pnlHeader.Controls.Add(lblOfficer);
@@ -62,7 +63,7 @@
             pnlHeader.Dock = DockStyle.Top;
             pnlHeader.Location = new Point(0, 0);
             pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(781, 53);
+            pnlHeader.Size = new Size(899, 53);
             pnlHeader.TabIndex = 0;
             // 
             // btnSignOut
@@ -130,52 +131,59 @@
             // pnlButtons
             // 
             pnlButtons.BackColor = Color.White;
+            pnlButtons.BorderStyle = BorderStyle.Fixed3D;
             pnlButtons.Controls.Add(Searchbtn);
             pnlButtons.Controls.Add(Queuebtn);
             pnlButtons.Controls.Add(Dashboardbtn);
-            pnlButtons.Location = new Point(2, 534);
+            pnlButtons.Location = new Point(20, 443);
             pnlButtons.Name = "pnlButtons";
-            pnlButtons.Size = new Size(778, 37);
+            pnlButtons.Size = new Size(800, 48);
             pnlButtons.TabIndex = 3;
             // 
             // Searchbtn
             // 
-            Searchbtn.Location = new Point(662, 5);
+            Searchbtn.BackColor = Color.FromArgb(0, 51, 102);
+            Searchbtn.ForeColor = Color.White;
+            Searchbtn.Location = new Point(630, 5);
             Searchbtn.Name = "Searchbtn";
-            Searchbtn.Size = new Size(75, 26);
+            Searchbtn.Size = new Size(107, 36);
             Searchbtn.TabIndex = 2;
             Searchbtn.Text = "Search";
-            Searchbtn.UseVisualStyleBackColor = true;
+            Searchbtn.UseVisualStyleBackColor = false;
             // 
             // Queuebtn
             // 
-            Queuebtn.ForeColor = Color.DarkBlue;
-            Queuebtn.Location = new Point(370, 5);
+            Queuebtn.BackColor = Color.FromArgb(0, 51, 102);
+            Queuebtn.ForeColor = Color.White;
+            Queuebtn.Location = new Point(324, 5);
             Queuebtn.Name = "Queuebtn";
-            Queuebtn.Size = new Size(75, 23);
+            Queuebtn.Size = new Size(121, 36);
             Queuebtn.TabIndex = 1;
             Queuebtn.Text = "Queue";
-            Queuebtn.UseVisualStyleBackColor = true;
+            Queuebtn.UseVisualStyleBackColor = false;
             // 
             // Dashboardbtn
             // 
-            Dashboardbtn.ForeColor = Color.Gray;
+            Dashboardbtn.BackColor = Color.FromArgb(0, 51, 102);
+            Dashboardbtn.ForeColor = Color.White;
             Dashboardbtn.Location = new Point(36, 5);
             Dashboardbtn.Name = "Dashboardbtn";
-            Dashboardbtn.Size = new Size(84, 25);
+            Dashboardbtn.Size = new Size(139, 36);
             Dashboardbtn.TabIndex = 0;
             Dashboardbtn.Text = "Dashboard";
-            Dashboardbtn.UseVisualStyleBackColor = true;
+            Dashboardbtn.UseVisualStyleBackColor = false;
             // 
             // dgvQueueManagement
             // 
+            dgvQueueManagement.BackgroundColor = Color.FromArgb(248, 249, 250);
+            dgvQueueManagement.BorderStyle = BorderStyle.Fixed3D;
             dgvQueueManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvQueueManagement.Columns.AddRange(new DataGridViewColumn[] { booked, noShow, checkedIn, waiting, beingServed, completed });
             dgvQueueManagement.Location = new Point(20, 101);
-            dgvQueueManagement.Margin = new Padding(2, 2, 2, 2);
+            dgvQueueManagement.Margin = new Padding(2);
             dgvQueueManagement.Name = "dgvQueueManagement";
             dgvQueueManagement.RowHeadersWidth = 51;
-            dgvQueueManagement.Size = new Size(624, 337);
+            dgvQueueManagement.Size = new Size(800, 324);
             dgvQueueManagement.TabIndex = 4;
             // 
             // booked
@@ -225,7 +233,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(798, 488);
+            ClientSize = new Size(899, 500);
             Controls.Add(dgvQueueManagement);
             Controls.Add(pnlButtons);
             Controls.Add(lblQueueManagement);

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            pnlSassa = new FlowLayoutPanel();
             btnStaffLogin = new Button();
             btnBeneficiaryLogin = new Button();
             btnAdmin = new Button();
@@ -44,14 +44,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // pnlSassa
             // 
-            flowLayoutPanel1.BackgroundImage = Properties.Resources.WhatsApp_Image_2026_09_15_at_2_44_52_PM;
-            flowLayoutPanel1.BackgroundImageLayout = ImageLayout.Stretch;
-            flowLayoutPanel1.Location = new Point(2, 1);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(642, 741);
-            flowLayoutPanel1.TabIndex = 0;
+            pnlSassa.BackgroundImage = Properties.Resources.WhatsApp_Image_2026_09_15_at_2_44_52_PM;
+            pnlSassa.BackgroundImageLayout = ImageLayout.Stretch;
+            pnlSassa.BorderStyle = BorderStyle.Fixed3D;
+            pnlSassa.Location = new Point(2, 1);
+            pnlSassa.Name = "pnlSassa";
+            pnlSassa.Size = new Size(642, 741);
+            pnlSassa.TabIndex = 0;
             // 
             // btnStaffLogin
             // 
@@ -181,7 +182,7 @@
             Controls.Add(btnAdmin);
             Controls.Add(btnBeneficiaryLogin);
             Controls.Add(btnStaffLogin);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(pnlSassa);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "WelcomePage";
             Text = "WelcomePage";
@@ -194,7 +195,7 @@
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel pnlSassa;
         private Button btnStaffLogin;
         private Button btnBeneficiaryLogin;
         private Button btnAdmin;

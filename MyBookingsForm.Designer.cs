@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            pnlMyBookings = new Panel();
             lblBeneficiaryPortal = new Label();
             label1 = new Label();
             lblSassa = new Label();
@@ -43,11 +43,7 @@
             pnlReschedule = new Panel();
             lblChooseAvailableSlot = new Label();
             lblRescheduleDate = new Label();
-            btnRefresh = new Button();
-            btnBack = new Button();
-            btnConfirmReschedule = new Button();
             lblRescheduleAvailability = new Label();
-            btnCloseReschedule = new Button();
             cboRescheduleTimeSlot = new ComboBox();
             dtpRescheduleDate = new DateTimePicker();
             tabControlMyBookings = new TabControl();
@@ -57,7 +53,11 @@
             dgvUpcoming = new DataGridView();
             tabPrevious = new TabPage();
             dgvPrevious = new DataGridView();
-            panel1.SuspendLayout();
+            btnBack = new Button();
+            btnRefresh = new Button();
+            btnCloseReschedule = new Button();
+            btnConfirmReschedule = new Button();
+            pnlMyBookings.SuspendLayout();
             pnlSideBar.SuspendLayout();
             pnlReschedule.SuspendLayout();
             tabControlMyBookings.SuspendLayout();
@@ -67,19 +67,20 @@
             ((System.ComponentModel.ISupportInitialize)dgvPrevious).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // pnlMyBookings
             // 
-            panel1.BackColor = Color.Navy;
-            panel1.Controls.Add(lblBeneficiaryPortal);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(lblSassa);
-            panel1.Controls.Add(lblMyBookings);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 3, 4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(933, 81);
-            panel1.TabIndex = 0;
+            pnlMyBookings.BackColor = Color.FromArgb(0, 51, 102);
+            pnlMyBookings.BorderStyle = BorderStyle.Fixed3D;
+            pnlMyBookings.Controls.Add(lblBeneficiaryPortal);
+            pnlMyBookings.Controls.Add(label1);
+            pnlMyBookings.Controls.Add(lblSassa);
+            pnlMyBookings.Controls.Add(lblMyBookings);
+            pnlMyBookings.Dock = DockStyle.Top;
+            pnlMyBookings.Location = new Point(0, 0);
+            pnlMyBookings.Margin = new Padding(4, 3, 4, 3);
+            pnlMyBookings.Name = "pnlMyBookings";
+            pnlMyBookings.Size = new Size(933, 81);
+            pnlMyBookings.TabIndex = 0;
             // 
             // lblBeneficiaryPortal
             // 
@@ -131,7 +132,8 @@
             // 
             // pnlSideBar
             // 
-            pnlSideBar.BackColor = Color.WhiteSmoke;
+            pnlSideBar.BackColor = Color.FromArgb(0, 51, 102);
+            pnlSideBar.BorderStyle = BorderStyle.Fixed3D;
             pnlSideBar.Controls.Add(btnLogout);
             pnlSideBar.Controls.Add(btnMyProfile);
             pnlSideBar.Controls.Add(btnQueueStatus);
@@ -141,7 +143,7 @@
             pnlSideBar.Location = new Point(0, 88);
             pnlSideBar.Margin = new Padding(4, 3, 4, 3);
             pnlSideBar.Name = "pnlSideBar";
-            pnlSideBar.Size = new Size(152, 496);
+            pnlSideBar.Size = new Size(161, 496);
             pnlSideBar.TabIndex = 1;
             // 
             // btnLogout
@@ -186,7 +188,7 @@
             // 
             // btnNewBooking
             // 
-            btnNewBooking.Location = new Point(10, 55);
+            btnNewBooking.Location = new Point(7, 55);
             btnNewBooking.Name = "btnNewBooking";
             btnNewBooking.Size = new Size(142, 39);
             btnNewBooking.TabIndex = 7;
@@ -196,9 +198,9 @@
             // 
             // btnDashboard
             // 
-            btnDashboard.Location = new Point(3, 12);
+            btnDashboard.Location = new Point(7, 12);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(149, 37);
+            btnDashboard.Size = new Size(142, 37);
             btnDashboard.TabIndex = 8;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
@@ -207,13 +209,14 @@
             // pnlReschedule
             // 
             pnlReschedule.BackColor = Color.FromArgb(248, 248, 248);
-            pnlReschedule.Controls.Add(lblChooseAvailableSlot);
-            pnlReschedule.Controls.Add(lblRescheduleDate);
+            pnlReschedule.BorderStyle = BorderStyle.Fixed3D;
+            pnlReschedule.Controls.Add(btnConfirmReschedule);
+            pnlReschedule.Controls.Add(btnCloseReschedule);
             pnlReschedule.Controls.Add(btnRefresh);
             pnlReschedule.Controls.Add(btnBack);
-            pnlReschedule.Controls.Add(btnConfirmReschedule);
+            pnlReschedule.Controls.Add(lblChooseAvailableSlot);
+            pnlReschedule.Controls.Add(lblRescheduleDate);
             pnlReschedule.Controls.Add(lblRescheduleAvailability);
-            pnlReschedule.Controls.Add(btnCloseReschedule);
             pnlReschedule.Controls.Add(cboRescheduleTimeSlot);
             pnlReschedule.Controls.Add(dtpRescheduleDate);
             pnlReschedule.Location = new Point(181, 333);
@@ -242,36 +245,6 @@
             lblRescheduleDate.TabIndex = 5;
             lblRescheduleDate.Text = "Reschedule Date";
             // 
-            // btnRefresh
-            // 
-            btnRefresh.Location = new Point(152, 159);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(149, 57);
-            btnRefresh.TabIndex = 4;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = true;
-            btnRefresh.Click += btnRefresh_Click;
-            // 
-            // btnBack
-            // 
-            btnBack.Location = new Point(3, 159);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(142, 57);
-            btnBack.TabIndex = 3;
-            btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
-            // 
-            // btnConfirmReschedule
-            // 
-            btnConfirmReschedule.Location = new Point(467, 159);
-            btnConfirmReschedule.Name = "btnConfirmReschedule";
-            btnConfirmReschedule.Size = new Size(173, 61);
-            btnConfirmReschedule.TabIndex = 2;
-            btnConfirmReschedule.Text = "Confirm Reschedule";
-            btnConfirmReschedule.UseVisualStyleBackColor = true;
-            btnConfirmReschedule.Click += btnConfirmReschedule_Click;
-            // 
             // lblRescheduleAvailability
             // 
             lblRescheduleAvailability.AutoSize = true;
@@ -281,16 +254,6 @@
             lblRescheduleAvailability.Size = new Size(88, 15);
             lblRescheduleAvailability.TabIndex = 2;
             lblRescheduleAvailability.Text = "Slot Availability";
-            // 
-            // btnCloseReschedule
-            // 
-            btnCloseReschedule.Location = new Point(307, 159);
-            btnCloseReschedule.Name = "btnCloseReschedule";
-            btnCloseReschedule.Size = new Size(154, 59);
-            btnCloseReschedule.TabIndex = 1;
-            btnCloseReschedule.Text = "Close Reschedule";
-            btnCloseReschedule.UseVisualStyleBackColor = true;
-            btnCloseReschedule.Click += btnCloseReschedule_Click;
             // 
             // cboRescheduleTimeSlot
             // 
@@ -320,6 +283,7 @@
             // 
             // tabUpcoming
             // 
+            tabUpcoming.BorderStyle = BorderStyle.Fixed3D;
             tabUpcoming.Controls.Add(btnRescheduleBooking);
             tabUpcoming.Controls.Add(btnCancelBooking);
             tabUpcoming.Controls.Add(dgvUpcoming);
@@ -333,26 +297,31 @@
             // 
             // btnRescheduleBooking
             // 
+            btnRescheduleBooking.BackColor = Color.FromArgb(0, 51, 102);
+            btnRescheduleBooking.ForeColor = Color.White;
             btnRescheduleBooking.Location = new Point(476, 87);
             btnRescheduleBooking.Name = "btnRescheduleBooking";
             btnRescheduleBooking.Size = new Size(150, 68);
             btnRescheduleBooking.TabIndex = 2;
             btnRescheduleBooking.Text = "Reschedule Booking";
-            btnRescheduleBooking.UseVisualStyleBackColor = true;
+            btnRescheduleBooking.UseVisualStyleBackColor = false;
             btnRescheduleBooking.Click += btnRescheduleBooking_Click;
             // 
             // btnCancelBooking
             // 
+            btnCancelBooking.BackColor = Color.FromArgb(0, 51, 102);
+            btnCancelBooking.ForeColor = Color.White;
             btnCancelBooking.Location = new Point(476, 13);
             btnCancelBooking.Name = "btnCancelBooking";
             btnCancelBooking.Size = new Size(150, 68);
             btnCancelBooking.TabIndex = 1;
             btnCancelBooking.Text = "Cancel Booking";
-            btnCancelBooking.UseVisualStyleBackColor = true;
+            btnCancelBooking.UseVisualStyleBackColor = false;
             btnCancelBooking.Click += btnCancelBooking_Click;
             // 
             // dgvUpcoming
             // 
+            dgvUpcoming.BackgroundColor = Color.FromArgb(248, 249, 250);
             dgvUpcoming.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUpcoming.Location = new Point(18, 11);
             dgvUpcoming.Name = "dgvUpcoming";
@@ -361,6 +330,7 @@
             // 
             // tabPrevious
             // 
+            tabPrevious.BorderStyle = BorderStyle.Fixed3D;
             tabPrevious.Controls.Add(dgvPrevious);
             tabPrevious.Location = new Point(4, 24);
             tabPrevious.Name = "tabPrevious";
@@ -372,11 +342,56 @@
             // 
             // dgvPrevious
             // 
+            dgvPrevious.BackgroundColor = Color.FromArgb(248, 249, 250);
             dgvPrevious.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPrevious.Location = new Point(0, 6);
+            dgvPrevious.Location = new Point(0, 1);
             dgvPrevious.Name = "dgvPrevious";
-            dgvPrevious.Size = new Size(636, 177);
+            dgvPrevious.Size = new Size(636, 182);
             dgvPrevious.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.FromArgb(0, 51, 102);
+            btnBack.ForeColor = SystemColors.Control;
+            btnBack.Location = new Point(3, 174);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(155, 59);
+            btnBack.TabIndex = 47;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = false;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.BackColor = Color.FromArgb(0, 51, 102);
+            btnRefresh.ForeColor = SystemColors.Control;
+            btnRefresh.Location = new Point(164, 174);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(155, 59);
+            btnRefresh.TabIndex = 48;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            // 
+            // btnCloseReschedule
+            // 
+            btnCloseReschedule.BackColor = Color.FromArgb(0, 51, 102);
+            btnCloseReschedule.ForeColor = SystemColors.Control;
+            btnCloseReschedule.Location = new Point(325, 174);
+            btnCloseReschedule.Name = "btnCloseReschedule";
+            btnCloseReschedule.Size = new Size(155, 59);
+            btnCloseReschedule.TabIndex = 49;
+            btnCloseReschedule.Text = "Close Reschedule";
+            btnCloseReschedule.UseVisualStyleBackColor = false;
+            // 
+            // btnConfirmReschedule
+            // 
+            btnConfirmReschedule.BackColor = Color.FromArgb(0, 51, 102);
+            btnConfirmReschedule.ForeColor = SystemColors.Control;
+            btnConfirmReschedule.Location = new Point(485, 174);
+            btnConfirmReschedule.Name = "btnConfirmReschedule";
+            btnConfirmReschedule.Size = new Size(155, 59);
+            btnConfirmReschedule.TabIndex = 50;
+            btnConfirmReschedule.Text = "Confirm Reschedule";
+            btnConfirmReschedule.UseVisualStyleBackColor = false;
             // 
             // frmMyBookings
             // 
@@ -386,15 +401,15 @@
             Controls.Add(tabControlMyBookings);
             Controls.Add(pnlReschedule);
             Controls.Add(pnlSideBar);
-            Controls.Add(panel1);
+            Controls.Add(pnlMyBookings);
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmMyBookings";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "My Bookings";
             WindowState = FormWindowState.Maximized;
             Load += MyBookingsForm_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlMyBookings.ResumeLayout(false);
+            pnlMyBookings.PerformLayout();
             pnlSideBar.ResumeLayout(false);
             pnlReschedule.ResumeLayout(false);
             pnlReschedule.PerformLayout();
@@ -409,7 +424,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMyBookings;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSassa;
         private System.Windows.Forms.Label lblMyBookings;
@@ -422,14 +437,10 @@
         private DataGridView dgvUpcoming;
         private Button btnRescheduleBooking;
         private Button btnCancelBooking;
-        private Button btnConfirmReschedule;
-        private Button btnCloseReschedule;
         private DataGridView dgvPrevious;
         private Label lblRescheduleAvailability;
         private ComboBox cboRescheduleTimeSlot;
         private DateTimePicker dtpRescheduleDate;
-        private Button btnRefresh;
-        private Button btnBack;
         private Label lblChooseAvailableSlot;
         private Label lblRescheduleDate;
         private Button btnNewBooking;
@@ -438,6 +449,10 @@
         private Button btnMyProfile;
         private Button btnQueueStatus;
         private Button btnMyBooking;
+        private Button btnConfirmReschedule;
+        private Button btnCloseReschedule;
+        private Button btnRefresh;
+        private Button btnBack;
     }
 }
 

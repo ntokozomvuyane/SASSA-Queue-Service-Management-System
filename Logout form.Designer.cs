@@ -28,195 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblsignout = new System.Windows.Forms.Label();
-            this.lblAreyousure = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSignout = new System.Windows.Forms.Button();
-            this.menuePanel = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnQueueStatus = new System.Windows.Forms.Button();
-            this.btnMyBooking = new System.Windows.Forms.Button();
-            this.btnNewBooking = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.SignOutPanel = new System.Windows.Forms.Panel();
-            this.lbllogout = new System.Windows.Forms.Label();
-            this.lblPortal = new System.Windows.Forms.Label();
-            this.lblSassa = new System.Windows.Forms.Label();
-            this.menuePanel.SuspendLayout();
-            this.SignOutPanel.SuspendLayout();
-            this.SuspendLayout();
+            lblsignout = new Label();
+            lblAreyousure = new Label();
+            menuePanel = new Panel();
+            btnLogout = new Button();
+            btnProfile = new Button();
+            btnQueueStatus = new Button();
+            btnMyBooking = new Button();
+            btnNewBooking = new Button();
+            btnDashboard = new Button();
+            SignOutPanel = new Panel();
+            lbllogout = new Label();
+            lblPortal = new Label();
+            lblSassa = new Label();
+            btnCancel = new Button();
+            btnSignOut = new Button();
+            menuePanel.SuspendLayout();
+            SignOutPanel.SuspendLayout();
+            SuspendLayout();
             // 
             // lblsignout
             // 
-            this.lblsignout.AutoSize = true;
-            this.lblsignout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsignout.Location = new System.Drawing.Point(544, 173);
-            this.lblsignout.Name = "lblsignout";
-            this.lblsignout.Size = new System.Drawing.Size(94, 22);
-            this.lblsignout.TabIndex = 30;
-            this.lblsignout.Text = "Sign Out ";
+            lblsignout.AutoSize = true;
+            lblsignout.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblsignout.Location = new Point(476, 162);
+            lblsignout.Name = "lblsignout";
+            lblsignout.Size = new Size(78, 18);
+            lblsignout.TabIndex = 30;
+            lblsignout.Text = "Sign Out ";
             // 
             // lblAreyousure
             // 
-            this.lblAreyousure.AutoSize = true;
-            this.lblAreyousure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreyousure.Location = new System.Drawing.Point(431, 223);
-            this.lblAreyousure.Name = "lblAreyousure";
-            this.lblAreyousure.Size = new System.Drawing.Size(321, 22);
-            this.lblAreyousure.TabIndex = 31;
-            this.lblAreyousure.Text = "Are you sure you want to sign out?";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(290, 288);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(278, 49);
-            this.btnCancel.TabIndex = 42;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // btnSignout
-            // 
-            this.btnSignout.Location = new System.Drawing.Point(633, 287);
-            this.btnSignout.Name = "btnSignout";
-            this.btnSignout.Size = new System.Drawing.Size(278, 49);
-            this.btnSignout.TabIndex = 43;
-            this.btnSignout.Text = "Sign Out";
-            this.btnSignout.UseVisualStyleBackColor = true;
+            lblAreyousure.AutoSize = true;
+            lblAreyousure.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAreyousure.Location = new Point(377, 209);
+            lblAreyousure.Name = "lblAreyousure";
+            lblAreyousure.Size = new Size(269, 18);
+            lblAreyousure.TabIndex = 31;
+            lblAreyousure.Text = "Are you sure you want to sign out?";
             // 
             // menuePanel
             // 
-            this.menuePanel.BackColor = System.Drawing.Color.White;
-            this.menuePanel.Controls.Add(this.btnLogout);
-            this.menuePanel.Controls.Add(this.btnProfile);
-            this.menuePanel.Controls.Add(this.btnQueueStatus);
-            this.menuePanel.Controls.Add(this.btnMyBooking);
-            this.menuePanel.Controls.Add(this.btnNewBooking);
-            this.menuePanel.Controls.Add(this.btnDashboard);
-            this.menuePanel.Location = new System.Drawing.Point(12, 76);
-            this.menuePanel.Name = "menuePanel";
-            this.menuePanel.Size = new System.Drawing.Size(183, 526);
-            this.menuePanel.TabIndex = 44;
+            menuePanel.BackColor = Color.FromArgb(0, 51, 102);
+            menuePanel.BorderStyle = BorderStyle.Fixed3D;
+            menuePanel.Controls.Add(btnLogout);
+            menuePanel.Controls.Add(btnProfile);
+            menuePanel.Controls.Add(btnQueueStatus);
+            menuePanel.Controls.Add(btnMyBooking);
+            menuePanel.Controls.Add(btnNewBooking);
+            menuePanel.Controls.Add(btnDashboard);
+            menuePanel.Location = new Point(10, 85);
+            menuePanel.Name = "menuePanel";
+            menuePanel.Size = new Size(160, 479);
+            menuePanel.TabIndex = 44;
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogout.Location = new System.Drawing.Point(16, 325);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(144, 40);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = Color.White;
+            btnLogout.ForeColor = Color.Black;
+            btnLogout.Location = new Point(14, 305);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(126, 38);
+            btnLogout.TabIndex = 7;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
             // 
             // btnProfile
             // 
-            this.btnProfile.Location = new System.Drawing.Point(16, 269);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(144, 40);
-            this.btnProfile.TabIndex = 4;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Location = new Point(14, 252);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Size = new Size(126, 38);
+            btnProfile.TabIndex = 4;
+            btnProfile.Text = "Profile";
+            btnProfile.UseVisualStyleBackColor = true;
             // 
             // btnQueueStatus
             // 
-            this.btnQueueStatus.Location = new System.Drawing.Point(16, 210);
-            this.btnQueueStatus.Name = "btnQueueStatus";
-            this.btnQueueStatus.Size = new System.Drawing.Size(144, 40);
-            this.btnQueueStatus.TabIndex = 3;
-            this.btnQueueStatus.Text = "Queue Status";
-            this.btnQueueStatus.UseVisualStyleBackColor = true;
+            btnQueueStatus.Location = new Point(14, 197);
+            btnQueueStatus.Name = "btnQueueStatus";
+            btnQueueStatus.Size = new Size(126, 38);
+            btnQueueStatus.TabIndex = 3;
+            btnQueueStatus.Text = "Queue Status";
+            btnQueueStatus.UseVisualStyleBackColor = true;
             // 
             // btnMyBooking
             // 
-            this.btnMyBooking.Location = new System.Drawing.Point(16, 155);
-            this.btnMyBooking.Name = "btnMyBooking";
-            this.btnMyBooking.Size = new System.Drawing.Size(144, 40);
-            this.btnMyBooking.TabIndex = 2;
-            this.btnMyBooking.Text = "My Booking";
-            this.btnMyBooking.UseVisualStyleBackColor = true;
+            btnMyBooking.Location = new Point(14, 145);
+            btnMyBooking.Name = "btnMyBooking";
+            btnMyBooking.Size = new Size(126, 38);
+            btnMyBooking.TabIndex = 2;
+            btnMyBooking.Text = "My Booking";
+            btnMyBooking.UseVisualStyleBackColor = true;
             // 
             // btnNewBooking
             // 
-            this.btnNewBooking.Location = new System.Drawing.Point(16, 103);
-            this.btnNewBooking.Name = "btnNewBooking";
-            this.btnNewBooking.Size = new System.Drawing.Size(144, 40);
-            this.btnNewBooking.TabIndex = 1;
-            this.btnNewBooking.Text = "New Booking";
-            this.btnNewBooking.UseVisualStyleBackColor = true;
+            btnNewBooking.Location = new Point(14, 97);
+            btnNewBooking.Name = "btnNewBooking";
+            btnNewBooking.Size = new Size(126, 38);
+            btnNewBooking.TabIndex = 1;
+            btnNewBooking.Text = "New Booking";
+            btnNewBooking.UseVisualStyleBackColor = true;
             // 
             // btnDashboard
             // 
-            this.btnDashboard.Location = new System.Drawing.Point(16, 47);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(144, 40);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Location = new Point(14, 44);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(126, 38);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = true;
             // 
             // SignOutPanel
             // 
-            this.SignOutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(74)))), ((int)(((byte)(122)))));
-            this.SignOutPanel.Controls.Add(this.lbllogout);
-            this.SignOutPanel.Controls.Add(this.lblPortal);
-            this.SignOutPanel.Controls.Add(this.lblSassa);
-            this.SignOutPanel.Location = new System.Drawing.Point(12, 12);
-            this.SignOutPanel.Name = "SignOutPanel";
-            this.SignOutPanel.Size = new System.Drawing.Size(958, 58);
-            this.SignOutPanel.TabIndex = 45;
+            SignOutPanel.BackColor = Color.FromArgb(0, 51, 102);
+            SignOutPanel.BorderStyle = BorderStyle.Fixed3D;
+            SignOutPanel.Controls.Add(lbllogout);
+            SignOutPanel.Controls.Add(lblPortal);
+            SignOutPanel.Controls.Add(lblSassa);
+            SignOutPanel.Location = new Point(10, 11);
+            SignOutPanel.Name = "SignOutPanel";
+            SignOutPanel.Size = new Size(838, 68);
+            SignOutPanel.TabIndex = 45;
             // 
             // lbllogout
             // 
-            this.lbllogout.AutoSize = true;
-            this.lbllogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllogout.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbllogout.Location = new System.Drawing.Point(113, 17);
-            this.lbllogout.Name = "lbllogout";
-            this.lbllogout.Size = new System.Drawing.Size(88, 22);
-            this.lbllogout.TabIndex = 20;
-            this.lbllogout.Text = "Sign Out";
+            lbllogout.AutoSize = true;
+            lbllogout.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbllogout.ForeColor = SystemColors.Control;
+            lbllogout.Location = new Point(99, 16);
+            lbllogout.Name = "lbllogout";
+            lbllogout.Size = new Size(73, 18);
+            lbllogout.TabIndex = 20;
+            lbllogout.Text = "Sign Out";
             // 
             // lblPortal
             // 
-            this.lblPortal.AutoSize = true;
-            this.lblPortal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortal.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPortal.Location = new System.Drawing.Point(781, 28);
-            this.lblPortal.Name = "lblPortal";
-            this.lblPortal.Size = new System.Drawing.Size(142, 20);
-            this.lblPortal.TabIndex = 19;
-            this.lblPortal.Text = "Beneficiary Portal";
+            lblPortal.AutoSize = true;
+            lblPortal.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPortal.ForeColor = SystemColors.Control;
+            lblPortal.Location = new Point(683, 26);
+            lblPortal.Name = "lblPortal";
+            lblPortal.Size = new Size(119, 17);
+            lblPortal.TabIndex = 19;
+            lblPortal.Text = "Beneficiary Portal";
             // 
             // lblSassa
             // 
-            this.lblSassa.AutoSize = true;
-            this.lblSassa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSassa.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblSassa.Location = new System.Drawing.Point(11, 19);
-            this.lblSassa.Name = "lblSassa";
-            this.lblSassa.Size = new System.Drawing.Size(96, 29);
-            this.lblSassa.TabIndex = 17;
-            this.lblSassa.Text = "SASSA";
+            lblSassa.AutoSize = true;
+            lblSassa.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSassa.ForeColor = SystemColors.Control;
+            lblSassa.Location = new Point(10, 18);
+            lblSassa.Name = "lblSassa";
+            lblSassa.Size = new Size(77, 24);
+            lblSassa.TabIndex = 17;
+            lblSassa.Text = "SASSA";
+            // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.FromArgb(0, 51, 102);
+            btnCancel.ForeColor = SystemColors.Control;
+            btnCancel.Location = new Point(332, 269);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(206, 46);
+            btnCancel.TabIndex = 46;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnSignOut
+            // 
+            btnSignOut.BackColor = Color.FromArgb(0, 51, 102);
+            btnSignOut.ForeColor = SystemColors.Control;
+            btnSignOut.Location = new Point(579, 268);
+            btnSignOut.Name = "btnSignOut";
+            btnSignOut.Size = new Size(195, 47);
+            btnSignOut.TabIndex = 47;
+            btnSignOut.Text = "Sign Out";
+            btnSignOut.UseVisualStyleBackColor = false;
             // 
             // Logout_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 632);
-            this.Controls.Add(this.SignOutPanel);
-            this.Controls.Add(this.menuePanel);
-            this.Controls.Add(this.btnSignout);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblAreyousure);
-            this.Controls.Add(this.lblsignout);
-            this.Name = "Logout_form";
-            this.Text = "Logout_form";
-            this.menuePanel.ResumeLayout(false);
-            this.SignOutPanel.ResumeLayout(false);
-            this.SignOutPanel.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(862, 592);
+            Controls.Add(btnSignOut);
+            Controls.Add(btnCancel);
+            Controls.Add(SignOutPanel);
+            Controls.Add(menuePanel);
+            Controls.Add(lblAreyousure);
+            Controls.Add(lblsignout);
+            Name = "Logout_form";
+            Text = "Logout_form";
+            menuePanel.ResumeLayout(false);
+            SignOutPanel.ResumeLayout(false);
+            SignOutPanel.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -224,8 +230,6 @@
 
         private System.Windows.Forms.Label lblsignout;
         private System.Windows.Forms.Label lblAreyousure;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSignout;
         private System.Windows.Forms.Panel menuePanel;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnProfile;
@@ -237,5 +241,7 @@
         private System.Windows.Forms.Label lbllogout;
         private System.Windows.Forms.Label lblPortal;
         private System.Windows.Forms.Label lblSassa;
+        private Button btnCancel;
+        private Button btnSignOut;
     }
 }

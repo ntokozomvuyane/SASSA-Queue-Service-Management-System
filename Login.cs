@@ -176,6 +176,8 @@ namespace SASSAQueueManagementSystem
         {
             SetMenuButtons(false);
         }
+
+        
     }
 }
 

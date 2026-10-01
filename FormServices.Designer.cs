@@ -36,10 +36,10 @@
             btnDashboard = new Button();
             lblServiceManagement = new Label();
             pnlNewGrantApplication = new Panel();
-            lblNewGrantApplication = new Label();
-            lblNewGrantStatus = new Label();
-            lblEditStatusNewGrant = new Label();
             btnEditStatusNewGrant = new Button();
+            lblEditStatusNewGrant = new Label();
+            lblNewGrantStatus = new Label();
+            lblNewGrantApplication = new Label();
             btnAddServices = new Button();
             pnlExistingGrantEnquiry = new Panel();
             btnEditStatusExistingGrant = new Button();
@@ -66,6 +66,12 @@
             lblEditStatusGeneralAssistance = new Label();
             lblStatusGeneralAssistance = new Label();
             lblGeneralAssistance = new Label();
+            pnlBookingConfirmationForm = new Panel();
+            lblStaffRole = new Label();
+            lblStaffName = new Label();
+            lblSystemName = new Label();
+            lblSystemSubtitle = new Label();
+            btnLogout = new Button();
             pnlSidebar.SuspendLayout();
             pnlNewGrantApplication.SuspendLayout();
             pnlExistingGrantEnquiry.SuspendLayout();
@@ -73,18 +79,21 @@
             pnlPaymentEnquiry.SuspendLayout();
             pnlDocumentSubmission.SuspendLayout();
             pnlGeneralAssistance.SuspendLayout();
+            pnlBookingConfirmationForm.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSidebar
             // 
+            pnlSidebar.BackColor = Color.FromArgb(0, 51, 102);
+            pnlSidebar.BorderStyle = BorderStyle.Fixed3D;
             pnlSidebar.Controls.Add(btnReports);
             pnlSidebar.Controls.Add(btnBookings);
             pnlSidebar.Controls.Add(btnSlots);
             pnlSidebar.Controls.Add(btnServices);
             pnlSidebar.Controls.Add(btnDashboard);
-            pnlSidebar.Location = new Point(18, 15);
+            pnlSidebar.Location = new Point(0, 54);
             pnlSidebar.Name = "pnlSidebar";
-            pnlSidebar.Size = new Size(163, 409);
+            pnlSidebar.Size = new Size(181, 370);
             pnlSidebar.TabIndex = 0;
             // 
             // btnReports
@@ -136,7 +145,7 @@
             // 
             lblServiceManagement.AutoSize = true;
             lblServiceManagement.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblServiceManagement.Location = new Point(198, 6);
+            lblServiceManagement.Location = new Point(206, 48);
             lblServiceManagement.Name = "lblServiceManagement";
             lblServiceManagement.Size = new Size(189, 25);
             lblServiceManagement.TabIndex = 1;
@@ -144,42 +153,16 @@
             // 
             // pnlNewGrantApplication
             // 
-            pnlNewGrantApplication.BackColor = SystemColors.ButtonHighlight;
+            pnlNewGrantApplication.BackColor = Color.FromArgb(248, 249, 250);
+            pnlNewGrantApplication.BorderStyle = BorderStyle.Fixed3D;
             pnlNewGrantApplication.Controls.Add(btnEditStatusNewGrant);
             pnlNewGrantApplication.Controls.Add(lblEditStatusNewGrant);
             pnlNewGrantApplication.Controls.Add(lblNewGrantStatus);
             pnlNewGrantApplication.Controls.Add(lblNewGrantApplication);
-            pnlNewGrantApplication.Location = new Point(206, 41);
+            pnlNewGrantApplication.Location = new Point(206, 76);
             pnlNewGrantApplication.Name = "pnlNewGrantApplication";
             pnlNewGrantApplication.Size = new Size(570, 44);
             pnlNewGrantApplication.TabIndex = 2;
-            // 
-            // lblNewGrantApplication
-            // 
-            lblNewGrantApplication.AutoSize = true;
-            lblNewGrantApplication.Location = new Point(12, 11);
-            lblNewGrantApplication.Name = "lblNewGrantApplication";
-            lblNewGrantApplication.Size = new Size(127, 15);
-            lblNewGrantApplication.TabIndex = 0;
-            lblNewGrantApplication.Text = "New Grant Application";
-            // 
-            // lblNewGrantStatus
-            // 
-            lblNewGrantStatus.AutoSize = true;
-            lblNewGrantStatus.Location = new Point(378, 13);
-            lblNewGrantStatus.Name = "lblNewGrantStatus";
-            lblNewGrantStatus.Size = new Size(39, 15);
-            lblNewGrantStatus.TabIndex = 1;
-            lblNewGrantStatus.Text = "Status";
-            // 
-            // lblEditStatusNewGrant
-            // 
-            lblEditStatusNewGrant.AutoSize = true;
-            lblEditStatusNewGrant.Location = new Point(450, 13);
-            lblEditStatusNewGrant.Name = "lblEditStatusNewGrant";
-            lblEditStatusNewGrant.Size = new Size(27, 15);
-            lblEditStatusNewGrant.TabIndex = 2;
-            lblEditStatusNewGrant.Text = "Edit";
             // 
             // btnEditStatusNewGrant
             // 
@@ -190,9 +173,36 @@
             btnEditStatusNewGrant.Text = "Edit";
             btnEditStatusNewGrant.UseVisualStyleBackColor = true;
             // 
+            // lblEditStatusNewGrant
+            // 
+            lblEditStatusNewGrant.AutoSize = true;
+            lblEditStatusNewGrant.Location = new Point(450, 13);
+            lblEditStatusNewGrant.Name = "lblEditStatusNewGrant";
+            lblEditStatusNewGrant.Size = new Size(27, 15);
+            lblEditStatusNewGrant.TabIndex = 2;
+            lblEditStatusNewGrant.Text = "Edit";
+            // 
+            // lblNewGrantStatus
+            // 
+            lblNewGrantStatus.AutoSize = true;
+            lblNewGrantStatus.Location = new Point(378, 13);
+            lblNewGrantStatus.Name = "lblNewGrantStatus";
+            lblNewGrantStatus.Size = new Size(39, 15);
+            lblNewGrantStatus.TabIndex = 1;
+            lblNewGrantStatus.Text = "Status";
+            // 
+            // lblNewGrantApplication
+            // 
+            lblNewGrantApplication.AutoSize = true;
+            lblNewGrantApplication.Location = new Point(12, 11);
+            lblNewGrantApplication.Name = "lblNewGrantApplication";
+            lblNewGrantApplication.Size = new Size(127, 15);
+            lblNewGrantApplication.TabIndex = 0;
+            lblNewGrantApplication.Text = "New Grant Application";
+            // 
             // btnAddServices
             // 
-            btnAddServices.Location = new Point(672, 6);
+            btnAddServices.Location = new Point(682, 10);
             btnAddServices.Name = "btnAddServices";
             btnAddServices.Size = new Size(104, 26);
             btnAddServices.TabIndex = 4;
@@ -201,12 +211,13 @@
             // 
             // pnlExistingGrantEnquiry
             // 
-            pnlExistingGrantEnquiry.BackColor = SystemColors.ButtonHighlight;
+            pnlExistingGrantEnquiry.BackColor = Color.FromArgb(248, 249, 250);
+            pnlExistingGrantEnquiry.BorderStyle = BorderStyle.Fixed3D;
             pnlExistingGrantEnquiry.Controls.Add(btnEditStatusExistingGrant);
             pnlExistingGrantEnquiry.Controls.Add(lblEditStatusExistingGrantEnquiry);
             pnlExistingGrantEnquiry.Controls.Add(lblExistingGrantStatus);
             pnlExistingGrantEnquiry.Controls.Add(lblExistingGrantEnquiry);
-            pnlExistingGrantEnquiry.Location = new Point(206, 91);
+            pnlExistingGrantEnquiry.Location = new Point(206, 139);
             pnlExistingGrantEnquiry.Name = "pnlExistingGrantEnquiry";
             pnlExistingGrantEnquiry.Size = new Size(570, 46);
             pnlExistingGrantEnquiry.TabIndex = 5;
@@ -249,12 +260,13 @@
             // 
             // pnlGrantInformationUpdate
             // 
-            pnlGrantInformationUpdate.BackColor = SystemColors.ButtonHighlight;
+            pnlGrantInformationUpdate.BackColor = Color.FromArgb(248, 249, 250);
+            pnlGrantInformationUpdate.BorderStyle = BorderStyle.Fixed3D;
             pnlGrantInformationUpdate.Controls.Add(btnEditStatusGrantInformationUpdate);
             pnlGrantInformationUpdate.Controls.Add(lblEditStatusGrantInformationUpdate);
             pnlGrantInformationUpdate.Controls.Add(lblGrantInformationUpdateStatus);
             pnlGrantInformationUpdate.Controls.Add(lblGrantInformationUpdate);
-            pnlGrantInformationUpdate.Location = new Point(206, 143);
+            pnlGrantInformationUpdate.Location = new Point(206, 204);
             pnlGrantInformationUpdate.Name = "pnlGrantInformationUpdate";
             pnlGrantInformationUpdate.Size = new Size(570, 44);
             pnlGrantInformationUpdate.TabIndex = 6;
@@ -297,12 +309,13 @@
             // 
             // pnlPaymentEnquiry
             // 
-            pnlPaymentEnquiry.BackColor = SystemColors.ButtonHighlight;
+            pnlPaymentEnquiry.BackColor = Color.FromArgb(248, 249, 250);
+            pnlPaymentEnquiry.BorderStyle = BorderStyle.Fixed3D;
             pnlPaymentEnquiry.Controls.Add(btnEditStausPaymentEnquiry);
             pnlPaymentEnquiry.Controls.Add(lblEditStatusPaymentEnquiry);
             pnlPaymentEnquiry.Controls.Add(lblPaymentEnquiryStatus);
             pnlPaymentEnquiry.Controls.Add(lblPaymentEnquiry);
-            pnlPaymentEnquiry.Location = new Point(206, 193);
+            pnlPaymentEnquiry.Location = new Point(206, 261);
             pnlPaymentEnquiry.Name = "pnlPaymentEnquiry";
             pnlPaymentEnquiry.Size = new Size(570, 44);
             pnlPaymentEnquiry.TabIndex = 7;
@@ -345,12 +358,13 @@
             // 
             // pnlDocumentSubmission
             // 
-            pnlDocumentSubmission.BackColor = SystemColors.ButtonHighlight;
+            pnlDocumentSubmission.BackColor = Color.FromArgb(248, 249, 250);
+            pnlDocumentSubmission.BorderStyle = BorderStyle.Fixed3D;
             pnlDocumentSubmission.Controls.Add(btnEditStatusDocumentSubmission);
             pnlDocumentSubmission.Controls.Add(lblEditStatusDocumentSubmission);
             pnlDocumentSubmission.Controls.Add(lblDocumentSubmissionStatus);
             pnlDocumentSubmission.Controls.Add(lblDocumentSubmission);
-            pnlDocumentSubmission.Location = new Point(206, 243);
+            pnlDocumentSubmission.Location = new Point(206, 323);
             pnlDocumentSubmission.Name = "pnlDocumentSubmission";
             pnlDocumentSubmission.Size = new Size(570, 44);
             pnlDocumentSubmission.TabIndex = 8;
@@ -393,12 +407,13 @@
             // 
             // pnlGeneralAssistance
             // 
-            pnlGeneralAssistance.BackColor = SystemColors.ButtonHighlight;
+            pnlGeneralAssistance.BackColor = Color.FromArgb(248, 249, 250);
+            pnlGeneralAssistance.BorderStyle = BorderStyle.Fixed3D;
             pnlGeneralAssistance.Controls.Add(btnEditStatusGeneralAssistance);
             pnlGeneralAssistance.Controls.Add(lblEditStatusGeneralAssistance);
             pnlGeneralAssistance.Controls.Add(lblStatusGeneralAssistance);
             pnlGeneralAssistance.Controls.Add(lblGeneralAssistance);
-            pnlGeneralAssistance.Location = new Point(206, 293);
+            pnlGeneralAssistance.Location = new Point(206, 384);
             pnlGeneralAssistance.Name = "pnlGeneralAssistance";
             pnlGeneralAssistance.Size = new Size(570, 40);
             pnlGeneralAssistance.TabIndex = 9;
@@ -439,17 +454,83 @@
             lblGeneralAssistance.TabIndex = 0;
             lblGeneralAssistance.Text = "General Assistance";
             // 
+            // pnlBookingConfirmationForm
+            // 
+            pnlBookingConfirmationForm.BackColor = Color.FromArgb(0, 51, 102);
+            pnlBookingConfirmationForm.BorderStyle = BorderStyle.Fixed3D;
+            pnlBookingConfirmationForm.Controls.Add(btnLogout);
+            pnlBookingConfirmationForm.Controls.Add(lblStaffRole);
+            pnlBookingConfirmationForm.Controls.Add(lblStaffName);
+            pnlBookingConfirmationForm.Controls.Add(lblSystemName);
+            pnlBookingConfirmationForm.Controls.Add(lblSystemSubtitle);
+            pnlBookingConfirmationForm.Controls.Add(btnAddServices);
+            pnlBookingConfirmationForm.Dock = DockStyle.Top;
+            pnlBookingConfirmationForm.Location = new Point(0, 0);
+            pnlBookingConfirmationForm.Margin = new Padding(3, 2, 3, 2);
+            pnlBookingConfirmationForm.Name = "pnlBookingConfirmationForm";
+            pnlBookingConfirmationForm.Size = new Size(801, 49);
+            pnlBookingConfirmationForm.TabIndex = 18;
+            // 
+            // lblStaffRole
+            // 
+            lblStaffRole.AutoSize = true;
+            lblStaffRole.Location = new Point(886, 26);
+            lblStaffRole.Name = "lblStaffRole";
+            lblStaffRole.Size = new Size(83, 15);
+            lblStaffRole.TabIndex = 2;
+            lblStaffRole.Text = "Service Officer";
+            // 
+            // lblStaffName
+            // 
+            lblStaffName.AutoSize = true;
+            lblStaffName.Location = new Point(886, 10);
+            lblStaffName.Name = "lblStaffName";
+            lblStaffName.Size = new Size(87, 15);
+            lblStaffName.TabIndex = 1;
+            lblStaffName.Text = "Officer Bhengu";
+            // 
+            // lblSystemName
+            // 
+            lblSystemName.AutoSize = true;
+            lblSystemName.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSystemName.ForeColor = Color.White;
+            lblSystemName.Location = new Point(3, 7);
+            lblSystemName.Name = "lblSystemName";
+            lblSystemName.Size = new Size(55, 20);
+            lblSystemName.TabIndex = 1;
+            lblSystemName.Text = "SASSA";
+            // 
+            // lblSystemSubtitle
+            // 
+            lblSystemSubtitle.AutoSize = true;
+            lblSystemSubtitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSystemSubtitle.ForeColor = Color.White;
+            lblSystemSubtitle.Location = new Point(3, 26);
+            lblSystemSubtitle.Name = "lblSystemSubtitle";
+            lblSystemSubtitle.Size = new Size(89, 15);
+            lblSystemSubtitle.TabIndex = 2;
+            lblSystemSubtitle.Text = "Admin Console";
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(558, 10);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(104, 26);
+            btnLogout.TabIndex = 5;
+            btnLogout.Text = "Sign Out";
+            btnLogout.UseVisualStyleBackColor = true;
+            // 
             // frmServices
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(801, 481);
+            Controls.Add(pnlBookingConfirmationForm);
             Controls.Add(pnlGeneralAssistance);
             Controls.Add(pnlDocumentSubmission);
             Controls.Add(pnlPaymentEnquiry);
             Controls.Add(pnlGrantInformationUpdate);
             Controls.Add(pnlExistingGrantEnquiry);
-            Controls.Add(btnAddServices);
             Controls.Add(pnlNewGrantApplication);
             Controls.Add(lblServiceManagement);
             Controls.Add(pnlSidebar);
@@ -469,6 +550,8 @@
             pnlDocumentSubmission.PerformLayout();
             pnlGeneralAssistance.ResumeLayout(false);
             pnlGeneralAssistance.PerformLayout();
+            pnlBookingConfirmationForm.ResumeLayout(false);
+            pnlBookingConfirmationForm.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -513,5 +596,11 @@
         private Label lblEditStatusGeneralAssistance;
         private Label lblStatusGeneralAssistance;
         private Label lblGeneralAssistance;
+        private Panel pnlBookingConfirmationForm;
+        private Label lblStaffRole;
+        private Label lblStaffName;
+        private Label lblSystemName;
+        private Label lblSystemSubtitle;
+        private Button btnLogout;
     }
 }

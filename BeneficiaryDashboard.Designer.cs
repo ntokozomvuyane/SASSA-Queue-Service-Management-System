@@ -264,6 +264,7 @@
             // menuePanel
             // 
             menuePanel.BackColor = Color.White;
+            menuePanel.BorderStyle = BorderStyle.Fixed3D;
             menuePanel.Controls.Add(btnLogout);
             menuePanel.Controls.Add(btnProfile);
             menuePanel.Controls.Add(btnQueueStatus);

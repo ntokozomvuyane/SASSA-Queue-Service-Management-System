@@ -30,8 +30,17 @@ namespace SASSAQueueManagementSystem
             object sender, EventArgs e)
         {
             //OpenLoginForm(UserRole.Staff);
-            Login loginForm = new Login(UserRole.Staff);
-            loginForm.ShowDialog();
+           // Login loginForm = new Login(UserRole.Staff);
+           // loginForm.ShowDialog();
+
+            Hide();
+
+            using (var staffLogin= new StaffLogin())
+            {
+                staffLogin.ShowDialog(this);
+            }
+
+            Show();
 
         }
 
@@ -50,6 +59,7 @@ namespace SASSAQueueManagementSystem
             Login loginForm = new Login(UserRole.Administrator);
             loginForm.ShowDialog();
         }
-    
+      
+
     }
 }

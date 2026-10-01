@@ -61,6 +61,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // pnlQueueStatus
             // 
             pnlQueueStatus.BackColor = Color.FromArgb(0, 51, 102);
+            pnlQueueStatus.BorderStyle = BorderStyle.Fixed3D;
             pnlQueueStatus.Controls.Add(lblBeneficiaryPortal);
             pnlQueueStatus.Controls.Add(lblTrackPosition);
             pnlQueueStatus.Controls.Add(lblQueueStatus);
@@ -122,7 +123,8 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             // pnlSideBar
             // 
-            pnlSideBar.BackColor = Color.WhiteSmoke;
+            pnlSideBar.BackColor = Color.FromArgb(0, 51, 102);
+            pnlSideBar.BorderStyle = BorderStyle.Fixed3D;
             pnlSideBar.Controls.Add(btnLogout);
             pnlSideBar.Controls.Add(btnMyProfile);
             pnlSideBar.Controls.Add(btnQueueStatus);
@@ -132,12 +134,12 @@ namespace Sassa_Queue_And_Service_Management_System
             pnlSideBar.Location = new Point(0, 83);
             pnlSideBar.Margin = new Padding(4, 3, 4, 3);
             pnlSideBar.Name = "pnlSideBar";
-            pnlSideBar.Size = new Size(190, 515);
+            pnlSideBar.Size = new Size(190, 505);
             pnlSideBar.TabIndex = 1;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(42, 253);
+            btnLogout.Location = new Point(26, 253);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(129, 39);
             btnLogout.TabIndex = 14;
@@ -147,7 +149,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             // btnMyProfile
             // 
-            btnMyProfile.Location = new Point(42, 208);
+            btnMyProfile.Location = new Point(26, 208);
             btnMyProfile.Name = "btnMyProfile";
             btnMyProfile.Size = new Size(129, 39);
             btnMyProfile.TabIndex = 13;
@@ -157,7 +159,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             // btnQueueStatus
             // 
-            btnQueueStatus.Location = new Point(42, 163);
+            btnQueueStatus.Location = new Point(26, 163);
             btnQueueStatus.Name = "btnQueueStatus";
             btnQueueStatus.Size = new Size(129, 39);
             btnQueueStatus.TabIndex = 12;
@@ -167,7 +169,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             // btnMyBooking
             // 
-            btnMyBooking.Location = new Point(42, 118);
+            btnMyBooking.Location = new Point(26, 118);
             btnMyBooking.Name = "btnMyBooking";
             btnMyBooking.Size = new Size(129, 39);
             btnMyBooking.TabIndex = 11;
@@ -177,7 +179,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             // btnNewBooking
             // 
-            btnNewBooking.Location = new Point(42, 73);
+            btnNewBooking.Location = new Point(26, 73);
             btnNewBooking.Name = "btnNewBooking";
             btnNewBooking.Size = new Size(129, 39);
             btnNewBooking.TabIndex = 10;
@@ -187,7 +189,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             // btnDashboard
             // 
-            btnDashboard.Location = new Point(42, 25);
+            btnDashboard.Location = new Point(26, 25);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(129, 39);
             btnDashboard.TabIndex = 6;
@@ -210,6 +212,7 @@ namespace Sassa_Queue_And_Service_Management_System
             // pnlQueueDetails
             // 
             pnlQueueDetails.BackColor = Color.WhiteSmoke;
+            pnlQueueDetails.BorderStyle = BorderStyle.Fixed3D;
             pnlQueueDetails.Controls.Add(lblQueueMessage);
             pnlQueueDetails.Controls.Add(lblPeopleAhead);
             pnlQueueDetails.Controls.Add(lblCheckInTime);
@@ -296,7 +299,7 @@ namespace Sassa_Queue_And_Service_Management_System
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(226, 561);
+            btnBack.Location = new Point(226, 551);
             btnBack.Margin = new Padding(4, 3, 4, 3);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(167, 37);
@@ -312,7 +315,7 @@ namespace Sassa_Queue_And_Service_Management_System
             btnRefresh.FlatStyle = FlatStyle.Flat;
             btnRefresh.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRefresh.ForeColor = Color.White;
-            btnRefresh.Location = new Point(429, 561);
+            btnRefresh.Location = new Point(529, 551);
             btnRefresh.Margin = new Padding(4, 3, 4, 3);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(167, 37);
