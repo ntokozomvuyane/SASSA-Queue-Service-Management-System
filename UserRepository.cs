@@ -6,7 +6,7 @@ namespace SASSAQueueManagementSystem
 {
     public class UserRepository
     {
-        public static List<User> User { get; } = new List<User>
+        public static List<User> Users { get; } = new List<User>
         {
             new Beneficiary
             {
@@ -19,8 +19,8 @@ namespace SASSAQueueManagementSystem
             new StaffMember
             {
                 UserID = "S001",
-                FullName = "Jane Smith",
-                Username = "janesmith",
+                FullName = "Ntokozo Mvuyane",
+                Username = "ntokozomvuyane",
                 Password = "5678",
                 StaffID = "STAFF001",
                 ServiceCentre = "Johannesburg"
@@ -28,8 +28,8 @@ namespace SASSAQueueManagementSystem
             new Administrator
             {
                 UserID = "A001",
-                FullName = "Officer Bhengu",
-                Username = "officerb",
+                FullName = "Officer Seeiso",
+                Username = "officers",
                 Password = "1234",
                 EmployeeNumber = "EMP001"   
             }

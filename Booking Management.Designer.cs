@@ -29,134 +29,123 @@ namespace Zanele_Admin
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
             btnReports = new Button();
             btnBookins = new Button();
             btnSlots = new Button();
             btnServices = new Button();
             btnDashboard = new Button();
-            groupBox2 = new GroupBox();
+            grpSearch = new GroupBox();
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
             cmbCentre = new ComboBox();
             cmbStatus = new ComboBox();
             txtSearch = new TextBox();
-            dgBookingManagement = new DataGridView();
-            groupBox3 = new GroupBox();
+            dgvBookingManagement = new DataGridView();
+            grpAdmin = new GroupBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label1 = new Label();
             button1 = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgBookingManagement).BeginInit();
-            groupBox3.SuspendLayout();
+            pnlSideBar = new Panel();
+            grpSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvBookingManagement).BeginInit();
+            grpAdmin.SuspendLayout();
+            pnlSideBar.SuspendLayout();
             SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = SystemColors.ControlLightLight;
-            groupBox1.Controls.Add(btnReports);
-            groupBox1.Controls.Add(btnBookins);
-            groupBox1.Controls.Add(btnSlots);
-            groupBox1.Controls.Add(btnServices);
-            groupBox1.Controls.Add(btnDashboard);
-            groupBox1.Location = new Point(1, 86);
-            groupBox1.Margin = new Padding(4, 5, 4, 5);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 5, 4, 5);
-            groupBox1.Size = new Size(221, 612);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
             // 
             // btnReports
             // 
-            btnReports.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReports.ForeColor = Color.Navy;
-            btnReports.Location = new Point(43, 318);
-            btnReports.Margin = new Padding(4, 5, 4, 5);
+            btnReports.BackColor = Color.White;
+            btnReports.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReports.ForeColor = SystemColors.ActiveCaptionText;
+            btnReports.Location = new Point(30, 162);
+            btnReports.Margin = new Padding(4, 3, 4, 3);
             btnReports.Name = "btnReports";
-            btnReports.Size = new Size(127, 35);
+            btnReports.Size = new Size(111, 27);
             btnReports.TabIndex = 0;
             btnReports.Text = "Reports";
             btnReports.UseVisualStyleBackColor = false;
             // 
             // btnBookins
             // 
-            btnBookins.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBookins.ForeColor = Color.Navy;
-            btnBookins.Location = new Point(43, 246);
-            btnBookins.Margin = new Padding(4, 5, 4, 5);
+            btnBookins.BackColor = Color.White;
+            btnBookins.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBookins.ForeColor = SystemColors.ActiveCaptionText;
+            btnBookins.Location = new Point(30, 54);
+            btnBookins.Margin = new Padding(4, 3, 4, 3);
             btnBookins.Name = "btnBookins";
-            btnBookins.Size = new Size(127, 35);
+            btnBookins.Size = new Size(111, 27);
             btnBookins.TabIndex = 0;
             btnBookins.Text = "Bookings";
             btnBookins.UseVisualStyleBackColor = false;
             // 
             // btnSlots
             // 
-            btnSlots.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSlots.ForeColor = Color.Navy;
-            btnSlots.Location = new Point(43, 185);
-            btnSlots.Margin = new Padding(4, 5, 4, 5);
+            btnSlots.BackColor = Color.White;
+            btnSlots.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSlots.ForeColor = SystemColors.ActiveCaptionText;
+            btnSlots.Location = new Point(31, 129);
+            btnSlots.Margin = new Padding(4, 3, 4, 3);
             btnSlots.Name = "btnSlots";
-            btnSlots.Size = new Size(127, 35);
+            btnSlots.Size = new Size(111, 27);
             btnSlots.TabIndex = 0;
             btnSlots.Text = "Slots";
             btnSlots.UseVisualStyleBackColor = false;
             // 
             // btnServices
             // 
-            btnServices.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnServices.ForeColor = Color.Navy;
-            btnServices.Location = new Point(43, 123);
-            btnServices.Margin = new Padding(4, 5, 4, 5);
+            btnServices.BackColor = Color.White;
+            btnServices.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnServices.ForeColor = SystemColors.ActiveCaptionText;
+            btnServices.Location = new Point(30, 87);
+            btnServices.Margin = new Padding(4, 3, 4, 3);
             btnServices.Name = "btnServices";
-            btnServices.Size = new Size(127, 35);
+            btnServices.Size = new Size(111, 27);
             btnServices.TabIndex = 0;
             btnServices.Text = "Services";
             btnServices.UseVisualStyleBackColor = false;
             // 
             // btnDashboard
             // 
-            btnDashboard.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = Color.Navy;
-            btnDashboard.Location = new Point(43, 49);
-            btnDashboard.Margin = new Padding(4, 5, 4, 5);
+            btnDashboard.BackColor = Color.White;
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = SystemColors.ActiveCaptionText;
+            btnDashboard.Location = new Point(30, 15);
+            btnDashboard.Margin = new Padding(4, 3, 4, 3);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(127, 35);
+            btnDashboard.Size = new Size(111, 27);
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
             // 
-            // groupBox2
+            // grpSearch
             // 
-            groupBox2.BackColor = Color.GhostWhite;
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(cmbCentre);
-            groupBox2.Controls.Add(cmbStatus);
-            groupBox2.Controls.Add(txtSearch);
-            groupBox2.Location = new Point(277, 129);
-            groupBox2.Margin = new Padding(4, 5, 4, 5);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4, 5, 4, 5);
-            groupBox2.Size = new Size(773, 151);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
+            grpSearch.BackColor = Color.Transparent;
+            grpSearch.Controls.Add(label3);
+            grpSearch.Controls.Add(label2);
+            grpSearch.Controls.Add(label4);
+            grpSearch.Controls.Add(cmbCentre);
+            grpSearch.Controls.Add(cmbStatus);
+            grpSearch.Controls.Add(txtSearch);
+            grpSearch.Location = new Point(243, 97);
+            grpSearch.Margin = new Padding(4, 3, 4, 3);
+            grpSearch.Name = "grpSearch";
+            grpSearch.Padding = new Padding(4, 3, 4, 3);
+            grpSearch.Size = new Size(677, 113);
+            grpSearch.TabIndex = 2;
+            grpSearch.TabStop = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(519, 34);
+            label3.Location = new Point(454, 25);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(120, 24);
+            label3.Size = new Size(95, 19);
             label3.TabIndex = 2;
             label3.Text = "Centre Filter";
             // 
@@ -165,10 +154,10 @@ namespace Zanele_Admin
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(248, 38);
+            label2.Location = new Point(217, 29);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(117, 24);
+            label2.Size = new Size(92, 19);
             label2.TabIndex = 2;
             label2.Text = "Status Filter";
             // 
@@ -177,10 +166,10 @@ namespace Zanele_Admin
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(39, 38);
+            label4.Location = new Point(34, 29);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(70, 24);
+            label4.Size = new Size(56, 19);
             label4.TabIndex = 2;
             label4.Text = "Search";
             // 
@@ -188,69 +177,68 @@ namespace Zanele_Admin
             // 
             cmbCentre.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbCentre.FormattingEnabled = true;
-            cmbCentre.Location = new Point(524, 72);
-            cmbCentre.Margin = new Padding(4, 5, 4, 5);
+            cmbCentre.Location = new Point(458, 54);
+            cmbCentre.Margin = new Padding(4, 3, 4, 3);
             cmbCentre.Name = "cmbCentre";
-            cmbCentre.Size = new Size(204, 32);
+            cmbCentre.Size = new Size(179, 27);
             cmbCentre.TabIndex = 1;
             // 
             // cmbStatus
             // 
             cmbStatus.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbStatus.FormattingEnabled = true;
-            cmbStatus.Location = new Point(253, 74);
-            cmbStatus.Margin = new Padding(4, 5, 4, 5);
+            cmbStatus.Location = new Point(222, 55);
+            cmbStatus.Margin = new Padding(4, 3, 4, 3);
             cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(216, 32);
+            cmbStatus.Size = new Size(190, 27);
             cmbStatus.TabIndex = 1;
             // 
             // txtSearch
             // 
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSearch.Location = new Point(32, 77);
-            txtSearch.Margin = new Padding(4, 5, 4, 5);
+            txtSearch.Location = new Point(28, 55);
+            txtSearch.Margin = new Padding(4, 3, 4, 3);
             txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(199, 43);
+            txtSearch.Size = new Size(174, 28);
             txtSearch.TabIndex = 0;
             // 
-            // dgBookingManagement
+            // dgvBookingManagement
             // 
-            dgBookingManagement.BackgroundColor = SystemColors.ControlLightLight;
-            dgBookingManagement.BorderStyle = BorderStyle.None;
-            dgBookingManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgBookingManagement.Location = new Point(277, 305);
-            dgBookingManagement.Margin = new Padding(4, 5, 4, 5);
-            dgBookingManagement.Name = "dgBookingManagement";
-            dgBookingManagement.RowHeadersWidth = 51;
-            dgBookingManagement.Size = new Size(773, 369);
-            dgBookingManagement.TabIndex = 3;
+            dgvBookingManagement.BackgroundColor = SystemColors.ControlLightLight;
+            dgvBookingManagement.BorderStyle = BorderStyle.Fixed3D;
+            dgvBookingManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBookingManagement.Location = new Point(243, 228);
+            dgvBookingManagement.Margin = new Padding(4, 3, 4, 3);
+            dgvBookingManagement.Name = "dgvBookingManagement";
+            dgvBookingManagement.Size = new Size(677, 277);
+            dgvBookingManagement.TabIndex = 3;
             // 
-            // groupBox3
+            // grpAdmin
             // 
-            groupBox3.BackColor = Color.FromArgb(26, 74, 122);
-            groupBox3.Controls.Add(label7);
-            groupBox3.Controls.Add(label6);
-            groupBox3.Controls.Add(label5);
-            groupBox3.Controls.Add(label1);
-            groupBox3.Controls.Add(button1);
-            groupBox3.Location = new Point(1, 6);
-            groupBox3.Margin = new Padding(4, 5, 4, 5);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(4, 5, 4, 5);
-            groupBox3.Size = new Size(1073, 90);
-            groupBox3.TabIndex = 4;
-            groupBox3.TabStop = false;
+            grpAdmin.BackColor = Color.FromArgb(0, 51, 102);
+            grpAdmin.Controls.Add(label7);
+            grpAdmin.Controls.Add(label6);
+            grpAdmin.Controls.Add(label5);
+            grpAdmin.Controls.Add(label1);
+            grpAdmin.Controls.Add(button1);
+            grpAdmin.Location = new Point(1, 3);
+            grpAdmin.Margin = new Padding(4, 3, 4, 3);
+            grpAdmin.Name = "grpAdmin";
+            grpAdmin.Padding = new Padding(4, 3, 4, 3);
+            grpAdmin.Size = new Size(939, 87);
+            grpAdmin.TabIndex = 4;
+            grpAdmin.TabStop = false;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ActiveCaption;
-            label7.Location = new Point(53, 60);
+            label7.Location = new Point(47, 45);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(107, 20);
+            label7.Size = new Size(86, 15);
             label7.TabIndex = 4;
             label7.Text = "Administration";
             // 
@@ -259,21 +247,21 @@ namespace Zanele_Admin
             label6.AutoSize = true;
             label6.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(52, 25);
+            label6.Location = new Point(46, 18);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(98, 29);
+            label6.Size = new Size(64, 23);
             label6.TabIndex = 3;
-            label6.Text = "SASSA";
+            label6.Text = "Sassa";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.ForeColor = SystemColors.ActiveCaption;
-            label5.Location = new Point(796, 60);
+            label5.Location = new Point(696, 45);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(100, 20);
+            label5.Size = new Size(80, 15);
             label5.TabIndex = 2;
             label5.Text = "Administrator";
             // 
@@ -282,69 +270,82 @@ namespace Zanele_Admin
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(755, 25);
+            label1.Location = new Point(660, 18);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(133, 25);
+            label1.Size = new Size(107, 20);
             label1.TabIndex = 1;
             label1.Text = "Admin Zanele";
             // 
             // button1
             // 
             button1.BackColor = Color.LightSteelBlue;
-            button1.Location = new Point(905, 45);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Location = new Point(792, 33);
+            button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new Size(100, 35);
+            button1.Size = new Size(88, 27);
             button1.TabIndex = 0;
             button1.Text = "Sign out";
             button1.UseVisualStyleBackColor = false;
             // 
+            // pnlSideBar
+            // 
+            pnlSideBar.BackColor = Color.FromArgb(0, 51, 102);
+            pnlSideBar.BorderStyle = BorderStyle.Fixed3D;
+            pnlSideBar.Controls.Add(btnDashboard);
+            pnlSideBar.Controls.Add(btnReports);
+            pnlSideBar.Controls.Add(btnSlots);
+            pnlSideBar.Controls.Add(btnServices);
+            pnlSideBar.Controls.Add(btnBookins);
+            pnlSideBar.Location = new Point(1, 97);
+            pnlSideBar.Name = "pnlSideBar";
+            pnlSideBar.Size = new Size(195, 408);
+            pnlSideBar.TabIndex = 5;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1067, 692);
-            Controls.Add(groupBox3);
-            Controls.Add(dgBookingManagement);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Margin = new Padding(4, 5, 4, 5);
+            ClientSize = new Size(933, 519);
+            Controls.Add(pnlSideBar);
+            Controls.Add(grpAdmin);
+            Controls.Add(dgvBookingManagement);
+            Controls.Add(grpSearch);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
             Text = "Booking Management";
-            groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgBookingManagement).EndInit();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            grpSearch.ResumeLayout(false);
+            grpSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvBookingManagement).EndInit();
+            grpAdmin.ResumeLayout(false);
+            grpAdmin.PerformLayout();
+            pnlSideBar.ResumeLayout(false);
             ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnBookins;
         private System.Windows.Forms.Button btnSlots;
         private System.Windows.Forms.Button btnServices;
         private System.Windows.Forms.Button btnDashboard;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbCentre;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dgBookingManagement;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgvBookingManagement;
+        private System.Windows.Forms.GroupBox grpAdmin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private Panel pnlSideBar;
     }
 }
 

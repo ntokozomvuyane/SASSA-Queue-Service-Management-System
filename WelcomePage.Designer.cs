@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            pnlSassa = new FlowLayoutPanel();
             btnStaffLogin = new Button();
             btnBeneficiaryLogin = new Button();
             btnAdmin = new Button();
@@ -44,20 +44,19 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // pnlSassa
             // 
-            flowLayoutPanel1.BackgroundImage = Properties.Resources.WhatsApp_Image_2026_09_15_at_2_44_52_PM;
-            flowLayoutPanel1.BackgroundImageLayout = ImageLayout.Stretch;
-            flowLayoutPanel1.Location = new Point(2, 1);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(642, 741);
-            flowLayoutPanel1.TabIndex = 0;
+            pnlSassa.BackgroundImage = Properties.Resources.WhatsApp_Image_2026_09_15_at_2_44_52_PM;
+            pnlSassa.BackgroundImageLayout = ImageLayout.Stretch;
+            pnlSassa.BorderStyle = BorderStyle.Fixed3D;
+            pnlSassa.Location = new Point(2, 1);
+            pnlSassa.Name = "pnlSassa";
+            pnlSassa.Size = new Size(642, 741);
+            pnlSassa.TabIndex = 0;
             // 
             // btnStaffLogin
             // 
             btnStaffLogin.BackColor = Color.CornflowerBlue;
-            btnStaffLogin.FlatAppearance.BorderSize = 0;
-            btnStaffLogin.FlatStyle = FlatStyle.Flat;
             btnStaffLogin.ForeColor = SystemColors.ControlLightLight;
             btnStaffLogin.Location = new Point(701, 236);
             btnStaffLogin.Name = "btnStaffLogin";
@@ -70,8 +69,6 @@
             // btnBeneficiaryLogin
             // 
             btnBeneficiaryLogin.BackColor = Color.Teal;
-            btnBeneficiaryLogin.FlatAppearance.BorderSize = 0;
-            btnBeneficiaryLogin.FlatStyle = FlatStyle.Flat;
             btnBeneficiaryLogin.ForeColor = SystemColors.ControlLightLight;
             btnBeneficiaryLogin.Location = new Point(701, 368);
             btnBeneficiaryLogin.Name = "btnBeneficiaryLogin";
@@ -79,12 +76,11 @@
             btnBeneficiaryLogin.TabIndex = 2;
             btnBeneficiaryLogin.Text = "Beneficiary Login";
             btnBeneficiaryLogin.UseVisualStyleBackColor = false;
+            btnBeneficiaryLogin.Click += btnBeneficiaryLogin_Click;
             // 
             // btnAdmin
             // 
             btnAdmin.BackColor = Color.Purple;
-            btnAdmin.FlatAppearance.BorderSize = 0;
-            btnAdmin.FlatStyle = FlatStyle.Flat;
             btnAdmin.ForeColor = SystemColors.ControlLightLight;
             btnAdmin.Location = new Point(701, 489);
             btnAdmin.Name = "btnAdmin";
@@ -92,6 +88,7 @@
             btnAdmin.TabIndex = 3;
             btnAdmin.Text = "Admin Login";
             btnAdmin.UseVisualStyleBackColor = false;
+            btnAdmin.Click += btnAdminLogin_Click;
             // 
             // label1
             // 
@@ -99,7 +96,7 @@
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(714, 35);
             label1.Name = "label1";
-            label1.Size = new Size(324, 41);
+            label1.Size = new Size(257, 32);
             label1.TabIndex = 4;
             label1.Text = "WELCOME TO SASSA!";
             // 
@@ -110,7 +107,7 @@
             label2.ForeColor = SystemColors.ControlDarkDark;
             label2.Location = new Point(765, 147);
             label2.Name = "label2";
-            label2.Size = new Size(380, 72);
+            label2.Size = new Size(296, 56);
             label2.TabIndex = 5;
             label2.Text = "Easier access.\r\n        Shorter queues.\r\n                     Better service for a brighter tomorrow.\r\n\r\n";
             // 
@@ -121,7 +118,7 @@
             label3.ForeColor = SystemColors.ControlDarkDark;
             label3.Location = new Point(727, 89);
             label3.Name = "label3";
-            label3.Size = new Size(333, 46);
+            label3.Size = new Size(279, 38);
             label3.TabIndex = 6;
             label3.Text = "Queue and Service Management System\r\n\r\n";
             // 
@@ -132,7 +129,7 @@
             label4.ForeColor = SystemColors.ControlDarkDark;
             label4.Location = new Point(765, 598);
             label4.Name = "label4";
-            label4.Size = new Size(318, 92);
+            label4.Size = new Size(263, 76);
             label4.TabIndex = 7;
             label4.Text = "Together we can build a better future!\r\n\r\n\r\n\r\n";
             // 
@@ -172,9 +169,8 @@
             // 
             // WelcomePage
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1167, 736);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -186,12 +182,10 @@
             Controls.Add(btnAdmin);
             Controls.Add(btnBeneficiaryLogin);
             Controls.Add(btnStaffLogin);
-            Controls.Add(flowLayoutPanel1);
-            Cursor = Cursors.Hand;
+            Controls.Add(pnlSassa);
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "WelcomePage";
-            Text = " ";
+            Text = "WelcomePage";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -201,7 +195,7 @@
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel pnlSassa;
         private Button btnStaffLogin;
         private Button btnBeneficiaryLogin;
         private Button btnAdmin;

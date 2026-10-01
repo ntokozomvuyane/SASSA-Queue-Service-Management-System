@@ -1,3 +1,5 @@
+using Sassa_Queue_And_Service_Management_System;
+
 namespace SASSAQueueManagementSystem
 {
     internal static class Program
@@ -11,7 +13,8 @@ namespace SASSAQueueManagementSystem
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmQueueManagementSystem());
+            //Application.Run(new frmQueueManagementSystem());
+            Application.Run(new WelcomePage());
         }
     }
 }

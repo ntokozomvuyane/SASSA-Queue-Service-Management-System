@@ -53,7 +53,8 @@
             // 
             // pnlHeader
             // 
-            pnlHeader.BackColor = Color.FromArgb(26, 74, 122);
+            pnlHeader.BackColor = Color.FromArgb(0, 51, 102);
+            pnlHeader.BorderStyle = BorderStyle.Fixed3D;
             pnlHeader.Controls.Add(btnSignOut);
             pnlHeader.Controls.Add(lblServiceOfficer);
             pnlHeader.Controls.Add(lblOfficer);
@@ -61,31 +62,29 @@
             pnlHeader.Controls.Add(lblSassa);
             pnlHeader.Dock = DockStyle.Top;
             pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Margin = new Padding(4, 4, 4, 4);
             pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(1046, 70);
+            pnlHeader.Size = new Size(899, 53);
             pnlHeader.TabIndex = 0;
             // 
             // btnSignOut
             // 
             btnSignOut.BackColor = Color.SteelBlue;
             btnSignOut.ForeColor = Color.White;
-            btnSignOut.Location = new Point(917, 16);
-            btnSignOut.Margin = new Padding(4, 4, 4, 4);
+            btnSignOut.Location = new Point(713, 12);
             btnSignOut.Name = "btnSignOut";
-            btnSignOut.Size = new Size(96, 30);
+            btnSignOut.Size = new Size(75, 23);
             btnSignOut.TabIndex = 5;
             btnSignOut.Text = "Sign Out";
             btnSignOut.UseVisualStyleBackColor = false;
+            btnSignOut.Click += btnSignOut_Click;
             // 
             // lblServiceOfficer
             // 
             lblServiceOfficer.AutoSize = true;
             lblServiceOfficer.ForeColor = Color.White;
-            lblServiceOfficer.Location = new Point(764, 32);
-            lblServiceOfficer.Margin = new Padding(4, 0, 4, 0);
+            lblServiceOfficer.Location = new Point(594, 24);
             lblServiceOfficer.Name = "lblServiceOfficer";
-            lblServiceOfficer.Size = new Size(111, 20);
+            lblServiceOfficer.Size = new Size(83, 15);
             lblServiceOfficer.TabIndex = 4;
             lblServiceOfficer.Text = "Service Officer";
             // 
@@ -93,10 +92,9 @@
             // 
             lblOfficer.AutoSize = true;
             lblOfficer.ForeColor = Color.White;
-            lblOfficer.Location = new Point(764, 12);
-            lblOfficer.Margin = new Padding(4, 0, 4, 0);
+            lblOfficer.Location = new Point(594, 9);
             lblOfficer.Name = "lblOfficer";
-            lblOfficer.Size = new Size(115, 20);
+            lblOfficer.Size = new Size(87, 15);
             lblOfficer.TabIndex = 3;
             lblOfficer.Text = "Officer Bhengu";
             // 
@@ -104,10 +102,9 @@
             // 
             lblStaffConsole.AutoSize = true;
             lblStaffConsole.ForeColor = Color.White;
-            lblStaffConsole.Location = new Point(15, 32);
-            lblStaffConsole.Margin = new Padding(4, 0, 4, 0);
+            lblStaffConsole.Location = new Point(12, 24);
             lblStaffConsole.Name = "lblStaffConsole";
-            lblStaffConsole.Size = new Size(102, 20);
+            lblStaffConsole.Size = new Size(77, 15);
             lblStaffConsole.TabIndex = 1;
             lblStaffConsole.Text = "Staff Console";
             // 
@@ -115,10 +112,9 @@
             // 
             lblSassa.AutoSize = true;
             lblSassa.ForeColor = Color.White;
-            lblSassa.Location = new Point(15, 12);
-            lblSassa.Margin = new Padding(4, 0, 4, 0);
+            lblSassa.Location = new Point(12, 9);
             lblSassa.Name = "lblSassa";
-            lblSassa.Size = new Size(55, 20);
+            lblSassa.Size = new Size(41, 15);
             lblSassa.TabIndex = 0;
             lblSassa.Text = "SASSA";
             // 
@@ -126,65 +122,68 @@
             // 
             lblQueueManagement.AutoSize = true;
             lblQueueManagement.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblQueueManagement.Location = new Point(26, 80);
-            lblQueueManagement.Margin = new Padding(4, 0, 4, 0);
+            lblQueueManagement.Location = new Point(20, 60);
             lblQueueManagement.Name = "lblQueueManagement";
-            lblQueueManagement.Size = new Size(246, 32);
+            lblQueueManagement.Size = new Size(193, 25);
             lblQueueManagement.TabIndex = 1;
             lblQueueManagement.Text = "Queue Management";
             // 
             // pnlButtons
             // 
             pnlButtons.BackColor = Color.White;
+            pnlButtons.BorderStyle = BorderStyle.Fixed3D;
             pnlButtons.Controls.Add(Searchbtn);
             pnlButtons.Controls.Add(Queuebtn);
             pnlButtons.Controls.Add(Dashboardbtn);
-            pnlButtons.Location = new Point(3, 712);
-            pnlButtons.Margin = new Padding(4, 4, 4, 4);
+            pnlButtons.Location = new Point(20, 443);
             pnlButtons.Name = "pnlButtons";
-            pnlButtons.Size = new Size(1000, 50);
+            pnlButtons.Size = new Size(800, 48);
             pnlButtons.TabIndex = 3;
             // 
             // Searchbtn
             // 
-            Searchbtn.Location = new Point(850, 7);
-            Searchbtn.Margin = new Padding(4, 4, 4, 4);
+            Searchbtn.BackColor = Color.FromArgb(0, 51, 102);
+            Searchbtn.ForeColor = Color.White;
+            Searchbtn.Location = new Point(630, 5);
             Searchbtn.Name = "Searchbtn";
-            Searchbtn.Size = new Size(96, 35);
+            Searchbtn.Size = new Size(107, 36);
             Searchbtn.TabIndex = 2;
             Searchbtn.Text = "Search";
-            Searchbtn.UseVisualStyleBackColor = true;
+            Searchbtn.UseVisualStyleBackColor = false;
             // 
             // Queuebtn
             // 
-            Queuebtn.ForeColor = Color.DarkBlue;
-            Queuebtn.Location = new Point(476, 7);
-            Queuebtn.Margin = new Padding(4, 4, 4, 4);
+            Queuebtn.BackColor = Color.FromArgb(0, 51, 102);
+            Queuebtn.ForeColor = Color.White;
+            Queuebtn.Location = new Point(324, 5);
             Queuebtn.Name = "Queuebtn";
-            Queuebtn.Size = new Size(96, 30);
+            Queuebtn.Size = new Size(121, 36);
             Queuebtn.TabIndex = 1;
             Queuebtn.Text = "Queue";
-            Queuebtn.UseVisualStyleBackColor = true;
+            Queuebtn.UseVisualStyleBackColor = false;
             // 
             // Dashboardbtn
             // 
-            Dashboardbtn.ForeColor = Color.Gray;
-            Dashboardbtn.Location = new Point(46, 7);
-            Dashboardbtn.Margin = new Padding(4, 4, 4, 4);
+            Dashboardbtn.BackColor = Color.FromArgb(0, 51, 102);
+            Dashboardbtn.ForeColor = Color.White;
+            Dashboardbtn.Location = new Point(36, 5);
             Dashboardbtn.Name = "Dashboardbtn";
-            Dashboardbtn.Size = new Size(108, 33);
+            Dashboardbtn.Size = new Size(139, 36);
             Dashboardbtn.TabIndex = 0;
             Dashboardbtn.Text = "Dashboard";
-            Dashboardbtn.UseVisualStyleBackColor = true;
+            Dashboardbtn.UseVisualStyleBackColor = false;
             // 
             // dgvQueueManagement
             // 
+            dgvQueueManagement.BackgroundColor = Color.FromArgb(248, 249, 250);
+            dgvQueueManagement.BorderStyle = BorderStyle.Fixed3D;
             dgvQueueManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvQueueManagement.Columns.AddRange(new DataGridViewColumn[] { booked, noShow, checkedIn, waiting, beingServed, completed });
-            dgvQueueManagement.Location = new Point(73, 140);
+            dgvQueueManagement.Location = new Point(20, 101);
+            dgvQueueManagement.Margin = new Padding(2);
             dgvQueueManagement.Name = "dgvQueueManagement";
             dgvQueueManagement.RowHeadersWidth = 51;
-            dgvQueueManagement.Size = new Size(802, 449);
+            dgvQueueManagement.Size = new Size(800, 324);
             dgvQueueManagement.TabIndex = 4;
             // 
             // booked
@@ -231,17 +230,15 @@
             // 
             // frmQueueManagementSystem
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            ClientSize = new Size(1067, 665);
+            ClientSize = new Size(899, 500);
             Controls.Add(dgvQueueManagement);
             Controls.Add(pnlButtons);
             Controls.Add(lblQueueManagement);
             Controls.Add(pnlHeader);
-            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 4, 4, 4);
             Name = "frmQueueManagementSystem";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Queue Management System";

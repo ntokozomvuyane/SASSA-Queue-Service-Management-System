@@ -7,6 +7,9 @@ namespace SASSAQueueManagementSystem
             InitializeComponent();
         }
 
-        
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
