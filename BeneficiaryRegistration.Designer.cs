@@ -196,7 +196,7 @@
             txtBeneficiaryID.Name = "txtBeneficiaryID";
             txtBeneficiaryID.Size = new Size(379, 27);
             txtBeneficiaryID.TabIndex = 23;
-            txtBeneficiaryID.TextChanged += this.textBox4_TextChanged;
+            //txtBeneficiaryID.TextChanged += this.textBox4_TextChanged;
             // 
             // lblFullName
             // 
@@ -206,7 +206,7 @@
             lblFullName.Size = new Size(80, 20);
             lblFullName.TabIndex = 22;
             lblFullName.Text = "Full Name";
-            lblFullName.Click += this.label6_Click;
+            //lblFullName.Click += this.label6_Click;
             // 
             // flowLayoutPanel1
             // 

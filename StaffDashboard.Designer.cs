@@ -39,6 +39,14 @@
             lblQueueOverview = new Label();
             lblDashboard = new Label();
             pnlMain = new Panel();
+            lblSearch = new Label();
+            lblQueue = new Label();
+            btnSearch = new Button();
+            btnQueueManagement = new Button();
+            dgvStaffStatus = new DataGridView();
+            ColQueueNumber = new DataGridViewTextBoxColumn();
+            ColBeneficiaryName = new DataGridViewTextBoxColumn();
+            ColStatus = new DataGridViewTextBoxColumn();
             panel5 = new Panel();
             lblCompleted = new Label();
             lblCompletedCount = new Label();
@@ -53,27 +61,19 @@
             lblBookedCount = new Label();
             lblDate = new Label();
             lblDashboardTitle = new Label();
-            dgvStaffStatus = new DataGridView();
-            ColQueueNumber = new DataGridViewTextBoxColumn();
-            ColBeneficiaryName = new DataGridViewTextBoxColumn();
-            ColStatus = new DataGridViewTextBoxColumn();
-            btnQueueManagement = new Button();
-            btnSearch = new Button();
-            lblQueue = new Label();
-            lblSearch = new Label();
             panel1.SuspendLayout();
             pnlSidebar.SuspendLayout();
             pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvStaffStatus).BeginInit();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvStaffStatus).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(0, 91, 187);
+            panel1.BackColor = Color.FromArgb(26, 74, 122);
             panel1.Controls.Add(lblStaffRole);
             panel1.Controls.Add(lblStaffName);
             panel1.Controls.Add(lblSystemName);
@@ -87,18 +87,22 @@
             // lblStaffRole
             // 
             lblStaffRole.AutoSize = true;
-            lblStaffRole.Location = new Point(1012, 34);
+            lblStaffRole.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblStaffRole.ForeColor = SystemColors.ControlLightLight;
+            lblStaffRole.Location = new Point(976, 34);
             lblStaffRole.Name = "lblStaffRole";
-            lblStaffRole.Size = new Size(105, 20);
+            lblStaffRole.Size = new Size(109, 20);
             lblStaffRole.TabIndex = 2;
             lblStaffRole.Text = "Service Officer";
             // 
             // lblStaffName
             // 
             lblStaffName.AutoSize = true;
-            lblStaffName.Location = new Point(1012, 13);
+            lblStaffName.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
+            lblStaffName.ForeColor = SystemColors.ControlLightLight;
+            lblStaffName.Location = new Point(976, 13);
             lblStaffName.Name = "lblStaffName";
-            lblStaffName.Size = new Size(108, 20);
+            lblStaffName.Size = new Size(112, 20);
             lblStaffName.TabIndex = 1;
             lblStaffName.Text = "Officer Bhengu";
             // 
@@ -191,6 +195,92 @@
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(942, 638);
             pnlMain.TabIndex = 2;
+            // 
+            // lblSearch
+            // 
+            lblSearch.AutoSize = true;
+            lblSearch.BackColor = Color.White;
+            lblSearch.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSearch.Location = new Point(528, 284);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(183, 20);
+            lblSearch.TabIndex = 12;
+            lblSearch.Text = "Search by reference or ID";
+            // 
+            // lblQueue
+            // 
+            lblQueue.AutoSize = true;
+            lblQueue.BackColor = Color.FromArgb(26, 74, 122);
+            lblQueue.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQueue.ForeColor = SystemColors.ControlLightLight;
+            lblQueue.Location = new Point(115, 286);
+            lblQueue.Name = "lblQueue";
+            lblQueue.Size = new Size(215, 20);
+            lblQueue.TabIndex = 11;
+            lblQueue.Text = "Call next, check in, completed";
+            // 
+            // btnSearch
+            // 
+            btnSearch.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearch.Location = new Point(504, 233);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(282, 134);
+            btnSearch.TabIndex = 10;
+            btnSearch.Text = "Search Bookings";
+            btnSearch.TextAlign = ContentAlignment.TopCenter;
+            btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnQueueManagement
+            // 
+            btnQueueManagement.BackColor = Color.FromArgb(26, 74, 122);
+            btnQueueManagement.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnQueueManagement.ForeColor = SystemColors.ControlLightLight;
+            btnQueueManagement.Location = new Point(85, 233);
+            btnQueueManagement.Name = "btnQueueManagement";
+            btnQueueManagement.Size = new Size(282, 134);
+            btnQueueManagement.TabIndex = 9;
+            btnQueueManagement.Text = "Queue Management";
+            btnQueueManagement.TextAlign = ContentAlignment.TopCenter;
+            btnQueueManagement.UseVisualStyleBackColor = false;
+            // 
+            // dgvStaffStatus
+            // 
+            dgvStaffStatus.AllowUserToAddRows = false;
+            dgvStaffStatus.AllowUserToDeleteRows = false;
+            dgvStaffStatus.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvStaffStatus.BackgroundColor = Color.White;
+            dgvStaffStatus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvStaffStatus.Columns.AddRange(new DataGridViewColumn[] { ColQueueNumber, ColBeneficiaryName, ColStatus });
+            dgvStaffStatus.Location = new Point(50, 394);
+            dgvStaffStatus.MultiSelect = false;
+            dgvStaffStatus.Name = "dgvStaffStatus";
+            dgvStaffStatus.ReadOnly = true;
+            dgvStaffStatus.RowHeadersVisible = false;
+            dgvStaffStatus.RowHeadersWidth = 51;
+            dgvStaffStatus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvStaffStatus.Size = new Size(780, 232);
+            dgvStaffStatus.TabIndex = 8;
+            // 
+            // ColQueueNumber
+            // 
+            ColQueueNumber.HeaderText = "Queue No.";
+            ColQueueNumber.MinimumWidth = 6;
+            ColQueueNumber.Name = "ColQueueNumber";
+            ColQueueNumber.ReadOnly = true;
+            // 
+            // ColBeneficiaryName
+            // 
+            ColBeneficiaryName.HeaderText = "Beneficiary Name";
+            ColBeneficiaryName.MinimumWidth = 6;
+            ColBeneficiaryName.Name = "ColBeneficiaryName";
+            ColBeneficiaryName.ReadOnly = true;
+            // 
+            // ColStatus
+            // 
+            ColStatus.HeaderText = "Status";
+            ColStatus.MinimumWidth = 6;
+            ColStatus.Name = "ColStatus";
+            ColStatus.ReadOnly = true;
             // 
             // panel5
             // 
@@ -319,88 +409,6 @@
             lblDashboardTitle.TabIndex = 0;
             lblDashboardTitle.Text = "Staff Dashboard";
             // 
-            // dgvStaffStatus
-            // 
-            dgvStaffStatus.AllowUserToAddRows = false;
-            dgvStaffStatus.AllowUserToDeleteRows = false;
-            dgvStaffStatus.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvStaffStatus.BackgroundColor = Color.White;
-            dgvStaffStatus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStaffStatus.Columns.AddRange(new DataGridViewColumn[] { ColQueueNumber, ColBeneficiaryName, ColStatus });
-            dgvStaffStatus.Location = new Point(50, 394);
-            dgvStaffStatus.MultiSelect = false;
-            dgvStaffStatus.Name = "dgvStaffStatus";
-            dgvStaffStatus.ReadOnly = true;
-            dgvStaffStatus.RowHeadersVisible = false;
-            dgvStaffStatus.RowHeadersWidth = 51;
-            dgvStaffStatus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStaffStatus.Size = new Size(780, 232);
-            dgvStaffStatus.TabIndex = 8;
-            // 
-            // ColQueueNumber
-            // 
-            ColQueueNumber.HeaderText = "Queue No.";
-            ColQueueNumber.MinimumWidth = 6;
-            ColQueueNumber.Name = "ColQueueNumber";
-            ColQueueNumber.ReadOnly = true;
-            // 
-            // ColBeneficiaryName
-            // 
-            ColBeneficiaryName.HeaderText = "Beneficiary Name";
-            ColBeneficiaryName.MinimumWidth = 6;
-            ColBeneficiaryName.Name = "ColBeneficiaryName";
-            ColBeneficiaryName.ReadOnly = true;
-            // 
-            // ColStatus
-            // 
-            ColStatus.HeaderText = "Status";
-            ColStatus.MinimumWidth = 6;
-            ColStatus.Name = "ColStatus";
-            ColStatus.ReadOnly = true;
-            // 
-            // btnQueueManagement
-            // 
-            btnQueueManagement.BackColor = Color.FromArgb(0, 91, 187);
-            btnQueueManagement.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnQueueManagement.Location = new Point(85, 233);
-            btnQueueManagement.Name = "btnQueueManagement";
-            btnQueueManagement.Size = new Size(282, 134);
-            btnQueueManagement.TabIndex = 9;
-            btnQueueManagement.Text = "Queue Management";
-            btnQueueManagement.TextAlign = ContentAlignment.TopCenter;
-            btnQueueManagement.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            btnSearch.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSearch.Location = new Point(504, 233);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(282, 134);
-            btnSearch.TabIndex = 10;
-            btnSearch.Text = "Search Bookings";
-            btnSearch.TextAlign = ContentAlignment.TopCenter;
-            btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // lblQueue
-            // 
-            lblQueue.AutoSize = true;
-            lblQueue.BackColor = Color.FromArgb(0, 91, 187);
-            lblQueue.Location = new Point(115, 286);
-            lblQueue.Name = "lblQueue";
-            lblQueue.Size = new Size(205, 20);
-            lblQueue.TabIndex = 11;
-            lblQueue.Text = "Call next, check in, completed";
-            // 
-            // lblSearch
-            // 
-            lblSearch.AutoSize = true;
-            lblSearch.BackColor = Color.White;
-            lblSearch.Location = new Point(528, 284);
-            lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(176, 20);
-            lblSearch.TabIndex = 12;
-            lblSearch.Text = "Search by reference or ID";
-            // 
             // StaffDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -419,6 +427,7 @@
             pnlSidebar.PerformLayout();
             pnlMain.ResumeLayout(false);
             pnlMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvStaffStatus).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             panel4.ResumeLayout(false);
@@ -427,7 +436,6 @@
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvStaffStatus).EndInit();
             ResumeLayout(false);
         }
 

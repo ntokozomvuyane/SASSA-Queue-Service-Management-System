@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
-            panel1 = new Panel();
             btnDashboard = new Button();
             btnNewBooking = new Button();
             btnMyBooking = new Button();
             btnQueueStatus = new Button();
             btnProfile = new Button();
             btnSignOut = new Button();
-            label1 = new Label();
-            label2 = new Label();
+            panel1 = new Panel();
             lblBeneficiaryPortal = new Label();
+            label2 = new Label();
+            label1 = new Label();
             lblWelcome = new Label();
             lblUsername = new Label();
             label3 = new Label();
@@ -66,17 +66,6 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(322, 632);
             flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(26, 74, 122);
-            panel1.Controls.Add(lblBeneficiaryPortal);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(4, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1071, 78);
-            panel1.TabIndex = 1;
             // 
             // btnDashboard
             // 
@@ -146,16 +135,26 @@
             btnSignOut.Text = "Sign Out";
             btnSignOut.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // panel1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(8, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 31);
-            label1.TabIndex = 0;
-            label1.Text = "SASSA";
+            panel1.BackColor = Color.FromArgb(26, 74, 122);
+            panel1.Controls.Add(lblBeneficiaryPortal);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(4, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1071, 78);
+            panel1.TabIndex = 1;
+            // 
+            // lblBeneficiaryPortal
+            // 
+            lblBeneficiaryPortal.AutoSize = true;
+            lblBeneficiaryPortal.ForeColor = SystemColors.ControlLightLight;
+            lblBeneficiaryPortal.Location = new Point(907, 29);
+            lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
+            lblBeneficiaryPortal.Size = new Size(134, 20);
+            lblBeneficiaryPortal.TabIndex = 2;
+            lblBeneficiaryPortal.Text = "Beneficiary Portal";
             // 
             // label2
             // 
@@ -167,15 +166,16 @@
             label2.TabIndex = 1;
             label2.Text = "Beneficiary Login\r\n                     Secure access to your SASSA bookings.\r\n";
             // 
-            // lblBeneficiaryPortal
+            // label1
             // 
-            lblBeneficiaryPortal.AutoSize = true;
-            lblBeneficiaryPortal.ForeColor = SystemColors.ControlLightLight;
-            lblBeneficiaryPortal.Location = new Point(907, 29);
-            lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
-            lblBeneficiaryPortal.Size = new Size(134, 20);
-            lblBeneficiaryPortal.TabIndex = 2;
-            lblBeneficiaryPortal.Text = "Beneficiary Portal";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(8, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(85, 31);
+            label1.TabIndex = 0;
+            label1.Text = "SASSA";
             // 
             // lblWelcome
             // 
@@ -277,7 +277,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1083, 731);
+            ClientSize = new Size(1068, 722);
             Controls.Add(btnBack);
             Controls.Add(lblForgotPassword);
             Controls.Add(lblCreateAccount);

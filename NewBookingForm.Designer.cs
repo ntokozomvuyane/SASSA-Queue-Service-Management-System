@@ -70,10 +70,9 @@
             NewBookingpanel.Controls.Add(lblPortal);
             NewBookingpanel.Controls.Add(lblmanage);
             NewBookingpanel.Controls.Add(lblSassa);
-            NewBookingpanel.Location = new Point(3, 4);
-            NewBookingpanel.Margin = new Padding(3, 4, 3, 4);
+            NewBookingpanel.Location = new Point(3, 3);
             NewBookingpanel.Name = "NewBookingpanel";
-            NewBookingpanel.Size = new Size(1356, 98);
+            NewBookingpanel.Size = new Size(1356, 85);
             NewBookingpanel.TabIndex = 27;
             // 
             // lblbookingnewone
@@ -81,7 +80,7 @@
             lblbookingnewone.AutoSize = true;
             lblbookingnewone.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblbookingnewone.ForeColor = SystemColors.Control;
-            lblbookingnewone.Location = new Point(127, 24);
+            lblbookingnewone.Location = new Point(127, 21);
             lblbookingnewone.Name = "lblbookingnewone";
             lblbookingnewone.Size = new Size(127, 22);
             lblbookingnewone.TabIndex = 20;
@@ -90,11 +89,11 @@
             // lblPortal
             // 
             lblPortal.AutoSize = true;
-            lblPortal.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPortal.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPortal.ForeColor = SystemColors.Control;
-            lblPortal.Location = new Point(1084, 27);
+            lblPortal.Location = new Point(1084, 23);
             lblPortal.Name = "lblPortal";
-            lblPortal.Size = new Size(142, 20);
+            lblPortal.Size = new Size(160, 20);
             lblPortal.TabIndex = 19;
             lblPortal.Text = "Beneficiary Portal";
             // 
@@ -103,7 +102,7 @@
             lblmanage.AutoSize = true;
             lblmanage.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblmanage.ForeColor = SystemColors.Control;
-            lblmanage.Location = new Point(118, 69);
+            lblmanage.Location = new Point(118, 60);
             lblmanage.Name = "lblmanage";
             lblmanage.Size = new Size(315, 18);
             lblmanage.TabIndex = 18;
@@ -114,7 +113,7 @@
             lblSassa.AutoSize = true;
             lblSassa.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSassa.ForeColor = SystemColors.Control;
-            lblSassa.Location = new Point(12, 27);
+            lblSassa.Location = new Point(12, 23);
             lblSassa.Name = "lblSassa";
             lblSassa.Size = new Size(96, 29);
             lblSassa.TabIndex = 17;
@@ -129,48 +128,43 @@
             menuePanel.Controls.Add(btnMyBooking);
             menuePanel.Controls.Add(btnNewBooking);
             menuePanel.Controls.Add(btnDashboard);
-            menuePanel.Location = new Point(14, 111);
-            menuePanel.Margin = new Padding(3, 4, 3, 4);
+            menuePanel.Location = new Point(14, 97);
             menuePanel.Name = "menuePanel";
-            menuePanel.Size = new Size(206, 778);
+            menuePanel.Size = new Size(206, 677);
             menuePanel.TabIndex = 28;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(18, 467);
-            btnLogout.Margin = new Padding(3, 4, 3, 4);
+            btnLogout.Location = new Point(18, 406);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(162, 58);
+            btnLogout.Size = new Size(162, 50);
             btnLogout.TabIndex = 7;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
             // 
             // btnProfile
             // 
-            btnProfile.Location = new Point(18, 387);
-            btnProfile.Margin = new Padding(3, 4, 3, 4);
+            btnProfile.Location = new Point(18, 337);
             btnProfile.Name = "btnProfile";
-            btnProfile.Size = new Size(162, 58);
+            btnProfile.Size = new Size(162, 50);
             btnProfile.TabIndex = 4;
             btnProfile.Text = "Profile";
             btnProfile.UseVisualStyleBackColor = true;
             // 
             // btnQueueStatus
             // 
-            btnQueueStatus.Location = new Point(18, 302);
-            btnQueueStatus.Margin = new Padding(3, 4, 3, 4);
+            btnQueueStatus.Location = new Point(18, 263);
             btnQueueStatus.Name = "btnQueueStatus";
-            btnQueueStatus.Size = new Size(162, 58);
+            btnQueueStatus.Size = new Size(162, 50);
             btnQueueStatus.TabIndex = 3;
             btnQueueStatus.Text = "Queue Status";
             btnQueueStatus.UseVisualStyleBackColor = true;
             // 
             // btnMyBooking
             // 
-            btnMyBooking.Location = new Point(18, 223);
-            btnMyBooking.Margin = new Padding(3, 4, 3, 4);
+            btnMyBooking.Location = new Point(18, 194);
             btnMyBooking.Name = "btnMyBooking";
-            btnMyBooking.Size = new Size(162, 58);
+            btnMyBooking.Size = new Size(162, 50);
             btnMyBooking.TabIndex = 2;
             btnMyBooking.Text = "My Booking";
             btnMyBooking.UseVisualStyleBackColor = true;
@@ -179,20 +173,18 @@
             // 
             btnNewBooking.BackColor = Color.FromArgb(26, 74, 122);
             btnNewBooking.ForeColor = SystemColors.Control;
-            btnNewBooking.Location = new Point(18, 148);
-            btnNewBooking.Margin = new Padding(3, 4, 3, 4);
+            btnNewBooking.Location = new Point(18, 129);
             btnNewBooking.Name = "btnNewBooking";
-            btnNewBooking.Size = new Size(162, 58);
+            btnNewBooking.Size = new Size(162, 50);
             btnNewBooking.TabIndex = 1;
             btnNewBooking.Text = "New Booking";
             btnNewBooking.UseVisualStyleBackColor = false;
             // 
             // btnDashboard
             // 
-            btnDashboard.Location = new Point(18, 68);
-            btnDashboard.Margin = new Padding(3, 4, 3, 4);
+            btnDashboard.Location = new Point(18, 59);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(162, 58);
+            btnDashboard.Size = new Size(162, 50);
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
@@ -201,7 +193,7 @@
             // 
             lblBooking.AutoSize = true;
             lblBooking.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBooking.Location = new Point(610, 142);
+            lblBooking.Location = new Point(610, 123);
             lblBooking.Name = "lblBooking";
             lblBooking.Size = new Size(151, 22);
             lblBooking.TabIndex = 29;
@@ -211,7 +203,7 @@
             // 
             lblbookyourappointment.AutoSize = true;
             lblbookyourappointment.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblbookyourappointment.Location = new Point(546, 188);
+            lblbookyourappointment.Location = new Point(546, 163);
             lblbookyourappointment.Name = "lblbookyourappointment";
             lblbookyourappointment.Size = new Size(286, 22);
             lblbookyourappointment.TabIndex = 30;
@@ -221,7 +213,7 @@
             // 
             lblSelectService.AutoSize = true;
             lblSelectService.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelectService.Location = new Point(271, 272);
+            lblSelectService.Location = new Point(271, 237);
             lblSelectService.Name = "lblSelectService";
             lblSelectService.Size = new Size(115, 20);
             lblSelectService.TabIndex = 31;
@@ -231,7 +223,7 @@
             // 
             lblServiceCentre.AutoSize = true;
             lblServiceCentre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblServiceCentre.Location = new Point(271, 413);
+            lblServiceCentre.Location = new Point(271, 359);
             lblServiceCentre.Name = "lblServiceCentre";
             lblServiceCentre.Size = new Size(167, 20);
             lblServiceCentre.TabIndex = 32;
@@ -241,7 +233,7 @@
             // 
             lblSelectDate.AutoSize = true;
             lblSelectDate.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelectDate.Location = new Point(271, 549);
+            lblSelectDate.Location = new Point(271, 477);
             lblSelectDate.Name = "lblSelectDate";
             lblSelectDate.Size = new Size(97, 20);
             lblSelectDate.TabIndex = 33;
@@ -251,7 +243,7 @@
             // 
             lblSummary.AutoSize = true;
             lblSummary.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSummary.Location = new Point(845, 259);
+            lblSummary.Location = new Point(845, 225);
             lblSummary.Name = "lblSummary";
             lblSummary.Size = new Size(183, 20);
             lblSummary.TabIndex = 34;
@@ -261,7 +253,7 @@
             // 
             lblSelectTime.AutoSize = true;
             lblSelectTime.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelectTime.Location = new Point(271, 668);
+            lblSelectTime.Location = new Point(271, 581);
             lblSelectTime.Name = "lblSelectTime";
             lblSelectTime.Size = new Size(98, 20);
             lblSelectTime.TabIndex = 35;
@@ -271,10 +263,9 @@
             // 
             cmbSelectService.FormattingEnabled = true;
             cmbSelectService.Items.AddRange(new object[] { "New Grant Application", "Existing Grant Enquiry", "Grant Information Update", "Payment Enquiry", "Document Submission", "General Assistance" });
-            cmbSelectService.Location = new Point(276, 334);
-            cmbSelectService.Margin = new Padding(3, 4, 3, 4);
+            cmbSelectService.Location = new Point(276, 290);
             cmbSelectService.Name = "cmbSelectService";
-            cmbSelectService.Size = new Size(402, 31);
+            cmbSelectService.Size = new Size(402, 28);
             cmbSelectService.TabIndex = 36;
             cmbSelectService.Text = "Select a service";
             // 
@@ -282,10 +273,9 @@
             // 
             cmbServiceCentre.FormattingEnabled = true;
             cmbServiceCentre.Items.AddRange(new object[] { "Johannesburg Central SASSA Centre", "Soweto SASSA Centre", "Alexandra SASSA Centre ", "Roodepoort SASSA Centre " });
-            cmbServiceCentre.Location = new Point(276, 480);
-            cmbServiceCentre.Margin = new Padding(3, 4, 3, 4);
+            cmbServiceCentre.Location = new Point(276, 417);
             cmbServiceCentre.Name = "cmbServiceCentre";
-            cmbServiceCentre.Size = new Size(402, 31);
+            cmbServiceCentre.Size = new Size(402, 28);
             cmbServiceCentre.TabIndex = 37;
             cmbServiceCentre.Text = "Select a service centre";
             // 
@@ -293,37 +283,33 @@
             // 
             cmbTime.FormattingEnabled = true;
             cmbTime.Items.AddRange(new object[] { "08:00 - 08:30", "08:30 - 09:00", "09:00 - 09:30", "09:30 - 10:00", "10:00 - 10:30", "10:30 - 11:00" });
-            cmbTime.Location = new Point(276, 726);
-            cmbTime.Margin = new Padding(3, 4, 3, 4);
+            cmbTime.Location = new Point(276, 631);
             cmbTime.Name = "cmbTime";
-            cmbTime.Size = new Size(332, 31);
+            cmbTime.Size = new Size(332, 28);
             cmbTime.TabIndex = 39;
             cmbTime.Text = "Available Time Slots";
             // 
             // dtpDate
             // 
-            dtpDate.Location = new Point(276, 604);
-            dtpDate.Margin = new Padding(3, 4, 3, 4);
+            dtpDate.Location = new Point(276, 525);
             dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(332, 30);
+            dtpDate.Size = new Size(332, 27);
             dtpDate.TabIndex = 40;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(718, 752);
-            btnCancel.Margin = new Padding(3, 4, 3, 4);
+            btnCancel.Location = new Point(718, 654);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(254, 70);
+            btnCancel.Size = new Size(254, 61);
             btnCancel.TabIndex = 41;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnConfirmbooking
             // 
-            btnConfirmbooking.Location = new Point(1080, 752);
-            btnConfirmbooking.Margin = new Padding(3, 4, 3, 4);
+            btnConfirmbooking.Location = new Point(1080, 654);
             btnConfirmbooking.Name = "btnConfirmbooking";
-            btnConfirmbooking.Size = new Size(259, 70);
+            btnConfirmbooking.Size = new Size(259, 61);
             btnConfirmbooking.TabIndex = 42;
             btnConfirmbooking.Text = "Confirm Booking";
             btnConfirmbooking.UseVisualStyleBackColor = true;
@@ -333,12 +319,11 @@
             dgvSummary.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSummary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSummary.Columns.AddRange(new DataGridViewColumn[] { colSelectedService, colServiceCentre, colDate, colTime });
-            dgvSummary.Location = new Point(718, 299);
-            dgvSummary.Margin = new Padding(3, 4, 3, 4);
+            dgvSummary.Location = new Point(718, 260);
             dgvSummary.Name = "dgvSummary";
             dgvSummary.RowHeadersWidth = 51;
             dgvSummary.RowTemplate.Height = 24;
-            dgvSummary.Size = new Size(621, 420);
+            dgvSummary.Size = new Size(621, 365);
             dgvSummary.TabIndex = 43;
             // 
             // colSelectedService
@@ -367,9 +352,9 @@
             // 
             // NewBookingForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1362, 900);
+            ClientSize = new Size(1362, 783);
             Controls.Add(dgvSummary);
             Controls.Add(btnConfirmbooking);
             Controls.Add(btnCancel);
@@ -386,7 +371,7 @@
             Controls.Add(lblBooking);
             Controls.Add(menuePanel);
             Controls.Add(NewBookingpanel);
-            Margin = new Padding(3, 4, 3, 4);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "NewBookingForm";
             Text = "NewBookingForm";
             NewBookingpanel.ResumeLayout(false);

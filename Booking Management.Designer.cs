@@ -29,272 +29,297 @@ namespace Zanele_Admin
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnServices = new System.Windows.Forms.Button();
-            this.btnSlots = new System.Windows.Forms.Button();
-            this.btnBookins = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.cmbCentre = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgBookingManagement = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBookingManagement)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            btnReports = new Button();
+            btnBookins = new Button();
+            btnSlots = new Button();
+            btnServices = new Button();
+            btnDashboard = new Button();
+            groupBox2 = new GroupBox();
+            label3 = new Label();
+            label2 = new Label();
+            label4 = new Label();
+            cmbCentre = new ComboBox();
+            cmbStatus = new ComboBox();
+            txtSearch = new TextBox();
+            dgBookingManagement = new DataGridView();
+            groupBox3 = new GroupBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label1 = new Label();
+            button1 = new Button();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgBookingManagement).BeginInit();
+            groupBox3.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Controls.Add(this.btnReports);
-            this.groupBox1.Controls.Add(this.btnBookins);
-            this.groupBox1.Controls.Add(this.btnSlots);
-            this.groupBox1.Controls.Add(this.btnServices);
-            this.groupBox1.Controls.Add(this.btnDashboard);
-            this.groupBox1.Location = new System.Drawing.Point(1, 56);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(166, 398);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.Navy;
-            this.btnDashboard.Location = new System.Drawing.Point(32, 32);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(95, 23);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // btnServices
-            // 
-            this.btnServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServices.ForeColor = System.Drawing.Color.Navy;
-            this.btnServices.Location = new System.Drawing.Point(32, 80);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(95, 23);
-            this.btnServices.TabIndex = 0;
-            this.btnServices.Text = "Services";
-            this.btnServices.UseVisualStyleBackColor = false;
-            // 
-            // btnSlots
-            // 
-            this.btnSlots.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSlots.ForeColor = System.Drawing.Color.Navy;
-            this.btnSlots.Location = new System.Drawing.Point(32, 120);
-            this.btnSlots.Name = "btnSlots";
-            this.btnSlots.Size = new System.Drawing.Size(95, 23);
-            this.btnSlots.TabIndex = 0;
-            this.btnSlots.Text = "Slots";
-            this.btnSlots.UseVisualStyleBackColor = false;
-            // 
-            // btnBookins
-            // 
-            this.btnBookins.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookins.ForeColor = System.Drawing.Color.Navy;
-            this.btnBookins.Location = new System.Drawing.Point(32, 160);
-            this.btnBookins.Name = "btnBookins";
-            this.btnBookins.Size = new System.Drawing.Size(95, 23);
-            this.btnBookins.TabIndex = 0;
-            this.btnBookins.Text = "Bookings";
-            this.btnBookins.UseVisualStyleBackColor = false;
+            groupBox1.BackColor = SystemColors.ControlLightLight;
+            groupBox1.Controls.Add(btnReports);
+            groupBox1.Controls.Add(btnBookins);
+            groupBox1.Controls.Add(btnSlots);
+            groupBox1.Controls.Add(btnServices);
+            groupBox1.Controls.Add(btnDashboard);
+            groupBox1.Location = new Point(1, 86);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(221, 612);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
             // 
             // btnReports
             // 
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.Navy;
-            this.btnReports.Location = new System.Drawing.Point(32, 207);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(95, 23);
-            this.btnReports.TabIndex = 0;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = false;
+            btnReports.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReports.ForeColor = Color.Navy;
+            btnReports.Location = new Point(43, 318);
+            btnReports.Margin = new Padding(4, 5, 4, 5);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(127, 35);
+            btnReports.TabIndex = 0;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = false;
+            // 
+            // btnBookins
+            // 
+            btnBookins.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBookins.ForeColor = Color.Navy;
+            btnBookins.Location = new Point(43, 246);
+            btnBookins.Margin = new Padding(4, 5, 4, 5);
+            btnBookins.Name = "btnBookins";
+            btnBookins.Size = new Size(127, 35);
+            btnBookins.TabIndex = 0;
+            btnBookins.Text = "Bookings";
+            btnBookins.UseVisualStyleBackColor = false;
+            // 
+            // btnSlots
+            // 
+            btnSlots.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSlots.ForeColor = Color.Navy;
+            btnSlots.Location = new Point(43, 185);
+            btnSlots.Margin = new Padding(4, 5, 4, 5);
+            btnSlots.Name = "btnSlots";
+            btnSlots.Size = new Size(127, 35);
+            btnSlots.TabIndex = 0;
+            btnSlots.Text = "Slots";
+            btnSlots.UseVisualStyleBackColor = false;
+            // 
+            // btnServices
+            // 
+            btnServices.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnServices.ForeColor = Color.Navy;
+            btnServices.Location = new Point(43, 123);
+            btnServices.Margin = new Padding(4, 5, 4, 5);
+            btnServices.Name = "btnServices";
+            btnServices.Size = new Size(127, 35);
+            btnServices.TabIndex = 0;
+            btnServices.Text = "Services";
+            btnServices.UseVisualStyleBackColor = false;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = Color.Navy;
+            btnDashboard.Location = new Point(43, 49);
+            btnDashboard.Margin = new Padding(4, 5, 4, 5);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(127, 35);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cmbCentre);
-            this.groupBox2.Controls.Add(this.cmbStatus);
-            this.groupBox2.Controls.Add(this.txtSearch);
-            this.groupBox2.Location = new System.Drawing.Point(208, 84);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(580, 98);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(24, 50);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(149, 28);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // cmbStatus
-            // 
-            this.cmbStatus.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(190, 48);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(163, 27);
-            this.cmbStatus.TabIndex = 1;
-            // 
-            // cmbCentre
-            // 
-            this.cmbCentre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCentre.FormattingEnabled = true;
-            this.cmbCentre.Location = new System.Drawing.Point(393, 47);
-            this.cmbCentre.Name = "cmbCentre";
-            this.cmbCentre.Size = new System.Drawing.Size(154, 27);
-            this.cmbCentre.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(186, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Status Filter";
+            groupBox2.BackColor = Color.GhostWhite;
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(label2);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(cmbCentre);
+            groupBox2.Controls.Add(cmbStatus);
+            groupBox2.Controls.Add(txtSearch);
+            groupBox2.Location = new Point(277, 129);
+            groupBox2.Margin = new Padding(4, 5, 4, 5);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(4, 5, 4, 5);
+            groupBox2.Size = new Size(773, 151);
+            groupBox2.TabIndex = 2;
+            groupBox2.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(389, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Centre Filter";
+            label3.AutoSize = true;
+            label3.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(519, 34);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(120, 24);
+            label3.TabIndex = 2;
+            label3.Text = "Centre Filter";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(248, 38);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(117, 24);
+            label2.TabIndex = 2;
+            label2.Text = "Status Filter";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(29, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Search";
+            label4.AutoSize = true;
+            label4.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(39, 38);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(70, 24);
+            label4.TabIndex = 2;
+            label4.Text = "Search";
+            // 
+            // cmbCentre
+            // 
+            cmbCentre.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbCentre.FormattingEnabled = true;
+            cmbCentre.Location = new Point(524, 72);
+            cmbCentre.Margin = new Padding(4, 5, 4, 5);
+            cmbCentre.Name = "cmbCentre";
+            cmbCentre.Size = new Size(204, 32);
+            cmbCentre.TabIndex = 1;
+            // 
+            // cmbStatus
+            // 
+            cmbStatus.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbStatus.FormattingEnabled = true;
+            cmbStatus.Location = new Point(253, 74);
+            cmbStatus.Margin = new Padding(4, 5, 4, 5);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.Size = new Size(216, 32);
+            cmbStatus.TabIndex = 1;
+            // 
+            // txtSearch
+            // 
+            txtSearch.BorderStyle = BorderStyle.None;
+            txtSearch.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearch.Location = new Point(32, 77);
+            txtSearch.Margin = new Padding(4, 5, 4, 5);
+            txtSearch.Multiline = true;
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(199, 43);
+            txtSearch.TabIndex = 0;
             // 
             // dgBookingManagement
             // 
-            this.dgBookingManagement.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgBookingManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgBookingManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBookingManagement.Location = new System.Drawing.Point(208, 198);
-            this.dgBookingManagement.Name = "dgBookingManagement";
-            this.dgBookingManagement.Size = new System.Drawing.Size(580, 240);
-            this.dgBookingManagement.TabIndex = 3;
+            dgBookingManagement.BackgroundColor = SystemColors.ControlLightLight;
+            dgBookingManagement.BorderStyle = BorderStyle.None;
+            dgBookingManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgBookingManagement.Location = new Point(277, 305);
+            dgBookingManagement.Margin = new Padding(4, 5, 4, 5);
+            dgBookingManagement.Name = "dgBookingManagement";
+            dgBookingManagement.RowHeadersWidth = 51;
+            dgBookingManagement.Size = new Size(773, 369);
+            dgBookingManagement.TabIndex = 3;
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(1, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(805, 75);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.button1.Location = new System.Drawing.Point(679, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Sign out";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(566, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Admin Zanele";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(597, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Administrator";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(39, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 23);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Sassa";
+            groupBox3.BackColor = Color.FromArgb(26, 74, 122);
+            groupBox3.Controls.Add(label7);
+            groupBox3.Controls.Add(label6);
+            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(label1);
+            groupBox3.Controls.Add(button1);
+            groupBox3.Location = new Point(1, 6);
+            groupBox3.Margin = new Padding(4, 5, 4, 5);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(4, 5, 4, 5);
+            groupBox3.Size = new Size(1073, 90);
+            groupBox3.TabIndex = 4;
+            groupBox3.TabStop = false;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Location = new System.Drawing.Point(40, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Administration";
+            label7.AutoSize = true;
+            label7.ForeColor = SystemColors.ActiveCaption;
+            label7.Location = new Point(53, 60);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(107, 20);
+            label7.TabIndex = 4;
+            label7.Text = "Administration";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(52, 25);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 29);
+            label6.TabIndex = 3;
+            label6.Text = "SASSA";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = SystemColors.ActiveCaption;
+            label5.Location = new Point(796, 60);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(100, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Administrator";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(755, 25);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(133, 25);
+            label1.TabIndex = 1;
+            label1.Text = "Admin Zanele";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.LightSteelBlue;
+            button1.Location = new Point(905, 45);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 35);
+            button1.TabIndex = 0;
+            button1.Text = "Sign out";
+            button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.dgBookingManagement);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Booking Management";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBookingManagement)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(1067, 692);
+            Controls.Add(groupBox3);
+            Controls.Add(dgBookingManagement);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "Form1";
+            Text = "Booking Management";
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgBookingManagement).EndInit();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ResumeLayout(false);
 
         }
 

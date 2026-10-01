@@ -56,6 +56,8 @@
             // btnStaffLogin
             // 
             btnStaffLogin.BackColor = Color.CornflowerBlue;
+            btnStaffLogin.FlatAppearance.BorderSize = 0;
+            btnStaffLogin.FlatStyle = FlatStyle.Flat;
             btnStaffLogin.ForeColor = SystemColors.ControlLightLight;
             btnStaffLogin.Location = new Point(701, 236);
             btnStaffLogin.Name = "btnStaffLogin";
@@ -68,6 +70,8 @@
             // btnBeneficiaryLogin
             // 
             btnBeneficiaryLogin.BackColor = Color.Teal;
+            btnBeneficiaryLogin.FlatAppearance.BorderSize = 0;
+            btnBeneficiaryLogin.FlatStyle = FlatStyle.Flat;
             btnBeneficiaryLogin.ForeColor = SystemColors.ControlLightLight;
             btnBeneficiaryLogin.Location = new Point(701, 368);
             btnBeneficiaryLogin.Name = "btnBeneficiaryLogin";
@@ -79,6 +83,8 @@
             // btnAdmin
             // 
             btnAdmin.BackColor = Color.Purple;
+            btnAdmin.FlatAppearance.BorderSize = 0;
+            btnAdmin.FlatStyle = FlatStyle.Flat;
             btnAdmin.ForeColor = SystemColors.ControlLightLight;
             btnAdmin.Location = new Point(701, 489);
             btnAdmin.Name = "btnAdmin";
@@ -168,6 +174,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1167, 736);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -180,9 +187,11 @@
             Controls.Add(btnBeneficiaryLogin);
             Controls.Add(btnStaffLogin);
             Controls.Add(flowLayoutPanel1);
+            Cursor = Cursors.Hand;
             Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "WelcomePage";
-            Text = "WelcomePage";
+            Text = " ";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

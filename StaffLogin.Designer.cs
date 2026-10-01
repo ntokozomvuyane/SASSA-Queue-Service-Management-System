@@ -32,19 +32,19 @@
             pnlHeader = new Panel();
             lblPortal = new Label();
             panel1 = new Panel();
-            lblDashboard = new Label();
-            lblQueueOverview = new Label();
-            lblProfile = new Label();
             lblSignOut = new Label();
+            lblProfile = new Label();
+            lblQueueOverview = new Label();
+            lblDashboard = new Label();
             pnlMain = new Panel();
             pnlLoginCard = new Panel();
-            lblTitle = new Label();
-            lblStaffID = new Label();
-            lblPassword = new Label();
-            btnClear = new Button();
-            btnLogin = new Button();
-            txtStaffID = new TextBox();
             txtPassword = new TextBox();
+            txtStaffID = new TextBox();
+            btnLogin = new Button();
+            btnClear = new Button();
+            lblPassword = new Label();
+            lblStaffID = new Label();
+            lblTitle = new Label();
             pnlHeader.SuspendLayout();
             panel1.SuspendLayout();
             pnlMain.SuspendLayout();
@@ -54,17 +54,17 @@
             // lblStaffLogin
             // 
             lblStaffLogin.AutoSize = true;
-            lblStaffLogin.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStaffLogin.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStaffLogin.ForeColor = Color.White;
-            lblStaffLogin.Location = new Point(0, 14);
+            lblStaffLogin.Location = new Point(3, 9);
             lblStaffLogin.Name = "lblStaffLogin";
-            lblStaffLogin.Size = new Size(213, 31);
+            lblStaffLogin.Size = new Size(149, 50);
             lblStaffLogin.TabIndex = 0;
-            lblStaffLogin.Text = "SASSA Staff Portal";
+            lblStaffLogin.Text = "SASSA \r\n        Staff Portal";
             // 
             // pnlHeader
             // 
-            pnlHeader.BackColor = Color.FromArgb(0, 91, 187);
+            pnlHeader.BackColor = Color.FromArgb(26, 74, 122);
             pnlHeader.Controls.Add(lblPortal);
             pnlHeader.Controls.Add(lblStaffLogin);
             pnlHeader.Dock = DockStyle.Top;
@@ -98,23 +98,14 @@
             panel1.Size = new Size(200, 583);
             panel1.TabIndex = 2;
             // 
-            // lblDashboard
+            // lblSignOut
             // 
-            lblDashboard.AutoSize = true;
-            lblDashboard.Location = new Point(35, 34);
-            lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(82, 20);
-            lblDashboard.TabIndex = 0;
-            lblDashboard.Text = "Dashboard";
-            // 
-            // lblQueueOverview
-            // 
-            lblQueueOverview.AutoSize = true;
-            lblQueueOverview.Location = new Point(35, 96);
-            lblQueueOverview.Name = "lblQueueOverview";
-            lblQueueOverview.Size = new Size(117, 20);
-            lblQueueOverview.TabIndex = 1;
-            lblQueueOverview.Text = "Queue Overview";
+            lblSignOut.AutoSize = true;
+            lblSignOut.Location = new Point(35, 214);
+            lblSignOut.Name = "lblSignOut";
+            lblSignOut.Size = new Size(66, 20);
+            lblSignOut.TabIndex = 3;
+            lblSignOut.Text = "Sign Out";
             // 
             // lblProfile
             // 
@@ -125,19 +116,29 @@
             lblProfile.TabIndex = 2;
             lblProfile.Text = "Profile";
             // 
-            // lblSignOut
+            // lblQueueOverview
             // 
-            lblSignOut.AutoSize = true;
-            lblSignOut.Location = new Point(35, 214);
-            lblSignOut.Name = "lblSignOut";
-            lblSignOut.Size = new Size(66, 20);
-            lblSignOut.TabIndex = 3;
-            lblSignOut.Text = "Sign Out";
+            lblQueueOverview.AutoSize = true;
+            lblQueueOverview.Location = new Point(35, 96);
+            lblQueueOverview.Name = "lblQueueOverview";
+            lblQueueOverview.Size = new Size(117, 20);
+            lblQueueOverview.TabIndex = 1;
+            lblQueueOverview.Text = "Queue Overview";
+            // 
+            // lblDashboard
+            // 
+            lblDashboard.AutoSize = true;
+            lblDashboard.Location = new Point(35, 34);
+            lblDashboard.Name = "lblDashboard";
+            lblDashboard.Size = new Size(82, 20);
+            lblDashboard.TabIndex = 0;
+            lblDashboard.Text = "Dashboard";
             // 
             // pnlMain
             // 
             pnlMain.Controls.Add(pnlLoginCard);
             pnlMain.Dock = DockStyle.Fill;
+            pnlMain.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pnlMain.Location = new Point(200, 70);
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(982, 583);
@@ -157,35 +158,33 @@
             pnlLoginCard.Size = new Size(500, 430);
             pnlLoginCard.TabIndex = 0;
             // 
-            // lblTitle
+            // txtPassword
             // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(154, 19);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(170, 31);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "Welcome Back";
+            txtPassword.Location = new Point(39, 207);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(340, 27);
+            txtPassword.TabIndex = 6;
+            txtPassword.UseSystemPasswordChar = true;
             // 
-            // lblStaffID
+            // txtStaffID
             // 
-            lblStaffID.AutoSize = true;
-            lblStaffID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStaffID.Location = new Point(38, 97);
-            lblStaffID.Name = "lblStaffID";
-            lblStaffID.Size = new Size(63, 20);
-            lblStaffID.TabIndex = 1;
-            lblStaffID.Text = "Staff ID";
+            txtStaffID.Location = new Point(39, 125);
+            txtStaffID.Name = "txtStaffID";
+            txtStaffID.Size = new Size(340, 27);
+            txtStaffID.TabIndex = 5;
             // 
-            // lblPassword
+            // btnLogin
             // 
-            lblPassword.AutoSize = true;
-            lblPassword.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPassword.Location = new Point(38, 172);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(76, 20);
-            lblPassword.TabIndex = 2;
-            lblPassword.Text = "Password";
+            btnLogin.BackColor = Color.FromArgb(26, 74, 122);
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(60, 285);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(350, 40);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
@@ -198,32 +197,35 @@
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnLogin
+            // lblPassword
             // 
-            btnLogin.BackColor = Color.FromArgb(0, 91, 187);
-            btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(60, 285);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(350, 40);
-            btnLogin.TabIndex = 4;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = false;
+            lblPassword.AutoSize = true;
+            lblPassword.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPassword.Location = new Point(38, 172);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new Size(76, 20);
+            lblPassword.TabIndex = 2;
+            lblPassword.Text = "Password";
             // 
-            // txtStaffID
+            // lblStaffID
             // 
-            txtStaffID.Location = new Point(39, 125);
-            txtStaffID.Name = "txtStaffID";
-            txtStaffID.Size = new Size(340, 27);
-            txtStaffID.TabIndex = 5;
+            lblStaffID.AutoSize = true;
+            lblStaffID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStaffID.Location = new Point(38, 97);
+            lblStaffID.Name = "lblStaffID";
+            lblStaffID.Size = new Size(63, 20);
+            lblStaffID.TabIndex = 1;
+            lblStaffID.Text = "Staff ID";
             // 
-            // txtPassword
+            // lblTitle
             // 
-            txtPassword.Location = new Point(39, 207);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(340, 27);
-            txtPassword.TabIndex = 6;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(154, 19);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(170, 31);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Welcome Back";
             // 
             // StaffLogin
             // 

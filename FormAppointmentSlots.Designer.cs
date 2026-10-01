@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             pnlSideBar = new Panel();
-            btnDashboard = new Button();
-            btnReports = new Button();
-            btnServices = new Button();
-            btnSlots = new Button();
             btnBookings = new Button();
+            btnSlots = new Button();
+            btnServices = new Button();
+            btnReports = new Button();
+            btnDashboard = new Button();
             lblAppointmentSlots = new Label();
             dgvAppointmentSlots = new DataGridView();
             date = new DataGridViewTextBoxColumn();
@@ -53,63 +53,69 @@
             pnlSideBar.Controls.Add(btnServices);
             pnlSideBar.Controls.Add(btnReports);
             pnlSideBar.Controls.Add(btnDashboard);
-            pnlSideBar.Location = new Point(13, 15);
+            pnlSideBar.Location = new Point(17, 20);
+            pnlSideBar.Margin = new Padding(3, 4, 3, 4);
             pnlSideBar.Name = "pnlSideBar";
-            pnlSideBar.Size = new Size(137, 423);
+            pnlSideBar.Size = new Size(177, 564);
             pnlSideBar.TabIndex = 0;
             // 
-            // btnDashboard
+            // btnBookings
             // 
-            btnDashboard.Location = new Point(13, 21);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(109, 36);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = true;
-            // 
-            // btnReports
-            // 
-            btnReports.Location = new Point(14, 175);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(109, 29);
-            btnReports.TabIndex = 1;
-            btnReports.Text = "Reports";
-            btnReports.UseVisualStyleBackColor = true;
-            // 
-            // btnServices
-            // 
-            btnServices.Location = new Point(13, 63);
-            btnServices.Name = "btnServices";
-            btnServices.Size = new Size(109, 31);
-            btnServices.TabIndex = 2;
-            btnServices.Text = "Services";
-            btnServices.UseVisualStyleBackColor = true;
+            btnBookings.Location = new Point(18, 183);
+            btnBookings.Margin = new Padding(3, 4, 3, 4);
+            btnBookings.Name = "btnBookings";
+            btnBookings.Size = new Size(141, 43);
+            btnBookings.TabIndex = 4;
+            btnBookings.Text = "Bookings";
+            btnBookings.UseVisualStyleBackColor = true;
             // 
             // btnSlots
             // 
-            btnSlots.Location = new Point(14, 100);
+            btnSlots.Location = new Point(18, 133);
+            btnSlots.Margin = new Padding(3, 4, 3, 4);
             btnSlots.Name = "btnSlots";
-            btnSlots.Size = new Size(109, 31);
+            btnSlots.Size = new Size(141, 41);
             btnSlots.TabIndex = 3;
             btnSlots.Text = "Slots";
             btnSlots.UseVisualStyleBackColor = true;
             // 
-            // btnBookings
+            // btnServices
             // 
-            btnBookings.Location = new Point(14, 137);
-            btnBookings.Name = "btnBookings";
-            btnBookings.Size = new Size(109, 32);
-            btnBookings.TabIndex = 4;
-            btnBookings.Text = "Bookings";
-            btnBookings.UseVisualStyleBackColor = true;
+            btnServices.Location = new Point(17, 84);
+            btnServices.Margin = new Padding(3, 4, 3, 4);
+            btnServices.Name = "btnServices";
+            btnServices.Size = new Size(141, 41);
+            btnServices.TabIndex = 2;
+            btnServices.Text = "Services";
+            btnServices.UseVisualStyleBackColor = true;
+            // 
+            // btnReports
+            // 
+            btnReports.Location = new Point(18, 233);
+            btnReports.Margin = new Padding(3, 4, 3, 4);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(141, 39);
+            btnReports.TabIndex = 1;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.Location = new Point(17, 28);
+            btnDashboard.Margin = new Padding(3, 4, 3, 4);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(141, 48);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = true;
             // 
             // lblAppointmentSlots
             // 
             lblAppointmentSlots.AutoSize = true;
             lblAppointmentSlots.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAppointmentSlots.Location = new Point(157, 20);
+            lblAppointmentSlots.Location = new Point(201, 27);
             lblAppointmentSlots.Name = "lblAppointmentSlots";
-            lblAppointmentSlots.Size = new Size(139, 21);
+            lblAppointmentSlots.Size = new Size(177, 28);
             lblAppointmentSlots.TabIndex = 1;
             lblAppointmentSlots.Text = "Appointment Slots";
             // 
@@ -117,49 +123,65 @@
             // 
             dgvAppointmentSlots.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAppointmentSlots.Columns.AddRange(new DataGridViewColumn[] { date, time, capacity, booked, available, fillPercentage });
-            dgvAppointmentSlots.Location = new Point(175, 51);
+            dgvAppointmentSlots.Location = new Point(225, 68);
+            dgvAppointmentSlots.Margin = new Padding(3, 4, 3, 4);
             dgvAppointmentSlots.Name = "dgvAppointmentSlots";
-            dgvAppointmentSlots.Size = new Size(613, 71);
+            dgvAppointmentSlots.RowHeadersWidth = 51;
+            dgvAppointmentSlots.Size = new Size(789, 95);
             dgvAppointmentSlots.TabIndex = 2;
             // 
             // date
             // 
             date.HeaderText = "Date";
+            date.MinimumWidth = 6;
             date.Name = "date";
+            date.Width = 125;
             // 
             // time
             // 
             time.HeaderText = "Time";
+            time.MinimumWidth = 6;
             time.Name = "time";
+            time.Width = 125;
             // 
             // capacity
             // 
             capacity.HeaderText = "Capacity";
+            capacity.MinimumWidth = 6;
             capacity.Name = "capacity";
+            capacity.Width = 125;
             // 
             // booked
             // 
             booked.HeaderText = "Booked";
+            booked.MinimumWidth = 6;
             booked.Name = "booked";
+            booked.Width = 125;
             // 
             // available
             // 
             available.HeaderText = "Available";
+            available.MinimumWidth = 6;
             available.Name = "available";
+            available.Width = 125;
             // 
             // fillPercentage
             // 
             fillPercentage.HeaderText = "Fill%";
+            fillPercentage.MinimumWidth = 6;
             fillPercentage.Name = "fillPercentage";
+            fillPercentage.Width = 125;
             // 
             // frmAppointmentSlots
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1028, 600);
             Controls.Add(dgvAppointmentSlots);
             Controls.Add(lblAppointmentSlots);
             Controls.Add(pnlSideBar);
+            Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmAppointmentSlots";
             Text = "Appointment Slots";
             pnlSideBar.ResumeLayout(false);
