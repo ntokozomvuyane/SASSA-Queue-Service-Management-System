@@ -1,7 +1,7 @@
 ﻿
 namespace Zanele_Admin
 {
-    partial class Form1
+    partial class frmBookings
     {
         /// <summary>
         /// Required designer variable.
@@ -302,7 +302,7 @@ namespace Zanele_Admin
             pnlSideBar.Size = new Size(195, 408);
             pnlSideBar.TabIndex = 5;
             // 
-            // Form1
+            // frmBookings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -313,7 +313,7 @@ namespace Zanele_Admin
             Controls.Add(dgvBookingManagement);
             Controls.Add(grpSearch);
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Form1";
+            Name = "frmBookings";
             Text = "Booking Management";
             grpSearch.ResumeLayout(false);
             grpSearch.PerformLayout();

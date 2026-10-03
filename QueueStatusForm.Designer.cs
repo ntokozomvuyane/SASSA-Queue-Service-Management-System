@@ -48,11 +48,20 @@ namespace Sassa_Queue_And_Service_Management_System
             lblPeopleAhead = new Label();
             lblCheckInTime = new Label();
             lblCentreName = new Label();
-            lblCurrentStatus = new Label();
             lblServiceName = new Label();
+            lblQueueNumberTitle = new Label();
+            lblCurrentStatus = new Label();
+            lblQueueMessageTitle = new Label();
+            lblPeopleAheadTitle = new Label();
+            lblCheckInTimeTitle = new Label();
+            lblCentreNameTitle = new Label();
+            lblCurrentStatusTitle = new Label();
+            lblServiceNameTitle = new Label();
             btnBack = new Button();
             btnRefresh = new Button();
             tmrQueueRefresh = new System.Windows.Forms.Timer(components);
+            lblEstimatedWaitTitle = new Label();
+            //lblEstimatedWait = new Label();
             pnlQueueStatus.SuspendLayout();
             pnlSideBar.SuspendLayout();
             pnlQueueDetails.SuspendLayout();
@@ -202,7 +211,7 @@ namespace Sassa_Queue_And_Service_Management_System
             lblQueueNumber.AutoSize = true;
             lblQueueNumber.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblQueueNumber.ForeColor = Color.FromArgb(0, 51, 102);
-            lblQueueNumber.Location = new Point(4, 11);
+            lblQueueNumber.Location = new Point(238, 9);
             lblQueueNumber.Margin = new Padding(4, 0, 4, 0);
             lblQueueNumber.Name = "lblQueueNumber";
             lblQueueNumber.Size = new Size(81, 31);
@@ -213,12 +222,21 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             pnlQueueDetails.BackColor = Color.WhiteSmoke;
             pnlQueueDetails.BorderStyle = BorderStyle.Fixed3D;
+            //pnlQueueDetails.Controls.Add(lblEstimatedWait);
+            pnlQueueDetails.Controls.Add(lblEstimatedWaitTitle);
             pnlQueueDetails.Controls.Add(lblQueueMessage);
             pnlQueueDetails.Controls.Add(lblPeopleAhead);
             pnlQueueDetails.Controls.Add(lblCheckInTime);
             pnlQueueDetails.Controls.Add(lblCentreName);
-            pnlQueueDetails.Controls.Add(lblCurrentStatus);
             pnlQueueDetails.Controls.Add(lblServiceName);
+            pnlQueueDetails.Controls.Add(lblQueueNumberTitle);
+            pnlQueueDetails.Controls.Add(lblCurrentStatus);
+            pnlQueueDetails.Controls.Add(lblQueueMessageTitle);
+            pnlQueueDetails.Controls.Add(lblPeopleAheadTitle);
+            pnlQueueDetails.Controls.Add(lblCheckInTimeTitle);
+            pnlQueueDetails.Controls.Add(lblCentreNameTitle);
+            pnlQueueDetails.Controls.Add(lblCurrentStatusTitle);
+            pnlQueueDetails.Controls.Add(lblServiceNameTitle);
             pnlQueueDetails.Controls.Add(lblQueueNumber);
             pnlQueueDetails.Location = new Point(226, 83);
             pnlQueueDetails.Margin = new Padding(4, 3, 4, 3);
@@ -230,67 +248,144 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             lblQueueMessage.AutoSize = true;
             lblQueueMessage.ForeColor = SystemColors.ControlDarkDark;
-            lblQueueMessage.Location = new Point(4, 199);
+            lblQueueMessage.Location = new Point(238, 199);
             lblQueueMessage.Margin = new Padding(4, 0, 4, 0);
             lblQueueMessage.Name = "lblQueueMessage";
             lblQueueMessage.Size = new Size(91, 15);
-            lblQueueMessage.TabIndex = 9;
+            lblQueueMessage.TabIndex = 16;
             lblQueueMessage.Text = "Queue Message";
             // 
             // lblPeopleAhead
             // 
             lblPeopleAhead.AutoSize = true;
             lblPeopleAhead.ForeColor = SystemColors.ControlDarkDark;
-            lblPeopleAhead.Location = new Point(4, 150);
+            lblPeopleAhead.Location = new Point(238, 150);
             lblPeopleAhead.Margin = new Padding(4, 0, 4, 0);
             lblPeopleAhead.Name = "lblPeopleAhead";
             lblPeopleAhead.Size = new Size(80, 15);
-            lblPeopleAhead.TabIndex = 7;
+            lblPeopleAhead.TabIndex = 15;
             lblPeopleAhead.Text = "People Ahead";
             // 
             // lblCheckInTime
             // 
             lblCheckInTime.AutoSize = true;
             lblCheckInTime.ForeColor = SystemColors.ControlDarkDark;
-            lblCheckInTime.Location = new Point(4, 124);
+            lblCheckInTime.Location = new Point(238, 124);
             lblCheckInTime.Margin = new Padding(4, 0, 4, 0);
             lblCheckInTime.Name = "lblCheckInTime";
             lblCheckInTime.Size = new Size(83, 15);
-            lblCheckInTime.TabIndex = 6;
+            lblCheckInTime.TabIndex = 14;
             lblCheckInTime.Text = "Check In Time";
             // 
             // lblCentreName
             // 
             lblCentreName.AutoSize = true;
             lblCentreName.ForeColor = SystemColors.ControlDarkDark;
-            lblCentreName.Location = new Point(4, 100);
+            lblCentreName.Location = new Point(238, 100);
             lblCentreName.Margin = new Padding(4, 0, 4, 0);
             lblCentreName.Name = "lblCentreName";
             lblCentreName.Size = new Size(77, 15);
-            lblCentreName.TabIndex = 5;
+            lblCentreName.TabIndex = 13;
             lblCentreName.Text = "Centre Name";
-            // 
-            // lblCurrentStatus
-            // 
-            lblCurrentStatus.AutoSize = true;
-            lblCurrentStatus.ForeColor = SystemColors.ControlDarkDark;
-            lblCurrentStatus.Location = new Point(4, 49);
-            lblCurrentStatus.Margin = new Padding(4, 0, 4, 0);
-            lblCurrentStatus.Name = "lblCurrentStatus";
-            lblCurrentStatus.Size = new Size(82, 15);
-            lblCurrentStatus.TabIndex = 4;
-            lblCurrentStatus.Text = "Current Status";
             // 
             // lblServiceName
             // 
             lblServiceName.AutoSize = true;
             lblServiceName.ForeColor = SystemColors.ControlDarkDark;
-            lblServiceName.Location = new Point(4, 73);
+            lblServiceName.Location = new Point(238, 73);
             lblServiceName.Margin = new Padding(4, 0, 4, 0);
             lblServiceName.Name = "lblServiceName";
             lblServiceName.Size = new Size(79, 15);
-            lblServiceName.TabIndex = 1;
+            lblServiceName.TabIndex = 12;
             lblServiceName.Text = "Service Name";
+            // 
+            // lblQueueNumberTitle
+            // 
+            lblQueueNumberTitle.AutoSize = true;
+            lblQueueNumberTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblQueueNumberTitle.Location = new Point(6, 23);
+            lblQueueNumberTitle.Margin = new Padding(4, 0, 4, 0);
+            lblQueueNumberTitle.Name = "lblQueueNumberTitle";
+            lblQueueNumberTitle.Size = new Size(89, 15);
+            lblQueueNumberTitle.TabIndex = 11;
+            lblQueueNumberTitle.Text = "Queue Number";
+            // 
+            // lblCurrentStatus
+            // 
+            lblCurrentStatus.AutoSize = true;
+            lblCurrentStatus.ForeColor = SystemColors.ControlDarkDark;
+            lblCurrentStatus.Location = new Point(238, 49);
+            lblCurrentStatus.Margin = new Padding(4, 0, 4, 0);
+            lblCurrentStatus.Name = "lblCurrentStatus";
+            lblCurrentStatus.Size = new Size(82, 15);
+            lblCurrentStatus.TabIndex = 10;
+            lblCurrentStatus.Text = "Current Status";
+            // 
+            // lblQueueMessageTitle
+            // 
+            lblQueueMessageTitle.AutoSize = true;
+            lblQueueMessageTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblQueueMessageTitle.Location = new Point(4, 199);
+            lblQueueMessageTitle.Margin = new Padding(4, 0, 4, 0);
+            lblQueueMessageTitle.Name = "lblQueueMessageTitle";
+            lblQueueMessageTitle.Size = new Size(91, 15);
+            lblQueueMessageTitle.TabIndex = 9;
+            lblQueueMessageTitle.Text = "Queue Message";
+            // 
+            // lblPeopleAheadTitle
+            // 
+            lblPeopleAheadTitle.AutoSize = true;
+            lblPeopleAheadTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblPeopleAheadTitle.Location = new Point(4, 150);
+            lblPeopleAheadTitle.Margin = new Padding(4, 0, 4, 0);
+            lblPeopleAheadTitle.Name = "lblPeopleAheadTitle";
+            lblPeopleAheadTitle.Size = new Size(80, 15);
+            lblPeopleAheadTitle.TabIndex = 7;
+            lblPeopleAheadTitle.Text = "People Ahead";
+            // 
+            // lblCheckInTimeTitle
+            // 
+            lblCheckInTimeTitle.AutoSize = true;
+            lblCheckInTimeTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblCheckInTimeTitle.Location = new Point(4, 124);
+            lblCheckInTimeTitle.Margin = new Padding(4, 0, 4, 0);
+            lblCheckInTimeTitle.Name = "lblCheckInTimeTitle";
+            lblCheckInTimeTitle.Size = new Size(83, 15);
+            lblCheckInTimeTitle.TabIndex = 6;
+            lblCheckInTimeTitle.Text = "Check In Time";
+            // 
+            // lblCentreNameTitle
+            // 
+            lblCentreNameTitle.AutoSize = true;
+            lblCentreNameTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblCentreNameTitle.Location = new Point(4, 100);
+            lblCentreNameTitle.Margin = new Padding(4, 0, 4, 0);
+            lblCentreNameTitle.Name = "lblCentreNameTitle";
+            lblCentreNameTitle.Size = new Size(77, 15);
+            lblCentreNameTitle.TabIndex = 5;
+            lblCentreNameTitle.Text = "Centre Name";
+            // 
+            // lblCurrentStatusTitle
+            // 
+            lblCurrentStatusTitle.AutoSize = true;
+            lblCurrentStatusTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblCurrentStatusTitle.Location = new Point(4, 49);
+            lblCurrentStatusTitle.Margin = new Padding(4, 0, 4, 0);
+            lblCurrentStatusTitle.Name = "lblCurrentStatusTitle";
+            lblCurrentStatusTitle.Size = new Size(82, 15);
+            lblCurrentStatusTitle.TabIndex = 4;
+            lblCurrentStatusTitle.Text = "Current Status";
+            // 
+            // lblServiceNameTitle
+            // 
+            lblServiceNameTitle.AutoSize = true;
+            lblServiceNameTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblServiceNameTitle.Location = new Point(4, 73);
+            lblServiceNameTitle.Margin = new Padding(4, 0, 4, 0);
+            lblServiceNameTitle.Name = "lblServiceNameTitle";
+            lblServiceNameTitle.Size = new Size(79, 15);
+            lblServiceNameTitle.TabIndex = 1;
+            lblServiceNameTitle.Text = "Service Name";
             // 
             // btnBack
             // 
@@ -328,6 +423,28 @@ namespace Sassa_Queue_And_Service_Management_System
             // 
             tmrQueueRefresh.Tick += tmrQueueRefresh_Tick;
             // 
+            // lblEstimatedWaitTitle
+            // 
+            lblEstimatedWaitTitle.AutoSize = true;
+            lblEstimatedWaitTitle.ForeColor = SystemColors.ControlDarkDark;
+            lblEstimatedWaitTitle.Location = new Point(4, 175);
+            lblEstimatedWaitTitle.Margin = new Padding(4, 0, 4, 0);
+            lblEstimatedWaitTitle.Name = "lblEstimatedWaitTitle";
+            lblEstimatedWaitTitle.Size = new Size(86, 15);
+            lblEstimatedWaitTitle.TabIndex = 17;
+            lblEstimatedWaitTitle.Text = "Estimated Wait";
+            // 
+            // lblEstimatedWait
+            // 
+            //lblEstimatedWait.AutoSize = true;
+            //lblEstimatedWait.ForeColor = SystemColors.ControlDarkDark;
+            //lblEstimatedWait.Location = new Point(238, 175);
+            //lblEstimatedWait.Margin = new Padding(4, 0, 4, 0);
+            //lblEstimatedWait.Name = "lblEstimatedWait";
+            //lblEstimatedWait.Size = new Size(86, 15);
+            //lblEstimatedWait.TabIndex = 18;
+            //lblEstimatedWait.Text = "Estimated Wait";
+            // 
             // QueueStatusForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -363,7 +480,7 @@ namespace Sassa_Queue_And_Service_Management_System
         private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Label lblQueueNumber;
         private System.Windows.Forms.Panel pnlQueueDetails;
-        private System.Windows.Forms.Label lblServiceName;
+        private System.Windows.Forms.Label lblServiceNameTitle;
         private System.Windows.Forms.Panel pnlEstimatedWait;
         private System.Windows.Forms.Label lbl35Minutes;
         private System.Windows.Forms.Label lblEstimatedWait;
@@ -374,12 +491,12 @@ namespace Sassa_Queue_And_Service_Management_System
         private System.Windows.Forms.Label lblQueueProgress2;
         private System.Windows.Forms.Button btnBack;
         private Button btnRefresh;
-        private Label lblQueueMessage;
+        private Label lblQueueMessageTitle;
         //private Label lblEstimatedWait;
-        private Label lblPeopleAhead;
-        private Label lblCheckInTime;
-        private Label lblCentreName;
-        private Label lblCurrentStatus;
+        private Label lblPeopleAheadTitle;
+        private Label lblCheckInTimeTitle;
+        private Label lblCentreNameTitle;
+        private Label lblCurrentStatusTitle;
         private System.Windows.Forms.Timer tmrQueueRefresh;
         private Button btnDashboard;
         private Button btnQueueStatus;
@@ -387,5 +504,14 @@ namespace Sassa_Queue_And_Service_Management_System
         private Button btnNewBooking;
         private Button btnLogout;
         private Button btnMyProfile;
+        private Label lblPeopleAhead;
+        private Label lblCheckInTime;
+        private Label lblCentreName;
+        private Label lblServiceName;
+        private Label lblQueueNumberTitle;
+        private Label lblCurrentStatus;
+        private Label lblQueueMessage;
+        //private Label lblEstimatedWait;
+        private Label lblEstimatedWaitTitle;
     }
 }

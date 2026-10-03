@@ -10,9 +10,15 @@ namespace SASSAQueueManagementSystem
 {
     public partial class frmAppointmentSlots : Form
     {
+        private Administrator? currentAdministrator;
         public frmAppointmentSlots()
         {
             InitializeComponent();
+        }
+        public frmAppointmentSlots(Administrator administrator) : this()
+        {
+            currentAdministrator = administrator
+                ?? throw new ArgumentNullException(nameof(administrator));
         }
     }
 }

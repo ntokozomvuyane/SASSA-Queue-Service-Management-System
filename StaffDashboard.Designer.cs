@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            pnlHeader = new Panel();
             lblCurrentDate = new Label();
             lblStaffRole = new Label();
             lblStaffName = new Label();
@@ -39,54 +39,64 @@
             btnProfile = new Button();
             btnQueueOverview = new Button();
             btnDashboard = new Button();
-            pnlMain = new Panel();
-            btnSearchByReferenceOrID = new Button();
-            btnCallNext = new Button();
+            pnlContent = new Panel();
+            pnlDashboardHome = new Panel();
+            lblDashboardTitle = new Label();
+            lblDate = new Label();
             btnSearch = new Button();
-            btnQueueManagement = new Button();
             dgvStaffStatus = new DataGridView();
             ColQueueNumber = new DataGridViewTextBoxColumn();
             ColBeneficiaryName = new DataGridViewTextBoxColumn();
             ColStatus = new DataGridViewTextBoxColumn();
-            panel5 = new Panel();
-            lblCompleted = new Label();
-            lblCompletedCount = new Label();
-            panel4 = new Panel();
-            lblServing = new Label();
-            lblServingCount = new Label();
-            panel3 = new Panel();
-            lblWaiting = new Label();
-            lblWaitingCount = new Label();
-            panel2 = new Panel();
+            pnlBooked = new Panel();
             lblBooked = new Label();
             lblBookedCount = new Label();
-            lblDate = new Label();
-            lblDashboardTitle = new Label();
-            panel1.SuspendLayout();
+            pnlWait = new Panel();
+            lblWaiting = new Label();
+            lblWaitingCount = new Label();
+            pnlCompleted = new Panel();
+            lblCompleted = new Label();
+            lblCompletedCount = new Label();
+            pnlServing = new Panel();
+            lblServing = new Label();
+            lblServingCount = new Label();
+            btnQueueManagement = new Button();
+            pnlCheckedIn = new Panel();
+            lblCheckedIn = new Label();
+            lblCheckedInCount = new Label();
+            pnlNoShow = new Panel();
+            lblNoShow = new Label();
+            lblNoShowCount = new Label();
+            lnklblCallNext = new LinkLabel();
+            lnklblSearchByReferenceorID = new LinkLabel();
+            pnlHeader.SuspendLayout();
             pnlSidebar.SuspendLayout();
-            pnlMain.SuspendLayout();
+            pnlContent.SuspendLayout();
+            pnlDashboardHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaffStatus).BeginInit();
-            panel5.SuspendLayout();
-            panel4.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
+            pnlBooked.SuspendLayout();
+            pnlWait.SuspendLayout();
+            pnlCompleted.SuspendLayout();
+            pnlServing.SuspendLayout();
+            pnlCheckedIn.SuspendLayout();
+            pnlNoShow.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // pnlHeader
             // 
-            panel1.BackColor = Color.FromArgb(0, 51, 102);
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(lblCurrentDate);
-            panel1.Controls.Add(lblStaffRole);
-            panel1.Controls.Add(lblStaffName);
-            panel1.Controls.Add(lblSystemName);
-            panel1.Controls.Add(lblSystemSubtitle);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(990, 49);
-            panel1.TabIndex = 0;
+            pnlHeader.BackColor = Color.FromArgb(0, 51, 102);
+            pnlHeader.BorderStyle = BorderStyle.Fixed3D;
+            pnlHeader.Controls.Add(lblCurrentDate);
+            pnlHeader.Controls.Add(lblStaffRole);
+            pnlHeader.Controls.Add(lblStaffName);
+            pnlHeader.Controls.Add(lblSystemName);
+            pnlHeader.Controls.Add(lblSystemSubtitle);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(0, 0);
+            pnlHeader.Margin = new Padding(3, 2, 3, 2);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(990, 49);
+            pnlHeader.TabIndex = 0;
             // 
             // lblCurrentDate
             // 
@@ -160,6 +170,7 @@
             btnLogout.TabIndex = 7;
             btnLogout.Text = "Sign Out";
             btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnProfile
             // 
@@ -169,6 +180,7 @@
             btnProfile.TabIndex = 6;
             btnProfile.Text = "Profile";
             btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Click += btnProfile_Click;
             // 
             // btnQueueOverview
             // 
@@ -178,6 +190,7 @@
             btnQueueOverview.TabIndex = 5;
             btnQueueOverview.Text = "Queue Overview";
             btnQueueOverview.UseVisualStyleBackColor = true;
+            btnQueueOverview.Click += btnQueueOverview_Click;
             // 
             // btnDashboard
             // 
@@ -187,71 +200,71 @@
             btnDashboard.TabIndex = 4;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
-            // pnlMain
+            // pnlContent
             // 
-            pnlMain.BorderStyle = BorderStyle.Fixed3D;
-            pnlMain.Controls.Add(btnSearchByReferenceOrID);
-            pnlMain.Controls.Add(btnCallNext);
-            pnlMain.Controls.Add(btnSearch);
-            pnlMain.Controls.Add(btnQueueManagement);
-            pnlMain.Controls.Add(dgvStaffStatus);
-            pnlMain.Controls.Add(panel5);
-            pnlMain.Controls.Add(panel4);
-            pnlMain.Controls.Add(panel3);
-            pnlMain.Controls.Add(panel2);
-            pnlMain.Controls.Add(lblDate);
-            pnlMain.Controls.Add(lblDashboardTitle);
-            pnlMain.Dock = DockStyle.Fill;
-            pnlMain.Location = new Point(166, 49);
-            pnlMain.Margin = new Padding(3, 2, 3, 2);
-            pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(824, 478);
-            pnlMain.TabIndex = 2;
+            pnlContent.BorderStyle = BorderStyle.Fixed3D;
+            pnlContent.Controls.Add(pnlDashboardHome);
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(166, 49);
+            pnlContent.Margin = new Padding(3, 2, 3, 2);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(824, 478);
+            pnlContent.TabIndex = 2;
             // 
-            // btnSearchByReferenceOrID
+            // pnlDashboardHome
             // 
-            btnSearchByReferenceOrID.Location = new Point(473, 212);
-            btnSearchByReferenceOrID.Name = "btnSearchByReferenceOrID";
-            btnSearchByReferenceOrID.Size = new Size(174, 36);
-            btnSearchByReferenceOrID.TabIndex = 14;
-            btnSearchByReferenceOrID.Text = "Search by Reference or ID";
-            btnSearchByReferenceOrID.UseVisualStyleBackColor = true;
+            pnlDashboardHome.Controls.Add(lnklblSearchByReferenceorID);
+            pnlDashboardHome.Controls.Add(lnklblCallNext);
+            pnlDashboardHome.Controls.Add(pnlNoShow);
+            pnlDashboardHome.Controls.Add(pnlCheckedIn);
+            pnlDashboardHome.Controls.Add(lblDashboardTitle);
+            pnlDashboardHome.Controls.Add(lblDate);
+            pnlDashboardHome.Controls.Add(btnSearch);
+            pnlDashboardHome.Controls.Add(dgvStaffStatus);
+            pnlDashboardHome.Controls.Add(pnlBooked);
+            pnlDashboardHome.Controls.Add(pnlWait);
+            pnlDashboardHome.Controls.Add(pnlCompleted);
+            pnlDashboardHome.Controls.Add(pnlServing);
+            pnlDashboardHome.Controls.Add(btnQueueManagement);
+            pnlDashboardHome.Dock = DockStyle.Fill;
+            pnlDashboardHome.Location = new Point(0, 0);
+            pnlDashboardHome.Name = "pnlDashboardHome";
+            pnlDashboardHome.Size = new Size(820, 474);
+            pnlDashboardHome.TabIndex = 0;
             // 
-            // btnCallNext
+            // lblDashboardTitle
             // 
-            btnCallNext.Location = new Point(107, 212);
-            btnCallNext.Name = "btnCallNext";
-            btnCallNext.Size = new Size(185, 36);
-            btnCallNext.TabIndex = 13;
-            btnCallNext.Text = "Call next, check in, completed";
-            btnCallNext.UseVisualStyleBackColor = true;
+            lblDashboardTitle.AutoSize = true;
+            lblDashboardTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDashboardTitle.Location = new Point(15, 14);
+            lblDashboardTitle.Name = "lblDashboardTitle";
+            lblDashboardTitle.Size = new Size(263, 45);
+            lblDashboardTitle.TabIndex = 0;
+            lblDashboardTitle.Text = "Staff Dashboard";
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Location = new Point(29, 59);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(210, 15);
+            lblDate.TabIndex = 1;
+            lblDate.Text = "Johannesburg CBD - Today's Overview";
             // 
             // btnSearch
             // 
             btnSearch.BackColor = Color.FromArgb(0, 51, 102);
             btnSearch.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSearch.Location = new Point(429, 175);
+            btnSearch.Location = new Point(427, 195);
             btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(247, 100);
+            btnSearch.Size = new Size(227, 104);
             btnSearch.TabIndex = 10;
             btnSearch.Text = "Search Bookings";
             btnSearch.TextAlign = ContentAlignment.TopCenter;
             btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // btnQueueManagement
-            // 
-            btnQueueManagement.BackColor = Color.FromArgb(0, 51, 102);
-            btnQueueManagement.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnQueueManagement.Location = new Point(74, 175);
-            btnQueueManagement.Margin = new Padding(3, 2, 3, 2);
-            btnQueueManagement.Name = "btnQueueManagement";
-            btnQueueManagement.Size = new Size(247, 100);
-            btnQueueManagement.TabIndex = 9;
-            btnQueueManagement.Text = "Queue Management";
-            btnQueueManagement.TextAlign = ContentAlignment.TopCenter;
-            btnQueueManagement.UseVisualStyleBackColor = false;
             // 
             // dgvStaffStatus
             // 
@@ -262,7 +275,7 @@
             dgvStaffStatus.BorderStyle = BorderStyle.Fixed3D;
             dgvStaffStatus.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStaffStatus.Columns.AddRange(new DataGridViewColumn[] { ColQueueNumber, ColBeneficiaryName, ColStatus });
-            dgvStaffStatus.Location = new Point(44, 296);
+            dgvStaffStatus.Location = new Point(29, 333);
             dgvStaffStatus.Margin = new Padding(3, 2, 3, 2);
             dgvStaffStatus.MultiSelect = false;
             dgvStaffStatus.Name = "dgvStaffStatus";
@@ -270,7 +283,7 @@
             dgvStaffStatus.RowHeadersVisible = false;
             dgvStaffStatus.RowHeadersWidth = 51;
             dgvStaffStatus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStaffStatus.Size = new Size(682, 174);
+            dgvStaffStatus.Size = new Size(655, 101);
             dgvStaffStatus.TabIndex = 8;
             // 
             // ColQueueNumber
@@ -294,103 +307,16 @@
             ColStatus.Name = "ColStatus";
             ColStatus.ReadOnly = true;
             // 
-            // panel5
+            // pnlBooked
             // 
-            panel5.BorderStyle = BorderStyle.Fixed3D;
-            panel5.Controls.Add(lblCompleted);
-            panel5.Controls.Add(lblCompletedCount);
-            panel5.Location = new Point(595, 83);
-            panel5.Margin = new Padding(3, 2, 3, 2);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(131, 75);
-            panel5.TabIndex = 5;
-            // 
-            // lblCompleted
-            // 
-            lblCompleted.AutoSize = true;
-            lblCompleted.Location = new Point(28, 40);
-            lblCompleted.Name = "lblCompleted";
-            lblCompleted.Size = new Size(66, 15);
-            lblCompleted.TabIndex = 2;
-            lblCompleted.Text = "Completed";
-            // 
-            // lblCompletedCount
-            // 
-            lblCompletedCount.AutoSize = true;
-            lblCompletedCount.Location = new Point(56, 16);
-            lblCompletedCount.Name = "lblCompletedCount";
-            lblCompletedCount.Size = new Size(13, 15);
-            lblCompletedCount.TabIndex = 1;
-            lblCompletedCount.Text = "1";
-            // 
-            // panel4
-            // 
-            panel4.BorderStyle = BorderStyle.Fixed3D;
-            panel4.Controls.Add(lblServing);
-            panel4.Controls.Add(lblServingCount);
-            panel4.Location = new Point(405, 83);
-            panel4.Margin = new Padding(3, 2, 3, 2);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(131, 75);
-            panel4.TabIndex = 4;
-            // 
-            // lblServing
-            // 
-            lblServing.AutoSize = true;
-            lblServing.Location = new Point(36, 40);
-            lblServing.Name = "lblServing";
-            lblServing.Size = new Size(46, 15);
-            lblServing.TabIndex = 2;
-            lblServing.Text = "Serving";
-            // 
-            // lblServingCount
-            // 
-            lblServingCount.AutoSize = true;
-            lblServingCount.Location = new Point(52, 16);
-            lblServingCount.Name = "lblServingCount";
-            lblServingCount.Size = new Size(13, 15);
-            lblServingCount.TabIndex = 1;
-            lblServingCount.Text = "1";
-            // 
-            // panel3
-            // 
-            panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(lblWaiting);
-            panel3.Controls.Add(lblWaitingCount);
-            panel3.Location = new Point(214, 83);
-            panel3.Margin = new Padding(3, 2, 3, 2);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(131, 75);
-            panel3.TabIndex = 3;
-            // 
-            // lblWaiting
-            // 
-            lblWaiting.AutoSize = true;
-            lblWaiting.Location = new Point(28, 40);
-            lblWaiting.Name = "lblWaiting";
-            lblWaiting.Size = new Size(48, 15);
-            lblWaiting.TabIndex = 2;
-            lblWaiting.Text = "Waiting";
-            // 
-            // lblWaitingCount
-            // 
-            lblWaitingCount.AutoSize = true;
-            lblWaitingCount.Location = new Point(52, 16);
-            lblWaitingCount.Name = "lblWaitingCount";
-            lblWaitingCount.Size = new Size(13, 15);
-            lblWaitingCount.TabIndex = 1;
-            lblWaitingCount.Text = "1";
-            // 
-            // panel2
-            // 
-            panel2.BorderStyle = BorderStyle.Fixed3D;
-            panel2.Controls.Add(lblBooked);
-            panel2.Controls.Add(lblBookedCount);
-            panel2.Location = new Point(36, 83);
-            panel2.Margin = new Padding(3, 2, 3, 2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(131, 75);
-            panel2.TabIndex = 2;
+            pnlBooked.BorderStyle = BorderStyle.Fixed3D;
+            pnlBooked.Controls.Add(lblBooked);
+            pnlBooked.Controls.Add(lblBookedCount);
+            pnlBooked.Location = new Point(4, 92);
+            pnlBooked.Margin = new Padding(3, 2, 3, 2);
+            pnlBooked.Name = "pnlBooked";
+            pnlBooked.Size = new Size(106, 75);
+            pnlBooked.TabIndex = 2;
             // 
             // lblBooked
             // 
@@ -410,24 +336,183 @@
             lblBookedCount.TabIndex = 1;
             lblBookedCount.Text = "6";
             // 
-            // lblDate
+            // pnlWait
             // 
-            lblDate.AutoSize = true;
-            lblDate.Location = new Point(18, 48);
-            lblDate.Name = "lblDate";
-            lblDate.Size = new Size(210, 15);
-            lblDate.TabIndex = 1;
-            lblDate.Text = "Johannesburg CBD - Today's Overview";
+            pnlWait.BorderStyle = BorderStyle.Fixed3D;
+            pnlWait.Controls.Add(lblWaiting);
+            pnlWait.Controls.Add(lblWaitingCount);
+            pnlWait.Location = new Point(245, 92);
+            pnlWait.Margin = new Padding(3, 2, 3, 2);
+            pnlWait.Name = "pnlWait";
+            pnlWait.Size = new Size(113, 75);
+            pnlWait.TabIndex = 3;
             // 
-            // lblDashboardTitle
+            // lblWaiting
             // 
-            lblDashboardTitle.AutoSize = true;
-            lblDashboardTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDashboardTitle.Location = new Point(3, 8);
-            lblDashboardTitle.Name = "lblDashboardTitle";
-            lblDashboardTitle.Size = new Size(263, 45);
-            lblDashboardTitle.TabIndex = 0;
-            lblDashboardTitle.Text = "Staff Dashboard";
+            lblWaiting.AutoSize = true;
+            lblWaiting.Location = new Point(28, 40);
+            lblWaiting.Name = "lblWaiting";
+            lblWaiting.Size = new Size(48, 15);
+            lblWaiting.TabIndex = 2;
+            lblWaiting.Text = "Waiting";
+            // 
+            // lblWaitingCount
+            // 
+            lblWaitingCount.AutoSize = true;
+            lblWaitingCount.Location = new Point(52, 16);
+            lblWaitingCount.Name = "lblWaitingCount";
+            lblWaitingCount.Size = new Size(13, 15);
+            lblWaitingCount.TabIndex = 1;
+            lblWaitingCount.Text = "1";
+            // 
+            // pnlCompleted
+            // 
+            pnlCompleted.BorderStyle = BorderStyle.Fixed3D;
+            pnlCompleted.Controls.Add(lblCompleted);
+            pnlCompleted.Controls.Add(lblCompletedCount);
+            pnlCompleted.Location = new Point(532, 92);
+            pnlCompleted.Margin = new Padding(3, 2, 3, 2);
+            pnlCompleted.Name = "pnlCompleted";
+            pnlCompleted.Size = new Size(131, 75);
+            pnlCompleted.TabIndex = 5;
+            // 
+            // lblCompleted
+            // 
+            lblCompleted.AutoSize = true;
+            lblCompleted.Location = new Point(28, 40);
+            lblCompleted.Name = "lblCompleted";
+            lblCompleted.Size = new Size(66, 15);
+            lblCompleted.TabIndex = 2;
+            lblCompleted.Text = "Completed";
+            // 
+            // lblCompletedCount
+            // 
+            lblCompletedCount.AutoSize = true;
+            lblCompletedCount.Location = new Point(56, 16);
+            lblCompletedCount.Name = "lblCompletedCount";
+            lblCompletedCount.Size = new Size(13, 15);
+            lblCompletedCount.TabIndex = 1;
+            lblCompletedCount.Text = "1";
+            // 
+            // pnlServing
+            // 
+            pnlServing.BorderStyle = BorderStyle.Fixed3D;
+            pnlServing.Controls.Add(lblServing);
+            pnlServing.Controls.Add(lblServingCount);
+            pnlServing.Location = new Point(388, 92);
+            pnlServing.Margin = new Padding(3, 2, 3, 2);
+            pnlServing.Name = "pnlServing";
+            pnlServing.Size = new Size(124, 75);
+            pnlServing.TabIndex = 4;
+            // 
+            // lblServing
+            // 
+            lblServing.AutoSize = true;
+            lblServing.Location = new Point(36, 40);
+            lblServing.Name = "lblServing";
+            lblServing.Size = new Size(46, 15);
+            lblServing.TabIndex = 2;
+            lblServing.Text = "Serving";
+            // 
+            // lblServingCount
+            // 
+            lblServingCount.AutoSize = true;
+            lblServingCount.Location = new Point(52, 16);
+            lblServingCount.Name = "lblServingCount";
+            lblServingCount.Size = new Size(13, 15);
+            lblServingCount.TabIndex = 1;
+            lblServingCount.Text = "1";
+            // 
+            // btnQueueManagement
+            // 
+            btnQueueManagement.BackColor = Color.FromArgb(0, 51, 102);
+            btnQueueManagement.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnQueueManagement.Location = new Point(77, 195);
+            btnQueueManagement.Margin = new Padding(3, 2, 3, 2);
+            btnQueueManagement.Name = "btnQueueManagement";
+            btnQueueManagement.Size = new Size(246, 104);
+            btnQueueManagement.TabIndex = 9;
+            btnQueueManagement.Text = "Queue Management";
+            btnQueueManagement.TextAlign = ContentAlignment.TopCenter;
+            btnQueueManagement.UseVisualStyleBackColor = false;
+            // 
+            // pnlCheckedIn
+            // 
+            pnlCheckedIn.BorderStyle = BorderStyle.Fixed3D;
+            pnlCheckedIn.Controls.Add(lblCheckedIn);
+            pnlCheckedIn.Controls.Add(lblCheckedInCount);
+            pnlCheckedIn.Location = new Point(116, 92);
+            pnlCheckedIn.Margin = new Padding(3, 2, 3, 2);
+            pnlCheckedIn.Name = "pnlCheckedIn";
+            pnlCheckedIn.Size = new Size(110, 75);
+            pnlCheckedIn.TabIndex = 15;
+            // 
+            // lblCheckedIn
+            // 
+            lblCheckedIn.AutoSize = true;
+            lblCheckedIn.Location = new Point(28, 40);
+            lblCheckedIn.Name = "lblCheckedIn";
+            lblCheckedIn.Size = new Size(66, 15);
+            lblCheckedIn.TabIndex = 2;
+            lblCheckedIn.Text = "Checked In";
+            // 
+            // lblCheckedInCount
+            // 
+            lblCheckedInCount.AutoSize = true;
+            lblCheckedInCount.Location = new Point(52, 16);
+            lblCheckedInCount.Name = "lblCheckedInCount";
+            lblCheckedInCount.Size = new Size(13, 15);
+            lblCheckedInCount.TabIndex = 1;
+            lblCheckedInCount.Text = "1";
+            // 
+            // pnlNoShow
+            // 
+            pnlNoShow.BorderStyle = BorderStyle.Fixed3D;
+            pnlNoShow.Controls.Add(lblNoShow);
+            pnlNoShow.Controls.Add(lblNoShowCount);
+            pnlNoShow.Location = new Point(686, 92);
+            pnlNoShow.Margin = new Padding(3, 2, 3, 2);
+            pnlNoShow.Name = "pnlNoShow";
+            pnlNoShow.Size = new Size(124, 75);
+            pnlNoShow.TabIndex = 16;
+            // 
+            // lblNoShow
+            // 
+            lblNoShow.AutoSize = true;
+            lblNoShow.Location = new Point(36, 40);
+            lblNoShow.Name = "lblNoShow";
+            lblNoShow.Size = new Size(57, 15);
+            lblNoShow.TabIndex = 2;
+            lblNoShow.Text = "No-Show";
+            // 
+            // lblNoShowCount
+            // 
+            lblNoShowCount.AutoSize = true;
+            lblNoShowCount.Location = new Point(52, 16);
+            lblNoShowCount.Name = "lblNoShowCount";
+            lblNoShowCount.Size = new Size(13, 15);
+            lblNoShowCount.TabIndex = 1;
+            lblNoShowCount.Text = "1";
+            // 
+            // lnklblCallNext
+            // 
+            lnklblCallNext.AutoSize = true;
+            lnklblCallNext.Location = new Point(136, 234);
+            lnklblCallNext.Name = "lnklblCallNext";
+            lnklblCallNext.Size = new Size(165, 15);
+            lnklblCallNext.TabIndex = 17;
+            lnklblCallNext.TabStop = true;
+            lnklblCallNext.Text = "Call next, check in, completed";
+            // 
+            // lnklblSearchByReferenceorID
+            // 
+            lnklblSearchByReferenceorID.AutoSize = true;
+            lnklblSearchByReferenceorID.Location = new Point(498, 234);
+            lnklblSearchByReferenceorID.Name = "lnklblSearchByReferenceorID";
+            lnklblSearchByReferenceorID.Size = new Size(141, 15);
+            lnklblSearchByReferenceorID.TabIndex = 18;
+            lnklblSearchByReferenceorID.TabStop = true;
+            lnklblSearchByReferenceorID.Text = "Search by Reference or ID";
             // 
             // StaffDashboard
             // 
@@ -435,48 +520,53 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 246, 248);
             ClientSize = new Size(990, 527);
-            Controls.Add(pnlMain);
+            Controls.Add(pnlContent);
             Controls.Add(pnlSidebar);
-            Controls.Add(panel1);
+            Controls.Add(pnlHeader);
             Margin = new Padding(3, 2, 3, 2);
             Name = "StaffDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StaffDashboard";
             Load += StaffDashboard_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
             pnlSidebar.ResumeLayout(false);
-            pnlMain.ResumeLayout(false);
-            pnlMain.PerformLayout();
+            pnlContent.ResumeLayout(false);
+            pnlDashboardHome.ResumeLayout(false);
+            pnlDashboardHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaffStatus).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            pnlBooked.ResumeLayout(false);
+            pnlBooked.PerformLayout();
+            pnlWait.ResumeLayout(false);
+            pnlWait.PerformLayout();
+            pnlCompleted.ResumeLayout(false);
+            pnlCompleted.PerformLayout();
+            pnlServing.ResumeLayout(false);
+            pnlServing.PerformLayout();
+            pnlCheckedIn.ResumeLayout(false);
+            pnlCheckedIn.PerformLayout();
+            pnlNoShow.ResumeLayout(false);
+            pnlNoShow.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlHeader;
         private Label lblSystemName;
         private Label lblSystemSubtitle;
         private Label lblStaffRole;
         private Label lblStaffName;
         private Panel pnlSidebar;
-        private Panel pnlMain;
+        private Panel pnlContent;
         private Label lblDashboardTitle;
-        private Panel panel5;
-        private Panel panel4;
+        private Panel pnlCompleted;
+        private Panel pnlServing;
         private Label lblServingCount;
-        private Panel panel3;
+        private Panel pnlWait;
         private Label lblWaiting;
         private Label lblWaitingCount;
-        private Panel panel2;
+        private Panel pnlBooked;
         private Label lblBooked;
         private Label lblBookedCount;
         private Label lblDate;
@@ -493,8 +583,15 @@
         private Button btnLogout;
         private Button btnProfile;
         private Button btnQueueOverview;
-        private Button btnCallNext;
-        private Button btnSearchByReferenceOrID;
         private Label lblCurrentDate;
+        private Panel pnlDashboardHome;
+        private Panel pnlNoShow;
+        private Label lblNoShow;
+        private Label lblNoShowCount;
+        private Panel pnlCheckedIn;
+        private Label lblCheckedIn;
+        private Label lblCheckedInCount;
+        private LinkLabel lnklblSearchByReferenceorID;
+        private LinkLabel lnklblCallNext;
     }
 }

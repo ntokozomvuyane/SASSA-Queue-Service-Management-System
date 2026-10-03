@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sassa_Queue_And_Service_Management_System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace SASSAQueueManagementSystem
         public StaffDashboard(StaffMember staff) : this()
         {
             currentStaff = staff;
+            ShowDashboardHome();
         }
 
         
@@ -43,6 +45,97 @@ namespace SASSAQueueManagementSystem
             lblStaffRole.Text = "Staff - " + currentStaff.ServiceCentre;
             lblCurrentDate.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
         }
+        private Form? activeChildForm;
+        private bool changingChildForm;
+        private void OpenChildForm(Form childForm)
+        {
+            changingChildForm = true;
+
+            if (activeChildForm != null)
+            {
+                activeChildForm.FormClosed -= ActiveChildForm_FormClosed;
+                activeChildForm.Close();
+            }
+
+            pnlContent.Controls.Clear();
+
+            activeChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormClosed += ActiveChildForm_FormClosed;
+
+            pnlContent.Controls.Add(childForm);
+            childForm.BringToFront();
+            childForm.Show();
+
+            changingChildForm = false;
+        }
+
+        private void ActiveChildForm_FormClosed(object? sender,
+            FormClosedEventArgs e)
+        {
+            if (changingChildForm)
+            {
+                return;
+            }
+
+            activeChildForm = null;
+            ShowDashboardHome();
+        }
+        private void ShowDashboardHome()
+        {
+            changingChildForm = true;
+
+            if (activeChildForm != null)
+            {
+                activeChildForm.FormClosed -= ActiveChildForm_FormClosed;
+                activeChildForm.Close();
+                activeChildForm = null;
+            }
+
+            pnlContent.Controls.Clear();
+            pnlDashboardHome.Dock = DockStyle.Fill;
+            pnlDashboardHome.Visible = true;
+            pnlContent.Controls.Add(pnlDashboardHome);
+            pnlDashboardHome.BringToFront();
+
+            changingChildForm = false;
+        }
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            ShowDashboardHome();
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void btnQueueOverview_Click(object sender, EventArgs e)
+        {
+            if (currentStaff == null) return;
+            OpenChildForm(new frmQueueManagementSystem(currentStaff));
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            if (currentStaff == null) return;
+            OpenChildForm(new frmStaffProfile(currentStaff));
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult answer = MessageBox.Show(
+                "Are you sure you want to sign out?",
+                "Confirm Sign Out",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (answer == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+
         //StaffMember? loggedInStaff = UserRepository.Users
         //        .OfType<StaffMember>()
         //        .FirstOrDefault(staff =>
@@ -85,5 +178,5 @@ namespace SASSAQueueManagementSystem
 
 
 
-    }
+}
 

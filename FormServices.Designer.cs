@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlSidebar = new Panel();
-            btnReports = new Button();
-            btnBookings = new Button();
-            btnSlots = new Button();
-            btnServices = new Button();
-            btnDashboard = new Button();
             lblServiceManagement = new Label();
             pnlNewGrantApplication = new Panel();
             btnEditStatusNewGrant = new Button();
@@ -66,80 +60,14 @@
             lblEditStatusGeneralAssistance = new Label();
             lblStatusGeneralAssistance = new Label();
             lblGeneralAssistance = new Label();
-            pnlBookingConfirmationForm = new Panel();
-            lblStaffRole = new Label();
-            lblStaffName = new Label();
-            lblSystemName = new Label();
-            lblSystemSubtitle = new Label();
             btnLogout = new Button();
-            pnlSidebar.SuspendLayout();
             pnlNewGrantApplication.SuspendLayout();
             pnlExistingGrantEnquiry.SuspendLayout();
             pnlGrantInformationUpdate.SuspendLayout();
             pnlPaymentEnquiry.SuspendLayout();
             pnlDocumentSubmission.SuspendLayout();
             pnlGeneralAssistance.SuspendLayout();
-            pnlBookingConfirmationForm.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlSidebar
-            // 
-            pnlSidebar.BackColor = Color.FromArgb(0, 51, 102);
-            pnlSidebar.BorderStyle = BorderStyle.Fixed3D;
-            pnlSidebar.Controls.Add(btnReports);
-            pnlSidebar.Controls.Add(btnBookings);
-            pnlSidebar.Controls.Add(btnSlots);
-            pnlSidebar.Controls.Add(btnServices);
-            pnlSidebar.Controls.Add(btnDashboard);
-            pnlSidebar.Location = new Point(0, 54);
-            pnlSidebar.Name = "pnlSidebar";
-            pnlSidebar.Size = new Size(181, 370);
-            pnlSidebar.TabIndex = 0;
-            // 
-            // btnReports
-            // 
-            btnReports.Location = new Point(7, 178);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(150, 29);
-            btnReports.TabIndex = 4;
-            btnReports.Text = "Reports";
-            btnReports.UseVisualStyleBackColor = true;
-            // 
-            // btnBookings
-            // 
-            btnBookings.Location = new Point(7, 138);
-            btnBookings.Name = "btnBookings";
-            btnBookings.Size = new Size(150, 34);
-            btnBookings.TabIndex = 3;
-            btnBookings.Text = "Bookings";
-            btnBookings.UseVisualStyleBackColor = true;
-            // 
-            // btnSlots
-            // 
-            btnSlots.Location = new Point(7, 98);
-            btnSlots.Name = "btnSlots";
-            btnSlots.Size = new Size(150, 34);
-            btnSlots.TabIndex = 2;
-            btnSlots.Text = "Slots";
-            btnSlots.UseVisualStyleBackColor = true;
-            // 
-            // btnServices
-            // 
-            btnServices.Location = new Point(7, 58);
-            btnServices.Name = "btnServices";
-            btnServices.Size = new Size(150, 34);
-            btnServices.TabIndex = 1;
-            btnServices.Text = "Services";
-            btnServices.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.Location = new Point(7, 17);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(150, 35);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = true;
             // 
             // lblServiceManagement
             // 
@@ -202,7 +130,7 @@
             // 
             // btnAddServices
             // 
-            btnAddServices.Location = new Point(682, 10);
+            btnAddServices.Location = new Point(660, 48);
             btnAddServices.Name = "btnAddServices";
             btnAddServices.Size = new Size(104, 26);
             btnAddServices.TabIndex = 4;
@@ -454,66 +382,9 @@
             lblGeneralAssistance.TabIndex = 0;
             lblGeneralAssistance.Text = "General Assistance";
             // 
-            // pnlBookingConfirmationForm
-            // 
-            pnlBookingConfirmationForm.BackColor = Color.FromArgb(0, 51, 102);
-            pnlBookingConfirmationForm.BorderStyle = BorderStyle.Fixed3D;
-            pnlBookingConfirmationForm.Controls.Add(btnLogout);
-            pnlBookingConfirmationForm.Controls.Add(lblStaffRole);
-            pnlBookingConfirmationForm.Controls.Add(lblStaffName);
-            pnlBookingConfirmationForm.Controls.Add(lblSystemName);
-            pnlBookingConfirmationForm.Controls.Add(lblSystemSubtitle);
-            pnlBookingConfirmationForm.Controls.Add(btnAddServices);
-            pnlBookingConfirmationForm.Dock = DockStyle.Top;
-            pnlBookingConfirmationForm.Location = new Point(0, 0);
-            pnlBookingConfirmationForm.Margin = new Padding(3, 2, 3, 2);
-            pnlBookingConfirmationForm.Name = "pnlBookingConfirmationForm";
-            pnlBookingConfirmationForm.Size = new Size(801, 49);
-            pnlBookingConfirmationForm.TabIndex = 18;
-            // 
-            // lblStaffRole
-            // 
-            lblStaffRole.AutoSize = true;
-            lblStaffRole.Location = new Point(886, 26);
-            lblStaffRole.Name = "lblStaffRole";
-            lblStaffRole.Size = new Size(83, 15);
-            lblStaffRole.TabIndex = 2;
-            lblStaffRole.Text = "Service Officer";
-            // 
-            // lblStaffName
-            // 
-            lblStaffName.AutoSize = true;
-            lblStaffName.Location = new Point(886, 10);
-            lblStaffName.Name = "lblStaffName";
-            lblStaffName.Size = new Size(87, 15);
-            lblStaffName.TabIndex = 1;
-            lblStaffName.Text = "Officer Bhengu";
-            // 
-            // lblSystemName
-            // 
-            lblSystemName.AutoSize = true;
-            lblSystemName.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSystemName.ForeColor = Color.White;
-            lblSystemName.Location = new Point(3, 7);
-            lblSystemName.Name = "lblSystemName";
-            lblSystemName.Size = new Size(55, 20);
-            lblSystemName.TabIndex = 1;
-            lblSystemName.Text = "SASSA";
-            // 
-            // lblSystemSubtitle
-            // 
-            lblSystemSubtitle.AutoSize = true;
-            lblSystemSubtitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSystemSubtitle.ForeColor = Color.White;
-            lblSystemSubtitle.Location = new Point(3, 26);
-            lblSystemSubtitle.Name = "lblSystemSubtitle";
-            lblSystemSubtitle.Size = new Size(89, 15);
-            lblSystemSubtitle.TabIndex = 2;
-            lblSystemSubtitle.Text = "Admin Console";
-            // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(558, 10);
+            btnLogout.Location = new Point(206, 452);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(104, 26);
             btnLogout.TabIndex = 5;
@@ -525,19 +396,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(801, 481);
-            Controls.Add(pnlBookingConfirmationForm);
+            Controls.Add(btnLogout);
             Controls.Add(pnlGeneralAssistance);
             Controls.Add(pnlDocumentSubmission);
+            Controls.Add(btnAddServices);
             Controls.Add(pnlPaymentEnquiry);
             Controls.Add(pnlGrantInformationUpdate);
             Controls.Add(pnlExistingGrantEnquiry);
             Controls.Add(pnlNewGrantApplication);
             Controls.Add(lblServiceManagement);
-            Controls.Add(pnlSidebar);
             Name = "frmServices";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Services";
-            pnlSidebar.ResumeLayout(false);
             pnlNewGrantApplication.ResumeLayout(false);
             pnlNewGrantApplication.PerformLayout();
             pnlExistingGrantEnquiry.ResumeLayout(false);
@@ -550,20 +420,11 @@
             pnlDocumentSubmission.PerformLayout();
             pnlGeneralAssistance.ResumeLayout(false);
             pnlGeneralAssistance.PerformLayout();
-            pnlBookingConfirmationForm.ResumeLayout(false);
-            pnlBookingConfirmationForm.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel pnlSidebar;
-        private Button btnReports;
-        private Button btnBookings;
-        private Button btnSlots;
-        private Button btnServices;
-        private Button btnDashboard;
         private Label lblServiceManagement;
         private Panel pnlNewGrantApplication;
         private Button btnEditStatusNewGrant;
@@ -596,11 +457,6 @@
         private Label lblEditStatusGeneralAssistance;
         private Label lblStatusGeneralAssistance;
         private Label lblGeneralAssistance;
-        private Panel pnlBookingConfirmationForm;
-        private Label lblStaffRole;
-        private Label lblStaffName;
-        private Label lblSystemName;
-        private Label lblSystemSubtitle;
         private Button btnLogout;
     }
 }

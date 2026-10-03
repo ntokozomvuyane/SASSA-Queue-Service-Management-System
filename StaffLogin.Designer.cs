@@ -129,7 +129,7 @@
             btnLogout.TabIndex = 7;
             btnLogout.Text = "Sign Out";
             btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
+            //btnLogout.Click += btnLogout_Click;
             // 
             // btnQueueOverview
             // 
@@ -216,7 +216,7 @@
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += btnLogin_Click;
+            //btnLogin.Click += btnLogin_Click;
             // 
             // btnClear
             // 
@@ -230,7 +230,7 @@
             btnClear.TabIndex = 3;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
-            btnClear.Click += btnClear_Click;
+            //btnClear.Click += btnClear_Click;
             // 
             // lblPassword
             // 
@@ -277,7 +277,7 @@
             Name = "StaffLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StaffLogin";
-            Load += StaffLogin_Load;
+            //Load += StaffLogin_Load;
             pnlHeader.ResumeLayout(false);
             pnlHeader.PerformLayout();
             panel1.ResumeLayout(false);

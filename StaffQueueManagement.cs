@@ -10,10 +10,16 @@ namespace SASSAQueueManagementSystem
 {
     public partial class StaffQueueForm : Form
     {
+        //private StaffMember? currentStaff;
         public StaffQueueForm()
         {
             InitializeComponent();
         }
+        //public StaffQueueForm(StaffMember staffMember) : this()
+        //{
+        //    currentStaff = staffMember
+        //        ?? throw new ArgumentNullException(nameof(staffMember));
+        //}
 
         private void dgvQueue_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

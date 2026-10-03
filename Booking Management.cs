@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SASSAQueueManagementSystem;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,18 @@ using System.Windows.Forms;
 
 namespace Zanele_Admin
 {
-    public partial class Form1 : Form
+    public partial class frmBookings : Form
     {
-        public Form1()
+        private Administrator? currentAdministrator;
+        public frmBookings()
         {
             InitializeComponent();
         }
+        public frmBookings(Administrator administrator) : this()
+        {
+            currentAdministrator = administrator
+                ?? throw new ArgumentNullException(nameof(administrator));
+        }
+
     }
 }

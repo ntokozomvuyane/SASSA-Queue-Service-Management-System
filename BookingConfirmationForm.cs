@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sassa_Queue_And_Service_Management_System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,11 +12,24 @@ namespace SASSAQueueManagementSystem
     public partial class BookingConfirmationForm : Form
     {
         private Booking? confirmedBooking;
-
+        private Beneficiary? currentBeneficiary;
+        private Action<Form> navigate;
         public BookingConfirmationForm()
         {
             InitializeComponent();
         }
+        public BookingConfirmationForm(
+        Booking booking,
+        Beneficiary beneficiary,
+        Action<Form> navigate) : this()
+        {
+            confirmedBooking = booking;
+            currentBeneficiary = beneficiary;
+            this.navigate = navigate;
+
+            //LoadBookingDetails();
+        }
+
         public BookingConfirmationForm(Booking booking) : this()
         {
             confirmedBooking = booking;
@@ -27,12 +41,9 @@ namespace SASSAQueueManagementSystem
             if (confirmedBooking == null)
             {
                 MessageBox.Show(
-                    "No booking was supplied.",
-                    "Booking Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                    "No booking was supplied.");
 
-                Close();
+               // Close();
                 return;
             }
 
@@ -62,18 +73,26 @@ namespace SASSAQueueManagementSystem
         private void btnCreateAnother_Click(
             object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Retry;
-            Close();
+            //DialogResult = DialogResult.Retry;
+            //Close();
+            if (currentBeneficiary == null || navigate == null)
+                return;
+            navigate(new NewBookingForm(currentBeneficiary, navigate));
         }
 
         private void btnDone_Click(
             object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            //DialogResult = DialogResult.OK;
+            //Close();
+            if (currentBeneficiary == null || navigate == null)
+                return;
+
+            navigate(new frmMyBookings(currentBeneficiary));
+
         }
 
-        
+
     }
 }
 

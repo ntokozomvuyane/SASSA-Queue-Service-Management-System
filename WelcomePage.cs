@@ -25,39 +25,50 @@ namespace SASSAQueueManagementSystem
                 this.Show();
             }
         }
+        private void OpenSharedLogin()
+        {
+            Hide();
+
+            using (var loginForm = new Login())
+            {
+                loginForm.ShowDialog(this);
+            }
+
+            Show();
+        }
 
         private void btnStaffLogin_Click(
             object sender, EventArgs e)
         {
-            //OpenLoginForm(UserRole.Staff);
-           // Login loginForm = new Login(UserRole.Staff);
-           // loginForm.ShowDialog();
 
-            Hide();
+            //Hide();
 
-            using (var staffLogin= new StaffLogin())
-            {
-                staffLogin.ShowDialog(this);
-            }
+            //using (var staffLogin= new StaffLogin())
+            //{
+            //    staffLogin.ShowDialog(this);
+            //}
 
-            Show();
+            //Show();
+            OpenSharedLogin();
 
         }
 
         private void btnBeneficiaryLogin_Click(
             object sender, EventArgs e)
         {
-            //OpenLoginForm(UserRole.Beneficiary);
-            Login loginForm = new Login(UserRole.Beneficiary);
-            loginForm.ShowDialog();
+            ////OpenLoginForm(UserRole.Beneficiary);
+            //Login loginForm = new Login(UserRole.Beneficiary);
+            //loginForm.ShowDialog();
+            OpenSharedLogin();
         }
 
         private void btnAdminLogin_Click(
             object sender, EventArgs e)
         {
             //OpenLoginForm(UserRole.Administrator);
-            Login loginForm = new Login(UserRole.Administrator);
-            loginForm.ShowDialog();
+            //Login loginForm = new Login(UserRole.Administrator);
+            //loginForm.ShowDialog();
+            OpenSharedLogin();
         }
       
 

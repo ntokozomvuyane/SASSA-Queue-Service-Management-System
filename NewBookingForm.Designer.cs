@@ -28,18 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            NewBookingpanel = new Panel();
-            lblbookingnewone = new Label();
-            lblPortal = new Label();
-            lblmanage = new Label();
-            lblSassa = new Label();
-            pnlSideBar = new Panel();
-            btnLogout = new Button();
-            btnProfile = new Button();
-            btnQueueStatus = new Button();
-            btnMyBooking = new Button();
-            btnNewBooking = new Button();
-            btnDashboard = new Button();
             lblBooking = new Label();
             lblbookyourappointment = new Label();
             lblSelectService = new Label();
@@ -61,156 +49,8 @@
             lblAvailablePositions = new Label();
             btnClear = new Button();
             btnBack = new Button();
-            NewBookingpanel.SuspendLayout();
-            pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAppointmentSummary).BeginInit();
             SuspendLayout();
-            // 
-            // NewBookingpanel
-            // 
-            NewBookingpanel.BackColor = Color.FromArgb(0, 51, 102);
-            NewBookingpanel.BorderStyle = BorderStyle.Fixed3D;
-            NewBookingpanel.Controls.Add(lblbookingnewone);
-            NewBookingpanel.Controls.Add(lblPortal);
-            NewBookingpanel.Controls.Add(lblmanage);
-            NewBookingpanel.Controls.Add(lblSassa);
-            NewBookingpanel.Location = new Point(2, 3);
-            NewBookingpanel.Margin = new Padding(2, 3, 2, 3);
-            NewBookingpanel.Name = "NewBookingpanel";
-            NewBookingpanel.Size = new Size(1055, 64);
-            NewBookingpanel.TabIndex = 27;
-            // 
-            // lblbookingnewone
-            // 
-            lblbookingnewone.AutoSize = true;
-            lblbookingnewone.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblbookingnewone.ForeColor = SystemColors.Control;
-            lblbookingnewone.Location = new Point(99, 16);
-            lblbookingnewone.Margin = new Padding(2, 0, 2, 0);
-            lblbookingnewone.Name = "lblbookingnewone";
-            lblbookingnewone.Size = new Size(108, 18);
-            lblbookingnewone.TabIndex = 20;
-            lblbookingnewone.Text = "New Booking";
-            // 
-            // lblPortal
-            // 
-            lblPortal.AutoSize = true;
-            lblPortal.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPortal.ForeColor = SystemColors.Control;
-            lblPortal.Location = new Point(843, 18);
-            lblPortal.Margin = new Padding(2, 0, 2, 0);
-            lblPortal.Name = "lblPortal";
-            lblPortal.Size = new Size(119, 17);
-            lblPortal.TabIndex = 19;
-            lblPortal.Text = "Beneficiary Portal";
-            // 
-            // lblmanage
-            // 
-            lblmanage.AutoSize = true;
-            lblmanage.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblmanage.ForeColor = SystemColors.Control;
-            lblmanage.Location = new Point(92, 45);
-            lblmanage.Margin = new Padding(2, 0, 2, 0);
-            lblmanage.Name = "lblmanage";
-            lblmanage.Size = new Size(263, 15);
-            lblmanage.TabIndex = 18;
-            lblmanage.Text = "Manage your booking, profile and queue status";
-            // 
-            // lblSassa
-            // 
-            lblSassa.AutoSize = true;
-            lblSassa.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSassa.ForeColor = SystemColors.Control;
-            lblSassa.Location = new Point(9, 18);
-            lblSassa.Margin = new Padding(2, 0, 2, 0);
-            lblSassa.Name = "lblSassa";
-            lblSassa.Size = new Size(77, 24);
-            lblSassa.TabIndex = 17;
-            lblSassa.Text = "SASSA";
-            // 
-            // pnlSideBar
-            // 
-            pnlSideBar.BackColor = Color.FromArgb(0, 51, 102);
-            pnlSideBar.BorderStyle = BorderStyle.Fixed3D;
-            pnlSideBar.Controls.Add(btnLogout);
-            pnlSideBar.Controls.Add(btnProfile);
-            pnlSideBar.Controls.Add(btnQueueStatus);
-            pnlSideBar.Controls.Add(btnMyBooking);
-            pnlSideBar.Controls.Add(btnNewBooking);
-            pnlSideBar.Controls.Add(btnDashboard);
-            pnlSideBar.ForeColor = Color.Black;
-            pnlSideBar.Location = new Point(2, 72);
-            pnlSideBar.Margin = new Padding(2, 3, 2, 3);
-            pnlSideBar.Name = "pnlSideBar";
-            pnlSideBar.Size = new Size(169, 507);
-            pnlSideBar.TabIndex = 28;
-            // 
-            // btnLogout
-            // 
-            btnLogout.Location = new Point(14, 305);
-            btnLogout.Margin = new Padding(2, 3, 2, 3);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(126, 38);
-            btnLogout.TabIndex = 7;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
-            // 
-            // btnProfile
-            // 
-            btnProfile.Location = new Point(14, 252);
-            btnProfile.Margin = new Padding(2, 3, 2, 3);
-            btnProfile.Name = "btnProfile";
-            btnProfile.Size = new Size(126, 38);
-            btnProfile.TabIndex = 4;
-            btnProfile.Text = "Profile";
-            btnProfile.UseVisualStyleBackColor = true;
-            btnProfile.Click += btnProfile_Click;
-            // 
-            // btnQueueStatus
-            // 
-            btnQueueStatus.Location = new Point(14, 197);
-            btnQueueStatus.Margin = new Padding(2, 3, 2, 3);
-            btnQueueStatus.Name = "btnQueueStatus";
-            btnQueueStatus.Size = new Size(126, 38);
-            btnQueueStatus.TabIndex = 3;
-            btnQueueStatus.Text = "Queue Status";
-            btnQueueStatus.UseVisualStyleBackColor = true;
-            btnQueueStatus.Click += btnQueueStatus_Click;
-            // 
-            // btnMyBooking
-            // 
-            btnMyBooking.Location = new Point(14, 145);
-            btnMyBooking.Margin = new Padding(2, 3, 2, 3);
-            btnMyBooking.Name = "btnMyBooking";
-            btnMyBooking.Size = new Size(126, 38);
-            btnMyBooking.TabIndex = 2;
-            btnMyBooking.Text = "My Booking";
-            btnMyBooking.UseVisualStyleBackColor = true;
-            btnMyBooking.Click += btnMyBooking_Click;
-            // 
-            // btnNewBooking
-            // 
-            btnNewBooking.BackColor = Color.White;
-            btnNewBooking.ForeColor = Color.Black;
-            btnNewBooking.Location = new Point(14, 97);
-            btnNewBooking.Margin = new Padding(2, 3, 2, 3);
-            btnNewBooking.Name = "btnNewBooking";
-            btnNewBooking.Size = new Size(126, 38);
-            btnNewBooking.TabIndex = 1;
-            btnNewBooking.Text = "New Booking";
-            btnNewBooking.UseVisualStyleBackColor = false;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.Location = new Point(14, 44);
-            btnDashboard.Margin = new Padding(2, 3, 2, 3);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(126, 38);
-            btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = true;
-            btnDashboard.Click += btnDashboard_Click;
             // 
             // lblBooking
             // 
@@ -453,15 +293,10 @@
             Controls.Add(lblSelectService);
             Controls.Add(lblbookyourappointment);
             Controls.Add(lblBooking);
-            Controls.Add(pnlSideBar);
-            Controls.Add(NewBookingpanel);
             Margin = new Padding(2, 3, 2, 3);
             Name = "NewBookingForm";
             Text = "NewBookingForm";
             Load += NewBookingForm_Load;
-            NewBookingpanel.ResumeLayout(false);
-            NewBookingpanel.PerformLayout();
-            pnlSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvAppointmentSummary).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -469,19 +304,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel NewBookingpanel;
-        private System.Windows.Forms.Label lblbookingnewone;
-        private System.Windows.Forms.Label lblPortal;
-        private System.Windows.Forms.Label lblmanage;
-        private System.Windows.Forms.Label lblSassa;
-        private System.Windows.Forms.Panel pnlSideBar;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnQueueStatus;
-        private System.Windows.Forms.Button btnMyBooking;
-        private System.Windows.Forms.Button btnNewBooking;
-        private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Label lblBooking;
         private System.Windows.Forms.Label lblbookyourappointment;
         private System.Windows.Forms.Label lblSelectService;

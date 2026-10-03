@@ -47,10 +47,10 @@
             lblPassword = new Label();
             btnLogin = new Button();
             lblCreateAccount = new Label();
-            lblForgotPassword = new Label();
             btnBack = new Button();
             btnCreateAccount = new Button();
             chkShowPassword = new CheckBox();
+            lnklblForgotPassword = new LinkLabel();
             pnlSideBar.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -171,9 +171,9 @@
             lblLoginHeading.ForeColor = SystemColors.ControlLightLight;
             lblLoginHeading.Location = new Point(99, 20);
             lblLoginHeading.Name = "lblLoginHeading";
-            lblLoginHeading.Size = new Size(286, 30);
+            lblLoginHeading.Size = new Size(226, 15);
             lblLoginHeading.TabIndex = 1;
-            lblLoginHeading.Text = "Beneficiary Login\r\n                     Secure access to your SASSA bookings.\r\n";
+            lblLoginHeading.Text = " Secure access to your SASSA bookings.\r\n";
             // 
             // label1
             // 
@@ -201,9 +201,9 @@
             lblUsername.AutoSize = true;
             lblUsername.Location = new Point(455, 272);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(151, 15);
+            lblUsername.Size = new Size(64, 15);
             lblUsername.TabIndex = 3;
-            lblUsername.Text = "Beneficiary ID/ Username";
+            lblUsername.Text = "Username";
             // 
             // label3
             // 
@@ -211,9 +211,9 @@
             label3.ForeColor = SystemColors.ControlDark;
             label3.Location = new Point(455, 182);
             label3.Name = "label3";
-            label3.Size = new Size(338, 15);
+            label3.Size = new Size(37, 15);
             label3.TabIndex = 4;
-            label3.Text = "Login as a SASSA beneficiary to manage your appointments.";
+            label3.Text = "Login";
             // 
             // txtUsername
             // 
@@ -262,16 +262,6 @@
             lblCreateAccount.TabIndex = 9;
             lblCreateAccount.Text = "New beneficiary? Create an account.";
             // 
-            // lblForgotPassword
-            // 
-            lblForgotPassword.AutoSize = true;
-            lblForgotPassword.ForeColor = Color.FromArgb(0, 51, 102);
-            lblForgotPassword.Location = new Point(352, 601);
-            lblForgotPassword.Name = "lblForgotPassword";
-            lblForgotPassword.Size = new Size(104, 15);
-            lblForgotPassword.TabIndex = 10;
-            lblForgotPassword.Text = "Forgot Password?";
-            // 
             // btnBack
             // 
             btnBack.BackColor = Color.FromArgb(0, 51, 102);
@@ -307,15 +297,26 @@
             chkShowPassword.UseVisualStyleBackColor = true;
             chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             // 
+            // lnklblForgotPassword
+            // 
+            lnklblForgotPassword.AutoSize = true;
+            lnklblForgotPassword.Location = new Point(337, 613);
+            lnklblForgotPassword.Name = "lnklblForgotPassword";
+            lnklblForgotPassword.Size = new Size(99, 15);
+            lnklblForgotPassword.TabIndex = 15;
+            lnklblForgotPassword.TabStop = true;
+            lnklblForgotPassword.Text = "Forgot Password";
+            lnklblForgotPassword.LinkClicked += lnklblForgotPassword_LinkClicked;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1083, 731);
+            Controls.Add(lnklblForgotPassword);
             Controls.Add(chkShowPassword);
             Controls.Add(btnCreateAccount);
             Controls.Add(btnBack);
-            Controls.Add(lblForgotPassword);
             Controls.Add(lblCreateAccount);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
@@ -358,9 +359,9 @@
         private Label lblPassword;
         private Button btnLogin;
         private Label lblCreateAccount;
-        private Label lblForgotPassword;
         private Button btnBack;
         private Button btnCreateAccount;
         private CheckBox chkShowPassword;
+        private LinkLabel lnklblForgotPassword;
     }
 }

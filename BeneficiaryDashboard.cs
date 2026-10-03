@@ -20,9 +20,10 @@ namespace Sassa_Queue_And_Service_Management_System
         {
             InitializeComponent();
         }
-        public BeneficiaryDashboard(Beneficiary beneficiary) :this()
+        public BeneficiaryDashboard(Beneficiary beneficiary) : this()
         {
             currentBeneficiary = beneficiary;
+            ShowDashboardHome();
         }
         private void BeneficiaryDashboard_Load(object sender, EventArgs e)
         {
@@ -50,7 +51,7 @@ namespace Sassa_Queue_And_Service_Management_System
             MessageBox.Show("The My Bookings form will open here.", "My Bookings", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
             //After the mybookings form has been created:
-             frmMyBookings bookingForm = new frmMyBookings();
+            frmMyBookings bookingForm = new frmMyBookings();
             bookingForm.ShowDialog();
             LoadDashboardInformation();
         }
@@ -79,97 +80,113 @@ namespace Sassa_Queue_And_Service_Management_System
             // before it was this OpenNewBooking();
             if (currentBeneficiary == null)
             {
-                MessageBox.Show("No beneficiary is" +
-                    "currently logged in.",
-                    "Login Required",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("No beneficiary was supplied");
                 return;
             }
-            using (NewBookingForm bookingForm =
-                new NewBookingForm(currentBeneficiary))
-            {
-                bookingForm.ShowDialog(this);
+            OpenChildForm(new NewBookingForm(currentBeneficiary, NavigateTo));
+            //Before
+            //{
+            //    MessageBox.Show("No beneficiary is" +
+            //        "currently logged in.",
+            //        "Login Required",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //using (NewBookingForm bookingForm =
+            //    new NewBookingForm(currentBeneficiary))
+            //{
+            //    bookingForm.ShowDialog(this);
 
-                switch (bookingForm.NextPage) 
-                {
-                    case "MyBookings":
-                        using (frmMyBookings form = new frmMyBookings(currentBeneficiary))
-                            form.ShowDialog(this);
-                        break;
+            //    switch (bookingForm.NextPage)
+            //    {
+            //        case "MyBookings":
+            //            using (frmMyBookings form = new frmMyBookings(currentBeneficiary))
+            //                form.ShowDialog(this);
+            //            break;
 
-                    case "QueueStatus":
-                        using (QueueStatusForm form = new QueueStatusForm(currentBeneficiary))
-                            form.ShowDialog(this);
-                        break;
+            //        case "QueueStatus":
+            //            using (QueueStatusForm form = new QueueStatusForm(currentBeneficiary))
+            //                form.ShowDialog(this);
+            //            break;
 
-                    case "Profile":
-                       using (MyProfileForm form = new MyProfileForm(currentBeneficiary))
-                          form.ShowDialog(this);
-                       break;
+            //        case "Profile":
+            //            using (MyProfileForm form = new MyProfileForm(currentBeneficiary))
+            //                form.ShowDialog(this);
+            //            break;
 
-                    case "Logout":
-                        Close();
-                        break;
+            //        case "Logout":
+            //            Close();
+            //            break;
 
 
-                }
-            }
+            //    }
         }
+
 
         private void btnNewBooking_Click(object sender, EventArgs e)
         {
             //before it was this OpenNewBooking()
-            if(currentBeneficiary == null)
+            if (currentBeneficiary == null)
             {
-                MessageBox.Show("No beneficiary is" +
-                    "currently logged in.",
-                    "Login Required",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("No beneficiary was supplied.");
                 return;
+
             }
-            using (NewBookingForm bookingForm =
-                new NewBookingForm(currentBeneficiary))
-            {
-                bookingForm.ShowDialog();
-            }
-            }
+            OpenChildForm(new NewBookingForm(currentBeneficiary, NavigateTo));
+            //{
+            //    MessageBox.Show("No beneficiary is" +
+            //        "currently logged in.",
+            //        "Login Required",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //using (NewBookingForm bookingForm =
+            //    new NewBookingForm(currentBeneficiary))
+            //{
+            //    bookingForm.ShowDialog();
+            //}
+        }
 
         private void btnpersonalBooking_Click(object sender, EventArgs e)
         {
             // Before OpenMyBookings();
-            if(currentBeneficiary == null)
-            {
-                MessageBox.Show("No beneficiary is currently logged in.",
-                    "Login Required",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            using (frmMyBookings bookingForm = new
-                frmMyBookings(currentBeneficiary))
-            {
-                bookingForm.ShowDialog();
-            }
+            if (currentBeneficiary == null) return;
+            OpenChildForm(new frmMyBookings(currentBeneficiary));
+
+
+            //{
+            //    MessageBox.Show("No beneficiary is currently logged in.",
+            //        "Login Required",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //using (frmMyBookings bookingForm = new
+            //    frmMyBookings(currentBeneficiary))
+            //{
+            //    bookingForm.ShowDialog();
+            //}
         }
 
         private void btnMyBooking_Click(object sender, EventArgs e)
         {
             //OpenMyBookings();
-            if (currentBeneficiary == null)
-            {
-                MessageBox.Show("No beneficiary is currently logged in.",
-                    "Login Required",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            using (frmMyBookings bookingForm = new
-                frmMyBookings(currentBeneficiary))
-            {
-                bookingForm.ShowDialog();
-            }
+            if (currentBeneficiary == null) return;
+            OpenChildForm(new frmMyBookings(currentBeneficiary));
+            //{
+            //    MessageBox.Show("No beneficiary is currently logged in.",
+            //        "Login Required",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //using (frmMyBookings bookingForm = new
+            //    frmMyBookings(currentBeneficiary))
+            //{
+            //    bookingForm.ShowDialog();
+            //}
         }
 
         private void btnViewAppointmentDetails_Click(object sender, EventArgs e)
@@ -187,82 +204,88 @@ namespace Sassa_Queue_And_Service_Management_System
         private void btnQueuePosition_Click(object sender, EventArgs e)
         {
             // Before OpenQueueStatus();
-            if (currentBeneficiary == null)
-            {
-                MessageBox.Show("No beneficiary is currently logged in.",
-                    "Login Required",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                return;
-            }
-            using (QueueStatusForm queueStatusForm =
-                new QueueStatusForm(currentBeneficiary))
-            {
-                queueStatusForm.ShowDialog();
-            }
+            if (currentBeneficiary == null) return;
+            OpenChildForm(new QueueStatusForm(currentBeneficiary));
+            //{
+            //    MessageBox.Show("No beneficiary is currently logged in.",
+            //        "Login Required",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning);
+            //    return;
+            //}
+            //using (QueueStatusForm queueStatusForm =
+            //    new QueueStatusForm(currentBeneficiary))
+            //{
+            //    queueStatusForm.ShowDialog();
+            //}
         }
 
         private void btnQueueStatus_Click(object sender, EventArgs e)
         {
             //OpenQueueStatus();
-            if (currentBeneficiary == null)
-            {
-                MessageBox.Show("Please log in first.");
-                return;
-            }
-            string nextPage;
-            using (var form =
-                new QueueStatusForm(currentBeneficiary))
-            {
-                form.ShowDialog(this);
-                nextPage = form.NextPage;
-            }
-            switch (nextPage)
-            {
-                case "NewBooking":
-                    btnNewBooking_Click(sender, EventArgs.Empty);
-                    break;
-                case "MyBookings":
-                    btnMyBooking_Click(sender, EventArgs.Empty);
-                    break;
-                case "Profile":
-                    btnProfile_Click(sender, EventArgs.Empty);
-                    break;
-                case "Logout":
-                    btnLogout_Click(sender, EventArgs.Empty);
-                    break;
-                    // Empty string means Dashboard or the window X: stay here.
+            if (currentBeneficiary == null) return;
+            OpenChildForm(new QueueStatusForm(currentBeneficiary));
+            //{
+            //    MessageBox.Show("Please log in first.");
+            //    return;
+            //}
+            //string nextPage;
+            //using (var form =
+            //    new QueueStatusForm(currentBeneficiary))
+            //{
+            //    form.ShowDialog(this);
+            //    nextPage = form.NextPage;
+            //}
+            //switch (nextPage)
+            //{
+            //    case "NewBooking":
+            //        btnNewBooking_Click(sender, EventArgs.Empty);
+            //        break;
+            //    case "MyBookings":
+            //        btnMyBooking_Click(sender, EventArgs.Empty);
+            //        break;
+            //    case "Profile":
+            //        btnProfile_Click(sender, EventArgs.Empty);
+            //        break;
+            //    case "Logout":
+            //        btnLogout_Click(sender, EventArgs.Empty);
+            //        break;
+            //        // Empty string means Dashboard or the window X: stay here.
 
-            }
+            //}
         }
 
         private void btnViewQueue_Click(object sender, EventArgs e)
         {
             OpenQueueStatus();
+
         }
 
         private void btnpersonalDetails_Click(object sender, EventArgs e)
         {
             //OpenProfile();
-            if (currentBeneficiary == null)
-            {
-                MessageBox.Show("Please sign in again.");
-                return;
-            }
+            if (currentBeneficiary == null) return;
+            OpenChildForm(new MyProfileForm(currentBeneficiary));
 
-            using (var form = new MyProfileForm(currentBeneficiary))
-            {
-                form.ShowDialog(this);
-                string nextPage = form.NextPage;
-                if (nextPage == "NewBooking")
-                    btnNewBooking_Click(sender, EventArgs.Empty);
-                else if (nextPage == "MyBookings")
-                    btnMyBooking_Click(sender, EventArgs.Empty);
-                else if (nextPage == "QueueStatus")
-                    btnQueueStatus_Click(sender, EventArgs.Empty);
-                else if (nextPage == "SignOut")
-                    btnLogout_Click(sender, EventArgs.Empty);
-            }
+            //if (currentBeneficiary == null)
+            //{
+            //    MessageBox.Show("Please sign in again.");
+            //    return;
+            //}
+
+            //using (var form = new MyProfileForm(currentBeneficiary))
+            //{
+            //    form.ShowDialog(this);
+            //    string nextPage = form.NextPage;
+            //    if (nextPage == "NewBooking")
+            //        btnNewBooking_Click(sender, EventArgs.Empty);
+            //    else if (nextPage == "MyBookings")
+            //        btnMyBooking_Click(sender, EventArgs.Empty);
+            //    else if (nextPage == "QueueStatus")
+            //        btnQueueStatus_Click(sender, EventArgs.Empty);
+            //    else if (nextPage == "SignOut")
+            //        btnLogout_Click(sender, EventArgs.Empty);
+            //}
 
 
         }
@@ -270,33 +293,39 @@ namespace Sassa_Queue_And_Service_Management_System
         private void btnProfile_Click(object sender, EventArgs e)
         {
             //OpenProfile();
-            if (currentBeneficiary == null)
-            {
-                MessageBox.Show("Please sign in again.");
-                return;
-            }
+            if (currentBeneficiary == null) return;
+            OpenChildForm(new MyProfileForm(currentBeneficiary));
 
-            using (var form = new MyProfileForm(currentBeneficiary))
-            {
-                form.ShowDialog(this);
-                string nextPage = form.NextPage;
-                if (nextPage == "NewBooking")
-                    btnNewBooking_Click(sender, EventArgs.Empty);
-                else if (nextPage == "MyBookings")
-                    btnMyBooking_Click(sender, EventArgs.Empty);
-                else if (nextPage == "QueueStatus")
-                    btnQueueStatus_Click(sender, EventArgs.Empty);
-                else if (nextPage == "SignOut")
-                    btnLogout_Click(sender, EventArgs.Empty);
-            }
+            //if (currentBeneficiary == null)
+            //{
+            //    MessageBox.Show("Please sign in again.");
+            //    return;
+            //}
 
-
-
+            //using (var form = new MyProfileForm(currentBeneficiary))
+            //{
+            //    form.ShowDialog(this);
+            //    string nextPage = form.NextPage;
+            //    if (nextPage == "NewBooking")
+            //        btnNewBooking_Click(sender, EventArgs.Empty);
+            //    else if (nextPage == "MyBookings")
+            //        btnMyBooking_Click(sender, EventArgs.Empty);
+            //    else if (nextPage == "QueueStatus")
+            //        btnQueueStatus_Click(sender, EventArgs.Empty);
+            //    else if (nextPage == "SignOut")
+            //        btnLogout_Click(sender, EventArgs.Empty);
+            //}
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
+        {    //before
+            //LoadDashboardInformation();
+            ShowDashboardHome();
+
+        }
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            LoadDashboardInformation();
+            Close();
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
@@ -312,8 +341,100 @@ namespace Sassa_Queue_And_Service_Management_System
                 != DialogResult.Yes) return;
 
             new WelcomePage().Show();
-                this.Close();
+            this.Close();
+        }
+
+        private Form? activeChildForm;
+        private bool changingChildForm;
+        private void OpenChildForm(Form childForm)
+        {
+            changingChildForm = true;
+
+            if (activeChildForm != null)
+            {
+                activeChildForm.FormClosed -= ActiveChildForm_FormClosed;
+                activeChildForm.Close();
+            }
+
+            pnlContent.Controls.Clear();
+
+            activeChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childForm.FormClosed += ActiveChildForm_FormClosed;
+
+            pnlContent.Controls.Add(childForm);
+            childForm.BringToFront();
+            childForm.Show();
+
+            changingChildForm = false;
+        }
+        private void NavigateTo(Form childForm)
+        {
+            BeginInvoke(new Action(() =>
+            {
+                OpenChildForm(childForm);
+            }));
+        }
+
+        private void ActiveChildForm_FormClosed(object? sender,
+            FormClosedEventArgs e)
+        {
+            if (changingChildForm)
+            {
+                return;
+            }
+
+            activeChildForm = null;
+            ShowDashboardHome();
+        }
+        private void ShowDashboardHome()
+        {
+            changingChildForm = true;
+
+            if (activeChildForm != null)
+            {
+                activeChildForm.FormClosed -= ActiveChildForm_FormClosed;
+                activeChildForm.Close();
+                activeChildForm = null;
+            }
+
+            pnlContent.Controls.Clear();
+            pnlDashboardHome.Dock = DockStyle.Fill;
+            pnlDashboardHome.Visible = true;
+            pnlContent.Controls.Add(pnlDashboardHome);
+            pnlDashboardHome.BringToFront();
+
+            changingChildForm = false;
+        }
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            DialogResult answer = MessageBox.Show(
+                "Are you sure you want to sign out?",
+                "Confirm Sign Out",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (answer == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+
+        private void btnLogout_Click_1(object sender, EventArgs e)
+        {
+            DialogResult answer = MessageBox.Show(
+                "Are you sure you want to sign out?",
+                "Confirm Sign Out",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (answer == DialogResult.Yes)
+            {
+                Close();
             }
         }
     }
+}
 

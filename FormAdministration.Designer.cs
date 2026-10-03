@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlSideBar = new Panel();
+            pnlSidebar = new Panel();
             btnBookings = new Button();
             btnSlots = new Button();
             btnReports = new Button();
             btnServices = new Button();
             btnDashboard = new Button();
             pnlMain = new Panel();
+            pnlMainBtnReports = new Button();
             pnlToday = new Panel();
             lblTodayBookingsNum = new Label();
             lblToday = new Label();
             pnlNoShows = new Panel();
             lblNoShows = new Label();
             lblNoShowsNum = new Label();
-            pnlCompleted = new Panel();
-            lblCompletedBookingsNum = new Label();
-            lblCompleted = new Label();
+            pnlMainBtnBookings = new Button();
             pnlTotalBookings = new Panel();
             lblTotalBookingsNum = new Label();
             lblTotalBookings = new Label();
-            pnlMainBtnReports = new Button();
-            pnlMainBtnBookings = new Button();
             pnlMainBtnSlots = new Button();
+            pnlCompleted = new Panel();
+            lblCompletedBookingsNum = new Label();
+            lblCompleted = new Label();
             pnlMainBtnServices = new Button();
             lblExistingGrantApplication = new Label();
             pnlDemandsByService = new Panel();
@@ -74,37 +74,42 @@
             date = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
             lblRecentBookings = new Label();
-            pnlBookingConfirmationForm = new Panel();
+            pnlHeader = new Panel();
+            btnLogout = new Button();
             lblAdminRole = new Label();
             lblAdminName = new Label();
             lblSystemName = new Label();
             lblSystemSubtitle = new Label();
-            btnLogout = new Button();
-            pnlSideBar.SuspendLayout();
+            pnlContent = new Panel();
+            pnlDashboardHome = new Panel();
+            pnlSidebar.SuspendLayout();
             pnlMain.SuspendLayout();
             pnlToday.SuspendLayout();
             pnlNoShows.SuspendLayout();
-            pnlCompleted.SuspendLayout();
             pnlTotalBookings.SuspendLayout();
+            pnlCompleted.SuspendLayout();
             pnlDemandsByService.SuspendLayout();
             pnlRecentBookings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRecentBookings).BeginInit();
-            pnlBookingConfirmationForm.SuspendLayout();
+            pnlHeader.SuspendLayout();
+            pnlContent.SuspendLayout();
+            pnlDashboardHome.SuspendLayout();
             SuspendLayout();
             // 
-            // pnlSideBar
+            // pnlSidebar
             // 
-            pnlSideBar.BackColor = Color.FromArgb(0, 51, 102);
-            pnlSideBar.BorderStyle = BorderStyle.Fixed3D;
-            pnlSideBar.Controls.Add(btnBookings);
-            pnlSideBar.Controls.Add(btnSlots);
-            pnlSideBar.Controls.Add(btnReports);
-            pnlSideBar.Controls.Add(btnServices);
-            pnlSideBar.Controls.Add(btnDashboard);
-            pnlSideBar.Location = new Point(14, 54);
-            pnlSideBar.Name = "pnlSideBar";
-            pnlSideBar.Size = new Size(159, 452);
-            pnlSideBar.TabIndex = 0;
+            pnlSidebar.BackColor = Color.FromArgb(0, 51, 102);
+            pnlSidebar.BorderStyle = BorderStyle.Fixed3D;
+            pnlSidebar.Controls.Add(btnBookings);
+            pnlSidebar.Controls.Add(btnSlots);
+            pnlSidebar.Controls.Add(btnReports);
+            pnlSidebar.Controls.Add(btnServices);
+            pnlSidebar.Controls.Add(btnDashboard);
+            pnlSidebar.Dock = DockStyle.Left;
+            pnlSidebar.Location = new Point(0, 0);
+            pnlSidebar.Name = "pnlSidebar";
+            pnlSidebar.Size = new Size(159, 528);
+            pnlSidebar.TabIndex = 0;
             // 
             // btnBookings
             // 
@@ -114,6 +119,7 @@
             btnBookings.TabIndex = 4;
             btnBookings.Text = "Bookings";
             btnBookings.UseVisualStyleBackColor = true;
+            btnBookings.Click += btnBookings_Click;
             // 
             // btnSlots
             // 
@@ -123,6 +129,7 @@
             btnSlots.TabIndex = 3;
             btnSlots.Text = "Slots";
             btnSlots.UseVisualStyleBackColor = true;
+            btnSlots.Click += btnSlots_Click;
             // 
             // btnReports
             // 
@@ -132,6 +139,7 @@
             btnReports.TabIndex = 2;
             btnReports.Text = "Reports";
             btnReports.UseVisualStyleBackColor = true;
+            btnReports.Click += btnReports_Click;
             // 
             // btnServices
             // 
@@ -141,6 +149,7 @@
             btnServices.TabIndex = 1;
             btnServices.Text = "Services";
             btnServices.UseVisualStyleBackColor = true;
+            btnServices.Click += btnServices_Click;
             // 
             // btnDashboard
             // 
@@ -150,22 +159,34 @@
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // pnlMain
             // 
             pnlMain.BorderStyle = BorderStyle.Fixed3D;
+            pnlMain.Controls.Add(pnlMainBtnReports);
             pnlMain.Controls.Add(pnlToday);
             pnlMain.Controls.Add(pnlNoShows);
-            pnlMain.Controls.Add(pnlCompleted);
-            pnlMain.Controls.Add(pnlTotalBookings);
-            pnlMain.Controls.Add(pnlMainBtnReports);
             pnlMain.Controls.Add(pnlMainBtnBookings);
+            pnlMain.Controls.Add(pnlTotalBookings);
             pnlMain.Controls.Add(pnlMainBtnSlots);
+            pnlMain.Controls.Add(pnlCompleted);
             pnlMain.Controls.Add(pnlMainBtnServices);
-            pnlMain.Location = new Point(188, 69);
+            pnlMain.Location = new Point(27, 17);
             pnlMain.Name = "pnlMain";
-            pnlMain.Size = new Size(702, 123);
+            pnlMain.Size = new Size(625, 146);
             pnlMain.TabIndex = 1;
+            // 
+            // pnlMainBtnReports
+            // 
+            pnlMainBtnReports.BackColor = Color.FromArgb(0, 51, 102);
+            pnlMainBtnReports.Location = new Point(465, 81);
+            pnlMainBtnReports.Name = "pnlMainBtnReports";
+            pnlMainBtnReports.Size = new Size(119, 52);
+            pnlMainBtnReports.TabIndex = 6;
+            pnlMainBtnReports.Text = "Reports";
+            pnlMainBtnReports.UseVisualStyleBackColor = false;
+            pnlMainBtnReports.Click += btnReports_Click;
             // 
             // pnlToday
             // 
@@ -173,9 +194,9 @@
             pnlToday.BorderStyle = BorderStyle.Fixed3D;
             pnlToday.Controls.Add(lblTodayBookingsNum);
             pnlToday.Controls.Add(lblToday);
-            pnlToday.Location = new Point(530, 10);
+            pnlToday.Location = new Point(465, 9);
             pnlToday.Name = "pnlToday";
-            pnlToday.Size = new Size(148, 50);
+            pnlToday.Size = new Size(119, 61);
             pnlToday.TabIndex = 10;
             // 
             // lblTodayBookingsNum
@@ -202,9 +223,9 @@
             pnlNoShows.BorderStyle = BorderStyle.Fixed3D;
             pnlNoShows.Controls.Add(lblNoShows);
             pnlNoShows.Controls.Add(lblNoShowsNum);
-            pnlNoShows.Location = new Point(363, 10);
+            pnlNoShows.Location = new Point(320, 10);
             pnlNoShows.Name = "pnlNoShows";
-            pnlNoShows.Size = new Size(148, 50);
+            pnlNoShows.Size = new Size(112, 60);
             pnlNoShows.TabIndex = 9;
             // 
             // lblNoShows
@@ -225,34 +246,16 @@
             lblNoShowsNum.TabIndex = 10;
             lblNoShowsNum.Text = "1";
             // 
-            // pnlCompleted
+            // pnlMainBtnBookings
             // 
-            pnlCompleted.BackColor = Color.FromArgb(248, 249, 250);
-            pnlCompleted.BorderStyle = BorderStyle.Fixed3D;
-            pnlCompleted.Controls.Add(lblCompletedBookingsNum);
-            pnlCompleted.Controls.Add(lblCompleted);
-            pnlCompleted.Location = new Point(182, 9);
-            pnlCompleted.Name = "pnlCompleted";
-            pnlCompleted.Size = new Size(148, 51);
-            pnlCompleted.TabIndex = 8;
-            // 
-            // lblCompletedBookingsNum
-            // 
-            lblCompletedBookingsNum.AutoSize = true;
-            lblCompletedBookingsNum.Location = new Point(58, 17);
-            lblCompletedBookingsNum.Name = "lblCompletedBookingsNum";
-            lblCompletedBookingsNum.Size = new Size(13, 15);
-            lblCompletedBookingsNum.TabIndex = 10;
-            lblCompletedBookingsNum.Text = "1";
-            // 
-            // lblCompleted
-            // 
-            lblCompleted.AutoSize = true;
-            lblCompleted.Location = new Point(30, 32);
-            lblCompleted.Name = "lblCompleted";
-            lblCompleted.Size = new Size(66, 15);
-            lblCompleted.TabIndex = 9;
-            lblCompleted.Text = "Completed";
+            pnlMainBtnBookings.BackColor = Color.FromArgb(0, 51, 102);
+            pnlMainBtnBookings.Location = new Point(318, 81);
+            pnlMainBtnBookings.Name = "pnlMainBtnBookings";
+            pnlMainBtnBookings.Size = new Size(114, 52);
+            pnlMainBtnBookings.TabIndex = 5;
+            pnlMainBtnBookings.Text = "Bookings";
+            pnlMainBtnBookings.UseVisualStyleBackColor = false;
+            pnlMainBtnBookings.Click += btnBookings_Click;
             // 
             // pnlTotalBookings
             // 
@@ -260,9 +263,9 @@
             pnlTotalBookings.BorderStyle = BorderStyle.Fixed3D;
             pnlTotalBookings.Controls.Add(lblTotalBookingsNum);
             pnlTotalBookings.Controls.Add(lblTotalBookings);
-            pnlTotalBookings.Location = new Point(3, 9);
+            pnlTotalBookings.Location = new Point(10, 10);
             pnlTotalBookings.Name = "pnlTotalBookings";
-            pnlTotalBookings.Size = new Size(148, 51);
+            pnlTotalBookings.Size = new Size(113, 60);
             pnlTotalBookings.TabIndex = 7;
             // 
             // lblTotalBookingsNum
@@ -283,45 +286,56 @@
             lblTotalBookings.TabIndex = 8;
             lblTotalBookings.Text = "Total Bookings";
             // 
-            // pnlMainBtnReports
-            // 
-            pnlMainBtnReports.BackColor = Color.FromArgb(0, 51, 102);
-            pnlMainBtnReports.Location = new Point(530, 66);
-            pnlMainBtnReports.Name = "pnlMainBtnReports";
-            pnlMainBtnReports.Size = new Size(148, 51);
-            pnlMainBtnReports.TabIndex = 6;
-            pnlMainBtnReports.Text = "Reports";
-            pnlMainBtnReports.UseVisualStyleBackColor = false;
-            // 
-            // pnlMainBtnBookings
-            // 
-            pnlMainBtnBookings.BackColor = Color.FromArgb(0, 51, 102);
-            pnlMainBtnBookings.Location = new Point(363, 66);
-            pnlMainBtnBookings.Name = "pnlMainBtnBookings";
-            pnlMainBtnBookings.Size = new Size(148, 51);
-            pnlMainBtnBookings.TabIndex = 5;
-            pnlMainBtnBookings.Text = "Bookings";
-            pnlMainBtnBookings.UseVisualStyleBackColor = false;
-            // 
             // pnlMainBtnSlots
             // 
             pnlMainBtnSlots.BackColor = Color.FromArgb(0, 51, 102);
-            pnlMainBtnSlots.Location = new Point(182, 66);
+            pnlMainBtnSlots.Location = new Point(165, 80);
             pnlMainBtnSlots.Name = "pnlMainBtnSlots";
-            pnlMainBtnSlots.Size = new Size(148, 53);
+            pnlMainBtnSlots.Size = new Size(112, 53);
             pnlMainBtnSlots.TabIndex = 4;
             pnlMainBtnSlots.Text = "Slots";
             pnlMainBtnSlots.UseVisualStyleBackColor = false;
+            pnlMainBtnSlots.Click += btnSlots_Click;
+            // 
+            // pnlCompleted
+            // 
+            pnlCompleted.BackColor = Color.FromArgb(248, 249, 250);
+            pnlCompleted.BorderStyle = BorderStyle.Fixed3D;
+            pnlCompleted.Controls.Add(lblCompletedBookingsNum);
+            pnlCompleted.Controls.Add(lblCompleted);
+            pnlCompleted.Location = new Point(165, 10);
+            pnlCompleted.Name = "pnlCompleted";
+            pnlCompleted.Size = new Size(112, 60);
+            pnlCompleted.TabIndex = 8;
+            // 
+            // lblCompletedBookingsNum
+            // 
+            lblCompletedBookingsNum.AutoSize = true;
+            lblCompletedBookingsNum.Location = new Point(58, 17);
+            lblCompletedBookingsNum.Name = "lblCompletedBookingsNum";
+            lblCompletedBookingsNum.Size = new Size(13, 15);
+            lblCompletedBookingsNum.TabIndex = 10;
+            lblCompletedBookingsNum.Text = "1";
+            // 
+            // lblCompleted
+            // 
+            lblCompleted.AutoSize = true;
+            lblCompleted.Location = new Point(30, 32);
+            lblCompleted.Name = "lblCompleted";
+            lblCompleted.Size = new Size(66, 15);
+            lblCompleted.TabIndex = 9;
+            lblCompleted.Text = "Completed";
             // 
             // pnlMainBtnServices
             // 
             pnlMainBtnServices.BackColor = Color.FromArgb(0, 51, 102);
-            pnlMainBtnServices.Location = new Point(3, 65);
+            pnlMainBtnServices.Location = new Point(10, 81);
             pnlMainBtnServices.Name = "pnlMainBtnServices";
-            pnlMainBtnServices.Size = new Size(148, 52);
+            pnlMainBtnServices.Size = new Size(113, 52);
             pnlMainBtnServices.TabIndex = 2;
             pnlMainBtnServices.Text = "Services";
             pnlMainBtnServices.UseVisualStyleBackColor = false;
+            pnlMainBtnServices.Click += btnServices_Click;
             // 
             // lblExistingGrantApplication
             // 
@@ -349,9 +363,9 @@
             pnlDemandsByService.Controls.Add(lblPaymentInquiry);
             pnlDemandsByService.Controls.Add(lblExistingGrantApplication);
             pnlDemandsByService.Controls.Add(lblDemandsByService);
-            pnlDemandsByService.Location = new Point(188, 198);
+            pnlDemandsByService.Location = new Point(27, 169);
             pnlDemandsByService.Name = "pnlDemandsByService";
-            pnlDemandsByService.Size = new Size(702, 197);
+            pnlDemandsByService.Size = new Size(625, 199);
             pnlDemandsByService.TabIndex = 2;
             // 
             // progressBarGeneralAssistance
@@ -456,7 +470,7 @@
             // 
             lblSassaQueueAndBookingSystem.AutoSize = true;
             lblSassaQueueAndBookingSystem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSassaQueueAndBookingSystem.Location = new Point(188, 51);
+            lblSassaQueueAndBookingSystem.Location = new Point(29, 2);
             lblSassaQueueAndBookingSystem.Name = "lblSassaQueueAndBookingSystem";
             lblSassaQueueAndBookingSystem.Size = new Size(297, 21);
             lblSassaQueueAndBookingSystem.TabIndex = 3;
@@ -468,9 +482,9 @@
             pnlRecentBookings.BorderStyle = BorderStyle.Fixed3D;
             pnlRecentBookings.Controls.Add(dgvRecentBookings);
             pnlRecentBookings.Controls.Add(lblRecentBookings);
-            pnlRecentBookings.Location = new Point(188, 401);
+            pnlRecentBookings.Location = new Point(29, 374);
             pnlRecentBookings.Name = "pnlRecentBookings";
-            pnlRecentBookings.Size = new Size(702, 105);
+            pnlRecentBookings.Size = new Size(623, 102);
             pnlRecentBookings.TabIndex = 4;
             // 
             // dgvRecentBookings
@@ -519,21 +533,30 @@
             lblRecentBookings.TabIndex = 0;
             lblRecentBookings.Text = "Recent Bookings";
             // 
-            // pnlBookingConfirmationForm
+            // pnlHeader
             // 
-            pnlBookingConfirmationForm.BackColor = Color.FromArgb(0, 51, 102);
-            pnlBookingConfirmationForm.BorderStyle = BorderStyle.Fixed3D;
-            pnlBookingConfirmationForm.Controls.Add(btnLogout);
-            pnlBookingConfirmationForm.Controls.Add(lblAdminRole);
-            pnlBookingConfirmationForm.Controls.Add(lblAdminName);
-            pnlBookingConfirmationForm.Controls.Add(lblSystemName);
-            pnlBookingConfirmationForm.Controls.Add(lblSystemSubtitle);
-            pnlBookingConfirmationForm.Dock = DockStyle.Top;
-            pnlBookingConfirmationForm.Location = new Point(0, 0);
-            pnlBookingConfirmationForm.Margin = new Padding(3, 2, 3, 2);
-            pnlBookingConfirmationForm.Name = "pnlBookingConfirmationForm";
-            pnlBookingConfirmationForm.Size = new Size(972, 49);
-            pnlBookingConfirmationForm.TabIndex = 18;
+            pnlHeader.BackColor = Color.FromArgb(0, 51, 102);
+            pnlHeader.BorderStyle = BorderStyle.Fixed3D;
+            pnlHeader.Controls.Add(btnLogout);
+            pnlHeader.Controls.Add(lblAdminRole);
+            pnlHeader.Controls.Add(lblAdminName);
+            pnlHeader.Controls.Add(lblSystemName);
+            pnlHeader.Controls.Add(lblSystemSubtitle);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(159, 0);
+            pnlHeader.Margin = new Padding(3, 2, 3, 2);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(850, 49);
+            pnlHeader.TabIndex = 18;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(847, 0);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(118, 38);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "Sign Out";
+            btnLogout.UseVisualStyleBackColor = true;
             // 
             // lblAdminRole
             // 
@@ -575,53 +598,64 @@
             lblSystemSubtitle.TabIndex = 2;
             lblSystemSubtitle.Text = "Amin Console";
             // 
-            // btnLogout
+            // pnlContent
             // 
-            btnLogout.Location = new Point(847, 0);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(118, 38);
-            btnLogout.TabIndex = 4;
-            btnLogout.Text = "Sign Out";
-            btnLogout.UseVisualStyleBackColor = true;
+            pnlContent.Controls.Add(pnlDashboardHome);
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(159, 49);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(850, 479);
+            pnlContent.TabIndex = 19;
+            // 
+            // pnlDashboardHome
+            // 
+            pnlDashboardHome.Controls.Add(lblSassaQueueAndBookingSystem);
+            pnlDashboardHome.Controls.Add(pnlDemandsByService);
+            pnlDashboardHome.Controls.Add(pnlMain);
+            pnlDashboardHome.Controls.Add(pnlRecentBookings);
+            pnlDashboardHome.Dock = DockStyle.Fill;
+            pnlDashboardHome.Location = new Point(0, 0);
+            pnlDashboardHome.Name = "pnlDashboardHome";
+            pnlDashboardHome.Size = new Size(850, 479);
+            pnlDashboardHome.TabIndex = 0;
             // 
             // frmAdministration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(972, 510);
-            Controls.Add(pnlBookingConfirmationForm);
-            Controls.Add(pnlRecentBookings);
-            Controls.Add(lblSassaQueueAndBookingSystem);
-            Controls.Add(pnlDemandsByService);
-            Controls.Add(pnlMain);
-            Controls.Add(pnlSideBar);
+            ClientSize = new Size(1009, 528);
+            Controls.Add(pnlContent);
+            Controls.Add(pnlHeader);
+            Controls.Add(pnlSidebar);
             Name = "frmAdministration";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administration";
-            pnlSideBar.ResumeLayout(false);
+            pnlSidebar.ResumeLayout(false);
             pnlMain.ResumeLayout(false);
             pnlToday.ResumeLayout(false);
             pnlToday.PerformLayout();
             pnlNoShows.ResumeLayout(false);
             pnlNoShows.PerformLayout();
-            pnlCompleted.ResumeLayout(false);
-            pnlCompleted.PerformLayout();
             pnlTotalBookings.ResumeLayout(false);
             pnlTotalBookings.PerformLayout();
+            pnlCompleted.ResumeLayout(false);
+            pnlCompleted.PerformLayout();
             pnlDemandsByService.ResumeLayout(false);
             pnlDemandsByService.PerformLayout();
             pnlRecentBookings.ResumeLayout(false);
             pnlRecentBookings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRecentBookings).EndInit();
-            pnlBookingConfirmationForm.ResumeLayout(false);
-            pnlBookingConfirmationForm.PerformLayout();
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
+            pnlContent.ResumeLayout(false);
+            pnlDashboardHome.ResumeLayout(false);
+            pnlDashboardHome.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Panel pnlSideBar;
+        private Panel pnlSidebar;
         private Button btnBookings;
         private Button btnSlots;
         private Button btnReports;
@@ -667,11 +701,13 @@
         private ProgressBar progressbarNewGrant;
         private ProgressBar progressBarGeneralAssistance;
         private Label lblGeneralAssistance;
-        private Panel pnlBookingConfirmationForm;
+        private Panel pnlHeader;
         private Label lblAdminRole;
         private Label lblAdminName;
         private Label lblSystemName;
         private Label lblSystemSubtitle;
         private Button btnLogout;
+        private Panel pnlContent;
+        private Panel pnlDashboardHome;
     }
 }

@@ -358,30 +358,30 @@ namespace Sassa_Queue_And_Service_Management_System
         private void btnSignOut_Click(object sender, EventArgs e) => GoToPage("Logout");
     
 
-        private void btnMyBookings_Click(object sender, EventArgs e)
-        {
-            if(currentBeneficiary == null)
-            {
-                MessageBox.Show("Please log in first");
-                return;
-            }
-            using (var form = new frmMyBookings(currentBeneficiary))
-            {
-                form.ShowDialog(this);
-                //after dialog closes, use the dashboard's existing navigation
+        //private void btnMyBookings_Click(object sender, EventArgs e)
+        //{
+        //    if(currentBeneficiary == null)
+        //    {
+        //        MessageBox.Show("Please log in first");
+        //        return;
+        //    }
+        //    using (var form = new frmMyBookings(currentBeneficiary))
+        //    {
+        //        form.ShowDialog(this);
+        //        //after dialog closes, use the dashboard's existing navigation
 
-                switch (form.NextPage)
-                {
-                    case "NewBooking": btnNewBooking_Click(sender, EventArgs.Empty); break;
-                    case "QueueStatus": btnQueueStatus_Click(sender, EventArgs.Empty); break;
-                    case "Profile": btnProfile_Click(sender, EventArgs.Empty); break;
-                    case "Logout": btnSignOut_Click(sender, EventArgs.Empty); break;
-                }
+        //        switch (form.NextPage)
+        //        {
+        //            case "NewBooking": btnNewBooking_Click(sender, EventArgs.Empty); break;
+        //            case "QueueStatus": btnQueueStatus_Click(sender, EventArgs.Empty); break;
+        //            case "Profile": btnProfile_Click(sender, EventArgs.Empty); break;
+        //            case "Logout": btnSignOut_Click(sender, EventArgs.Empty); break;
+        //        }
 
             }
         }
-        }
-    }
+        
+    
 
 
 

@@ -12,11 +12,14 @@ namespace SASSAQueueManagementSystem
     public partial class Login : Form
     {
         private UserRole selectedRole = UserRole.Beneficiary;
+        //private UserRole selectedRole = UserRole.Staff;
+
 
         // This constructor allows the Windows Forms Designer to open.
         public Login()
         {
             InitializeComponent();
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         // This constructor receives the role selected on WelcomePage.
@@ -82,15 +85,14 @@ namespace SASSAQueueManagementSystem
 
             User? loggedInUser = UserRepository.Users
                 .FirstOrDefault(user =>
-                    user.Role == selectedRole &&
-                    user.ValidateLogin(username, password));
+                    MatchesUsername(user, username) &&
+                    user.Password == password);
 
             if (loggedInUser == null)
             {
                 MessageBox.Show(
-                    "Invalid username or password for the " +
-                    "selected login type.",
-                    "Login Failed",
+                    "The login details are incorrect ",
+                    "Login failed",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
 
@@ -98,49 +100,64 @@ namespace SASSAQueueManagementSystem
                 txtPassword.Focus();
                 return;
             }
-            if (loggedInUser is Beneficiary beneficiary)
-            {
-                MessageBox.Show(
-                    "Welcome, " + loggedInUser.FullName + "!",
-                    "Login Successful",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+            //before
+            //if (loggedInUser is Beneficiary beneficiary)
+            //{
+            //    MessageBox.Show(
+            //        "Welcome, " + loggedInUser.FullName + "!",
+            //        "Login Successful",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Information);
 
-                this.Hide();
+            //    this.Hide();
 
-                using (BeneficiaryDashboard dashboard = new BeneficiaryDashboard(beneficiary))
-                {
-                    dashboard.ShowDialog();
-                }
+            //    using (BeneficiaryDashboard dashboard = new BeneficiaryDashboard(beneficiary))
+            //    {
+            //        dashboard.ShowDialog();
+            //    }
 
-                this.Close();
-                // before adding using OpenDashboard(loggedInUser);
-            }
+            //    this.Close();
+            OpenCorrectDashboard(loggedInUser);
         }
 
-        private void OpenDashboard(User loggedInUser)
+
+        private void OpenCorrectDashboard(User loggedInUser)
         {
             Form dashboard;
 
-            switch (loggedInUser.Role)
+            if (loggedInUser is Beneficiary beneficiary)
             {
-                case UserRole.Staff:
-                    dashboard = new StaffDashboard();
-                    break;
-
-                case UserRole.Administrator:
-                    dashboard = new frmAdministration();
-                    break;
-
-                default:
-                    dashboard = new BeneficiaryDashboard(
-                        (Beneficiary)loggedInUser);
-                    break;
+                dashboard = new BeneficiaryDashboard(beneficiary);
+            }
+            else if (loggedInUser is StaffMember staffMember)
+            {
+                dashboard = new StaffDashboard(staffMember);
+            }
+            else if (loggedInUser is Administrator administrator)
+            {
+                dashboard = new frmAdministration(administrator);
+            }
+            else
+            {
+                MessageBox.Show("This user type is not supported.",
+                    "Login Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
             }
 
-            this.Hide();
-            dashboard.ShowDialog();
-            this.Close();
+            Hide();
+
+            using (dashboard)
+            {
+                dashboard.ShowDialog(this);
+            }
+
+            txtUsername.Clear();
+            txtPassword.Clear();
+            Show();
+            txtUsername.Focus();
+
         }
 
         private void chkShowPassword_CheckedChanged(
@@ -165,10 +182,10 @@ namespace SASSAQueueManagementSystem
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            using (BeneficiaryRegistration registrationForm =
+            using (var registration =
                    new BeneficiaryRegistration())
             {
-                registrationForm.ShowDialog();
+                registration.ShowDialog(this);
             }
         }
 
@@ -176,8 +193,49 @@ namespace SASSAQueueManagementSystem
         {
             SetMenuButtons(false);
         }
+        //i named it matches username instead of matches login id
+        private bool MatchesUsername(User user, string username)
+        {
+            if (string.Equals(user.Username, username,
+                StringComparison.OrdinalIgnoreCase) ||
+                string.Equals(user.UserID, username,
+                StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
 
-        
+            if (user is StaffMember staff &&
+                string.Equals(staff.StaffID, username,
+                StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            if (user is Administrator administrator &&
+                string.Equals(administrator.EmployeeNumber, username,
+                StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void lnklblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Hide();
+
+            using (var forgotPassword = new ForgotPassword())
+            {
+                forgotPassword.ShowDialog(this);
+            }
+
+            Show();
+            Activate();
+            txtPassword.Clear();
+            txtPassword.Focus();
+
+        }
     }
 }
 

@@ -15,6 +15,7 @@ namespace SASSAQueueManagementSystem
                 Username = "johndoe",
                 Password = "1234",
                 ContactNumber = "0712345678"
+                
             },
             new StaffMember
             {
@@ -28,7 +29,7 @@ namespace SASSAQueueManagementSystem
             new Administrator
             {
                 UserID = "A001",
-                FullName = "Officer Seeiso",
+                FullName = "Zanele Seeiso",
                 Username = "officers",
                 Password = "1234",
                 EmployeeNumber = "EMP001"   

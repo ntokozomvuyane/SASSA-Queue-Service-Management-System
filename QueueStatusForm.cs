@@ -39,7 +39,6 @@ namespace Sassa_Queue_And_Service_Management_System
                 Close();
                 return;
             }
-
             tmrQueueRefresh.Interval = 5000;
             tmrQueueRefresh.Start();
             DisplayQueueStatus();
@@ -49,31 +48,38 @@ namespace Sassa_Queue_And_Service_Management_System
         {
             if (currentBeneficiary == null)
             {
+                ShowNoQueueEntry("No beneficiary is currently logged in.");
                 return;
+
+                
             }
 
             currentQueueEntry = SystemData.QueueEntries
                 .Where(entry =>
-                    entry.Booking != null &&
-                    entry.Booking.Beneficiary.UserID ==
-                        currentBeneficiary.UserID)
+                            entry.Booking?.Beneficiary?.UserID == currentBeneficiary.UserID &&
+            entry.Status != QueueStatus.Completed &&
+            entry.Status != QueueStatus.NoShow)
+
                 .OrderByDescending(entry => entry.CheckInTime)
                 .FirstOrDefault();
 
             if (currentQueueEntry == null)
             {
-                pnlQueueDetails.Visible = false;
-                lblQueueMessage.Visible = true;
-                lblQueueMessage.Text =
-                    "You do not have a queue entry yet. " +
-                    "Please check in at the service centre.";
+                ShowNoQueueEntry("You do not have an active queue entry. " +
+            "Please check in at the service centre.");
+
+                //pnlQueueDetails.Visible = false;
+                //lblQueueMessageTitle.Visible = true;
+                //lblQueueMessageTitle.Text =
+                //    "You do not have a queue entry yet. " +
+                //    "Please check in at the service centre.";
                 return;
             }
 
             UpdateQueuePosition(currentQueueEntry);
 
             pnlQueueDetails.Visible = true;
-            lblQueueMessage.Visible = true;
+            //lblQueueMessageTitle.Visible = true;
 
             lblQueueNumber.Text =
                 currentQueueEntry.QueueNumber;
@@ -82,20 +88,42 @@ namespace Sassa_Queue_And_Service_Management_System
                 FormatQueueStatus(currentQueueEntry.Status);
 
             lblServiceName.Text =
-                currentQueueEntry.Booking.Service.ServiceName;
+                currentQueueEntry.Booking?.Service?.ServiceName ?? "===";
 
             lblCentreName.Text =
-                currentQueueEntry.Booking
-                    .ServiceCentre.CentreName;
+                currentQueueEntry.Booking?
+                    .ServiceCentre?.CentreName ?? "===";
 
             lblCheckInTime.Text =
                 currentQueueEntry.CheckInTime
                     .ToString("dd MMMM yyyy HH:mm");
+            lblPeopleAhead.Text = currentQueueEntry.PeopleAhead.ToString();
+            lblQueueMessage.Text = GetStatusMessage(currentQueueEntry.Status);
 
-            DisplayWaitingInformation(currentQueueEntry);
-            lblQueueMessage.Text =
-                GetStatusMessage(currentQueueEntry.Status);
+            lblEstimatedWait.Text =
+        currentQueueEntry.EstimatedWaitingTime + " minutes";
         }
+
+        //DisplayWaitingInformation(currentQueueEntry);
+        //lblQueueMessageTitle.Text =
+        //    GetStatusMessage(currentQueueEntry.Status);
+        private void ShowNoQueueEntry(string message)
+        {
+            currentQueueEntry = null;
+            pnlQueueDetails.Visible = true;
+
+            lblQueueNumber.Text = "---";
+            lblCurrentStatus.Text = "Not checked in";
+            lblServiceName.Text = "---";
+            lblCentreName.Text = "---";
+            lblCheckInTime.Text = "---";
+            lblPeopleAhead.Text = "0";
+            lblQueueMessage.Text = message;
+
+            // Keep this line only if the label exists on the form.
+            lblEstimatedWait.Text = "Not applicable";
+        }
+
 
         private void UpdateQueuePosition(QueueEntry entry)
         {
@@ -106,17 +134,25 @@ namespace Sassa_Queue_And_Service_Management_System
                 entry.EstimatedWaitingTime = 0;
                 return;
             }
+            if (entry.Booking?.ServiceCentre == null ||
+        entry.Booking.Service == null)
+            {
+                entry.PeopleAhead = 0;
+                entry.EstimatedWaitingTime = 0;
+                return;
+            }
+            int peopleAhead = SystemData.QueueEntries.Count(other =>
+        other != entry &&
+        other.Booking?.ServiceCentre != null &&
+        other.Booking.Service != null &&
+        other.Booking.ServiceCentre.CentreID ==
+            entry.Booking.ServiceCentre.CentreID &&
+        other.Booking.Service.ServiceID ==
+            entry.Booking.Service.ServiceID &&
+        other.CheckInTime < entry.CheckInTime &&
+        (other.Status == QueueStatus.CheckedIn ||
+         other.Status == QueueStatus.Waiting));
 
-            int peopleAhead = SystemData.QueueEntries.Count(
-                other =>
-                    other != entry &&
-                    other.Booking.ServiceCentre.CentreID ==
-                        entry.Booking.ServiceCentre.CentreID &&
-                    other.Booking.Service.ServiceID ==
-                        entry.Booking.Service.ServiceID &&
-                    other.CheckInTime < entry.CheckInTime &&
-                    (other.Status == QueueStatus.CheckedIn ||
-                     other.Status == QueueStatus.Waiting));
 
             entry.PeopleAhead = peopleAhead;
 
@@ -129,7 +165,7 @@ namespace Sassa_Queue_And_Service_Management_System
             if (entry.Status == QueueStatus.CheckedIn ||
                 entry.Status == QueueStatus.Waiting)
             {
-                lblPeopleAhead.Text =
+                lblPeopleAheadTitle.Text =
                     entry.PeopleAhead.ToString();
 
                 lblEstimatedWait.Text =
@@ -138,13 +174,13 @@ namespace Sassa_Queue_And_Service_Management_System
             else if (entry.Status == QueueStatus.Called ||
                      entry.Status == QueueStatus.BeingServed)
             {
-                lblPeopleAhead.Text = "0";
+                lblPeopleAheadTitle.Text = "0";
                 lblEstimatedWait.Text =
                     "Proceed to the service desk";
             }
             else
             {
-                lblPeopleAhead.Text = "0";
+                lblPeopleAheadTitle.Text = "0";
                 lblEstimatedWait.Text = "Not applicable";
             }
         }
@@ -199,6 +235,12 @@ namespace Sassa_Queue_And_Service_Management_System
         {
             DisplayQueueStatus();
         }
+        private void QueueStatusForm_FormClosed(object sender,
+        FormClosedEventArgs e)
+        {
+            tmrQueueRefresh.Stop();
+        }
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -237,7 +279,85 @@ namespace Sassa_Queue_And_Service_Management_System
 
         private void btnQueueStatus_Click(object sender, EventArgs e)
         {
-            // Already viewing Queue Status.
+            //if (currentBeneficiary == null)
+            //{
+            //    MessageBox.Show("No beneficiary was supplied.");
+            //    return;
+            //}
+
+            //OpenChildForm(
+            //    new QueueStatusForm(currentBeneficiary));
+            DisplayQueueStatus();
+
+        }
+        //private void CheckInBooking(Booking selectedBooking)
+        //{
+        //    if (selectedBooking == null)
+        //    {
+        //        MessageBox.Show("Please select a booking first.");
+        //        return;
+        //    }
+
+        //    bool alreadyCheckedIn = SystemData.QueueEntries.Any(entry =>
+        //        entry.Booking == selectedBooking &&
+        //        entry.Status != QueueStatus.Completed &&
+        //        entry.Status != QueueStatus.NoShow);
+
+        //    if (alreadyCheckedIn)
+        //    {
+        //        MessageBox.Show("This booking is already in the queue.");
+        //        return;
+        //    }
+
+            //QueueEntry newEntry = new QueueEntry
+            //{
+            //    QueueNumber =
+            //        $"A{SystemData.QueueEntries.Count + 1:000}",
+            //    Booking = selectedBooking,
+            //    CheckInTime = DateTime.Now,
+            //    Status = QueueStatus.CheckedIn,
+            //    PeopleAhead = 0,
+            //    EstimatedWaitingTime = 0
+            //};
+
+            //SystemData.QueueEntries.Add(newEntry);
+            //MessageBox.Show(
+            //    "Check-in successful. Queue number: " +
+            //    newEntry.QueueNumber);
+        
+        private void CheckInBooking(Booking selectedBooking)
+        {
+            if (selectedBooking == null)
+            {
+                MessageBox.Show("Please select a booking first.");
+                return;
+            }
+
+            bool alreadyCheckedIn = SystemData.QueueEntries.Any(entry =>
+                entry.Booking == selectedBooking &&
+                entry.Status != QueueStatus.Completed &&
+                entry.Status != QueueStatus.NoShow);
+            if (alreadyCheckedIn)
+            {
+                MessageBox.Show("This booking is already in the queue.");
+                return;
+            }
+
+            // Prototype numbering for the shared in-memory list.
+            int number = SystemData.QueueEntries.Count + 1;
+            string queueNumber = $"A{number:000}";
+            while (SystemData.QueueEntries.Any(
+                entry => entry.QueueNumber == queueNumber))
+            {
+                number++;
+                queueNumber = $"A{number:000}";
+            }
+
+            QueueEntry newEntry = QueueEntry.CreateForCheckIn(
+                selectedBooking, queueNumber);
+            SystemData.QueueEntries.Add(newEntry);
+            MessageBox.Show("Check-in successful. Queue number: " +
+                newEntry.QueueNumber);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)

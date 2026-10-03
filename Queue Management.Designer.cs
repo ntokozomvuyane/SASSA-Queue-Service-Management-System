@@ -28,12 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pnlHeader = new Panel();
             btnSignOut = new Button();
-            lblServiceOfficer = new Label();
-            lblOfficer = new Label();
-            lblStaffConsole = new Label();
-            lblSassa = new Label();
             lblQueueManagement = new Label();
             pnlButtons = new Panel();
             Searchbtn = new Button();
@@ -46,77 +41,21 @@
             waiting = new DataGridViewTextBoxColumn();
             beingServed = new DataGridViewTextBoxColumn();
             completed = new DataGridViewTextBoxColumn();
-            pnlHeader.SuspendLayout();
             pnlButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvQueueManagement).BeginInit();
             SuspendLayout();
-            // 
-            // pnlHeader
-            // 
-            pnlHeader.BackColor = Color.FromArgb(0, 51, 102);
-            pnlHeader.BorderStyle = BorderStyle.Fixed3D;
-            pnlHeader.Controls.Add(btnSignOut);
-            pnlHeader.Controls.Add(lblServiceOfficer);
-            pnlHeader.Controls.Add(lblOfficer);
-            pnlHeader.Controls.Add(lblStaffConsole);
-            pnlHeader.Controls.Add(lblSassa);
-            pnlHeader.Dock = DockStyle.Top;
-            pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(899, 53);
-            pnlHeader.TabIndex = 0;
             // 
             // btnSignOut
             // 
             btnSignOut.BackColor = Color.SteelBlue;
             btnSignOut.ForeColor = Color.White;
-            btnSignOut.Location = new Point(713, 12);
+            btnSignOut.Location = new Point(721, 64);
             btnSignOut.Name = "btnSignOut";
             btnSignOut.Size = new Size(75, 23);
             btnSignOut.TabIndex = 5;
             btnSignOut.Text = "Sign Out";
             btnSignOut.UseVisualStyleBackColor = false;
             btnSignOut.Click += btnSignOut_Click;
-            // 
-            // lblServiceOfficer
-            // 
-            lblServiceOfficer.AutoSize = true;
-            lblServiceOfficer.ForeColor = Color.White;
-            lblServiceOfficer.Location = new Point(594, 24);
-            lblServiceOfficer.Name = "lblServiceOfficer";
-            lblServiceOfficer.Size = new Size(83, 15);
-            lblServiceOfficer.TabIndex = 4;
-            lblServiceOfficer.Text = "Service Officer";
-            // 
-            // lblOfficer
-            // 
-            lblOfficer.AutoSize = true;
-            lblOfficer.ForeColor = Color.White;
-            lblOfficer.Location = new Point(594, 9);
-            lblOfficer.Name = "lblOfficer";
-            lblOfficer.Size = new Size(87, 15);
-            lblOfficer.TabIndex = 3;
-            lblOfficer.Text = "Officer Bhengu";
-            // 
-            // lblStaffConsole
-            // 
-            lblStaffConsole.AutoSize = true;
-            lblStaffConsole.ForeColor = Color.White;
-            lblStaffConsole.Location = new Point(12, 24);
-            lblStaffConsole.Name = "lblStaffConsole";
-            lblStaffConsole.Size = new Size(77, 15);
-            lblStaffConsole.TabIndex = 1;
-            lblStaffConsole.Text = "Staff Console";
-            // 
-            // lblSassa
-            // 
-            lblSassa.AutoSize = true;
-            lblSassa.ForeColor = Color.White;
-            lblSassa.Location = new Point(12, 9);
-            lblSassa.Name = "lblSassa";
-            lblSassa.Size = new Size(41, 15);
-            lblSassa.TabIndex = 0;
-            lblSassa.Text = "SASSA";
             // 
             // lblQueueManagement
             // 
@@ -234,16 +173,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(899, 500);
+            Controls.Add(btnSignOut);
             Controls.Add(dgvQueueManagement);
             Controls.Add(pnlButtons);
             Controls.Add(lblQueueManagement);
-            Controls.Add(pnlHeader);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "frmQueueManagementSystem";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Queue Management System";
-            pnlHeader.ResumeLayout(false);
-            pnlHeader.PerformLayout();
             pnlButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvQueueManagement).EndInit();
             ResumeLayout(false);
@@ -259,11 +196,6 @@
         private Label label24;
         private Button button9;
         private Button button10;
-        private Panel pnlHeader;
-        private Label lblSassa;
-        private Label lblStaffConsole;
-        private Label lblServiceOfficer;
-        private Label lblOfficer;
         private Button btnSignOut;
         private Label lblQueueManagement;
         private Panel pnlButtons;

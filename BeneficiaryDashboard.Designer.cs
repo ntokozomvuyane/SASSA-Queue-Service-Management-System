@@ -34,27 +34,31 @@
             btnQueueStatus = new Button();
             btnProfile = new Button();
             btnLogout = new Button();
-            btnbookingnewappointment = new Button();
-            btnpersonalBooking = new Button();
-            btnQueuePosition = new Button();
-            btnViewBookingDetails = new Button();
-            btnViewAppointmentDetails = new Button();
-            btnViewQueue = new Button();
-            btnViewAll = new Button();
-            btnpersonalDetails = new Button();
-            lblMenue = new Label();
-            lblUpcomingAppointment = new Label();
-            lbltotalBookings = new Label();
-            lblQueuePosition = new Label();
-            lblUnreadNotifications = new Label();
-            menuePanel = new Panel();
-            panel1 = new Panel();
+            pnlSidebar = new Panel();
+            pnlHeader = new Panel();
             lblBeneficiaryDashboard = new Label();
             lblPortal = new Label();
             lblmanage = new Label();
             lblSassa = new Label();
-            menuePanel.SuspendLayout();
-            panel1.SuspendLayout();
+            btnpersonalBooking = new Button();
+            btnViewAll = new Button();
+            lblUnreadNotifications = new Label();
+            lblMenue = new Label();
+            btnQueuePosition = new Button();
+            btnpersonalDetails = new Button();
+            btnbookingnewappointment = new Button();
+            btnViewQueue = new Button();
+            btnViewBookingDetails = new Button();
+            btnViewAppointmentDetails = new Button();
+            lblQueuePosition = new Label();
+            lbltotalBookings = new Label();
+            lblUpcomingAppointment = new Label();
+            pnlContent = new Panel();
+            pnlDashboardHome = new Panel();
+            pnlSidebar.SuspendLayout();
+            pnlHeader.SuspendLayout();
+            pnlContent.SuspendLayout();
+            pnlDashboardHome.SuspendLayout();
             SuspendLayout();
             // 
             // btnDashboard
@@ -117,176 +121,36 @@
             btnLogout.TabIndex = 7;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnLogout_Click;
+            btnLogout.Click += btnLogout_Click_1;
             // 
-            // btnbookingnewappointment
+            // pnlSidebar
             // 
-            btnbookingnewappointment.BackColor = Color.FromArgb(26, 74, 122);
-            btnbookingnewappointment.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnbookingnewappointment.ForeColor = SystemColors.Control;
-            btnbookingnewappointment.Location = new Point(209, 236);
-            btnbookingnewappointment.Name = "btnbookingnewappointment";
-            btnbookingnewappointment.Size = new Size(354, 119);
-            btnbookingnewappointment.TabIndex = 8;
-            btnbookingnewappointment.Text = "New Booking";
-            btnbookingnewappointment.UseVisualStyleBackColor = false;
-            btnbookingnewappointment.Click += btnbookingnewappointment_Click;
+            pnlSidebar.BackColor = Color.White;
+            pnlSidebar.BorderStyle = BorderStyle.Fixed3D;
+            pnlSidebar.Controls.Add(btnLogout);
+            pnlSidebar.Controls.Add(btnProfile);
+            pnlSidebar.Controls.Add(btnQueueStatus);
+            pnlSidebar.Controls.Add(btnMyBooking);
+            pnlSidebar.Controls.Add(btnNewBooking);
+            pnlSidebar.Controls.Add(btnDashboard);
+            pnlSidebar.Dock = DockStyle.Left;
+            pnlSidebar.Location = new Point(0, 0);
+            pnlSidebar.Name = "pnlSidebar";
+            pnlSidebar.Size = new Size(160, 574);
+            pnlSidebar.TabIndex = 25;
             // 
-            // btnpersonalBooking
+            // pnlHeader
             // 
-            btnpersonalBooking.BackColor = Color.FromArgb(26, 74, 122);
-            btnpersonalBooking.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnpersonalBooking.ForeColor = SystemColors.Control;
-            btnpersonalBooking.Location = new Point(612, 410);
-            btnpersonalBooking.Name = "btnpersonalBooking";
-            btnpersonalBooking.Size = new Size(354, 119);
-            btnpersonalBooking.TabIndex = 9;
-            btnpersonalBooking.Text = "My Bookings";
-            btnpersonalBooking.UseVisualStyleBackColor = false;
-            btnpersonalBooking.Click += btnpersonalBooking_Click;
-            // 
-            // btnQueuePosition
-            // 
-            btnQueuePosition.BackColor = Color.FromArgb(26, 74, 122);
-            btnQueuePosition.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnQueuePosition.ForeColor = SystemColors.Control;
-            btnQueuePosition.Location = new Point(209, 410);
-            btnQueuePosition.Name = "btnQueuePosition";
-            btnQueuePosition.Size = new Size(354, 119);
-            btnQueuePosition.TabIndex = 10;
-            btnQueuePosition.Text = "Queue Status";
-            btnQueuePosition.UseVisualStyleBackColor = false;
-            btnQueuePosition.Click += btnQueuePosition_Click;
-            // 
-            // btnViewBookingDetails
-            // 
-            btnViewBookingDetails.Location = new Point(396, 112);
-            btnViewBookingDetails.Name = "btnViewBookingDetails";
-            btnViewBookingDetails.Size = new Size(126, 38);
-            btnViewBookingDetails.TabIndex = 11;
-            btnViewBookingDetails.Text = "View Details          >";
-            btnViewBookingDetails.UseVisualStyleBackColor = true;
-            btnViewBookingDetails.Click += btnViewBookingDetails_Click;
-            // 
-            // btnViewAppointmentDetails
-            // 
-            btnViewAppointmentDetails.Location = new Point(209, 112);
-            btnViewAppointmentDetails.Name = "btnViewAppointmentDetails";
-            btnViewAppointmentDetails.Size = new Size(126, 38);
-            btnViewAppointmentDetails.TabIndex = 12;
-            btnViewAppointmentDetails.Text = "View Details          >";
-            btnViewAppointmentDetails.UseVisualStyleBackColor = true;
-            btnViewAppointmentDetails.Click += btnViewAppointmentDetails_Click;
-            // 
-            // btnViewQueue
-            // 
-            btnViewQueue.Location = new Point(583, 112);
-            btnViewQueue.Name = "btnViewQueue";
-            btnViewQueue.Size = new Size(126, 38);
-            btnViewQueue.TabIndex = 13;
-            btnViewQueue.Text = "View Queue           >";
-            btnViewQueue.UseVisualStyleBackColor = true;
-            btnViewQueue.Click += btnViewQueue_Click;
-            // 
-            // btnViewAll
-            // 
-            btnViewAll.Location = new Point(788, 112);
-            btnViewAll.Name = "btnViewAll";
-            btnViewAll.Size = new Size(126, 38);
-            btnViewAll.TabIndex = 14;
-            btnViewAll.Text = "View All           >";
-            btnViewAll.UseVisualStyleBackColor = true;
-            btnViewAll.Click += btnViewAll_Click;
-            // 
-            // btnpersonalDetails
-            // 
-            btnpersonalDetails.BackColor = Color.FromArgb(26, 74, 122);
-            btnpersonalDetails.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnpersonalDetails.ForeColor = SystemColors.Control;
-            btnpersonalDetails.Location = new Point(612, 236);
-            btnpersonalDetails.Name = "btnpersonalDetails";
-            btnpersonalDetails.Size = new Size(354, 119);
-            btnpersonalDetails.TabIndex = 15;
-            btnpersonalDetails.Text = "Profile";
-            btnpersonalDetails.UseVisualStyleBackColor = false;
-            btnpersonalDetails.Click += btnpersonalDetails_Click;
-            // 
-            // lblMenue
-            // 
-            lblMenue.AutoSize = true;
-            lblMenue.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMenue.Location = new Point(474, 192);
-            lblMenue.Name = "lblMenue";
-            lblMenue.Size = new Size(212, 18);
-            lblMenue.TabIndex = 16;
-            lblMenue.Text = "What would you like to do?";
-            // 
-            // lblUpcomingAppointment
-            // 
-            lblUpcomingAppointment.AutoSize = true;
-            lblUpcomingAppointment.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUpcomingAppointment.Location = new Point(206, 80);
-            lblUpcomingAppointment.Name = "lblUpcomingAppointment";
-            lblUpcomingAppointment.Size = new Size(154, 17);
-            lblUpcomingAppointment.TabIndex = 21;
-            lblUpcomingAppointment.Text = "Upcoming Appointment";
-            // 
-            // lbltotalBookings
-            // 
-            lbltotalBookings.AutoSize = true;
-            lbltotalBookings.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbltotalBookings.Location = new Point(396, 80);
-            lbltotalBookings.Name = "lbltotalBookings";
-            lbltotalBookings.Size = new Size(95, 17);
-            lbltotalBookings.TabIndex = 22;
-            lbltotalBookings.Text = "Total Booking";
-            // 
-            // lblQueuePosition
-            // 
-            lblQueuePosition.AutoSize = true;
-            lblQueuePosition.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblQueuePosition.Location = new Point(580, 80);
-            lblQueuePosition.Name = "lblQueuePosition";
-            lblQueuePosition.Size = new Size(133, 17);
-            lblQueuePosition.TabIndex = 23;
-            lblQueuePosition.Text = "Est. Queue Position";
-            // 
-            // lblUnreadNotifications
-            // 
-            lblUnreadNotifications.AutoSize = true;
-            lblUnreadNotifications.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUnreadNotifications.Location = new Point(786, 80);
-            lblUnreadNotifications.Name = "lblUnreadNotifications";
-            lblUnreadNotifications.Size = new Size(136, 17);
-            lblUnreadNotifications.TabIndex = 24;
-            lblUnreadNotifications.Text = "Unread Notifications";
-            // 
-            // menuePanel
-            // 
-            menuePanel.BackColor = Color.White;
-            menuePanel.BorderStyle = BorderStyle.Fixed3D;
-            menuePanel.Controls.Add(btnLogout);
-            menuePanel.Controls.Add(btnProfile);
-            menuePanel.Controls.Add(btnQueueStatus);
-            menuePanel.Controls.Add(btnMyBooking);
-            menuePanel.Controls.Add(btnNewBooking);
-            menuePanel.Controls.Add(btnDashboard);
-            menuePanel.Location = new Point(4, 68);
-            menuePanel.Name = "menuePanel";
-            menuePanel.Size = new Size(160, 507);
-            menuePanel.TabIndex = 25;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(26, 74, 122);
-            panel1.Controls.Add(lblBeneficiaryDashboard);
-            panel1.Controls.Add(lblPortal);
-            panel1.Controls.Add(lblmanage);
-            panel1.Controls.Add(lblSassa);
-            panel1.Location = new Point(4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(977, 56);
-            panel1.TabIndex = 26;
+            pnlHeader.BackColor = Color.FromArgb(26, 74, 122);
+            pnlHeader.Controls.Add(lblBeneficiaryDashboard);
+            pnlHeader.Controls.Add(lblPortal);
+            pnlHeader.Controls.Add(lblmanage);
+            pnlHeader.Controls.Add(lblSassa);
+            pnlHeader.Dock = DockStyle.Top;
+            pnlHeader.Location = new Point(160, 0);
+            pnlHeader.Name = "pnlHeader";
+            pnlHeader.Size = new Size(828, 56);
+            pnlHeader.TabIndex = 26;
             // 
             // lblBeneficiaryDashboard
             // 
@@ -332,34 +196,196 @@
             lblSassa.TabIndex = 17;
             lblSassa.Text = "SASSA";
             // 
+            // btnpersonalBooking
+            // 
+            btnpersonalBooking.BackColor = Color.FromArgb(26, 74, 122);
+            btnpersonalBooking.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnpersonalBooking.ForeColor = SystemColors.Control;
+            btnpersonalBooking.Location = new Point(421, 291);
+            btnpersonalBooking.Name = "btnpersonalBooking";
+            btnpersonalBooking.Size = new Size(274, 104);
+            btnpersonalBooking.TabIndex = 9;
+            btnpersonalBooking.Text = "My Bookings";
+            btnpersonalBooking.UseVisualStyleBackColor = false;
+            btnpersonalBooking.Click += btnpersonalBooking_Click;
+            // 
+            // btnViewAll
+            // 
+            btnViewAll.Location = new Point(559, 52);
+            btnViewAll.Name = "btnViewAll";
+            btnViewAll.Size = new Size(126, 38);
+            btnViewAll.TabIndex = 14;
+            btnViewAll.Text = "View All           >";
+            btnViewAll.UseVisualStyleBackColor = true;
+            btnViewAll.Click += btnViewAll_Click;
+            // 
+            // lblUnreadNotifications
+            // 
+            lblUnreadNotifications.AutoSize = true;
+            lblUnreadNotifications.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUnreadNotifications.Location = new Point(559, 23);
+            lblUnreadNotifications.Name = "lblUnreadNotifications";
+            lblUnreadNotifications.Size = new Size(136, 17);
+            lblUnreadNotifications.TabIndex = 24;
+            lblUnreadNotifications.Text = "Unread Notifications";
+            // 
+            // lblMenue
+            // 
+            lblMenue.AutoSize = true;
+            lblMenue.Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMenue.Location = new Point(218, 122);
+            lblMenue.Name = "lblMenue";
+            lblMenue.Size = new Size(212, 18);
+            lblMenue.TabIndex = 16;
+            lblMenue.Text = "What would you like to do?";
+            // 
+            // btnQueuePosition
+            // 
+            btnQueuePosition.BackColor = Color.FromArgb(26, 74, 122);
+            btnQueuePosition.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnQueuePosition.ForeColor = SystemColors.Control;
+            btnQueuePosition.Location = new Point(22, 291);
+            btnQueuePosition.Name = "btnQueuePosition";
+            btnQueuePosition.Size = new Size(278, 104);
+            btnQueuePosition.TabIndex = 10;
+            btnQueuePosition.Text = "Queue Status";
+            btnQueuePosition.UseVisualStyleBackColor = false;
+            btnQueuePosition.Click += btnQueuePosition_Click;
+            // 
+            // btnpersonalDetails
+            // 
+            btnpersonalDetails.BackColor = Color.FromArgb(26, 74, 122);
+            btnpersonalDetails.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnpersonalDetails.ForeColor = SystemColors.Control;
+            btnpersonalDetails.Location = new Point(421, 155);
+            btnpersonalDetails.Name = "btnpersonalDetails";
+            btnpersonalDetails.Size = new Size(274, 112);
+            btnpersonalDetails.TabIndex = 15;
+            btnpersonalDetails.Text = "Profile";
+            btnpersonalDetails.UseVisualStyleBackColor = false;
+            btnpersonalDetails.Click += btnpersonalDetails_Click;
+            // 
+            // btnbookingnewappointment
+            // 
+            btnbookingnewappointment.BackColor = Color.FromArgb(26, 74, 122);
+            btnbookingnewappointment.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnbookingnewappointment.ForeColor = SystemColors.Control;
+            btnbookingnewappointment.Location = new Point(22, 155);
+            btnbookingnewappointment.Name = "btnbookingnewappointment";
+            btnbookingnewappointment.Size = new Size(278, 112);
+            btnbookingnewappointment.TabIndex = 8;
+            btnbookingnewappointment.Text = "New Booking";
+            btnbookingnewappointment.UseVisualStyleBackColor = false;
+            btnbookingnewappointment.Click += btnbookingnewappointment_Click;
+            // 
+            // btnViewQueue
+            // 
+            btnViewQueue.Location = new Point(383, 52);
+            btnViewQueue.Name = "btnViewQueue";
+            btnViewQueue.Size = new Size(126, 38);
+            btnViewQueue.TabIndex = 13;
+            btnViewQueue.Text = "View Queue           >";
+            btnViewQueue.UseVisualStyleBackColor = true;
+            btnViewQueue.Click += btnViewQueue_Click;
+            // 
+            // btnViewBookingDetails
+            // 
+            btnViewBookingDetails.Location = new Point(205, 52);
+            btnViewBookingDetails.Name = "btnViewBookingDetails";
+            btnViewBookingDetails.Size = new Size(126, 38);
+            btnViewBookingDetails.TabIndex = 11;
+            btnViewBookingDetails.Text = "View Details          >";
+            btnViewBookingDetails.UseVisualStyleBackColor = true;
+            btnViewBookingDetails.Click += btnViewBookingDetails_Click;
+            // 
+            // btnViewAppointmentDetails
+            // 
+            btnViewAppointmentDetails.Location = new Point(22, 52);
+            btnViewAppointmentDetails.Name = "btnViewAppointmentDetails";
+            btnViewAppointmentDetails.Size = new Size(126, 38);
+            btnViewAppointmentDetails.TabIndex = 12;
+            btnViewAppointmentDetails.Text = "View Details          >";
+            btnViewAppointmentDetails.UseVisualStyleBackColor = true;
+            btnViewAppointmentDetails.Click += btnViewAppointmentDetails_Click;
+            // 
+            // lblQueuePosition
+            // 
+            lblQueuePosition.AutoSize = true;
+            lblQueuePosition.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblQueuePosition.Location = new Point(383, 23);
+            lblQueuePosition.Name = "lblQueuePosition";
+            lblQueuePosition.Size = new Size(133, 17);
+            lblQueuePosition.TabIndex = 23;
+            lblQueuePosition.Text = "Est. Queue Position";
+            // 
+            // lbltotalBookings
+            // 
+            lbltotalBookings.AutoSize = true;
+            lbltotalBookings.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbltotalBookings.Location = new Point(205, 23);
+            lbltotalBookings.Name = "lbltotalBookings";
+            lbltotalBookings.Size = new Size(95, 17);
+            lbltotalBookings.TabIndex = 22;
+            lbltotalBookings.Text = "Total Booking";
+            // 
+            // lblUpcomingAppointment
+            // 
+            lblUpcomingAppointment.AutoSize = true;
+            lblUpcomingAppointment.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUpcomingAppointment.Location = new Point(10, 23);
+            lblUpcomingAppointment.Name = "lblUpcomingAppointment";
+            lblUpcomingAppointment.Size = new Size(154, 17);
+            lblUpcomingAppointment.TabIndex = 21;
+            lblUpcomingAppointment.Text = "Upcoming Appointment";
+            // 
+            // pnlContent
+            // 
+            pnlContent.Controls.Add(pnlDashboardHome);
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(160, 56);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(828, 518);
+            pnlContent.TabIndex = 27;
+            // 
+            // pnlDashboardHome
+            // 
+            pnlDashboardHome.Controls.Add(lblUpcomingAppointment);
+            pnlDashboardHome.Controls.Add(btnViewAppointmentDetails);
+            pnlDashboardHome.Controls.Add(btnQueuePosition);
+            pnlDashboardHome.Controls.Add(lblMenue);
+            pnlDashboardHome.Controls.Add(btnpersonalDetails);
+            pnlDashboardHome.Controls.Add(lbltotalBookings);
+            pnlDashboardHome.Controls.Add(btnpersonalBooking);
+            pnlDashboardHome.Controls.Add(lblUnreadNotifications);
+            pnlDashboardHome.Controls.Add(btnbookingnewappointment);
+            pnlDashboardHome.Controls.Add(btnViewAll);
+            pnlDashboardHome.Controls.Add(lblQueuePosition);
+            pnlDashboardHome.Controls.Add(btnViewBookingDetails);
+            pnlDashboardHome.Controls.Add(btnViewQueue);
+            pnlDashboardHome.Dock = DockStyle.Fill;
+            pnlDashboardHome.Location = new Point(0, 0);
+            pnlDashboardHome.Name = "pnlDashboardHome";
+            pnlDashboardHome.Size = new Size(828, 518);
+            pnlDashboardHome.TabIndex = 0;
+            // 
             // BeneficiaryDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(988, 574);
-            Controls.Add(panel1);
-            Controls.Add(lblUpcomingAppointment);
-            Controls.Add(menuePanel);
-            Controls.Add(btnViewAppointmentDetails);
-            Controls.Add(lblMenue);
-            Controls.Add(lblUnreadNotifications);
-            Controls.Add(lblQueuePosition);
-            Controls.Add(lbltotalBookings);
-            Controls.Add(btnpersonalDetails);
-            Controls.Add(btnViewAll);
-            Controls.Add(btnViewQueue);
-            Controls.Add(btnViewBookingDetails);
-            Controls.Add(btnQueuePosition);
-            Controls.Add(btnpersonalBooking);
-            Controls.Add(btnbookingnewappointment);
+            Controls.Add(pnlContent);
+            Controls.Add(pnlHeader);
+            Controls.Add(pnlSidebar);
             Name = "BeneficiaryDashboard";
             Text = "BeneficiaryDashboard";
             Load += BeneficiaryDashboard_Load;
-            menuePanel.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            pnlSidebar.ResumeLayout(false);
+            pnlHeader.ResumeLayout(false);
+            pnlHeader.PerformLayout();
+            pnlContent.ResumeLayout(false);
+            pnlDashboardHome.ResumeLayout(false);
+            pnlDashboardHome.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
@@ -371,24 +397,26 @@
         private System.Windows.Forms.Button btnQueueStatus;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnbookingnewappointment;
-        private System.Windows.Forms.Button btnpersonalBooking;
-        private System.Windows.Forms.Button btnQueuePosition;
-        private System.Windows.Forms.Button btnViewBookingDetails;
-        private System.Windows.Forms.Button btnViewAppointmentDetails;
-        private System.Windows.Forms.Button btnViewQueue;
-        private System.Windows.Forms.Button btnViewAll;
-        private System.Windows.Forms.Button btnpersonalDetails;
-        private System.Windows.Forms.Label lblMenue;
-        private System.Windows.Forms.Label lblUpcomingAppointment;
-        private System.Windows.Forms.Label lbltotalBookings;
-        private System.Windows.Forms.Label lblQueuePosition;
-        private System.Windows.Forms.Label lblUnreadNotifications;
-        private System.Windows.Forms.Panel menuePanel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlSidebar;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblPortal;
         private System.Windows.Forms.Label lblmanage;
         private System.Windows.Forms.Label lblSassa;
         private System.Windows.Forms.Label lblBeneficiaryDashboard;
+        private Button btnpersonalBooking;
+        private Button btnViewAll;
+        private Label lblUnreadNotifications;
+        private Label lblMenue;
+        private Button btnQueuePosition;
+        private Button btnpersonalDetails;
+        private Button btnbookingnewappointment;
+        private Button btnViewQueue;
+        private Button btnViewBookingDetails;
+        private Label lblUpcomingAppointment;
+        private Button btnViewAppointmentDetails;
+        private Label lblQueuePosition;
+        private Label lbltotalBookings;
+        private Panel pnlContent;
+        private Panel pnlDashboardHome;
     }
 }

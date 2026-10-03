@@ -104,6 +104,25 @@ namespace SASSAQueueManagementSystem
 
             return true;
         }
+        public static QueueEntry CreateForCheckIn(
+    Booking booking, string queueNumber)
+        {
+            if (booking == null)
+                throw new ArgumentNullException(nameof(booking));
+            if (string.IsNullOrWhiteSpace(queueNumber))
+                throw new ArgumentException("Queue number is required.",
+                    nameof(queueNumber));
+
+            QueueEntry entry = new QueueEntry();
+            entry.QueueNumber = queueNumber;
+            entry.Booking = booking;
+            entry.CheckInTime = DateTime.Now;
+            entry.Status = QueueStatus.CheckedIn;
+            entry.PeopleAhead = 0;
+            entry.EstimatedWaitingTime = 0;
+            return entry;
+        }
+
     }
 
 }

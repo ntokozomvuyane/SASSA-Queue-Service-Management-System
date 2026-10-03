@@ -14,15 +14,17 @@ namespace Sassa_Queue_And_Service_Management_System
     public partial class NewBookingForm : Form
     {
         private Beneficiary? currentBeneficiary;
+        private Action<Form>? navigate;
         public NewBookingForm()
         {
             InitializeComponent();
         }
-        public NewBookingForm(Beneficiary beneficiary) : this()
+        public NewBookingForm(Beneficiary beneficiary, Action<Form>navigate) : this()
         {
             currentBeneficiary = beneficiary;
+            this.navigate = navigate;
         }
-
+        
         private void cboServiceCentre_SelectedIndexChanged(
             object sender, EventArgs e)
         {
@@ -53,16 +55,18 @@ namespace Sassa_Queue_And_Service_Management_System
         private void btnConfirmBooking_Click(
             object sender, EventArgs e)
         {
-            if (currentBeneficiary == null)
+            if (currentBeneficiary == null|| navigate == null)
             {
                 MessageBox.Show(
-                    "No beneficiary is currently logged in.",
-                    "Login Required",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    "The page was not opened from dashboard");
 
                 return;
             }
+            //navigate(new BookingConfirmationForm(
+            //booking,
+            // currentBeneficiary,
+            //navigate));
+
 
             if (cboServiceCentre.SelectedItem
                 is not ServiceCentre selectedCentre)
@@ -139,18 +143,24 @@ namespace Sassa_Queue_And_Service_Management_System
             }
 
             SystemData.Bookings.Add(newBooking);
-            using (BookingConfirmationForm confirmationForm = new BookingConfirmationForm(newBooking))
-            {
-                DialogResult result = confirmationForm.ShowDialog(this);
-                   if(result == DialogResult.Retry)
-                {
-                    btnClear_Click(btnClear, EventArgs.Empty);
-                    return;
-                }
-                //RefreshAvailableSlots();
-            }
+            navigate(new BookingConfirmationForm(
+           newBooking,
+            currentBeneficiary,
+           navigate));
+            //using (BookingConfirmationForm confirmationForm = new BookingConfirmationForm(newBooking))
+            //{
+            //    DialogResult result = confirmationForm.ShowDialog(this);
+            //       if(result == DialogResult.Retry)
+            //    {
+            //        btnClear_Click(btnClear, EventArgs.Empty);
+            //        return;
+            //    }
+            //    //RefreshAvailableSlots();
+            //}
             Close();
+           
         }
+
         private void SetUpAppointmentSummary()
         {
             dgvAppointmentSummary.Columns.Clear();
@@ -193,22 +203,22 @@ namespace Sassa_Queue_And_Service_Management_System
         {
             Close();
         }
-        private void btnNewBooking_Click(object sender, EventArgs e)
-        {
-            // already on new booking
-        }
-        private void btnMyBooking_Click(object sender, EventArgs e)
-        {
-            GoToPage("MyBookings");
-        }
-        private void btnQueueStatus_Click(object sender, EventArgs e)
-        {
-            GoToPage("QueueStatus");
-        }
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            GoToPage("Profile");
-        }
+        //private void btnNewBooking_Click(object sender, EventArgs e)
+        //{
+        //    // already on new booking
+        //}
+        //private void btnMyBooking_Click(object sender, EventArgs e)
+        //{
+        //    GoToPage("MyBookings");
+        //}
+        //private void btnQueueStatus_Click(object sender, EventArgs e)
+        //{
+        //    GoToPage("QueueStatus");
+        //}
+        //private void btnProfile_Click(object sender, EventArgs e)
+        //{
+        //    GoToPage("Profile");
+        //}
         private void btnLogout_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to sign out?",

@@ -29,18 +29,6 @@ namespace Sassa_Queue_And_Service_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            pnlMyProfile = new Panel();
-            lblBeneficiaryPortal = new Label();
-            lblBeneficiaryDetails = new Label();
-            lblMyProfile = new Label();
-            lblSassa = new Label();
-            pnlSideBar = new Panel();
-            btnLogout = new Button();
-            btnMyProfile = new Button();
-            btnQueueStatus = new Button();
-            btnMyBooking = new Button();
-            btnNewBooking = new Button();
-            btnDashboard = new Button();
             lblPersonalInformation = new Label();
             lblFullName = new Label();
             txtFullName = new TextBox();
@@ -54,147 +42,7 @@ namespace Sassa_Queue_And_Service_Management_System
             btnSave = new Button();
             btnBack = new Button();
             cboPreferredCentre = new ComboBox();
-            pnlMyProfile.SuspendLayout();
-            pnlSideBar.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlMyProfile
-            // 
-            pnlMyProfile.BackColor = Color.FromArgb(0, 51, 102);
-            pnlMyProfile.BorderStyle = BorderStyle.Fixed3D;
-            pnlMyProfile.Controls.Add(lblBeneficiaryPortal);
-            pnlMyProfile.Controls.Add(lblBeneficiaryDetails);
-            pnlMyProfile.Controls.Add(lblMyProfile);
-            pnlMyProfile.Controls.Add(lblSassa);
-            pnlMyProfile.Dock = DockStyle.Top;
-            pnlMyProfile.Location = new Point(0, 0);
-            pnlMyProfile.Margin = new Padding(4, 3, 4, 3);
-            pnlMyProfile.Name = "pnlMyProfile";
-            pnlMyProfile.Size = new Size(1029, 75);
-            pnlMyProfile.TabIndex = 0;
-            // 
-            // lblBeneficiaryPortal
-            // 
-            lblBeneficiaryPortal.AutoSize = true;
-            lblBeneficiaryPortal.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBeneficiaryPortal.ForeColor = Color.White;
-            lblBeneficiaryPortal.Location = new Point(886, 27);
-            lblBeneficiaryPortal.Margin = new Padding(4, 0, 4, 0);
-            lblBeneficiaryPortal.Name = "lblBeneficiaryPortal";
-            lblBeneficiaryPortal.Size = new Size(120, 15);
-            lblBeneficiaryPortal.TabIndex = 3;
-            lblBeneficiaryPortal.Text = "Beneficiary Portal";
-            // 
-            // lblBeneficiaryDetails
-            // 
-            lblBeneficiaryDetails.AutoSize = true;
-            lblBeneficiaryDetails.ForeColor = Color.White;
-            lblBeneficiaryDetails.Location = new Point(148, 38);
-            lblBeneficiaryDetails.Margin = new Padding(4, 0, 4, 0);
-            lblBeneficiaryDetails.Name = "lblBeneficiaryDetails";
-            lblBeneficiaryDetails.Size = new Size(220, 15);
-            lblBeneficiaryDetails.TabIndex = 2;
-            lblBeneficiaryDetails.Text = "View and update your beneficiary details";
-            // 
-            // lblMyProfile
-            // 
-            lblMyProfile.AutoSize = true;
-            lblMyProfile.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMyProfile.ForeColor = Color.White;
-            lblMyProfile.Location = new Point(144, 10);
-            lblMyProfile.Margin = new Padding(4, 0, 4, 0);
-            lblMyProfile.Name = "lblMyProfile";
-            lblMyProfile.Size = new Size(87, 20);
-            lblMyProfile.TabIndex = 1;
-            lblMyProfile.Text = "My Profile";
-            // 
-            // lblSassa
-            // 
-            lblSassa.AutoSize = true;
-            lblSassa.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSassa.ForeColor = Color.White;
-            lblSassa.Location = new Point(35, 15);
-            lblSassa.Margin = new Padding(4, 0, 4, 0);
-            lblSassa.Name = "lblSassa";
-            lblSassa.Size = new Size(87, 25);
-            lblSassa.TabIndex = 0;
-            lblSassa.Text = "SASSA";
-            // 
-            // pnlSideBar
-            // 
-            pnlSideBar.BackColor = Color.FromArgb(0, 51, 102);
-            pnlSideBar.BorderStyle = BorderStyle.Fixed3D;
-            pnlSideBar.Controls.Add(btnLogout);
-            pnlSideBar.Controls.Add(btnMyProfile);
-            pnlSideBar.Controls.Add(btnQueueStatus);
-            pnlSideBar.Controls.Add(btnMyBooking);
-            pnlSideBar.Controls.Add(btnNewBooking);
-            pnlSideBar.Controls.Add(btnDashboard);
-            pnlSideBar.Location = new Point(0, 81);
-            pnlSideBar.Margin = new Padding(4, 3, 4, 3);
-            pnlSideBar.Name = "pnlSideBar";
-            pnlSideBar.Size = new Size(180, 535);
-            pnlSideBar.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            btnLogout.Location = new Point(14, 244);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(131, 35);
-            btnLogout.TabIndex = 11;
-            btnLogout.Text = "Sign Out";
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += btnSignOut_Click;
-            // 
-            // btnMyProfile
-            // 
-            btnMyProfile.Location = new Point(14, 200);
-            btnMyProfile.Name = "btnMyProfile";
-            btnMyProfile.Size = new Size(131, 35);
-            btnMyProfile.TabIndex = 10;
-            btnMyProfile.Text = "Profile";
-            btnMyProfile.UseVisualStyleBackColor = true;
-            btnMyProfile.Click += btnMyProfile_Click;
-            // 
-            // btnQueueStatus
-            // 
-            btnQueueStatus.Location = new Point(14, 150);
-            btnQueueStatus.Name = "btnQueueStatus";
-            btnQueueStatus.Size = new Size(131, 35);
-            btnQueueStatus.TabIndex = 9;
-            btnQueueStatus.Text = "Queue Status";
-            btnQueueStatus.UseVisualStyleBackColor = true;
-            btnQueueStatus.Click += btnQueueStatus_Click;
-            // 
-            // btnMyBooking
-            // 
-            btnMyBooking.Location = new Point(12, 109);
-            btnMyBooking.Name = "btnMyBooking";
-            btnMyBooking.Size = new Size(131, 35);
-            btnMyBooking.TabIndex = 8;
-            btnMyBooking.Text = "My Booking";
-            btnMyBooking.UseVisualStyleBackColor = true;
-            btnMyBooking.Click += btnMyBookings_Click;
-            // 
-            // btnNewBooking
-            // 
-            btnNewBooking.Location = new Point(13, 68);
-            btnNewBooking.Name = "btnNewBooking";
-            btnNewBooking.Size = new Size(131, 35);
-            btnNewBooking.TabIndex = 7;
-            btnNewBooking.Text = "New Booking";
-            btnNewBooking.UseVisualStyleBackColor = true;
-            btnNewBooking.Click += btnNewBooking_Click;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.Location = new Point(13, 24);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(131, 35);
-            btnDashboard.TabIndex = 6;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.UseVisualStyleBackColor = true;
-            btnDashboard.Click += btnDashboard_Click;
             // 
             // lblPersonalInformation
             // 
@@ -360,30 +208,18 @@ namespace Sassa_Queue_And_Service_Management_System
             Controls.Add(txtFullName);
             Controls.Add(lblFullName);
             Controls.Add(lblPersonalInformation);
-            Controls.Add(pnlSideBar);
-            Controls.Add(pnlMyProfile);
             Margin = new Padding(4, 3, 4, 3);
             Name = "MyProfileForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MyProfileForm";
             WindowState = FormWindowState.Maximized;
             Load += BeneficiaryProfileForm_Load;
-            pnlMyProfile.ResumeLayout(false);
-            pnlMyProfile.PerformLayout();
-            pnlSideBar.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlMyProfile;
-        private System.Windows.Forms.Label lblBeneficiaryPortal;
-        private System.Windows.Forms.Label lblBeneficiaryDetails;
-        private System.Windows.Forms.Label lblMyProfile;
-        private System.Windows.Forms.Label lblSassa;
-        private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Label lblPersonalInformation;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.TextBox txtFullName;
@@ -396,12 +232,6 @@ namespace Sassa_Queue_And_Service_Management_System
         private System.Windows.Forms.Label lblPreferredCentre;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnBack;
-        private Button btnNewBooking;
-        private Button btnDashboard;
-        private Button btnMyProfile;
-        private Button btnQueueStatus;
-        private Button btnMyBooking;
-        private Button btnLogout;
         private ComboBox cboPreferredCentre;
     }
 }
